@@ -1,17 +1,5 @@
 window.Mathjax = {
     loader: {load: ['[tex]/cancel']},
-    startup: {
-        // See: <https://github.com/mathjax/MathJax/issues/2312>
-        // Thanks @dvpc <https://github.com/dpvc>
-        ready() {
-            Mathjax.startup.defaultReady();
-            Mathjax.startup.document.inputJax[0].preFilters.add(({math}) => {
-                if (math.math.match(/\\\\/)) {
-                    math.math = `\\displaylines{${math.math}}`;
-                }
-            });
-        }
-    }
     tex: {packages: {'[+]': ['cancel']}}
 };
 
