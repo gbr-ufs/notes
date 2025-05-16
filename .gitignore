@@ -1,0 +1,5 @@
+# Ignore all dotfiles except for those under version control.
+.*
+!.editorconfig
+!.envrc
+!.gitignore
