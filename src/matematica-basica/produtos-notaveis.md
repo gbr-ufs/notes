@@ -1,25 +1,24 @@
-Produtos Notáveis
-=================
+## Produtos Notáveis
 
 Expressões algébricas fundamentais. São *notáveis* pela sua importância na matemática.
 
-# Legenda
+## Legenda
 
 - \\( \therefore \\) significa *Logo*, *Portanto*
 
-# Propriedades
+## Propriedades
 
 Nas última igualdades, a propriedade distributiva é aplicada.
 
-## Quadrado
+### Quadrado
 
-### Quadrado da Soma de Dois Termos
+#### Quadrado da Soma de Dois Termos
 
 \\[
 (x + y)^{2} = (x + y) \cdot (x + y) = x^{2} + 2xy + y^{2}
 \\]
 
-### Quadrado da Diferença de Dois Termos
+#### Quadrado da Diferença de Dois Termos
 
 \\[
 (x - y)^{2} = (x - y) \cdot (x - y) = x^{2} - 2xy + y^{2}
@@ -31,7 +30,7 @@ Nas última igualdades, a propriedade distributiva é aplicada.
 x^2 - y^{2} = (x + y) \cdot (x - y)
 \\]
 
-### Visualização
+#### Visualização
 
 [Esta](https://youtu.be/9FBQRWRe9ls?si=Im567cxXyGXaC1yx) aula serve como visualização para essas operações.
 
@@ -54,21 +53,21 @@ Porém, isso está incorreto, pois esquecemos dos dois retângulos—adicionando
 (x + y)^{2} = x^{2} + 2xy + y^{2}
 \\]
 
-## Cubo
+### Cubo
 
-### Cubo da Soma de Dois Termos
+#### Cubo da Soma de Dois Termos
 
 \\[
 (x + y)^{3} = (x + y) \cdot (x + y) \cdot (x + y) = x^{3} + 3x^{2}y + 3xy^{2} + y^{3}
 \\]
 
-### Cubo da Diferença de Dois Termos
+#### Cubo da Diferença de Dois Termos
 
 \\[
 (x - y)^{3} = (x - y) \cdot (x - y) \cdot  (x - y) = x^{3} - 3x^{2}y + 3xy^{2} - y^{3}
 \\]
 
-# Exceções
+## Exceções
 
 No caso de \\( a = 1 \\), \\( b = 0 \\), essa equivalência é correta:
 
@@ -76,11 +75,11 @@ No caso de \\( a = 1 \\), \\( b = 0 \\), essa equivalência é correta:
 (x + y)^{2} = x^{2} + y^{2}
 \\]
 
-# Exercícios
+## Exercícios
 
-## [Produtos Notáveis: Parte 1 - Aula 25](https://www.youtube.com/watch?v=AvNnnTpwLug)
+### [Produtos Notáveis: Parte 1 - Aula 25](https://www.youtube.com/watch?v=AvNnnTpwLug)
 
-### [Questão 1](https://youtu.be/AvNnnTpwLug?si=oS_DFKOKpG29waSJ&t=508)
+#### [Questão 1](https://youtu.be/AvNnnTpwLug?si=oS_DFKOKpG29waSJ&t=508)
 
 Sejam \\( x \\) e \\( y \\) números reais positivos, onde:
 
@@ -89,7 +88,7 @@ Sejam \\( x \\) e \\( y \\) números reais positivos, onde:
 
 Encontre o valor de \\( x + y \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -115,11 +114,11 @@ x + y = 11
 
 </details>
 
-### [Questão 2](https://youtu.be/AvNnnTpwLug?si=hDvE9Ao-5TxLvJ3_&t=657)
+#### [Questão 2](https://youtu.be/AvNnnTpwLug?si=hDvE9Ao-5TxLvJ3_&t=657)
 
 Sabendo-se que \\( x + \frac{1}{x} = 5 \\), calcule \\(x^{2} + \frac{1}{x^{2}} \\), onde \\( x > 0 \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -147,13 +146,13 @@ S = 25 - 2 = 23
 
 </details>
 
-## [Produtos Notáveis: Parte 2 - Aula 26](https://www.youtube.com/watch?v=odhFAYUg2Zs)
+### [Produtos Notáveis: Parte 2 - Aula 26](https://www.youtube.com/watch?v=odhFAYUg2Zs)
 
-### [Questão 1](https://youtu.be/odhFAYUg2Zs?si=i-iNDwTN3aY22LEf&t=270)
+#### [Questão 1](https://youtu.be/odhFAYUg2Zs?si=i-iNDwTN3aY22LEf&t=270)
 
 Sejam \\( a \\) e \\( b \\) números reais, podemos afirmar que \\( a^{2} + b^{2} \geq 2ab \\)?
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -173,11 +172,11 @@ Com isso, podemos afirmar que \\( a^{2} + b ^{2} \\) é sim maior ou igual à \\
 
 </details>
 
-### [Questão 2](https://youtu.be/odhFAYUg2Zs?si=NdTKaxDmdx04RB4D&t=469)
+#### [Questão 2](https://youtu.be/odhFAYUg2Zs?si=NdTKaxDmdx04RB4D&t=469)
 
 Considere três números reais \\( a \\), \\( b \\) e \\(c \\), tal que \\(a > b > c\\). Podemos afirmar que \\(a^{2} + b^{2} + c^{2} \geq ab + ac + bc\\)?
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -225,13 +224,13 @@ Com isso, podemos afirmar que \\( a^{2} + b^{2} + c^{2} \\) é sim maior que \\(
 
 </details>
 
-## [Produtos Notáveis: Parte 3](https://www.youtube.com/watch?v=9FBQRWRe9ls)
+### [Produtos Notáveis: Parte 3](https://www.youtube.com/watch?v=9FBQRWRe9ls)
 
-### [Questão 1](https://youtu.be/9FBQRWRe9ls?si=fIzpUXmnSVcqwtA3&t=294)
+#### [Questão 1](https://youtu.be/9FBQRWRe9ls?si=fIzpUXmnSVcqwtA3&t=294)
 
 Sejam \\( x \\), \\( y \\) e \\( z \\) números positivos, onde \\( x^{2} + y^{2} + z^{2} = 38 \\) e \\( xy + xz + yz = 31 \\), calcule o valor de \\( x + y + z \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -269,7 +268,7 @@ x + y + z = 10
 
 </details>
 
-### [Questão 2](https://youtu.be/9FBQRWRe9ls?si=wevTLThkWqqA8KBE&t=615)
+#### [Questão 2](https://youtu.be/9FBQRWRe9ls?si=wevTLThkWqqA8KBE&t=615)
 
 Sabendo-se das seguintes afirmações:
 
@@ -279,7 +278,7 @@ Sabendo-se das seguintes afirmações:
 
 Calcule o valor de \\( \frac{x}{y} + \frac{y}{x} + 2 \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -309,13 +308,13 @@ E também sabemos que \\( x + y = 6 \\), logo chegamos ao resultado:
 
 </details>
 
-## [Produtos Notáveis: Parte 4 - Aula 28](https://www.youtube.com/watch?v=waX7T66U8R4)
+### [Produtos Notáveis: Parte 4 - Aula 28](https://www.youtube.com/watch?v=waX7T66U8R4)
 
-### [Questão 1](https://youtu.be/waX7T66U8R4?si=GuA1-n0CnqWxRSE3&t=262)
+#### [Questão 1](https://youtu.be/waX7T66U8R4?si=GuA1-n0CnqWxRSE3&t=262)
 
 Calcule o valor de \\( 0,651^{2} - 0,349^{2} \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -329,7 +328,7 @@ Calcule o valor de \\( 0,651^{2} - 0,349^{2} \\).
 
 </details>
 
-### [Questão 2](https://youtu.be/waX7T66U8R4?si=rW7MG5yqhl0D9mez&t=481)
+#### [Questão 2](https://youtu.be/waX7T66U8R4?si=rW7MG5yqhl0D9mez&t=481)
 
 Desenvolva e reduza os termos semelhantes:
 
@@ -337,7 +336,7 @@ Desenvolva e reduza os termos semelhantes:
 (x + y)^{2} + (x + y) \cdot (x - y)
 \\]
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -367,7 +366,7 @@ x^{2} + 2xy \\cancel{+ y^{2}} + x^{2} \\cancel{- y^{2}} = 2x^{2} 2xy
 
 </details>
 
-### [Questão 3](https://youtu.be/waX7T66U8R4?si=ioggq48dt7g1sRb_&t=568)
+#### [Questão 3](https://youtu.be/waX7T66U8R4?si=ioggq48dt7g1sRb_&t=568)
 
 Sabendo-se as seguintes afirmações:
 
@@ -376,7 +375,7 @@ Sabendo-se as seguintes afirmações:
 
 Calcule o valor de \\( \frac{2^{81x^{2}}}{2^{25y^{2}}} \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -394,13 +393,13 @@ x^{2} - y^{2} = (x + y) \cdot (x - y) \therefore
 
 </details>
 
-## [Produtos Notáveis: Parte 5 - Aula 29](https://www.youtube.com/watch?v=WGLefHEIByI)
+### [Produtos Notáveis: Parte 5 - Aula 29](https://www.youtube.com/watch?v=WGLefHEIByI)
 
-### [Questão 1](https://youtu.be/WGLefHEIByI?si=DG8H6Rj7Pyeg4YgY&t=264)
+#### [Questão 1](https://youtu.be/WGLefHEIByI?si=DG8H6Rj7Pyeg4YgY&t=264)
 
 Desenvolva \\( (x + 2)^{3} \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -410,11 +409,11 @@ Desenvolva \\( (x + 2)^{3} \\).
 
 </details>
 
-### [Questão 2](https://youtu.be/WGLefHEIByI?si=PsqzKc92c4nlc-YB&t=404)
+#### [Questão 2](https://youtu.be/WGLefHEIByI?si=PsqzKc92c4nlc-YB&t=404)
 
 Seja \\( x > 0 \\), onde \\( x + \frac{1}{x} = 4 \\), calcule o valor de \\( x^{3} + \frac{1}{x^{3}} \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -450,11 +449,11 @@ x^{3} + \frac{1}{x^{3}} = 64 - 12 = 52
 
 </details>
 
-### [Questão 3](https://youtu.be/WGLefHEIByI?si=yp1IywROl--g5s1B&t=591)
+#### [Questão 3](https://youtu.be/WGLefHEIByI?si=yp1IywROl--g5s1B&t=591)
 
 Seja \\( x + y + z = 0 \\), demonstre que \\( x^{3} + y^{3} + z^{3} = 3xyz \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -498,9 +497,9 @@ x^{3} + y^{3} + z^{3} - 3xyz = 0
 
 </details>
 
-## [Produtos Notáveis Parte 1 - Aula 30](https://www.youtube.com/watch?v=o5kepLCKAdA)
+### [Produtos Notáveis Parte 1 - Aula 30](https://www.youtube.com/watch?v=o5kepLCKAdA)
 
-### [Questão 1](https://youtu.be/o5kepLCKAdA?si=PUviBuMGHdmu6ujQ&t=20)
+#### [Questão 1](https://youtu.be/o5kepLCKAdA?si=PUviBuMGHdmu6ujQ&t=20)
 
 (35ª OBM/1ª Fase)
 
@@ -512,7 +511,7 @@ c) 2012
 d) 2014
 e) 4026
 
-#### Resolução
+##### Resolução
 
 Para simplificar, podemos deixar a igualdade com o mesmo expoente:
 
@@ -528,7 +527,7 @@ Alternativa C.
 
 </details>
 
-### [Questão 2](https://youtu.be/o5kepLCKAdA?si=HmW28cobOfabEea1&t=256)
+#### [Questão 2](https://youtu.be/o5kepLCKAdA?si=HmW28cobOfabEea1&t=256)
 
 (35ª OBM/2ª Fase [Adaptada])
 
@@ -546,7 +545,7 @@ c) 1
 d) 0
 e) -1
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -598,9 +597,9 @@ Alternativa C.
 
 </details>
 
-## [Resolução de exercícios: Produtos Notáveis Parte 2 - Aula 31](https://youtu.be/LcTnn4GPjbk?si=1y9bUwcRG69CHnmv)
+### [Resolução de exercícios: Produtos Notáveis Parte 2 - Aula 31](https://youtu.be/LcTnn4GPjbk?si=1y9bUwcRG69CHnmv)
 
-### [Questão 1](https://youtu.be/LcTnn4GPjbk?si=1y9bUwcRG69CHnmv&t=15)
+#### [Questão 1](https://youtu.be/LcTnn4GPjbk?si=1y9bUwcRG69CHnmv&t=15)
 
 (35ª OBM)
 
@@ -612,7 +611,7 @@ c) 3
 d) 4
 e) 5
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -638,7 +637,7 @@ Alternativa C.
 
 </details>
 
-### [Questão 2](https://youtu.be/LcTnn4GPjbk?si=W8bdBjrWHUxW3419&t=251)
+#### [Questão 2](https://youtu.be/LcTnn4GPjbk?si=W8bdBjrWHUxW3419&t=251)
 
 Um possível valor de \\( ^{n} \\) para que \\( 2^{20} + 2^{26} + 2^{n} \\) seja um quadrado perfeito, é:
 
@@ -648,7 +647,7 @@ c) 30
 d) 20
 e) 12
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -664,11 +663,11 @@ e) 12
 
 Um possível valor é \\( n = 30 \\).
 
-### [Questão 3](https://youtu.be/LcTnn4GPjbk?si=rYVNvFaDiEIZ6FZ1&t=571)
+#### [Questão 3](https://youtu.be/LcTnn4GPjbk?si=rYVNvFaDiEIZ6FZ1&t=571)
 
 A diferença dos quadrados de dois números naturais consecutivos sempre resulta num número ímpar?
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -686,9 +685,9 @@ Com isso, chegamos na conclusão que sim, sempre resultará num número ímpar.
 
 </details>
 
-## [Resolução de exercícios: OBM (Olimpíada Brasileira de Matemática) - Aula 32](https://www.youtube.com/watch?v=17bj5G15ZVw)
+### [Resolução de exercícios: OBM (Olimpíada Brasileira de Matemática) - Aula 32](https://www.youtube.com/watch?v=17bj5G15ZVw)
 
-### [Questão 1](https://youtu.be/17bj5G15ZVw?si=dOvebcR_gx2SDToK&t=27)
+#### [Questão 1](https://youtu.be/17bj5G15ZVw?si=dOvebcR_gx2SDToK&t=27)
 
 (34ª OBM)
 
@@ -700,7 +699,7 @@ Sendo \\(a \\), \\( b \\) e \\( c \\) reais, tais que:
 
 Encontre \\( abc \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -795,9 +794,9 @@ abc = 546
 
 </details>
 
-## [Resolução de exercícios: Produtos Notáveis Parte 3 - Aula 33](https://www.youtube.com/watch?v=WYYhEngzs_M)
+### [Resolução de exercícios: Produtos Notáveis Parte 3 - Aula 33](https://www.youtube.com/watch?v=WYYhEngzs_M)
 
-### [Questão 1](https://youtu.be/WYYhEngzs_M?si=t-cLbBjBuSB8K_xL&t=224)
+#### [Questão 1](https://youtu.be/WYYhEngzs_M?si=t-cLbBjBuSB8K_xL&t=224)
 
 Considere \\( A = 1 \\) e \\( B = 1 \\) e analize a seguinte sequência:
 
@@ -809,7 +808,7 @@ Considere \\( A = 1 \\) e \\( B = 1 \\) e analize a seguinte sequência:
 
 Qual parte contribuiu para a desigualdade no final?
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -817,13 +816,13 @@ O erro está na terceira parte. Não podemos simplificar uma indeterminação—
 
 </details>
 
-### [Questão 2](https://youtu.be/WYYhEngzs_M?si=S2-UbR98hdAkhAsj&t=433)
+#### [Questão 2](https://youtu.be/WYYhEngzs_M?si=S2-UbR98hdAkhAsj&t=433)
 
 Considere quatro números reais \\( a \\), \\( b \\), \\( c \\) e \\( d \\).
 
 Mostre que se \\( (a + b)^{2} + (b + c)^{2} + (c + d)^{2} = 4 \cdot (ab + bc + cd) \\),, então \\( a = b = c = d\\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -853,13 +852,13 @@ Por serem potências, os valores são positivos ou zero. Como não dá para cheg
 
 </details>
 
-## [Resolução de exercícios: Produtos Notáveis Parte 4 - Aula 34](https://www.youtube.com/watch?v=_07JhoPhAQk)
+### [Resolução de exercícios: Produtos Notáveis Parte 4 - Aula 34](https://www.youtube.com/watch?v=_07JhoPhAQk)
 
-### [Questão 1](https://youtu.be/_07JhoPhAQk?si=SvAI-WzNBD7iINnv&t=47)
+#### [Questão 1](https://youtu.be/_07JhoPhAQk?si=SvAI-WzNBD7iINnv&t=47)
 
 Sabendo-se que \\( a^{2} + b^{2} + c^{2} = 1 \\), onde \\( a \\), \\( b \\) e \\(c \\) são números reais, demonstre que \\( -\frac{1}{2} \leq ab + ac + bc \leq 1 \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -939,13 +938,13 @@ Juntando as duas:
 
 </details>
 
-## [Resolução de exercícios: Produtos Notáveis Parte 5 - Aula 35](https://www.youtube.com/watch?v=yZTdnkP8ZtU)
+### [Resolução de exercícios: Produtos Notáveis Parte 5 - Aula 35](https://www.youtube.com/watch?v=yZTdnkP8ZtU)
 
-### [Questão 1](https://youtu.be/yZTdnkP8ZtU?si=LxyiEd7_aKhUrV0i&t=41)
+#### [Questão 1](https://youtu.be/yZTdnkP8ZtU?si=LxyiEd7_aKhUrV0i&t=41)
 
 Demonstre a igualdade \\( (a^{2} + b^{2}) \cdot (c^{2} + d^{2}) = (ad - bc)^{2} + (ac + bd)^{2} \\).
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -959,11 +958,11 @@ a^{2} c^{2} + a^{2} d^{2} + b^{2} c^{2} + b^{2} d^{2} = (a^{2} d^{2} - 2adbc + b
 
 </details>
 
-### [Questão 2](https://youtu.be/yZTdnkP8ZtU?si=ziqT4KMI4WWwI_wU&t=316)
+#### [Questão 2](https://youtu.be/yZTdnkP8ZtU?si=ziqT4KMI4WWwI_wU&t=316)
 
 O produto de 4 números positivos consecutivos somado a uma unidade é um quadrado perfeito?
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -991,9 +990,9 @@ Então, podemos aplicar a propriedade distributiva com \(n^{2} + 3n\) como se fo
 
 </details>
 
-## Plataforma Base
+### Plataforma Base
 
-### Questão 1
+#### Questão 1
 
 Simplificando a expressão \\( (x + 10)^{2} - x \cdot (x + 20) \\), encontraremos:
 
@@ -1003,7 +1002,7 @@ c) 100
 d) 50
 e) 120
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1019,7 +1018,7 @@ Alternativa C.
 
 </details>
 
-### Questão 2
+#### Questão 2
 
 Realizando a simplificação da expressão algébrica \\( \frac{(2x - 10) \cdot (2x + 10)}{x^{2} - 25 \\), encontraremos:
 
@@ -1029,7 +1028,7 @@ c) 2x - 5
 d) 4
 e) \\( 2x^{2} + 5 \\)
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1047,7 +1046,7 @@ Alternativa D.
 
 </details>
 
-### Questão 3
+#### Questão 3
 
 Simplificando a expressão \\( (2x - 5) \cdot (2x + 5) - (2x - 5)^{2} \\), encontramos:
 
@@ -1057,7 +1056,7 @@ c) 20x
 d) 50
 e) 2x - 25
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1075,7 +1074,7 @@ Alternativa B.
 
 </details>
 
-### Questão 4
+#### Questão 4
 
 Sabe-se que \\( x^{2} + y^{2} = 20 \\) e \\( xy = 3 \\). Qual o valor de \\( (x + y)^{2} \\)?
 
@@ -1085,7 +1084,7 @@ c) 60
 d) \\( 23^{2} \\)
 e) 23
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1107,7 +1106,7 @@ Alternativa A.
 
 </details>
 
-### Questão 5
+#### Questão 5
 
 A diferença entre o quadrado da soma e o quadrado da diferença entre dois números rais é igual a:
 
@@ -1117,7 +1116,7 @@ c) A diferença dos quadrados dos dois números.
 d) Ao dobro do produto dos números.
 e) A diferença dos dois números.
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1135,7 +1134,7 @@ Alternativa A.
 
 </details>
 
-### Questão 6
+#### Questão 6
 
 Assinale a forma simplificada da expressão:
 
@@ -1149,7 +1148,7 @@ c) \\( \frac{(y - x)^{2}}{x^{2} - y^{2}} \\)
 d) \\( x^{2} - y^{2} \\)
 e) \\( y^{2} - x^{2} \\)
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1171,7 +1170,7 @@ Alternativa B.
 
 </details>
 
-### Questão 7
+#### Questão 7
 
 Sabendo-se que:
 
@@ -1186,7 +1185,7 @@ c) 10
 d) 32
 e) 36
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1222,7 +1221,7 @@ Alternativa A.
 
 </details>
 
-### Questão 8
+#### Questão 8
 
 Assinale a alternativa que representa a forma mais simples da expressão:
 
@@ -1236,7 +1235,7 @@ c) \\( x^{2} - 16 \\)
 d) 2x + 8
 e) 2
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1252,7 +1251,7 @@ Alternativa E.
 
 </details>
 
-### Questão 9
+#### Questão 9
 
 O produto de \\( ( \sqrt{4} + \sqrt{5}) \cdot (\sqrt{4} - \sqrt{5}) \\) é:
 
@@ -1262,7 +1261,7 @@ c) -1
 d) -20
 e) 20
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1280,7 +1279,7 @@ Alternativa C.
 
 </details>
 
-### Questão 10
+#### Questão 10
 
 Qual é o resultado, na forma mais simples, da operação \\( \frac{4x^{2}}{1 - x^{2}} - \frac{1 - x}{1 + x} + \frac{1 + x}{1 - x} \\):
 
@@ -1290,7 +1289,7 @@ c) \\( \frac{4}{(1 - x)} \\)
 d) \\( \frac{4x +1}{(1 + x)} \\)
 e) \\( \frac{4 \cdot (x + 1)}{(1 - x)} \\)
 
-#### Resolução
+##### Resolução
 
 <details>
 
@@ -1306,6 +1305,6 @@ e) \\( \frac{4 \cdot (x + 1)}{(1 - x)} \\)
 
 Alternativa B.
 
-# Referências Bibliográficas
+## Referências Bibliográficas
 
 GOUVEIA, Rosimar. Produtos Notáveis. *Em*: Toda Matéria. Disponível em: <https://www.todamateria.com.br/produtos-notaveis/>. Acesso em: 7 mai. 2025.
