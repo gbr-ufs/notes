@@ -1,0 +1,9 @@
+[book]
+authors = ["Gabriel Santos (@gs-101)"]
+language = "pt-br"
+multilingual = true
+src = "src"
+title = "Notes"
+
+[build]
+build-dir = "public"
