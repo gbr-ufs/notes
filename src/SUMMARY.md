@@ -1,7 +1,3 @@
-# Summary
+# Matemática Básica
 
-Hello, World!
-
-# Another Page
-
-- [Another page](example/example.md)
+- [Produtos Notáveis](matematica-basica/produtos-notaveis.md)
