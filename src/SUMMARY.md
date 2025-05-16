@@ -2,15 +2,15 @@
 
 [Notes](titulo.md)
 
-# Matemática Básica
+## Matemática Básica
 
-- [Produtos Notáveis](matematica-basica/produtos-notaveis.md)
+[Produtos Notáveis](matematica-basica/produtos-notaveis.md)
 
-# Vetores
+## Vetores
 
-- [Vetores](vetores/vetores.md)
+[Vetores](vetores/vetores.md)
 
-# Programação
+## Programação
 
-- [Programação](programacao/programacao.md)
-- [Funcional](programacao/funcional/funcional.md)
+[Programação](programacao/programacao.md)
+[Funcional](programacao/funcional/funcional.md)
