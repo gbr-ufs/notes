@@ -11,4 +11,4 @@ Anotações em Markdown para o curso de Engenharia da Computação 2025 da Unive
 
 # Referências Bibliográficas
 
-MCCANN, Tyler. Tylerdotrar/example-mdbook. Disponível em: <https://github.com/tylerdotrar/Example-mdBook>. Acesso em: 6 de Maio de 2025.
+MCCANN, Tyler. Tylerdotrar/example-mdbook. Disponível em: <https://github.com/tylerdotrar/Example-mdBook>. Acesso em: 6 mai. 2025.

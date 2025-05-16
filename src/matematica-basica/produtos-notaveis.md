@@ -1306,6 +1306,6 @@ e) \\( \frac{4 \cdot (x + 1)}{(1 - x)} \\)
 
 Alternativa B.
 
-# Referências
+# Referências Bibliográficas
 
 GOUVEIA, Rosimar. Produtos Notáveis. *Em*: Toda Matéria. Disponível em: <https://www.todamateria.com.br/produtos-notaveis/>. Acesso em: 7 mai. 2025.
