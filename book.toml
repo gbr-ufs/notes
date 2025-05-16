@@ -8,4 +8,4 @@ title = "Notes"
 build-dir = "public"
 
 [output.html]
-additional-js = ["custom/mathjax-config.js"]
+additional-js = ["custom/mathjax.js"]
