@@ -1083,7 +1083,14 @@ e) \( \frac{4 \cdot (x + 1)}{(1 - x)} \)</p>
 <p>Por padrão, uma variável, mesmo que modificada em uma função, mantém o mesmo valor.</p>
 <pre><code class="language-javascript">const variavel = 10;
 
-function divideByTwo(num)
+// Divide um número por 2.
+function divideByTwo(num) {
+    return num / 2;
+}
+
+console.log(divideByTwo(variavel));
+// Mesmo que `variavel` tenha sido modificada na função, o seu valor se mantém.
+console.log(variavel);
 </code></pre>
 <h4 id="determinismo"><a class="header" href="#determinismo">Determinismo</a></h4>
 <p>Dado um mesmo argumento, uma função deve sempre produzir o mesmo resultado.</p>
