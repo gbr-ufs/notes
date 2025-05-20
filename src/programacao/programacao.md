@@ -15,8 +15,6 @@
 >
 >— Autor Desconhecido. priberam. Disponível em: <https://dicionario.priberam.org/programa%C3%A7%C3%A3o>. Acesso em: 20 mai. 2025.
 
-## Paradigma
-
 ## Refatoramento
 
 ## Parâmetros

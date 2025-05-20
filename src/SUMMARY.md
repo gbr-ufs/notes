@@ -14,4 +14,5 @@
 ## Programação
 
 - [Programação](programacao/programacao.md)
-  - [Funcional](programacao/funcional/funcional.md)
+  - [Paradigma](programacao/paradigma/paradigma.md)
+    - [Funcional](programacao/paradigma/funcional.md)
