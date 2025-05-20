@@ -15,6 +15,10 @@
 >
 >— Autor Desconhecido. priberam. Disponível em: <https://dicionario.priberam.org/programa%C3%A7%C3%A3o>. Acesso em: 20 mai. 2025.
 
+## Pureza
+
+O resultado de uma função depende dos argumentos que foram passados a esta.
+
 ## Refatoramento
 
 ## Parâmetros
