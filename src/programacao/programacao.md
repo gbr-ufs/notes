@@ -15,6 +15,10 @@
 >
 >— Autor Desconhecido. priberam. Disponível em: <https://dicionario.priberam.org/programa%C3%A7%C3%A3o>. Acesso em: 20 mai. 2025.
 
+>Escrever [instruções] em uma linguagem específica que a máquina entenda [para] poder gerar essas aplicações [em referência às imagens].
+>
+>— MACEDO, H. (ED.). 01Oqueprogramar, 16 Feb. 2022. Disponível em: <https://www.youtube.com/watch?v=OtznOZE6-ns>. Acesso em: 27 mai. 2025.
+
 ## Pureza
 
 O resultado de uma função depende dos argumentos que foram passados a esta.
