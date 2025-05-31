@@ -17,3 +17,4 @@
   - [Paradigma](programacao/paradigma/paradigma.md)
     - [Funcional](programacao/paradigma/funcional.md)
   - [Linguagem](programacao/linguagem/linguagem.md)
+    - [JavaScript](programacao/linguagem/javascript.md)
