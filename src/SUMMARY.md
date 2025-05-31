@@ -16,3 +16,4 @@
 - [Programação](programacao/programacao.md)
   - [Paradigma](programacao/paradigma/paradigma.md)
     - [Funcional](programacao/paradigma/funcional.md)
+  - [Linguagem](programacao/linguagem/linguagem.md)
