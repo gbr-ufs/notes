@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Conjuntos - Notes</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="conjuntos"><a class="header" href="#conjuntos">Conjuntos</a></h2>
+<p>Coleção de objetos. Um objeto membro de um conjunto é chamado de <em>elemento</em>.</p>
+<h3 id="legenda"><a class="header" href="#legenda">Legenda</a></h3>
+<ul>
+<li>Letras maiúsculas representam <em>conjuntos</em></li>
+<li>Letras minúsculas representam <em>elementos</em></li>
+<li>\( x \in A \) traduz para "\( x \) pertence ao conjunto \( A \)"</li>
+<li>\( \neg(x \in A) \equiv x \not\in A \)</li>
+<li>Exemplo de conjunto: \( {1, 3, 5, 7, 9} \)</li>
+<li>\( A = {x \in \mathbb{U}: P(x)} \) (\( x \) do conjunto universal \( \mathbb{U} \) pertence à \( A \) se \( P(x) \))</li>
+<li>Exemplo de declaração de conjunto: \( A = {n \in \mathbb{Z}: n = 2k, k \in \mathbb{Z}} \) (n do conjunto dos números pertence à A se for par)</li>
+</ul>
+<p>A ordem não importa, o que importa são os elementos.</p>
+<h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
+<p>Determine os conjuntos \( A = {x \in \mathbb{R}: x^{2} &lt; 4} \), \( B = {x \in \mathbb{Z}: -2 &lt; x &lt; 5} \) e \( C = {x \in \mathbb{N}: (3x - 1)(x - 2) = 0} \)</p>
+<h4 id="resolução"><a class="header" href="#resolução">Resolução</a></h4>
+<details>
+<p>\[
+A = (-2, 2)
+\]</p>
+<p>\[
+B = {-1, 0, 1, 2, 3, 4}
+\]</p>
+<p>\[
+C = {2}
+\]</p>
+</details>
+<h4 id="observação"><a class="header" href="#observação">Observação</a></h4>
+<p>É importante decompor as condições.
+Neste exemplo, \( x^2 &lt; 4 \implies x^2 - 4 &lt; 0 \implies (x - 2)( x + 2) &lt; 0 \implies ((x - 2 &lt; 0) \land (x + 2 &gt;0)) \lor ((x - 2 &gt; 0) \land (x + 2 &gt; 0)) \implies (x &gt; 2) \land (x - 2) \), o que é impossível.</p>
+<h3 id="definição"><a class="header" href="#definição">Definição</a></h3>
+<p>\[
+\forall x \in \mathbb{U}, x \in A \implies x \in B (A \supset B)
+\]</p>
+<p>Nesse caso, A está contido em B. E A é um subconjunto dele mesmo. Um subconjunto é próprio se A \supset B e A \neq B.</p>
+<h4 id="como-descobrir-se--a-supset-b-"><a class="header" href="#como-descobrir-se--a-supset-b-">Como descobrir se \( A \supset B \)</a></h4>
+<p>\[
+A = {n \in \mathbb{Z}: n = 2k, k \in \mathbb{Z}}
+\]</p>
+<p>\[
+B = {m \in \mathbb{Z}: m = 6k, k \in \mathbb{Z}}
+\]</p>
+<p>\( B \supset A \), pois se \( y \in B \implies y = 6k, k \in \mathbb{Z} \implies y = 2(3k) = 2u, u \in \mathbb{Z} \), cumprindo a exigência de A.</p>
+<h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
+<p>Considere os conjuntos \( A = {-4, 1, 2, 4, 10} \), \( B = {m \in \mathbb{Z}: |m| \leq 12} \) e \( C = {t \in \mathbb{Z}: t^2 + 3 \in [4, 20)} \). Quais inclusões entre esses conjuntos é verdadeira?</p>
+<h4 id="resolução-1"><a class="header" href="#resolução-1">Resolução</a></h4>
+<details>
+<p>\[
+B = {-12, -11, -10, ..., 10, 11, 12}
+\]</p>
+<p>Desse modo, temos que \( A \supset B \). Para \( C \), como \( t \) está elevado ao quadrado, se determinarmos os elementos positivos em C, os negativos também estarão. Assim, \( 4 \leq t^{3} + 3 &lt; 20 \implies 1 \leq t^2 &lt; 17 \implies 1 \leq t &lt; \sqrt{17} \). Logo, \( C = {-4, -3, -2, -1, 1, 2, 3, 4} \), \( C \supset B \), \( (10 \in A \land 10 \not\in C) \implies A \not\in C \).</p>
+</details>
+<h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
+<p>\[
+((A \supset B) \land (B \supset C)) \implies A \supset C
+\]</p>
+<h4 id="resolução-2"><a class="header" href="#resolução-2">Resolução</a></h4>
+<details>
+<p>Se \( A \supset B \) e \( B \supset C \), então \( (\forall a \in A \implies a \in B) \land (\forall b \in B \implies b \in C) \).
+Portanto, \( (\forall x \in A \implies x \in B \implies x \in C) \equiv A \supset C \).</p>
+</details>
+<h3 id="observação--a-notsupset-b-"><a class="header" href="#observação--a-notsupset-b-">Observação \( (A \not\supset B) \)</a></h3>
+<p>Para provar uma afirmação da forma \( A \not\supset B \), basta encontrar um \( a \in A \), \( a \not\in B \). \( A \supset B \equiv \forall x, (x \in A \implies x \in B) \), então \( A \not\supset B \equiv \exists x \), \( (x \in A) \land (x \not\in B) \).</p>
+<h3 id="observação--a--b-"><a class="header" href="#observação--a--b-">Observação \( A = B \)</a></h3>
+<p>\[
+A = B \leftrightarrow A \supset B \land B \supset A
+\]</p>
+<h3 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h3>
+<p>\[
+P = {x \in \mathbb{R}: x^2 - 5x + 6 &lt; 0}
+\]</p>
+<p>\[
+Q = {x \in \mathbb{R}: 2 &lt; x &lt; 3}
+\]</p>
+<p>P = Q?</p>
+<h4 id="resolução-3"><a class="header" href="#resolução-3">Resolução</a></h4>
+<details>
+<p>Seja \( y \in P \). \( y \in P \implies y^2 - 5y + 6 &lt; 0 \equiv (y - 2)(y - 3) &lt; 0 \). Temos dois casos possíveis:</p>
+<p>I. \( y - 2 &lt; 0 \land y - 3 &gt; 0 \)
+II. \( y - 2 &gt; 0 \land y - 3 &lt; 0 \)</p>
+<p>Em I, temos que \( y &lt; 2 \) e \( y &gt; 3 \), o que é um absurdo. Em II, \( 2 &lt; y &lt; 3 \leftrightarrow y \in \mathbb{Q} \). Com isso, seria necessário que \( \mathbb{Q} \supset P \). Seja \( z \in \mathbb{Q} \). Então \( 2 &lt; z &lt; 3 \) e daí \( y - 2 &gt; 0 \land y - 3 &lt; 0 \). Logo,\( (y - 2)(y - 3) &lt; 0 \) e, consequentemente, \( z^{2} - 5z + 6 &lt; 0 \).
+Portanto, \( z \in \mathbb{P} \).</p>
+<h3 id="operações-sobre-conjuntos"><a class="header" href="#operações-sobre-conjuntos">Operações sobre Conjuntos</a></h3>
+<h4 id="união"><a class="header" href="#união">União</a></h4>
+<p>\[
+A \cup B = {x \in \mathbb{U}: x \in A \lor x \in B}
+\]</p>
+<h4 id="interseção"><a class="header" href="#interseção">Interseção</a></h4>
+<p>\[
+A \cap B = {x \in \mathbb{U}: x \in A \land x \in B}
+\]</p>
+<h4 id="subtração"><a class="header" href="#subtração">Subtração</a></h4>
+<p>\[
+A - B = {x \in \mathbb{U}: x \in A \land x \not\in B}
+\]</p>
+<h4 id="exemplo-4"><a class="header" href="#exemplo-4">Exemplo</a></h4>
+<p>Seja \( \mathbb{U} = {1, 2, 3, ..., 12}, A = {n \in \mathbb{U}: n = 2k, k \in \mathbb{R}} \) e \(B = {n \in \mathbb{U}: \text{n é primo}} \). Então \( A \cup B = {2, 3, 4, 5, 6, 7, 8, 10, 11, 12} \), \( A \cap B = {2} \) e \( A - B = {4, 6, 8, 10, 12} \).</p>
+<h4 id="exemplo-5"><a class="header" href="#exemplo-5">Exemplo</a></h4>
+<p>Consideramos os intervalos da reta \( A = [1, 4) = {x \in \mathbb{R}: 1 \leq x &lt; 4} \) e \( B = (2, 6] = { x \in \mathbb{R}: 2 &lt; x \leq 6} \). Então \( A \cup B = [1, 6] \). \( A \cap B = (2, 4) \) e \( A - B = [1, 2] \).
+Além disso, \( [1, 2] \cap (2, 4) = \varnothing \) (conjunto vazio).</p>
+<h4 id="exemplo-6"><a class="header" href="#exemplo-6">Exemplo</a></h4>
+<p>\[
+x &gt; 0, y &gt; 0 \in \mathbb{R}, x \neq y \implies \frac{x}{y} + \frac{y}{x} &gt; 2
+\]</p>
+<h5 id="resolução-4"><a class="header" href="#resolução-4">Resolução</a></h5>
+<details>
+<p>\[
+Q = x \neq y \implies \frac{x}{y} + \frac{y}{x} &gt; 2
+\]</p>
+<p>\[
+\neg Q = x \neq y \implies \frac{x}{y} + \frac{y}{x} \leq 2
+\]</p>
+<p>\[
+\frac{x}{y} = \frac{y}{y} \leq 2 \implies xy \cdot (\frac{x}{y} + \frac{y}{x}) \leq xy \cdot 2 \implies x^{2} + y^{2} \leq 2xy \implies x^{2} - 2xy = y^{2} \leq 0 \implies (x - y)^{2} \leq 0
+\]</p>
+<p>\( (x - y)^{2} \) não pode ser menor que 0, devido ao quadrado, logo, a única opção é \( (x - y)^{2} = 0 \leftrightarrow x - y = 0 \leftrightarrow x = y \). O que é um absurdo, pois \( x \neq y \).</p>
+</details>
+<h4 id="exemplo-7"><a class="header" href="#exemplo-7">Exemplo</a></h4>
+<p>\[
+a &gt; 0, b &gt; 0, c &gt; 0 \in \mathbb{Z}, b = (a + 1), c = (a + 2), a^{2} + b^{2} = c^{2} \implies a = 3, b = 4, c = 5
+\]</p>
+<h5 id="resolução-5"><a class="header" href="#resolução-5">Resolução</a></h5>
+<details>
+<p>\[
+Q = a, b = (a + 1), c = (a + 2), a^{2} + b^{2} = c^{2} \implies a = 3, b = 4, c = 5
+\]</p>
+<p>\[
+\neg Q = a, b = (a + 1), c = (a + 2), a^{2} + b^{2} = c^{2} \implies a \neq 3, b \neq 4, c \neq 5
+\]</p>
+<p>\[
+a^{2} + (a + 1)^{2} = (a + 2)^{2} \implies a^{2} + a^{2} + 2a + 1 = a^{2} + 4a + 4 \implies a^{2} - 2a - 3 = 0 \implies ( a - 3)( a + 1) 0 \implies a = 3 \lor a = -1
+\]</p>
+<p>O que é um absurdo, pois em nossa negação \( a \neq 3 \).</p>
+</details>
+<h4 id="euclides"><a class="header" href="#euclides">Euclides</a></h4>
+<p>\[
+\sqrt{2} \in \mathbb{I}
+\]</p>
+<h5 id="demonstração"><a class="header" href="#demonstração">Demonstração</a></h5>
+<details>
+<p>\[
+\mathbb{Q} = \sqrt{2} \in \mathbb{I}
+\]</p>
+<p>\[
+\neg\mathbb{Q} = \sqrt{2}{ \in \mathbb{Q}, m \neq = 0, n \neq 0, \sqrt{2} = \frac{m}{n} \implies mdc{m, n} = 1 \implies \frac{m^{2}}{n^{2}} = 2 \lor 2n^{2} = m^{2} \implies n^{2} = \frac^{m^{2}}{2} \implies 2|m \implies m = 2k \implies</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../fem/fem.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../matematica-basica/matematica-basica.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../fem/fem.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../matematica-basica/matematica-basica.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../custom/mathjax.js"></script>
+        <script src="../custom/tikzjax.js"></script>
+
+
+    </div>
+    </body>
+</html>
