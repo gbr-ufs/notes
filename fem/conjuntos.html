@@ -186,20 +186,21 @@ C = \{2\}
 <p>É importante decompor as condições.
 Neste exemplo, \( x^2 &lt; 4 \implies x^2 - 4 &lt; 0 \implies (x - 2)( x + 2) &lt; 0 \implies \)
 \( x - 2 &lt; 0 \land x + 2 &gt; 0 \lor x - 2 &gt; 0 \land x + 2 &gt; 0 \implies \)
-\( x &gt; 2 \land x - 2 \), o que é impossível.</p>
-<h3 id="definição"><a class="header" href="#definição">Definição</a></h3>
+\( x &gt; 2 \land x - 2 \)
+, o que é impossível.</p>
+<h3 id="subconjunto"><a class="header" href="#subconjunto">Subconjunto</a></h3>
 <p>\[
-\forall x \in \mathbb{U}, x \in A \implies x \in B (A \supset B)
+(A \subset B) = \forall x \in \mathbb{U}, x \in A \implies x \in B
 \]</p>
-<p>Nesse caso, A está contido em B. E A é um subconjunto dele mesmo. Um subconjunto é próprio se A \supset B e A \neq B.</p>
-<h4 id="como-descobrir-se--a-supset-b-"><a class="header" href="#como-descobrir-se--a-supset-b-">Como descobrir se \( A \supset B \)</a></h4>
+<p>Nesse caso, A está contido em B. E A é um subconjunto dele mesmo. Um subconjunto é próprio se \( A \subset B \) e \( A \neq B \).</p>
+<h4 id="como-descobrir-se--a-subset-b-"><a class="header" href="#como-descobrir-se--a-subset-b-">Como descobrir se \( A \subset B \)</a></h4>
 <p>\[
 A = \{n \in \mathbb{Z}: n = 2k, k \in \mathbb{Z}\}
 \]</p>
 <p>\[
 B = \{m \in \mathbb{Z}: m = 6k, k \in \mathbb{Z}\}
 \]</p>
-<p>\( B \supset A \), pois se \( y \in B \implies y = 6k, k \in \mathbb{Z} \implies y = 2(3k) = 2u, u \in \mathbb{Z} \), cumprindo a exigência de A.</p>
+<p>\( B \subset A \), pois se \( y \in B \implies y = 6k, k \in \mathbb{Z} \implies y = 2(3k) = 2u, u \in \mathbb{Z} \), cumprindo a exigência de A.</p>
 <h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
 <p>Considere os conjuntos \( A = \{-4, 1, 2, 4, 10\} \), \( B = \{m \in \mathbb{Z}: |m| \leq 12\} \) e \( C = \{t \in \mathbb{Z}: t^2 + 3 \in [4, 20)\} \). Quais inclusões entre esses conjuntos é verdadeira?</p>
 <h4 id="resolução-1"><a class="header" href="#resolução-1">Resolução</a></h4>
@@ -207,22 +208,22 @@ B = \{m \in \mathbb{Z}: m = 6k, k \in \mathbb{Z}\}
 <p>\[
 B = \{-12, -11, -10, ..., 10, 11, 12\}
 \]</p>
-<p>Desse modo, temos que \( A \supset B \). Para \( C \), como \( t \) está elevado ao quadrado, se determinarmos os elementos positivos em C, os negativos também estarão. Assim, \( 4 \leq t^{3} + 3 &lt; 20 \implies 1 \leq t^2 &lt; 17 \implies 1 \leq t &lt; \sqrt{17} \). Logo, \( C = \{-4, -3, -2, -1, 1, 2, 3, 4\} \), \( C \supset B \), \( (10 \in A \land 10 \not\in C) \implies A \not\in C \).</p>
+<p>Desse modo, temos que \( A \subset B \). Para \( C \), como \( t \) está elevado ao quadrado, se determinarmos os elementos positivos em C, os negativos também estarão. Assim, \( 4 \leq t^{3} + 3 &lt; 20 \implies 1 \leq t^2 &lt; 17 \implies 1 \leq t &lt; \sqrt{17} \). Logo, \( C = \{-4, -3, -2, -1, 1, 2, 3, 4\} \), \( C \subset B \), \( (10 \in A \land 10 \not\in C) \implies A \not\in C \).</p>
 </details>
 <h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
 <p>\[
-((A \supset B) \land (B \supset C)) \implies A \supset C
+((A \subset B) \land (B \subset C)) \implies A \subset C
 \]</p>
 <h4 id="resolução-2"><a class="header" href="#resolução-2">Resolução</a></h4>
 <details>
-<p>Se \( A \supset B \) e \( B \supset C \), então \( (\forall a \in A \implies a \in B) \land (\forall b \in B \implies b \in C) \).
-Portanto, \( (\forall x \in A \implies x \in B \implies x \in C) \equiv A \supset C \).</p>
+<p>Se \( A \subset B \) e \( B \subset C \), então \( (\forall a \in A \implies a \in B) \land (\forall b \in B \implies b \in C) \).
+Portanto, \( (\forall x \in A \implies x \in B \implies x \in C) \equiv A \subset C \).</p>
 </details>
-<h3 id="observação--a-notsupset-b-"><a class="header" href="#observação--a-notsupset-b-">Observação \( (A \not\supset B) \)</a></h3>
-<p>Para provar uma afirmação da forma \( A \not\supset B \), basta encontrar um \( a \in A \), \( a \not\in B \). \( A \supset B \equiv \forall x, (x \in A \implies x \in B) \), então \( A \not\supset B \equiv \exists x \), \( (x \in A) \land (x \not\in B) \).</p>
+<h3 id="observação--a-notsubset-b-"><a class="header" href="#observação--a-notsubset-b-">Observação \( (A \not\subset B) \)</a></h3>
+<p>Para provar uma afirmação da forma \( A \not\subset B \), basta encontrar um \( a \in A \), \( a \not\in B \). \( A \subset B \equiv \forall x, (x \in A \implies x \in B) \), então \( A \not\subset B \equiv \exists x \), \( (x \in A) \land (x \not\in B) \).</p>
 <h3 id="observação--a--b-"><a class="header" href="#observação--a--b-">Observação \( A = B \)</a></h3>
 <p>\[
-A = B \leftrightarrow A \supset B \land B \supset A
+A = B \leftrightarrow A \subset B \land B \subset A
 \]</p>
 <h3 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h3>
 <p>\[
@@ -237,7 +238,7 @@ Q = \{x \in \mathbb{R}: 2 &lt; x &lt; 3\}
 <p>Seja \( y \in P \). \( y \in P \implies y^2 - 5y + 6 &lt; 0 \equiv (y - 2)(y - 3) &lt; 0 \). Temos dois casos possíveis:</p>
 <p>I. \( y - 2 &lt; 0 \land y - 3 &gt; 0 \)
 II. \( y - 2 &gt; 0 \land y - 3 &lt; 0 \)</p>
-<p>Em I, temos que \( y &lt; 2 \) e \( y &gt; 3 \), o que é um absurdo. Em II, \( 2 &lt; y &lt; 3 \leftrightarrow y \in \mathbb{Q} \). Com isso, seria necessário que \( \mathbb{Q} \supset P \). Seja \( z \in \mathbb{Q} \). Então \( 2 &lt; z &lt; 3 \) e daí \( y - 2 &gt; 0 \land y - 3 &lt; 0 \). Logo,\( (y - 2)(y - 3) &lt; 0 \) e, consequentemente, \( z^{2} - 5z + 6 &lt; 0 \).
+<p>Em I, temos que \( y &lt; 2 \) e \( y &gt; 3 \), o que é um absurdo. Em II, \( 2 &lt; y &lt; 3 \leftrightarrow y \in \mathbb{Q} \). Com isso, seria necessário que \( \mathbb{Q} \subset P \). Seja \( z \in \mathbb{Q} \). Então \( 2 &lt; z &lt; 3 \) e daí \( y - 2 &gt; 0 \land y - 3 &lt; 0 \). Logo,\( (y - 2)(y - 3) &lt; 0 \) e, consequentemente, \( z^{2} - 5z + 6 &lt; 0 \).
 Portanto, \( z \in \mathbb{P} \).</p>
 <h3 id="operações-sobre-conjuntos"><a class="header" href="#operações-sobre-conjuntos">Operações sobre Conjuntos</a></h3>
 <h4 id="união"><a class="header" href="#união">União</a></h4>
