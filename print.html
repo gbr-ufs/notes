@@ -267,45 +267,45 @@ Além disso, \( [1, 2] \cap (2, 4) = \varnothing \) (conjunto vazio).</p>
 <h3 id="Álgebra-de-conjuntos"><a class="header" href="#Álgebra-de-conjuntos">Álgebra de Conjuntos</a></h3>
 <p>Sejam \( A \), \( B \) e \( C \) subconjuntos de um conjunto universal, então:</p>
 <p>I. Propriedades do conjunto vazio: \( A \cap \varnothing = \varnothing e A \cup \varnothing = A \)</p>
-<p>II. Leis de Idempotência: \( A \cap A = A e A \cup A = A \)</p>
+<p>II. Leis de Idempotência: \( A \cap A = A \) e \( A \cup A = A \)</p>
 <p>III. Leis Comutativas: \( A \cap B = B \cap A \) e \( A \cup B = B \cup A \)</p>
 <p>IV. Leis Associativas: \( (A \cap B) \cap C = A \cap (B \cap C) \) e \( (A \cup B) \cup C = A \cup (B \cup C) \)</p>
-<p>V. Leis Distributivas: \( A \cap (B \cap C) = (A \cap B) \cup (A \cap C) e A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \)</p>
+<p>V. Leis Distributivas: \( A \cap (B \cap C) = (A \cap B) \cup (A \cap C) \)  e \( A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \)</p>
 <h3 id="uniões-e-interseções-generalizadas"><a class="header" href="#uniões-e-interseções-generalizadas">Uniões e Interseções Generalizadas</a></h3>
 <p>Esta seção aborda operações com mais de dois conjuntos. Seja \(n \in \mathbb{N} \) e \(A_{1}, A_{2}, ..., A_{n} \) subconjuntos de \( \mathbb{U} \).</p>
 <h4 id="definição"><a class="header" href="#definição">Definição</a></h4>
 <p>(a) A união dos conjuntos \( A_{i} \) como o conjunto</p>
 <p>\[
-\underset{\overset{\bigcup}{n}}{i \in 1} A_{i} = A_{1} \cup A_{2} \cup ... \cup A_{n} = \{ x \in \mathbb{U}: x \in A_{i}, \text{para algum} i = 1, 2, ..., n\}
+\underset{\overset{\bigcup}{n}}{i \in 1} A_{i} = A_{1} \cup A_{2} \cup ... \cup A_{n} = \{ x \in \mathbb{U}: x \in A_{i}, \text{para algum } i = 1, 2, ..., n\}
 \]</p>
 <p>(b) A interseção dos \( A_{i} \) como o conjunto</p>
 <p>\[
-\underset{\overset{\bigcap}{n}}{i = 1} A_{i} = A_{1} \cap A_{2} \cap ... \cap A_{n} = \{x \in \mathbb{U}: x \in A_{i}, \text{para todo} i = 1, 2, ..., n\}
+\underset{\overset{\bigcap}{n}}{i = 1} A_{i} = A_{1} \cap A_{2} \cap ... \cap A_{n} = \{x \in \mathbb{U}: x \in A_{i}, \text{para todo } i = 1, 2, ..., n\}
 \]</p>
 <h4 id="exemplo-6"><a class="header" href="#exemplo-6">Exemplo</a></h4>
 <p>Consideremos a família \( A_{i} = [0, \frac{1}{i}) \), com \( i = 1, 2, ..., 5 \). Então</p>
 <p>\[
-\underset{\overset{\bigcup}{5}}{i \in 1} A_{i} = [0, 1)
+\underset{i \in 1}{\overset{\bigcup}{5}} A_{i} = [0, 1)
 \]</p>
 <p>e</p>
 <p>\[
-\underset{\overset{\bigcap}{5}}{i = 1} A_{i} = [0, \frac{1}{5}) \)
+\underset{i = 1}{\overset{\bigcap}{5}} A_{i} = [0, \frac{1}{5})
 \]</p>
 <p>Por outro lado, se tomarmos a família \( B_{i} = [i, i + 1) \), com \( i = 1, 2, ..., 5 \). Então</p>
 <p>\[
-\underset{\overset{\bigcup}{5}}{i \in 1} B_{i} = [1, 6)
+\underset{i \in 1}{\overset{\bigcup}{5}} B_{i} = [1, 6)
 \]</p>
 <p>e</p>
 <p>\[
-\underset{\overset{\bigcup}{5}}{i = 1} B_{i} = \varnothing
+\underset{i = 1}{\overset{\bigcup}{5}} B_{i} = \varnothing
 \]</p>
 <p>O conjunto de índices pode ser todo o conjunto dos números naturais. No exemplo acima, teríamos então que</p>
 <p>\[
-\underset{\overset{\bigcup}{\infty}}{i \in 1} S_{n} = \underset{\overset{\bigcup}{\infty}}{i \in 1} (0, \frac{1}{n}) = (0, 1)
+\underset{i \in 1}{\overset{\bigcup}{\infty}} S_{n} = \underset{i \in 1}{\overset{\bigcup}{\infty}} (0, \frac{1}{n}) = (0, 1)
 \]</p>
 <p>e</p>
 <p>\[
-\underset{\overset{\bigcup}{\infty}}{i = 1} S_{n} = \underset{\overset{\bigcup}{\infty}}{i = 1} (0, \frac{1}{n}) = \varnothing
+\underset{i = 1}{\overset{\bigcup}{\infty}} S_{n} = \underset{i = 1}{\overset{\bigcup}{\infty}} (0, \frac{1}{n}) = \varnothing
 \]</p>
 <h3 id="conjunto-potência"><a class="header" href="#conjunto-potência">Conjunto Potência</a></h3>
 <p>Consideremos o conjunto \( A = \{x, y, z\} \). Então podemos construir um conjunto cujos elementos são os subconjuntos do conjunto \( A \). Note que \( A \) possui subconjuntos com zero, um, dois ou três elementos. Assim, denotando por \( \Rho(A) \), este novo conjunto, segue que</p>
