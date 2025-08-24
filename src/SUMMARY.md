@@ -2,6 +2,11 @@
 
 [Notes](titulo.md)
 
+## Fundamentos Elementares da Matemática
+
+- [Fundamentos Elementares da Matemática](fem/fem.md)
+  - [Conjuntos](fem/conjuntos.md)
+
 ## Matemática Básica
 
 - [Matemática Básica](matematica-basica/matematica-basica.md)
