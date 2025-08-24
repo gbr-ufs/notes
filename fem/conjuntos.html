@@ -217,8 +217,8 @@ A \subset B \land B \subset C \implies A \subset C
 \]</p>
 <h4 id="resolução-2"><a class="header" href="#resolução-2">Resolução</a></h4>
 <details>
-<p>Se \( A \subset B \) e \( B \subset C \), então \( \forall a \in A \implies a \in B \land \forall b \in B \implies b \in C \).
-Portanto, \( \forall x \in A \implies x \in B \implies x \in C \equiv A \subset C \).</p>
+<p>Se \( A \subset B \) e \( B \subset C \), então \( \forall a, a \in A \implies a \in B \land \forall b, b \in B \implies b \in C \).
+Portanto, \( \forall x, x \in A \implies x \in B \implies x \in C \equiv A \subset C \).</p>
 </details>
 <h3 id="observação--a-notsubset-b-"><a class="header" href="#observação--a-notsubset-b-">Observação \( (A \not\subset B) \)</a></h3>
 <p>Para provar uma afirmação da forma \( A \not\subset B \), basta encontrar um \( a \in A \), \( a \not\in B \). \( A \subset B \equiv \forall x, x \in A \implies x \in B \), então \( A \not\subset B \equiv \exists x \), \( x \in A \land x \not\in B \).</p>
@@ -240,7 +240,7 @@ Q = \{x \in \mathbb{R}: 2 &lt; x &lt; 3\}
 <p>I. \( y - 2 &lt; 0 \land y - 3 &gt; 0 \)</p>
 <p>II. \( y - 2 &gt; 0 \land y - 3 &lt; 0 \)</p>
 <p>Em I, temos que \( y &lt; 2 \) e \( y &gt; 3 \), o que é um absurdo. Em II, \( 2 &lt; y &lt; 3 \Longleftrightarrow y \in \mathbb{Q} \). Com isso, seria necessário que \( \mathbb{Q} \subset P \). Seja \( z \in \mathbb{Q} \). Então \( 2 &lt; z &lt; 3 \) e daí \( y - 2 &gt; 0 \land y - 3 &lt; 0 \). Logo,\( (y - 2)(y - 3) &lt; 0 \) e, consequentemente, \( z^{2} - 5z + 6 &lt; 0 \).
-Portanto, \( z \in \mathbb{P} \).</p>
+Portanto, \( z \in P \).</p>
 </details>
 <h3 id="operações-sobre-conjuntos"><a class="header" href="#operações-sobre-conjuntos">Operações sobre Conjuntos</a></h3>
 <h4 id="união"><a class="header" href="#união">União</a></h4>
@@ -256,81 +256,83 @@ A \cap B = \{x \in \mathbb{U}: x \in A \land x \in B\}
 A - B = \{x \in \mathbb{U}: x \in A \land x \not\in B\}
 \]</p>
 <h4 id="exemplo-4"><a class="header" href="#exemplo-4">Exemplo</a></h4>
-<p>Seja \( \mathbb{U} = \{1, 2, 3, ..., 12\} \), \( A = \{n \in \mathbb{U}: n = 2k, k \in \mathbb{R}\} \) e \(B = \{n \in \mathbb{U}: \text{n é primo}\} \). Então \( A \cup B = \{2, 3, 4, 5, 6, 7, 8, 10, 11, 12\} \), \( A \cap B = \{2\} \) e \( A - B = \{4, 6, 8, 10, 12\} \).</p>
+<p>Seja \( \mathbb{U} = \{1, 2, 3, ..., 12\} \), \( A = \{n \in \mathbb{U}: n = 2k, k \in \mathbb{R}\} \) e \(B = \{n \in \mathbb{U}: n \text{é primo}\} \). Então \( A \cup B = \{2, 3, 4, 5, 6, 7, 8, 10, 11, 12\} \), \( A \cap B = \{2\} \) e \( A - B = \{4, 6, 8, 10, 12\} \).</p>
 <h4 id="exemplo-5"><a class="header" href="#exemplo-5">Exemplo</a></h4>
 <p>Consideramos os intervalos da reta \( A = [1, 4) = \{x \in \mathbb{R}: 1 \leq x &lt; 4\} \) e \( B = (2, 6] = \{x \in \mathbb{R}: 2 &lt; x \leq 6\} \). Então \( A \cup B = [1, 6] \). \( A \cap B = (2, 4) \) e \( A - B = [1, 2] \).
 Além disso, \( [1, 2] \cap (2, 4) = \varnothing \) (conjunto vazio).</p>
+<h3 id="Álgebra-de-conjuntos"><a class="header" href="#Álgebra-de-conjuntos">Álgebra de Conjuntos</a></h3>
+<p>Sejam \( A \), \( B \) e \( C \) subconjuntos de um conjunto universal, então:</p>
+<p>I. Propriedades do conjunto vazio: \( A \cap \varnothing = \varnothing e A \cup \varnothing = A \)</p>
+<p>II. Leis de Idempotência: \( A \cap A = A e A \cup A = A \)</p>
+<p>III. Leis Comutativas: \( A \cap B = B \cap A \) e \( A \cup B = B \cup A \)</p>
+<p>IV. Leis Associativas: \( (A \cap B) \cap C = A \cap (B \cap C) \) e \( (A \cup B) \cup C = A \cup (B \cup C) \)</p>
+<p>V. Leis Distributivas: \( A \cap (B \cap C) = (A \cap B) \cup (A \cap C) e A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \)</p>
+<h3 id="uniões-e-interseções-generalizadas"><a class="header" href="#uniões-e-interseções-generalizadas">Uniões e Interseções Generalizadas</a></h3>
+<p>Esta seção aborda operações com mais de dois conjuntos. Seja \(n \in \mathbb{N} \) e \(A_{1}, A_{2}, ..., A_{n} \) subconjuntos de \( \mathbb{U} \).</p>
+<h4 id="definição"><a class="header" href="#definição">Definição</a></h4>
+<p>(a) A união dos conjuntos \( A_{i} \) como o conjunto</p>
+<p>\[
+\underset{\overset{\bigcup}{n}}{i \in 1} A_{i} = A_{1} \cup A_{2} \cup ... \cup A_{n} = \{ x \in \mathbb{U}: x \in A_{i}, \text{para algum} i = 1, 2, ..., n\}
+\]</p>
+<p>(b) A interseção dos \( A_{i} \) como o conjunto</p>
+<p>\[
+\underset{\overset{\bigcap}{n}}{i = 1} A_{i} = A_{1} \cap A_{2} \cap ... \cap A_{n} = \{x \in \mathbb{U}: x \in A_{i}, \text{para todo} i = 1, 2, ..., n\}
+\]</p>
 <h4 id="exemplo-6"><a class="header" href="#exemplo-6">Exemplo</a></h4>
+<p>Consideremos a família \( A_{i} = [0, \frac{1}{i}) \), com \( i = 1, 2, ..., 5 \). Então</p>
 <p>\[
-x &gt; 0, y &gt; 0 \in \mathbb{R}, x \neq y \implies \frac{x}{y} + \frac{y}{x} &gt; 2
+\underset{\overset{\bigcup}{5}}{i \in 1} A_{i} = [0, 1)
 \]</p>
-<h5 id="resolução-4"><a class="header" href="#resolução-4">Resolução</a></h5>
-<details>
+<p>e</p>
 <p>\[
-Q = x \neq y \implies \frac{x}{y} + \frac{y}{x} &gt; 2
+\underset{\overset{\bigcap}{5}}{i = 1} A_{i} = [0, \frac{1}{5}) \)
 \]</p>
+<p>Por outro lado, se tomarmos a família \( B_{i} = [i, i + 1) \), com \( i = 1, 2, ..., 5 \). Então</p>
 <p>\[
-\neg Q = x \neq y \implies \frac{x}{y} + \frac{y}{x} \leq 2
+\underset{\overset{\bigcup}{5}}{i \in 1} B_{i} = [1, 6)
 \]</p>
+<p>e</p>
 <p>\[
-\frac{x}{y} = \frac{y}{y} \leq 2 \implies
+\underset{\overset{\bigcup}{5}}{i = 1} B_{i} = \varnothing
 \]</p>
+<p>O conjunto de índices pode ser todo o conjunto dos números naturais. No exemplo acima, teríamos então que</p>
 <p>\[
-xy \cdot (\frac{x}{y} + \frac{y}{x}) \leq xy \cdot 2 \implies
+\underset{\overset{\bigcup}{\infty}}{i \in 1} S_{n} = \underset{\overset{\bigcup}{\infty}}{i \in 1} (0, \frac{1}{n}) = (0, 1)
 \]</p>
+<p>e</p>
 <p>\[
-x^{2} + y^{2} \leq 2xy \implies
+\underset{\overset{\bigcup}{\infty}}{i = 1} S_{n} = \underset{\overset{\bigcup}{\infty}}{i = 1} (0, \frac{1}{n}) = \varnothing
 \]</p>
+<h3 id="conjunto-potência"><a class="header" href="#conjunto-potência">Conjunto Potência</a></h3>
+<p>Consideremos o conjunto \( A = \{x, y, z\} \). Então podemos construir um conjunto cujos elementos são os subconjuntos do conjunto \( A \). Note que \( A \) possui subconjuntos com zero, um, dois ou três elementos. Assim, denotando por \( \Rho(A) \), este novo conjunto, segue que</p>
 <p>\[
-x^{2} - 2xy = y^{2} \leq 0
+\Rho(A) = \{\varnothing, \{x\}, \{y\}, \{z\}, \{x, y\}, \{x, z\}, \{y, z\}, \{x, y, z\}.
 \]</p>
+<p>Que possui 8 elementos.</p>
+<p>\
+\Rho(A) = \{X: X \subset A \}</p>
+<h4 id="teorema"><a class="header" href="#teorema">Teorema</a></h4>
+<p>Se \( A \) é um conjunto \( n \) de elementos, então \( \Rho(A) \) é um conjunto com \( 2^{n} \) elementos.</p>
+<h4 id="teorema-1"><a class="header" href="#teorema-1">Teorema</a></h4>
+<p>Sejam \( A \) e \( B \) conjuntos. Então \( A \subset B \Longleftrightarrow \Rho(A) \subset \Rho(B) \).</p>
+<h3 id="produto-cartesiano"><a class="header" href="#produto-cartesiano">Produto Cartesiano</a></h3>
+<p>Conjunto formado por pares <strong>ordenados</strong> \( (a, b) \).</p>
+<h4 id="definição-1"><a class="header" href="#definição-1">Definição</a></h4>
+<p>Sejam \( A \) e \( B \) conjuntos. Definimos o produto cartesiano de \( A \) e \( B \) \( (A \times B) \) como o conjunto</p>
 <p>\[
-\implies (x - y)^{2} \leq 0
+A \times B = \{(a, b): a \in A \land b \in B\}
 \]</p>
-<p>\( (x - y)^{2} \) não pode ser menor que 0, devido ao quadrado, logo, a única opção é \( (x - y)^{2} = 0 \Longleftrightarrow x - y = 0 \Longleftrightarrow x = y \). O que é um absurdo, pois \( x \neq y \).</p>
-</details>
+<p>onde \( (a, b) \) denota um par ordenado.</p>
 <h4 id="exemplo-7"><a class="header" href="#exemplo-7">Exemplo</a></h4>
+<p>Sejam \( A = \{a, b, c \} \) e \( B = \{1, 2\} \). Então</p>
 <p>\[
-a &gt; 0, b &gt; 0, c &gt; 0 \in \mathbb{Z}, b = (a + 1), c = (a + 2), a^{2} + b^{2} = c^{2} \implies a = 3, b = 4, c = 5
+A \times B = \{(a, 1), (a, 2), (b, 1), (b, 2), (c, 1), (c, 2)\}
 \]</p>
-<h5 id="resolução-5"><a class="header" href="#resolução-5">Resolução</a></h5>
-<details>
-<p>\[
-Q = a, b = (a + 1), c = (a + 2), a^{2} + b^{2} = c^{2} \implies a = 3, b = 4, c = 5
-\]</p>
-<p>\[
-\neg Q = a, b = (a + 1), c = (a + 2), a^{2} + b^{2} = c^{2} \implies a \neq 3, b \neq 4, c \neq 5
-\]</p>
-<p>\[
-a^{2} + (a + 1)^{2} = (a + 2)^{2} \implies
-\]</p>
-<p>\[
-a^{2} + a^{2} + 2a + 1 = a^{2} + 4a + 4 \implies
-\]</p>
-<p>\[
-a^{2} - 2a - 3 = 0 \implies
-\]</p>
-<p>\[
-( a - 3)( a + 1) 0 \implies
-\]</p>
-<p>\[
-a = 3 \lor a = -1
-\]</p>
-<p>O que é um absurdo, pois em nossa negação \( a \neq 3 \).</p>
-</details>
-<h4 id="euclides"><a class="header" href="#euclides">Euclides</a></h4>
-<p>\[
-\sqrt{2} \in \mathbb{I}
-\]</p>
-<h5 id="demonstração"><a class="header" href="#demonstração">Demonstração</a></h5>
-<details>
-<p>\[
-\mathbb{Q} = \sqrt{2} \in \mathbb{I}
-\]</p>
-<p>\[
-\neg\mathbb{Q} = \sqrt{2}{ \in \mathbb{Q}, m \neq = 0, n \neq 0, \sqrt{2} = \frac{m}{n} \implies mdc{m, n} = 1 \implies \frac{m^{2}}{n^{2}} = 2 \lor 2n^{2} = m^{2} \implies n^{2} = \frac^{m^{2}}{2} \implies 2|m \implies m = 2k \implies
-\]</p>
-</details>
+<h4 id="teorema-2"><a class="header" href="#teorema-2">Teorema</a></h4>
+<p>Sejam \( A \), \( B \), \( C \) e \( D \) conjuntos.</p>
+<p>I. Se \( A \subset B \) e \( C \subset D \), então \( A times C \subset B \times D \)</p>
+<p>II. \( A \times B \cup C = A \times B \cup A \times C \) e \( A \times (B \cap C) = (A \times B) \cap (A \times C)\)</p>
+<p>III. \( A \cap B \times C \cap D = A \times C \cap B \times D \)</p>
 
                     </main>
 
