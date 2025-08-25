@@ -15,6 +15,10 @@
 ## Vetores
 
 - [Vetores](vetores/vetores.md)
+  - [Cônicas](vetores/conicas/conicas.md)
+    - [Parábola](vetores/conicas/parabola.md)
+    - [Elipse](vetores/conicas/elipse.md)
+    - [Hipérbole](vetores/conicas/hiperbole.md)
 
 ## Programação
 
