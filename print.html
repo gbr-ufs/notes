@@ -1216,26 +1216,104 @@ e) \( \frac{4 \cdot (x + 1)}{(1 - x)} \)</p>
 <p>STEINBRUCH, A.; WINTERLE, P. Geometria Analitica. 2. ed. São Paulo: McGraw-Hill, 2006.</p>
 <h2 id="complementar"><a class="header" href="#complementar">Complementar</a></h2>
 <p>REIS, G. L. DOS; SILVA, V. V. DA. Geometria analitica. 2. ed. Rio de Janeiro: Livros Tecnicos e Cientificos, 1996.</p>
-<h1 id="estrutura"><a class="header" href="#estrutura">Estrutura</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="cônicas"><a class="header" href="#cônicas">Cônicas</a></h2>
+<p>Considere duas retas concorrentes e não-perpendiculares, \( g \) e (( e \), que se intersectam em um ponto \( O \). Fazendo \( g \) girar 360 graus em torno de \( e \), obtemos dois cones.</p>
+<p>Uma geratriz de C é uma reta obtida girando \( g \) a um ângulo \( 0 \leq \theta &lt; 2\pi \) em torno de \( e \). Uma cônica é uma curva obtida intersectando \( C \) com um plano \( \pi \) que não passa por \( O \).</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="parábola"><a class="header" href="#parábola">Parábola</a></h3>
+<p>Obtida ao cortar um cone de forma paralela à geratriz de \( C \).</p>
+<h4 id="definição-2"><a class="header" href="#definição-2">Definição</a></h4>
+<p>Sejam \( d \) uma reta no plano e \( F \) um ponto não pertencente a \( d \). A parábola \( \rho \) de diretriz \( d \) e foco \( F \) é o conjunto que consiste em todos os pontos \( P \) do plano, equidistantes do ponto \( F \) e da reta \( d \), isto é,</p>
+<p>\[
+\rho = \{P; d(P, F) = d(P, d_{\text{reta}})\}
+\]</p>
+<p>O eixo \( e \) da parábola é a reta que passa pelo foco \( F \) e é perpendicular a reta diretriz \( d \). O vértice \( V \) da parábola é o ponto de interseção da parábola com o eixo \( e \).</p>
+<h4 id="equações-reduzidas"><a class="header" href="#equações-reduzidas">Equações Reduzidas</a></h4>
+<h5 id="parábola-com-vértice-na-origem-e-eixo-coincidente-com-o-eixo--y-"><a class="header" href="#parábola-com-vértice-na-origem-e-eixo-coincidente-com-o-eixo--y-">Parábola com vértice na origem e eixo coincidente com o eixo \( y \)</a></h5>
 <ul>
-<li>Dividido em 3 unidades</li>
-<li>Aulas antes da prova são de exercícios</li>
-</ul>
-<h2 id="unidade-1"><a class="header" href="#unidade-1">Unidade 1</a></h2>
+<li>\( F = (0, a) \)</li>
+<li>\( a \neq 0 \)</li>
+<li>\( d(V, d) = d(V, F) = |a| \)</li>
+<li>\( d \) é uma reta horizontal
 <ul>
-<li>Capítulos 1, 2, 3 e 4.</li>
-<li>Prova 12/06</li>
+<li>\( d: y = -a \)</li>
 </ul>
-<h2 id="unidade-2"><a class="header" href="#unidade-2">Unidade 2</a></h2>
+</li>
+</ul>
+<p>\( P = (x, y) \in \rho \Longleftrightarrow d(P, F) = d(P, d) \). A reta que passa pelo ponto \( P = (x, y) \) e é perpendicular a reta diretriz \( d \) intersecta \( d \) no ponto \( P = (x, -a) \), consequentemente,</p>
+<p>\[
+d(P, d) = d(P, P') = \sqrt{(y + a)^{2}} = |y + a|
+\]</p>
+<p>\[
+P = (x, y) \in \rho \Longleftrightarrow x^{2} = 4ay
+\]</p>
+<h6 id="abertura"><a class="header" href="#abertura">Abertura</a></h6>
 <ul>
-<li>Capítulos 5, 6 e 7.</li>
-<li>Prova: 07/08</li>
+<li>\( a &gt; 0 \) indica uma abertura para cima</li>
+<li>\( a &lt; 0 \) indica uma abertura para baixo</li>
 </ul>
-<h2 id="unidade-3"><a class="header" href="#unidade-3">Unidade 3</a></h2>
+<h5 id="parábola-com-vértice-na-origem-e-eixo-coincidente-com-o-eixo-x"><a class="header" href="#parábola-com-vértice-na-origem-e-eixo-coincidente-com-o-eixo-x">Parábola com vértice na origem e eixo coincidente com o eixo x</a></h5>
 <ul>
-<li>Capítulos 8 e 9.</li>
-<li>Prova: 09/09</li>
+<li>\( F = (0, a) \)</li>
+<li>\( a \neq 0 \)</li>
+<li>\( d(V, d) = d(V, F) = |a| \)</li>
+<li>\( d \) é uma reta vertical
+<ul>
+<li>\( d: x = -a \)</li>
 </ul>
+</li>
+</ul>
+<p>\( P = (x, y) \in \rho \Longleftrightarrow d(P, F) = d(P, d) \). A reta que passa por \( P = (x, y) \) e é perpendicular a reta diretriz \( d \) intersecta \( d \) no ponto \( P = (-a, y) \), consequentemente,</p>
+<p>\[
+d(P, d) = d(P, P') = \sqrt{(x + a)^{2}} = |x + a|
+\]</p>
+<h6 id="abertura-1"><a class="header" href="#abertura-1">Abertura</a></h6>
+<ul>
+<li>\( a &gt; 0 \) indica uma abertura para direita</li>
+<li>\( a &lt; 0 \) indica uma abertura para esquerda</li>
+</ul>
+<h5 id="parábola-com-vértice-em--v--x_0-y_0--e-eixo-paralelo-ao-eixo--y-"><a class="header" href="#parábola-com-vértice-em--v--x_0-y_0--e-eixo-paralelo-ao-eixo--y-">Parábola com vértice em \( V = (x_{0}, y_{0}) \) e eixo paralelo ao eixo \( y \)</a></h5>
+<ul>
+<li>\( F = (x_{0}, y_{0} + a) \)</li>
+<li>\( a \neq 0 \)</li>
+<li>\( d \) é uma reta horizontal
+<ul>
+<li>\( d: y = y_{0} - a \)</li>
+</ul>
+</li>
+<li>\( e: x = x_{0} \)</li>
+<li>\( (x - x)^{2} = 4a(y - y_{0}) \)</li>
+</ul>
+<h6 id="abertura-2"><a class="header" href="#abertura-2">Abertura</a></h6>
+<ul>
+<li>\( a &gt; 0 \) indica uma abertura para cima</li>
+<li>\( a &lt; 0 \) indica uma abertura para baixo</li>
+</ul>
+<h5 id="parábola-com-vértice--v--x_0-y_0--e-eixo-paralelo-ao-eixo--x-"><a class="header" href="#parábola-com-vértice--v--x_0-y_0--e-eixo-paralelo-ao-eixo--x-">Parábola com vértice \( V = (x_{0}, y_{0}) \) e eixo paralelo ao eixo \( x \)</a></h5>
+<ul>
+<li>\( F = (x_{0} + a, y_{0}) \)</li>
+<li>\( a \neq 0 \)</li>
+<li>\( d \) é uma reta vertical
+<ul>
+<li>\( d: x = x_{0} - a \)</li>
+</ul>
+</li>
+<li>\( e: y = y_{0} \)</li>
+<li>\( (y - y_{0})^{2} = 4a(x - x_{0}) \)</li>
+</ul>
+<h6 id="abertura-3"><a class="header" href="#abertura-3">Abertura</a></h6>
+<ul>
+<li>\( a &gt; 0 \) indica uma abertura para direita</li>
+<li>\( a &lt; 0 \) indica uma abertura para esquerda</li>
+</ul>
+<h4 id="equação-geral"><a class="header" href="#equação-geral">Equação Geral</a></h4>
+<ul>
+<li>Paralelo ao eixo \( y \): \( Ax^{2} + Cx + Dy + E = 0, A \neq 0 \)</li>
+<li>Paralelo ao eixo \( x \): \( By^{2} + Cx + Dy + E = 0, B \neq 0 \)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="elipse"><a class="header" href="#elipse">Elipse</a></h3>
+<p>Quando apenas um dos cones é cortado de uma forma não paralela.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="hipérbole"><a class="header" href="#hipérbole">Hipérbole</a></h3>
+<p>Quando o corte não é paralelo e os dois cones são cortados.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="programação"><a class="header" href="#programação">Programação</a></h1>
 <blockquote>
 <p>[...] [P]rocesso de escrita, testes e manutenção de programas de computadores. Esses programas, por sua vez, são compostos por conjuntos de instruções determinados pelo programador que descrevem tarefas a serem realizadas pela máquina e atendem diversas finalidades.</p>
