@@ -177,35 +177,37 @@ I(R) = \{3, 4\}
 <p>(1) Sobre \( \mathbb{Z} \) consideremos a relação \( R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} : x + y = 0\} \). Enstão \( R = \{..., (-1, 1), (1, -1), (0, 0), (2, -2), ...\} \) é o conjunto de pontos sobre a reta dada pela equação \( y = -x \) com coordenadas inteiras.</p>
 <p>(2) Sobre o conjunto \( \mathbb{N} \times \mathbb{N} \) considere a relação \( (m, n)R(s, r) \Longleftrightarrow m + r = n + s \). Esta relação possui uma infinidade de elementos. Por exemplo, \( (1, 1)R(2, 2), (1, 3)R(5, 7), ...\).</p>
 <p>(3) Seja \( E = \{(x, y) \in \mathbb{R} \times \mathbb{R} : \frac{x^{2}}{324} + \frac{y^{2}}{64} \leq 1\} \). O gráfico de \( E \) é constituído pelos pontos do plano que estão dentro e sobre a elipse.</p>
-<p>\begin{tikzpicture}
-% Gerado pelo Gemini 2.5 Pro da Google
-%
-% --- Grade de fundo ---
-% Desenha uma grade cinza clara de 6x4 unidades.
-\draw[step=1, gray, very thin] (0,0) grid (6,4);</p>
-<pre><code>% --- Elipse ---
-% Define as coordenadas do centro da elipse.
-\coordinate (centro_elipse) at (3,2);
+<script type="text/tikz">
+\begin{tikzpicture}
+    % Gerado pelo Gemini 2.5 Pro da Google
+    %
+    % --- Grade de fundo ---
+    % Desenha uma grade cinza clara de 6x4 unidades.
+    \draw[step=1, gray, very thin] (0,0) grid (6,4);
 
-% Desenha e preenche a elipse.
-% 'fill=green!20' define a cor de preenchimento (verde claro).
-% 'draw=green!60!black' define a cor da borda (um verde mais escuro).
-% A elipse está centrada em (3,2) com raio horizontal de 2.5 e vertical de 1.
-\filldraw[fill=green!20, draw=green!60!black] (centro_elipse) ellipse (2.5 and 1);
+    % --- Elipse ---
+    % Define as coordenadas do centro da elipse.
+    \coordinate (centro_elipse) at (3,2);
 
-% --- Rótulos (Labels) ---
-% Adiciona a letra "E" em vermelho no centro da elipse.
-\node[red] at (centro_elipse) {E};
+    % Desenha e preenche a elipse.
+    % 'fill=green!20' define a cor de preenchimento (verde claro).
+    % 'draw=green!60!black' define a cor da borda (um verde mais escuro).
+    % A elipse está centrada em (3,2) com raio horizontal de 2.5 e vertical de 1.
+    \filldraw[fill=green!20, draw=green!60!black] (centro_elipse) ellipse (2.5 and 1);
 
-% Adiciona o número "8" acima do topo da elipse.
-% '[anchor=south]' alinha o texto pela sua base.
-\node[anchor=south] at (3,3) {8};
+    % --- Rótulos (Labels) ---
+    % Adiciona a letra "E" em vermelho no centro da elipse.
+    \node[red] at (centro_elipse) {E};
 
-% Adiciona o número "18" à direita da elipse.
-% '[anchor=west]' alinha o texto pelo seu lado esquerdo.
-\node[anchor=west] at (5.5,2) {18};
-</code></pre>
-<p>\end{tikzpicture}</p>
+    % Adiciona o número "8" acima do topo da elipse.
+    % '[anchor=south]' alinha o texto pela sua base.
+    \node[anchor=south] at (3,3) {8};
+
+    % Adiciona o número "18" à direita da elipse.
+    % '[anchor=west]' alinha o texto pelo seu lado esquerdo.
+    \node[anchor=west] at (5.5,2) {18};
+\end{tikzpicture}
+</script>
 
                     </main>
 
