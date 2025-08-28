@@ -6,6 +6,7 @@
 
 - [Fundamentos Elementares da Matemática](fem/fem.md)
   - [Conjuntos](fem/conjuntos.md)
+  - [Relações](fem/relacoes.md)
 
 ## Matemática Básica
 
