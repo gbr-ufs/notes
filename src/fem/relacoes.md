@@ -38,6 +38,6 @@ O domínio fica na esquerda e a imagem na direita.
 
 <details>
 
-![Gráfico exibindo uma elipse no centro, com os pontos 8 e 18 pertencendo à ela](../../img/fem/grafico_e.png)
+![Gráfico exibindo uma elipse no centro, com os pontos 8 e 18 pertencendo à ela](../img/fem/grafico_e.png)
 
 </details>
