@@ -22,14 +22,14 @@ O eixo \\( e \\) da parábola é a reta que passa pelo foco \\( F \\) e é perpe
 - \\( d \\) é uma reta horizontal
   - \\( d: y = -a \\)
 
-\\( P = (x, y) \in \mathcal{P} \Longleftrightarrow d(P, F) = d(P, d) \\). A reta que passa pelo ponto \\( P = (x, y) \\) e é perpendicular a reta diretriz \\( d \\) intersecta \\( d \\) no ponto \\( P = (x, -a) \\), consequentemente,
+\\( P = (x, y) \in \mathcal{P} \iff d(P, F) = d(P, d) \\). A reta que passa pelo ponto \\( P = (x, y) \\) e é perpendicular a reta diretriz \\( d \\) intersecta \\( d \\) no ponto \\( P = (x, -a) \\), consequentemente,
 
 \\[
 d(P, d) = d(P, P') = \sqrt{(y + a)^{2}} = |y + a|
 \\]
 
 \\[
-P = (x, y) \in \mathcal{P} \Longleftrightarrow x^{2} = 4ay
+P = (x, y) \in \mathcal{P} \iff x^{2} = 4ay
 \\]
 
 ###### Abertura
@@ -45,7 +45,7 @@ P = (x, y) \in \mathcal{P} \Longleftrightarrow x^{2} = 4ay
 - \\( d \\) é uma reta vertical
   - \\( d: x = -a \\)
 
-\\( P = (x, y) \in \mathcal{P} \Longleftrightarrow d(P, F) = d(P, d) \\). A reta que passa por \\( P = (x, y) \\) e é perpendicular a reta diretriz \\( d \\) intersecta \\( d \\) no ponto \\( P = (-a, y) \\), consequentemente,
+\\( P = (x, y) \in \mathcal{P} \iff d(P, F) = d(P, d) \\). A reta que passa por \\( P = (x, y) \\) e é perpendicular a reta diretriz \\( d \\) intersecta \\( d \\) no ponto \\( P = (-a, y) \\), consequentemente,
 
 \\[
 d(P, d) = d(P, P') = \sqrt{(x + a)^{2}} = |x + a|

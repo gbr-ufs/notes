@@ -103,7 +103,7 @@ Para provar uma afirmação da forma \\( A \not\subset B \\), basta encontrar um
 ### Observação \\( (A = B) \\)
 
 \\[
-A = B \Longleftrightarrow A \subset B \land B \subset A
+A = B \iff A \subset B \land B \subset A
 \\]
 
 ### Exemplo
@@ -128,7 +128,7 @@ I. \\( y - 2 < 0 \land y - 3 > 0 \\)
 
 II. \\( y - 2 > 0 \land y - 3 < 0 \\)
 
-Em I, temos que \\( y < 2 \\) e \\( y > 3 \\), o que é um absurdo. Em II, \\( 2 < y < 3 \Longleftrightarrow y \in \mathbb{Q} \\). Com isso, seria necessário que \\( \mathbb{Q} \subset P \\). Seja \\( z \in \mathbb{Q} \\). Então \\( 2 < z < 3 \\) e daí \\( y - 2 > 0 \land y - 3 < 0 \\). Logo,\\( (y - 2)(y - 3) < 0 \\) e, consequentemente, \\( z^{2} - 5z + 6 < 0 \\).
+Em I, temos que \\( y < 2 \\) e \\( y > 3 \\), o que é um absurdo. Em II, \\( 2 < y < 3 \iff y \in \mathbb{Q} \\). Com isso, seria necessário que \\( \mathbb{Q} \subset P \\). Seja \\( z \in \mathbb{Q} \\). Então \\( 2 < z < 3 \\) e daí \\( y - 2 > 0 \land y - 3 < 0 \\). Logo,\\( (y - 2)(y - 3) < 0 \\) e, consequentemente, \\( z^{2} - 5z + 6 < 0 \\).
 Portanto, \\( z \in P \\).
 
 </details>
@@ -252,7 +252,7 @@ Se \\( A \\) é um conjunto \\( n \\) de elementos, então \\( \rho(A) \\) é um
 
 #### Teorema
 
-Sejam \\( A \\) e \\( B \\) conjuntos. Então \\( A \subset B \Longleftrightarrow \rho(A) \subset \rho(B) \\).
+Sejam \\( A \\) e \\( B \\) conjuntos. Então \\( A \subset B \iff \rho(A) \subset \rho(B) \\).
 
 ### Produto Cartesiano
 

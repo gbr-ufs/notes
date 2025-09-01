@@ -59,7 +59,7 @@ c^{2} = a^{2} + b^{2}
 - \\( F_{1} = (0, -c) \\)
 - \\( F_{2} = (0, c) \\)
 - Equação das assíntotas: \\( y = -\frac{a}{b}x \text{ e } y = \frac{a}{b}x \\)
-- \\( P = (x, y) \in \mathcal{H} \Longleftrightarrow \frac{y^{2}}{a^{2}} - \frac{x^{2}}{b^{2}} = 1\\)
+- \\( P = (x, y) \in \mathcal{H} \iff \frac{y^{2}}{a^{2}} - \frac{x^{2}}{b^{2}} = 1\\)
 
 ##### Hipérbole com centro na origem e reta focal coincidente com o eixo \\( x \\)
 
@@ -71,7 +71,7 @@ c^{2} = a^{2} + b^{2}
 - \\( F_{1} = (-c, 0) \\)
 - \\( F_{2} = (c, 0) \\)
 - Equação das assíntotas: \\( y = -\frac{b}{a}x \text{ e } y = \frac{b}{a}x \\)
-- \\( P = (x, y) \in \mathcal{H} \Longleftrightarrow \frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\\)
+- \\( P = (x, y) \in \mathcal{H} \iff \frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\\)
 
 ##### Hipérbole com centro em \\( C = (x_{0}, y_{0}) \\) e reta focal paralela ao eixo \\( y \\)
 
@@ -85,7 +85,7 @@ c^{2} = a^{2} + b^{2}
 - Equação das assíntotas: \\( y = -\frac{a}{b}(x - x_{0}) + y_{0} \text{ e } y = \frac{a}{b}(x - x_{0}) + y_{0} \\)
 - Reta focal: \\( l : x = x_{0} \\)
 - Reta imaginária: \\( l' : y = y_{0} \\)
-- \\( P = (x, y) \in \mathcal{H} \Longleftrightarrow \frac{(y - y_{0})^{2}}{a^{2}} - \frac{(x - x_{0})^{2}}{b^{2}} = 1\\)
+- \\( P = (x, y) \in \mathcal{H} \iff \frac{(y - y_{0})^{2}}{a^{2}} - \frac{(x - x_{0})^{2}}{b^{2}} = 1\\)
 
 ##### Hipérbole com centro em \\( C = (x_{0}, y_{0}) \\) e reta focal paralela ao eixo \\( x \\)
 
@@ -99,7 +99,7 @@ c^{2} = a^{2} + b^{2}
 - Equação das assíntotas: \\( y = -\frac{b}{a}(x - x_{0}) + y_{0} \text{ e } y = \frac{b}{a}(x - x_{0}) + y_{0} \\)
 - Reta focal: \\( l : x = x_{0} \\)
 - Reta imaginária: \\( l' : y = y_{0} \\)
-- \\( P = (x, y) \in \mathcal{H} \Longleftrightarrow \frac{(x - x_{0})^{2}}{a^{2}} - \frac{(y - y_{0})^{2}}{b^{2}} = 1\\)
+- \\( P = (x, y) \in \mathcal{H} \iff \frac{(x - x_{0})^{2}}{a^{2}} - \frac{(y - y_{0})^{2}}{b^{2}} = 1\\)
 
 #### Equação Geral
 

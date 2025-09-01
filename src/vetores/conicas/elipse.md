@@ -57,7 +57,7 @@ b^{2} = a^{2} - c^{2}
 - \\( C = (0, 0) \\)
 - \\( F_{1} = (0, -c) \\)
 - \\( F_{2} = (0, c) \\)
-- \\( P = (x, y) \in \mathcal{E} \Longleftrightarrow \frac{x^{2}}{b^{2}} \frac{y^{2}}{a^{2}} = 1\\)
+- \\( P = (x, y) \in \mathcal{E} \iff \frac{x^{2}}{b^{2}} \frac{y^{2}}{a^{2}} = 1\\)
 
 ##### Elipse com centro na origem e eixo focal coincidente com o eixo \\( x \\)
 
@@ -68,7 +68,7 @@ b^{2} = a^{2} - c^{2}
 - \\( C = (0, 0) \\)
 - \\( F_{1} = (-c, 0) \\)
 - \\( F_{2} = (c, 0) \\)
-- \\( P = (x, y) \in \mathcal{E} \Longleftrightarrow \frac{x^{2}}{a^{2}} \frac{y^{2}}{b^{2}} = 1\\)
+- \\( P = (x, y) \in \mathcal{E} \iff \frac{x^{2}}{a^{2}} \frac{y^{2}}{b^{2}} = 1\\)
 
 ##### Observação
 
@@ -84,7 +84,7 @@ Um jeito fácil de descobrir com qual eixo o eixo focal coincide é olhando os v
 - \\( F_{1} = (x_{0}, y_{0} - c) \\)
 - \\( F_{1} = (x_{0}, y_{0} + c) \\)
 - \\( l : x = x_{0} \\)
-- \\( P = (x, y) \in \mathcal{E} \Longleftrightarrow \frac{(x - x_{0})^{2}}{b^{2}} + \frac{(y - y_{0})^{2}}{a^{2}} = 1\\)
+- \\( P = (x, y) \in \mathcal{E} \iff \frac{(x - x_{0})^{2}}{b^{2}} + \frac{(y - y_{0})^{2}}{a^{2}} = 1\\)
 
 ##### Elipse com centro \\( C = (x_{0}, y_{0}) \\) e eixo focal paralelo ao eixo \\( x \\)
 
@@ -96,7 +96,7 @@ Um jeito fácil de descobrir com qual eixo o eixo focal coincide é olhando os v
 - \\( F_{1} = (x_{0} - c, y_{0}) \\)
 - \\( F_{1} = (x_{0} + c, y_{0}) \\)
 - \\( l : y = y_{0} \\)
-- \\( P = (x, y) \in \mathcal{E} \Longleftrightarrow \frac{(x - x_{0})^{2}}{a^{2}} + \frac{(y - y_{0})^{2}}{b^{2}} = 1\\)
+- \\( P = (x, y) \in \mathcal{E} \iff \frac{(x - x_{0})^{2}}{a^{2}} + \frac{(y - y_{0})^{2}}{b^{2}} = 1\\)
 
 ##### Observação
 
