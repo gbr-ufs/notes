@@ -224,7 +224,7 @@ Portanto, \( \forall x, x \in A \implies x \in B \implies x \in C \equiv A \subs
 <p>Para provar uma afirmação da forma \( A \not\subset B \), basta encontrar um \( a \in A \), \( a \not\in B \). \( A \subset B \equiv \forall x, x \in A \implies x \in B \), então \( A \not\subset B \equiv \exists x \), \( x \in A \land x \not\in B \).</p>
 <h3 id="observação--a--b-"><a class="header" href="#observação--a--b-">Observação \( (A = B) \)</a></h3>
 <p>\[
-A = B \Longleftrightarrow A \subset B \land B \subset A
+A = B \iff A \subset B \land B \subset A
 \]</p>
 <h3 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h3>
 <p>\[
@@ -239,7 +239,7 @@ Q = \{x \in \mathbb{R}: 2 &lt; x &lt; 3\}
 <p>Seja \( y \in P \). \( y \in P \implies y^2 - 5y + 6 &lt; 0 \equiv (y - 2)(y - 3) &lt; 0 \). Temos dois casos possíveis:</p>
 <p>I. \( y - 2 &lt; 0 \land y - 3 &gt; 0 \)</p>
 <p>II. \( y - 2 &gt; 0 \land y - 3 &lt; 0 \)</p>
-<p>Em I, temos que \( y &lt; 2 \) e \( y &gt; 3 \), o que é um absurdo. Em II, \( 2 &lt; y &lt; 3 \Longleftrightarrow y \in \mathbb{Q} \). Com isso, seria necessário que \( \mathbb{Q} \subset P \). Seja \( z \in \mathbb{Q} \). Então \( 2 &lt; z &lt; 3 \) e daí \( y - 2 &gt; 0 \land y - 3 &lt; 0 \). Logo,\( (y - 2)(y - 3) &lt; 0 \) e, consequentemente, \( z^{2} - 5z + 6 &lt; 0 \).
+<p>Em I, temos que \( y &lt; 2 \) e \( y &gt; 3 \), o que é um absurdo. Em II, \( 2 &lt; y &lt; 3 \iff y \in \mathbb{Q} \). Com isso, seria necessário que \( \mathbb{Q} \subset P \). Seja \( z \in \mathbb{Q} \). Então \( 2 &lt; z &lt; 3 \) e daí \( y - 2 &gt; 0 \land y - 3 &lt; 0 \). Logo,\( (y - 2)(y - 3) &lt; 0 \) e, consequentemente, \( z^{2} - 5z + 6 &lt; 0 \).
 Portanto, \( z \in P \).</p>
 </details>
 <h3 id="operações-sobre-conjuntos"><a class="header" href="#operações-sobre-conjuntos">Operações sobre Conjuntos</a></h3>
@@ -315,7 +315,7 @@ Além disso, \( [1, 2] \cap (2, 4) = \varnothing \) (conjunto vazio).</p>
 <h4 id="teorema"><a class="header" href="#teorema">Teorema</a></h4>
 <p>Se \( A \) é um conjunto \( n \) de elementos, então \( \rho(A) \) é um conjunto com \( 2^{n} \) elementos.</p>
 <h4 id="teorema-1"><a class="header" href="#teorema-1">Teorema</a></h4>
-<p>Sejam \( A \) e \( B \) conjuntos. Então \( A \subset B \Longleftrightarrow \rho(A) \subset \rho(B) \).</p>
+<p>Sejam \( A \) e \( B \) conjuntos. Então \( A \subset B \iff \rho(A) \subset \rho(B) \).</p>
 <h3 id="produto-cartesiano"><a class="header" href="#produto-cartesiano">Produto Cartesiano</a></h3>
 <p>Conjunto formado por pares <strong>ordenados</strong> \( (a, b) \).</p>
 <h4 id="definição-1"><a class="header" href="#definição-1">Definição</a></h4>
