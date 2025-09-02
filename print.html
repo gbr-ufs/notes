@@ -383,7 +383,7 @@ R^{-1} = \{(y, x) \in \mathbb{R}^{+} \times \mathbb{R} : y = x^{2}\} = \{(y, x) 
 <p>\[
 S \circ R = \{(a, c) \in A \times C : \exists{b} \in B \text{ tal que } (a, b) \in R \text{ e } (b, c) \in S\}
 \]</p>
-<p>O domínio de \( S \circ R \) será um subconjunto do domínio da relação \( R \) e a imagem estará contida na imagem da relação \( S \). E para um elemnto pertencer a composição é necessário que haja um elemento em \( B \) fazendo a conexão entre elementos de \( A \) e \( C \).</p>
+<p>O domínio de \( S \circ R \) será um subconjunto do domínio da relação \( R \) e a imagem estará contida na imagem da relação \( S \). E para um elemento pertencer a composição é necessário que haja um elemento em \( B \) fazendo a conexão entre elementos de \( A \) e \( C \).</p>
 <h3 id="exemplo-11"><a class="header" href="#exemplo-11">Exemplo</a></h3>
 <p>Consideremos os conjuntos \( A = \{1, 2, 3, 4\} \), \( B = \{p, q, r, s\} \) e \( C = \{x, y, z\} \). Seja \( R = \{(1, p), (1, q), (2, q), (3, r), (4, s)\} \) uma relação entre \( A \) e \( B \), e tomemos a relação entre \( B \) e \( C \) dada por \( S = \{(p, x), (q, x), (q, y), (s, z)\} \). Então</p>
 <p>\[
@@ -514,6 +514,103 @@ Z/R = \{[0], [1], [2]\}
 \( \therefore (x_{1}, y_{1})R(x_{3}, y_{3} \)</p>
 <p>O termo "parcial" numa relação de ordem parcial refere-se ao fato que existem elementos no conjunto que não são comparáveis. Por exemplo, no conjunto \( \mathbb{N} \) com a relação de divisibilidade os elementos 2 e 3 não estão relacionados (nem 2 divide 3, nem 3 divide 2).</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="funções"><a class="header" href="#funções">Funções</a></h2>
+<p>Tradicionalmente, é uma regra que liga um número (<em>argumento</em>) a outro (<em>valor</em>). É usado na ciência para descrever processsos onde uma quantidade afeta outra.</p>
+<p>Uma <strong>função</strong> \( f \) de um conjunto \( X\) em um conjunto \( Y \) é uma relação que associa cada elemento \( x \in X \) a um único elemento \( y \in Y \) que denotamos por \( y = f(x) \). Assim, uma função \( f : X \rightarrow Y \) satisfaz duas condições:</p>
+<p>(1) \( D(f) = X \)</p>
+<p>(2) \( (x, y) \in f \land (x, z) \in f \implies y = z \)</p>
+<p>Aqui \( D(f) \) é dito o <strong>domínio</strong> da função \( f \) e o conjunto de \( Y \) dado por</p>
+<p>\[
+f(X) = I(f) = \{f(x): x \in X\}
+\]</p>
+<p>é chamado <strong>imagem</strong> de \( f \). Designamos o conjunto \( Y \) como o <strong>contra-domínio</strong>.</p>
+<p>Para ser uma função, todo elemento do conjunto \( X \) deve estar associado a outro do conjunto \( Y \), mas a inversa não precisa ser necessariamente verdade.</p>
+<h3 id="exemplo-22"><a class="header" href="#exemplo-22">Exemplo</a></h3>
+<p>(1) A função \( f : A = \{1, 4, 7\} \rightarrow B = \{1, 2, 6, 7, 8, 9, 12\} \) dada por \( f(x) = x + 5 \) pode ser representada por um diagrama de flechas. Note que \( I(f) = \{6, 9, 12\} \subset B \).</p>
+<p><img src="fem/../img/fem/diagrama_de_flechas.png" alt="Diagrama de flechas (setas) exibindo os elementos de A ligados a alguns dos elementos de B, mas não todos" /></p>
+<p>(2) Muitas vezes, funções são dadas sem haver menção ao domínio. Nesse caso, o domínio é entendido como o maior subconjunto de \( \mathbb{R} \) para o qual \( f \) está definida. Por exemplo, para \( f(x) = \frac{\sqrt{x}}{x - 2} \), o domínio de \( f \) é \( [0, \infty) - \{2\} = D(f) \).</p>
+<h3 id="definição-8"><a class="header" href="#definição-8">Definição</a></h3>
+<p>Duas funções \( f : A \rightarrow B \) e \( g : C \rightarrow D \) são iguais se, e somente se, \( A = C, B = D \land \forall x \in A = C, f(x) = g(x) \).</p>
+<h3 id="exemplo-23"><a class="header" href="#exemplo-23">Exemplo</a></h3>
+<p>Consideremos as seguintes funções \( f : \mathbb{R} \rightarrow \mathbb{R} \) e \( g : \mathbb{R}<em>{+} \rightarrow \mathbb{R} \) dadas por \( f(x) = x^{3} \) e \( g(x) = x^{3} \), respectivamente. Então, mesmo tendo expressões iguais, como \( \mathbb{R} \neq \mathbb{R}</em>{+} \), elas são diferentes.</p>
+<h3 id="combinando-funções"><a class="header" href="#combinando-funções">Combinando funções</a></h3>
+<p>Quando o contradomínio das funções são conjuntos em que se podem fazer operações aritméticas, então podemos produzir novas funções a partir de funções dadas combinando-as. Desse modo, se \( A \) é um conjunto qualquer e \(f, g : A \rightarrow \mathbb{R} \), definimos as seguintes novas funções \( f + g \), \( f - g \), \( f \cdot g \) e \( \frac{f}{g} \) de \( A \) em \( mathbb{R} \) através dos valores de \( f \) e  \( g \) em cada \( x \in A \). Isto é</p>
+<ul>
+<li>\( (f + g)(x) = f(x) + g(x) \)</li>
+<li>\( (f - g)(x) = f(x) - g(x) \)</li>
+<li>\( (f \cdot g)(x) = f(x) \cdot g(x) \)</li>
+<li>\( (\frac{f}{g})(x) = \frac{f(x)}{g(x)} (g(x) \neq 0) \)</li>
+</ul>
+<h4 id="exemplo-24"><a class="header" href="#exemplo-24">Exemplo</a></h4>
+<p>Seja \( f(x) = x^{2} + 1 \) e \( g(x) = 2x + 1 \), temos as seguintes funções:</p>
+<ul>
+<li>\( (f + g)(x) = x^{2} + 2x + 2 \)</li>
+<li>\( (f - g)(x) = x^{2} - 2x \)</li>
+<li>\( (f \cdot g)(x) = 2x^{3} + x^{2} + 2x + 1\)</li>
+<li>\( (\frac{f}{g})(x) = \frac{(x^{2} + 1)}{(2x + 1)} (x \neq \frac{1}{2}) \)</li>
+</ul>
+<h4 id="restrição"><a class="header" href="#restrição">Restrição</a></h4>
+<p>Outra maneira de a partir de uma função \( f : X \rightarrow Y \) se obter uma nova função é restringir a ação da função a um subconjunto de seu domínio ou, ao contrário, estender o domínio.</p>
+<p>(1) se \( a \subset X \), a função \( f|<em>{A} : A \rightarrow Y \) definida por \( f|</em>{A}(a) = f(a), \forall a \in A \) é dita a <strong>restrição</strong> de \( f \) ao conjunto \( A \).</p>
+<p>(2) se \( X \subset W \) uma função \( g: W \rightarrow B, g(x) = f(x) \forall x \in X \) é dita uma <strong>extensão</strong> de \( f \).</p>
+<h4 id="exemplo-25"><a class="header" href="#exemplo-25">Exemplo</a></h4>
+<p>A função \( f : (0, \infty) \rightarrow \mathbb{R}, f(x) = \frac{1}[x} \) cresce ilimitadamente quando nos aproximamos de \( x = 0 \), porém, sua restrição \( g : [\frac{1}{2}, \infty) \rightarrow \mathbb{R}, g(x) = \frac{1}{x} \) é limitada, com \( g(x) \leq 2, \forall x \in [\frac{1}{2}, \infty) \).</p>
+<h4 id="exemplo-26"><a class="header" href="#exemplo-26">Exemplo</a></h4>
+<p>A função raiz quadrada pode ser estendida para todo o conjunto dos reais através da função \( g : \mathbb{R} \rightarrow \mathbb{R}, g(x) = \sqrt{|x|} \).</p>
+<h3 id="composição-e-funções-inversas"><a class="header" href="#composição-e-funções-inversas">Composição e funções inversas</a></h3>
+<p>Desde que cada função é uma relação e cada relação possui associado a ela sua inversa, isto é, se \( f : A \rightarrow B \) é uma relação, então a relação inversa \( f^{-1} \) é dada por</p>
+<p>\[
+f^{-1} = \{(y, x) : (x, y) \in f\}
+\]</p>
+<p>diremos que \( f \) é <strong>invertível</strong> se \( f^{-1} \) é também uma função.</p>
+<h4 id="exemplo-27"><a class="header" href="#exemplo-27">Exemplo</a></h4>
+<p>Para a função \( f = \{(x, y) : y = 2x + 1\} \subset \mathbb{R} \times \mathbb{R} \), a inversa de \( f \) é a função</p>
+<p>\[
+f^{-1} = \{(y, x) : (x, y) \in f\} = \{(y, x) : y = 2x + 1\} = \{(y, x) : x = \frac{y - 1}{2}\}
+\]</p>
+<p>Contudo, para a função \( g = \{(x, y) : y = x^{2}\} \subset \mathbb{R}^{+} \times \mathbb{R}^{+} \), temos que a relação inversa</p>
+<p>\[
+g^{-1} = \{(y, x) : (x, y) \in g\} = \{(y, x) : y = x^{2}\} = \{(y, x) : x = \pm \sqrt{y}\}
+\]</p>
+<p>não é uma função. De fato, \( (1, 1), (1, -1) \in g^{-1} \) pois \( 1^{2} = (-1)^{2} \). Porém, \( 1 \neq -1 \).</p>
+<p>(1) Elementos distintos no domínio \( A \) devem estar associados a elementos distintos no contradomínio \( B \), ou seja, se \( x \neq y \in A \), então \( f(x) \neq f(y) \in B \). Funções que satisfazm esta propriedade são chamadas de <strong>funções injetivas</strong>.</p>
+<p>(2) Cada elemento no contradomínio \( B \) deve ser imagem sob \( f \) de pelo menos um elemento de \( A \). Em outras palavras \( \forall y \in B \exists x \in A, f(x) = y \), ou ainda, \( I(f) = B \). Funções que satisfazem esta propriedade são ditas <strong>funções sobrejetivas</strong>.</p>
+<p>Desse modo, se a função \( f \) não for <strong>bijetiva</strong>: injetiva e sobrejetiva, ela não é invertível. Noutras palavras, se \( f \) é invertível, necessariamente ela é bijetiva.</p>
+<h4 id="exemplo-28"><a class="header" href="#exemplo-28">Exemplo</a></h4>
+<p>Seja \( f : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R} \times \mathbb{R} \) definida por \( f(x, y) = (-x + y, x + y) \). Se \( (x, y), (z, t) \in \mathbb{R} \times \mathbb{R} \) são tais que \( f(x, y) = f(z, t) \), então</p>
+<p>\[
+(-x + y, x + y) = (-z + t, z + t)
+\]</p>
+<p>Isto implica que</p>
+<p>\[
+-x + y = -z + t \implies x + y = z + t
+\]</p>
+<p>Somando esssas identidades, obtemos que \( y = t \) e, consequentemente, \( x = z \). Assim, \( (x, y) = (z, t) \) e a função \( f \) é injetiva. Agora, para verificarmos se a função \( f \) é sobrejetiva, tomemos um elemento genérico \( (c, d) \) em \( \mathbb{R} \times \mathbb{R} \) e busquemos um elemento no domínio \( (x, y) \in \mathbb{R} \times \mathbb{R}, f(x, y) = (c, d) \). Por definição de \( f \), temos que \( (-x + y, x + y) = (c, d) \), donde \( -x + y = c \land x + y = d \). Somando essas equações obtemos que \( y = \frac{c + d}{2} \). Substitutindo em uma das equações acima, concluímos que \( x = \frac{d - c}{2} \). Portanto,</p>
+<p>\[
+f\left(\frac{c + d}{2}, \frac{d - c}{2}\right) = (c, d)
+\]</p>
+<p>e a função \( f \0 é sobrejetiva. Desse modo, \( f \) é uma função bijetiva.</p>
+<h4 id="composição"><a class="header" href="#composição">Composição</a></h4>
+<p>Seja \( f : A \rightarrow B \) e \( g : B \rightarrow C \). A <strong>composição</strong> de \( g \) e \( f \) é a relação</p>
+<p>\[
+g \circ f = \{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\}
+&amp; = \{(x, z) : \exists y \in B, f(x) = y \land g(y) = z\}
+&amp; = \{(x, z) : g(f(x)) = z\}
+\]</p>
+<p>Logo, \( g \circ f : A \rightarrow C \) será definida por \( (g \circ f)(x) = g(f(x)) \).</p>
+<h5 id="exemplo-29"><a class="header" href="#exemplo-29">Exemplo</a></h5>
+<p>Seja \( f(x) = \sen(x) \) e \( g(x) = x^{2} + 6x \).</p>
+<p>\[
+(f \circ g)(x) = f(g(x)) = \sen(g(x)) = \sen(x^{2} + 6x)
+\]</p>
+<p>e</p>
+<p>\[
+(g \circ f)(x) = g(f(x)) = \sen^{2}(x) + 6\sen(x)
+\]</p>
+<p>Como a operação de composição de funções não é comutativa, \( f \circ g \) pode ser diferente de \( g \circ f \).</p>
+<h5 id="observação-1"><a class="header" href="#observação-1">Observação</a></h5>
+<p>Como a composição de relações é associativa e funções são relações, a composição de funções também é associativa, ou seja, \( f : A \rightarrow B, g : B \rightarrow C \land h : C \rightarrow \implies (h \circ f) \circ g = h \circ (f \circ g) \).</p>
+<h4 id="definição-9"><a class="header" href="#definição-9">Definição</a></h4>
+<p>Se uma função \( f : A \rightarrow B \) é bijetiva, então ela é invertível.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="matemática-básica"><a class="header" href="#matemática-básica">Matemática Básica</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="produtos-notáveis"><a class="header" href="#produtos-notáveis">Produtos Notáveis</a></h2>
 <p>Expressões algébricas fundamentais. São <em>notáveis</em> pela sua importância na matemática.</p>
@@ -1397,7 +1494,7 @@ e) \( \frac{4 \cdot (x + 1)}{(1 - x)} \)</p>
 <p>Uma geratriz de C é uma reta obtida girando \( g \) a um ângulo \( 0 \leq \theta &lt; 2\pi \) em torno de \( e \). Uma cônica é uma curva obtida intersectando \( C \) com um plano \( \pi \) que não passa por \( O \).</p>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="parábola"><a class="header" href="#parábola">Parábola</a></h3>
 <p>Obtida ao cortar um cone de forma paralela à geratriz de \( C \).</p>
-<h4 id="definição-8"><a class="header" href="#definição-8">Definição</a></h4>
+<h4 id="definição-10"><a class="header" href="#definição-10">Definição</a></h4>
 <p>Sejam \( d \) uma reta no plano e \( F \) um ponto não pertencente a \( d \). A parábola \( \mathcal{P} \) de diretriz \( d \) e foco \( F \) é o conjunto que consiste em todos os pontos \( P \) do plano, equidistantes do ponto \( F \) e da reta \( d \), isto é,</p>
 <p>\[
 \mathcal{P} = \{P; d(P, F) = d(P, d_{\text{reta}})\}
@@ -1488,7 +1585,7 @@ d(P, d) = d(P, P') = \sqrt{(x + a)^{2}} = |x + a|
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="elipse"><a class="header" href="#elipse">Elipse</a></h3>
 <p>Quando apenas um dos cones é cortado de uma forma não paralela.</p>
-<h4 id="definição-9"><a class="header" href="#definição-9">Definição</a></h4>
+<h4 id="definição-11"><a class="header" href="#definição-11">Definição</a></h4>
 <p>Sejam \( F_{1} \) e \( F_{2} \) pontos distintos do plano. Denote \( d(F_{1}, F_{2}) = 2c &gt; 0 \). A elipse \( \mathcal{E} \) de focos \( F_{1} \) e \( F_{2} \) é o conjunto do plano que consiste de todos os pontos \( P \), cuja soma das distâncias a \( F_{1} \) e \( F_{2} \) é igual a uma constante \( 2a &gt; 0 \), onde \( a &gt; c \), ou seja,</p>
 <p>\[
 \mathcal{E} = \{P; d(P, F_{1}) + d(P, F_{2}) = 2a\}, a &gt; c
@@ -1502,7 +1599,7 @@ d(P, d) = d(P, P') = \sqrt{(x + a)^{2}} = |x + a|
 <li>O <em>eixo maior</em> é o segmento \( A_{1}A_{2} \)</li>
 <li>O <em>eixo menor</em> é o segmento \( B_{1}B_{2} \)</li>
 </ul>
-<h4 id="observação-1"><a class="header" href="#observação-1">Observação</a></h4>
+<h4 id="observação-2"><a class="header" href="#observação-2">Observação</a></h4>
 <p>\[
 d(A_{1}, C) = d(A_{2}, C) = a
 \]</p>
@@ -1515,9 +1612,9 @@ d(F_{1}, C) = d(F_{2}, C) = c
 <p>\[
 d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = a - c
 \]</p>
-<h4 id="observação-2"><a class="header" href="#observação-2">Observação</a></h4>
-<p>O comprimento do eixo maior da elipse é igual a \( 2a \), enquando o do eixo menor é \( 2b \).</p>
 <h4 id="observação-3"><a class="header" href="#observação-3">Observação</a></h4>
+<p>O comprimento do eixo maior da elipse é igual a \( 2a \), enquando o do eixo menor é \( 2b \).</p>
+<h4 id="observação-4"><a class="header" href="#observação-4">Observação</a></h4>
 <p>\[
 b^{2} = a^{2} - c^{2}
 \]</p>
@@ -1544,7 +1641,7 @@ b^{2} = a^{2} - c^{2}
 <li>\( F_{2} = (c, 0) \)</li>
 <li>\( P = (x, y) \in \mathcal{E} \iff \frac{x^{2}}{a^{2}} \frac{y^{2}}{b^{2}} = 1\)</li>
 </ul>
-<h5 id="observação-4"><a class="header" href="#observação-4">Observação</a></h5>
+<h5 id="observação-5"><a class="header" href="#observação-5">Observação</a></h5>
 <p>Um jeito fácil de descobrir com qual eixo o eixo focal coincide é olhando os valores dos denominadores, e lembrando que \( a &gt; b \).</p>
 <h5 id="elipse-com-centro--c--x_0-y_0--e-eixo-focal-paralelo-ao-eixo--y-"><a class="header" href="#elipse-com-centro--c--x_0-y_0--e-eixo-focal-paralelo-ao-eixo--y-">Elipse com centro \( C = (x_{0}, y_{0}) \) e eixo focal paralelo ao eixo \( y \)</a></h5>
 <ul>
@@ -1570,7 +1667,7 @@ b^{2} = a^{2} - c^{2}
 <li>\( l : y = y_{0} \)</li>
 <li>\( P = (x, y) \in \mathcal{E} \iff \frac{(x - x_{0})^{2}}{a^{2}} + \frac{(y - y_{0})^{2}}{b^{2}} = 1\)</li>
 </ul>
-<h5 id="observação-5"><a class="header" href="#observação-5">Observação</a></h5>
+<h5 id="observação-6"><a class="header" href="#observação-6">Observação</a></h5>
 <p>Para ver com que eixo o eixo focal é paralelo, basta ver o denominador da equação. Se o que tem \( x \) em cima é maior, então é paralelo com o eixo \( x \), e se o que tem \( y \) é maior, então é paralelo com \( y \).</p>
 <h4 id="excentricidade"><a class="header" href="#excentricidade">Excentricidade</a></h4>
 <p>Diz o quão achatada a elipse é.</p>
@@ -1584,12 +1681,12 @@ Ax_{2} + By^{2} + Cx + Dy + E = 0
 \]</p>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="hipérbole"><a class="header" href="#hipérbole">Hipérbole</a></h3>
 <p>Quando o corte não é paralelo e os dois cones são cortados.</p>
-<h4 id="definição-10"><a class="header" href="#definição-10">Definição</a></h4>
+<h4 id="definição-12"><a class="header" href="#definição-12">Definição</a></h4>
 <p>Sejam \( F_{1} \) e \( F_{2} \) pontos distintos do plano. Denote \( d(F_{1}, F_{2}) = 2c &gt; 0 \). A hipérbole \( \mathcal{H} \) de focos \( F_{1} \) e \( F_{2} \) é o conjunto do plano que consiste de todos os pontos \( P \) tais que o módulo da diferença das distâncias a \( F_{1} \) e \( F_{2} \) é igual a uma constante \( 2a &gt; 0 \), ou seja,</p>
 <p>\[
 \mathcal{H} = \{P; |d(P, F_{1}) - d(P, F_{2})| = 2a\}
 \]</p>
-<h4 id="observação-6"><a class="header" href="#observação-6">Observação</a></h4>
+<h4 id="observação-7"><a class="header" href="#observação-7">Observação</a></h4>
 <p>Pela desigualdade triangular, obtemos que \( a &lt; c \).</p>
 <ul>
 <li>Uma hipérbole possui dois focos, \( F_{1} e F_{2} \)</li>
@@ -1603,16 +1700,16 @@ Ax_{2} + By^{2} + Cx + Dy + E = 0
 <li>O <em>eixo imaginário</em> da hipérbole é o segmento \( B_{1}B_{2} \)</li>
 <li>A <em>excentricidade</em> de uma hipérbole é o número real \( e = \frac{c}{a}, (e &gt; 1) \)</li>
 </ul>
-<h4 id="observação-7"><a class="header" href="#observação-7">Observação</a></h4>
+<h4 id="observação-8"><a class="header" href="#observação-8">Observação</a></h4>
 <p>\[
 d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = c - a
 \]</p>
 <p>\[
 d(A_{1}, C) = d(A_{2}, C) = a
 \]</p>
-<h4 id="observação-8"><a class="header" href="#observação-8">Observação</a></h4>
-<p>O comprimento do eixo real da hipérbole é igual a \( 2a \).</p>
 <h4 id="observação-9"><a class="header" href="#observação-9">Observação</a></h4>
+<p>O comprimento do eixo real da hipérbole é igual a \( 2a \).</p>
+<h4 id="observação-10"><a class="header" href="#observação-10">Observação</a></h4>
 <p>Pelo Teorema de Pitágoras, temos que \( d(C, B_{1}) = d(C, B_{2}) = b \) onde</p>
 <p>\[
 c^{2} = a^{2} + b^{2}
