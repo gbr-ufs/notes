@@ -76,7 +76,7 @@ Seja \\( R \\) uma relação entre os conjuntos \\( A \\) e \\( B \\) e seja \\(
 S \circ R = \\{(a, c) \in A \times C : \exists{b} \in B \text{ tal que } (a, b) \in R \text{ e } (b, c) \in S\\}
 \\]
 
-O domínio de \\( S \circ R \\) será um subconjunto do domínio da relação \\( R \\) e a imagem estará contida na imagem da relação \\( S \\). E para um elemnto pertencer a composição é necessário que haja um elemento em \\( B \\) fazendo a conexão entre elementos de \\( A \\) e \\( C \\).
+O domínio de \\( S \circ R \\) será um subconjunto do domínio da relação \\( R \\) e a imagem estará contida na imagem da relação \\( S \\). E para um elemento pertencer a composição é necessário que haja um elemento em \\( B \\) fazendo a conexão entre elementos de \\( A \\) e \\( C \\).
 
 ### Exemplo
 
