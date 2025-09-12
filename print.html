@@ -531,9 +531,9 @@ f(X) = I(f) = \{f(x): x \in X\}
 <h3 id="definição-8"><a class="header" href="#definição-8">Definição</a></h3>
 <p>Duas funções \( f : A \rightarrow B \) e \( g : C \rightarrow D \) são iguais se, e somente se, \( A = C, B = D \land \forall x \in A = C, f(x) = g(x) \).</p>
 <h3 id="exemplo-23"><a class="header" href="#exemplo-23">Exemplo</a></h3>
-<p>Consideremos as seguintes funções \( f : \mathbb{R} \rightarrow \mathbb{R} \) e \( g : \mathbb{R}<em>{+} \rightarrow \mathbb{R} \) dadas por \( f(x) = x^{3} \) e \( g(x) = x^{3} \), respectivamente. Então, mesmo tendo expressões iguais, como \( \mathbb{R} \neq \mathbb{R}</em>{+} \), elas são diferentes.</p>
+<p>Consideremos as seguintes funções \( f : \mathbb{R} \rightarrow \mathbb{R} \) e \( g : \mathbb{R}_{+} \rightarrow \mathbb{R} \) dadas por \( f(x) = x^{3} \) e \( g(x) = x^{3} \), respectivamente. Então, mesmo tendo expressões iguais, como \( \mathbb{R} \neq \mathbb{R}_{+} \), elas são diferentes.</p>
 <h3 id="combinando-funções"><a class="header" href="#combinando-funções">Combinando funções</a></h3>
-<p>Quando o contradomínio das funções são conjuntos em que se podem fazer operações aritméticas, então podemos produzir novas funções a partir de funções dadas combinando-as. Desse modo, se \( A \) é um conjunto qualquer e \(f, g : A \rightarrow \mathbb{R} \), definimos as seguintes novas funções \( f + g \), \( f - g \), \( f \cdot g \) e \( \frac{f}{g} \) de \( A \) em \( mathbb{R} \) através dos valores de \( f \) e  \( g \) em cada \( x \in A \). Isto é</p>
+<p>Quando o contradomínio das funções são conjuntos em que se podem fazer operações aritméticas, então podemos produzir novas funções a partir de funções dadas combinando-as. Desse modo, se \( A \) é um conjunto qualquer e \(f, g : A \rightarrow \mathbb{R} \), definimos as seguintes novas funções \( f + g \), \( f - g \), \( f \cdot g \) e \( \frac{f}{g} \) de \( A \) em \( \mathbb{R} \) através dos valores de \( f \) e  \( g \) em cada \( x \in A \). Isto é</p>
 <ul>
 <li>\( (f + g)(x) = f(x) + g(x) \)</li>
 <li>\( (f - g)(x) = f(x) - g(x) \)</li>
@@ -550,10 +550,10 @@ f(X) = I(f) = \{f(x): x \in X\}
 </ul>
 <h4 id="restrição"><a class="header" href="#restrição">Restrição</a></h4>
 <p>Outra maneira de a partir de uma função \( f : X \rightarrow Y \) se obter uma nova função é restringir a ação da função a um subconjunto de seu domínio ou, ao contrário, estender o domínio.</p>
-<p>(1) se \( a \subset X \), a função \( f|<em>{A} : A \rightarrow Y \) definida por \( f|</em>{A}(a) = f(a), \forall a \in A \) é dita a <strong>restrição</strong> de \( f \) ao conjunto \( A \).</p>
+<p>(1) se \( a \subset X \), a função \( f|_{A} : A \rightarrow Y \) definida por \( f|_{A}(a) = f(a), \forall a \in A \) é dita a <strong>restrição</strong> de \( f \) ao conjunto \( A \).</p>
 <p>(2) se \( X \subset W \) uma função \( g: W \rightarrow B, g(x) = f(x) \forall x \in X \) é dita uma <strong>extensão</strong> de \( f \).</p>
 <h4 id="exemplo-25"><a class="header" href="#exemplo-25">Exemplo</a></h4>
-<p>A função \( f : (0, \infty) \rightarrow \mathbb{R}, f(x) = \frac{1}[x} \) cresce ilimitadamente quando nos aproximamos de \( x = 0 \), porém, sua restrição \( g : [\frac{1}{2}, \infty) \rightarrow \mathbb{R}, g(x) = \frac{1}{x} \) é limitada, com \( g(x) \leq 2, \forall x \in [\frac{1}{2}, \infty) \).</p>
+<p>A função \( f : (0, \infty) \rightarrow \mathbb{R}, f(x) = \frac{1}{x} \) cresce ilimitadamente quando nos aproximamos de \( x = 0 \), porém, sua restrição \( g : [\frac{1}{2}, \infty) \rightarrow \mathbb{R}, g(x) = \frac{1}{x} \) é limitada, com \( g(x) \leq 2, \forall x \in [\frac{1}{2}, \infty) \).</p>
 <h4 id="exemplo-26"><a class="header" href="#exemplo-26">Exemplo</a></h4>
 <p>A função raiz quadrada pode ser estendida para todo o conjunto dos reais através da função \( g : \mathbb{R} \rightarrow \mathbb{R}, g(x) = \sqrt{|x|} \).</p>
 <h3 id="composição-e-funções-inversas"><a class="header" href="#composição-e-funções-inversas">Composição e funções inversas</a></h3>
@@ -573,7 +573,7 @@ g^{-1} = \{(y, x) : (x, y) \in g\} = \{(y, x) : y = x^{2}\} = \{(y, x) : x = \pm
 \]</p>
 <p>não é uma função. De fato, \( (1, 1), (1, -1) \in g^{-1} \) pois \( 1^{2} = (-1)^{2} \). Porém, \( 1 \neq -1 \).</p>
 <p>(1) Elementos distintos no domínio \( A \) devem estar associados a elementos distintos no contradomínio \( B \), ou seja, se \( x \neq y \in A \), então \( f(x) \neq f(y) \in B \). Funções que satisfazm esta propriedade são chamadas de <strong>funções injetivas</strong>.</p>
-<p>(2) Cada elemento no contradomínio \( B \) deve ser imagem sob \( f \) de pelo menos um elemento de \( A \). Em outras palavras \( \forall y \in B \exists x \in A, f(x) = y \), ou ainda, \( I(f) = B \). Funções que satisfazem esta propriedade são ditas <strong>funções sobrejetivas</strong>.</p>
+<p>(2) Cada elemento no contradomínio \( B \) deve ser imagem sob \( f \) de pelo menos um elemento de \( A \). Em outras palavras \( \forall y \in B,  \exists x \in A, f(x) = y \), ou ainda, \( I(f) = B \). Funções que satisfazem esta propriedade são ditas <strong>funções sobrejetivas</strong>.</p>
 <p>Desse modo, se a função \( f \) não for <strong>bijetiva</strong>: injetiva e sobrejetiva, ela não é invertível. Noutras palavras, se \( f \) é invertível, necessariamente ela é bijetiva.</p>
 <h4 id="exemplo-28"><a class="header" href="#exemplo-28">Exemplo</a></h4>
 <p>Seja \( f : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R} \times \mathbb{R} \) definida por \( f(x, y) = (-x + y, x + y) \). Se \( (x, y), (z, t) \in \mathbb{R} \times \mathbb{R} \) são tais que \( f(x, y) = f(z, t) \), então</p>
@@ -588,23 +588,23 @@ g^{-1} = \{(y, x) : (x, y) \in g\} = \{(y, x) : y = x^{2}\} = \{(y, x) : x = \pm
 <p>\[
 f\left(\frac{c + d}{2}, \frac{d - c}{2}\right) = (c, d)
 \]</p>
-<p>e a função \( f \0 é sobrejetiva. Desse modo, \( f \) é uma função bijetiva.</p>
+<p>e a função \( f \) é sobrejetiva. Desse modo, \( f \) é uma função bijetiva.</p>
 <h4 id="composição"><a class="header" href="#composição">Composição</a></h4>
 <p>Seja \( f : A \rightarrow B \) e \( g : B \rightarrow C \). A <strong>composição</strong> de \( g \) e \( f \) é a relação</p>
 <p>\[
-g \circ f = \{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\}
-&amp; = \{(x, z) : \exists y \in B, f(x) = y \land g(y) = z\}
-&amp; = \{(x, z) : g(f(x)) = z\}
+g \circ f = \{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\} \
+= \{(x, z) : \exists y \in B, f(x) = y \land g(y) = z\} \
+= \{(x, z) : g(f(x)) = z\} \
 \]</p>
 <p>Logo, \( g \circ f : A \rightarrow C \) será definida por \( (g \circ f)(x) = g(f(x)) \).</p>
 <h5 id="exemplo-29"><a class="header" href="#exemplo-29">Exemplo</a></h5>
-<p>Seja \( f(x) = \sen(x) \) e \( g(x) = x^{2} + 6x \).</p>
+<p>Seja \( f(x) = sen(x) \) e \( g(x) = x^{2} + 6x \).</p>
 <p>\[
-(f \circ g)(x) = f(g(x)) = \sen(g(x)) = \sen(x^{2} + 6x)
+(f \circ g)(x) = f(g(x)) = sen(g(x)) = sen(x^{2} + 6x)
 \]</p>
 <p>e</p>
 <p>\[
-(g \circ f)(x) = g(f(x)) = \sen^{2}(x) + 6\sen(x)
+(g \circ f)(x) = g(f(x)) = sen^{2}(x) + 6sen(x)
 \]</p>
 <p>Como a operação de composição de funções não é comutativa, \( f \circ g \) pode ser diferente de \( g \circ f \).</p>
 <h5 id="observação-1"><a class="header" href="#observação-1">Observação</a></h5>
