@@ -115,5 +115,5 @@ Quanto mais próximo de 0 a excentricidade é, mais arredondada é a elipse.
 #### Equação Geral
 
 \\[
-Ax_{2} + By^{2} + Cx + Dy + E = 0
+Ax^{2} + By^{2} + Cx + Dy + E = 0
 \\]

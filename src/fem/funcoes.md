@@ -32,11 +32,11 @@ Duas funções \\( f : A \rightarrow B \\) e \\( g : C \rightarrow D \\) são ig
 
 ### Exemplo
 
-Consideremos as seguintes funções \\( f : \mathbb{R} \rightarrow \mathbb{R} \\) e \\( g : \mathbb{R}_{+} \rightarrow \mathbb{R} \\) dadas por \\( f(x) = x^{3} \\) e \\( g(x) = x^{3} \\), respectivamente. Então, mesmo tendo expressões iguais, como \\( \mathbb{R} \neq \mathbb{R}_{+} \\), elas são diferentes.
+Consideremos as seguintes funções \\( f : \mathbb{R} \rightarrow \mathbb{R} \\) e \\( g : \mathbb{R}\_{+} \rightarrow \mathbb{R} \\) dadas por \\( f(x) = x^{3} \\) e \\( g(x) = x^{3} \\), respectivamente. Então, mesmo tendo expressões iguais, como \\( \mathbb{R} \neq \mathbb{R}_{+} \\), elas são diferentes.
 
 ### Combinando funções
 
-Quando o contradomínio das funções são conjuntos em que se podem fazer operações aritméticas, então podemos produzir novas funções a partir de funções dadas combinando-as. Desse modo, se \\( A \\) é um conjunto qualquer e \\(f, g : A \rightarrow \mathbb{R} \\), definimos as seguintes novas funções \\( f + g \\), \\( f - g \\), \\( f \cdot g \\) e \\( \frac{f}{g} \\) de \\( A \\) em \\( mathbb{R} \\) através dos valores de \\( f \\) e  \\( g \\) em cada \\( x \in A \\). Isto é
+Quando o contradomínio das funções são conjuntos em que se podem fazer operações aritméticas, então podemos produzir novas funções a partir de funções dadas combinando-as. Desse modo, se \\( A \\) é um conjunto qualquer e \\(f, g : A \rightarrow \mathbb{R} \\), definimos as seguintes novas funções \\( f + g \\), \\( f - g \\), \\( f \cdot g \\) e \\( \frac{f}{g} \\) de \\( A \\) em \\( \mathbb{R} \\) através dos valores de \\( f \\) e  \\( g \\) em cada \\( x \in A \\). Isto é
 
 - \\( (f + g)(x) = f(x) + g(x) \\)
 - \\( (f - g)(x) = f(x) - g(x) \\)
@@ -56,13 +56,13 @@ Seja \\( f(x) = x^{2} + 1 \\) e \\( g(x) = 2x + 1 \\), temos as seguintes funç�
 
 Outra maneira de a partir de uma função \\( f : X \rightarrow Y \\) se obter uma nova função é restringir a ação da função a um subconjunto de seu domínio ou, ao contrário, estender o domínio.
 
-(1) se \\( a \subset X \\), a função \\( f|_{A} : A \rightarrow Y \\) definida por \\( f|_{A}(a) = f(a), \forall a \in A \\) é dita a **restrição** de \\( f \\) ao conjunto \\( A \\).
+(1) se \\( a \subset X \\), a função \\( f|\_{A} : A \rightarrow Y \\) definida por \\( f|_{A}(a) = f(a), \forall a \in A \\) é dita a **restrição** de \\( f \\) ao conjunto \\( A \\).
 
 (2) se \\( X \subset W \\) uma função \\( g: W \rightarrow B, g(x) = f(x) \forall x \in X \\) é dita uma **extensão** de \\( f \\).
 
 #### Exemplo
 
-A função \\( f : (0, \infty) \rightarrow \mathbb{R}, f(x) = \frac{1}[x} \\) cresce ilimitadamente quando nos aproximamos de \\( x = 0 \\), porém, sua restrição \\( g : [\frac{1}{2}, \infty) \rightarrow \mathbb{R}, g(x) = \frac{1}{x} \\) é limitada, com \\( g(x) \leq 2, \forall x \in [\frac{1}{2}, \infty) \\).
+A função \\( f : (0, \infty) \rightarrow \mathbb{R}, f(x) = \frac{1}{x} \\) cresce ilimitadamente quando nos aproximamos de \\( x = 0 \\), porém, sua restrição \\( g : [\frac{1}{2}, \infty) \rightarrow \mathbb{R}, g(x) = \frac{1}{x} \\) é limitada, com \\( g(x) \leq 2, \forall x \in [\frac{1}{2}, \infty) \\).
 
 #### Exemplo
 
@@ -96,7 +96,7 @@ não é uma função. De fato, \\( (1, 1), (1, -1) \in g^{-1} \\) pois \\( 1^{2}
 
 (1) Elementos distintos no domínio \\( A \\) devem estar associados a elementos distintos no contradomínio \\( B \\), ou seja, se \\( x \neq y \in A \\), então \\( f(x) \neq f(y) \in B \\). Funções que satisfazm esta propriedade são chamadas de **funções injetivas**.
 
-(2) Cada elemento no contradomínio \\( B \\) deve ser imagem sob \\( f \\) de pelo menos um elemento de \\( A \\). Em outras palavras \\( \forall y \in B \exists x \in A, f(x) = y \\), ou ainda, \\( I(f) = B \\). Funções que satisfazem esta propriedade são ditas **funções sobrejetivas**.
+(2) Cada elemento no contradomínio \\( B \\) deve ser imagem sob \\( f \\) de pelo menos um elemento de \\( A \\). Em outras palavras \\( \forall y \in B,  \exists x \in A, f(x) = y \\), ou ainda, \\( I(f) = B \\). Funções que satisfazem esta propriedade são ditas **funções sobrejetivas**.
 
 Desse modo, se a função \\( f \\) não for **bijetiva**: injetiva e sobrejetiva, ela não é invertível. Noutras palavras, se \\( f \\) é invertível, necessariamente ela é bijetiva.
 
@@ -120,32 +120,32 @@ Somando esssas identidades, obtemos que \\( y = t \\) e, consequentemente, \\( x
 f\left(\frac{c + d}{2}, \frac{d - c}{2}\right) = (c, d)
 \\]
 
-e a função \\( f \\0 é sobrejetiva. Desse modo, \\( f \\) é uma função bijetiva.
+e a função \\( f \\) é sobrejetiva. Desse modo, \\( f \\) é uma função bijetiva.
 
 #### Composição
 
 Seja \\( f : A \rightarrow B \\) e \\( g : B \rightarrow C \\). A **composição** de \\( g \\) e \\( f \\) é a relação
 
 \\[
-g \circ f = \\{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\\}
-& = \\{(x, z) : \exists y \in B, f(x) = y \land g(y) = z\\}
-& = \\{(x, z) : g(f(x)) = z\\}
+g \circ f = \\{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\\} \\
+= \\{(x, z) : \exists y \in B, f(x) = y \land g(y) = z\\} \\
+= \\{(x, z) : g(f(x)) = z\\} \\
 \\]
 
 Logo, \\( g \circ f : A \rightarrow C \\) será definida por \\( (g \circ f)(x) = g(f(x)) \\).
 
 ##### Exemplo
 
-Seja \\( f(x) = \sen(x) \\) e \\( g(x) = x^{2} + 6x \\).
+Seja \\( f(x) = sen(x) \\) e \\( g(x) = x^{2} + 6x \\).
 
 \\[
-(f \circ g)(x) = f(g(x)) = \sen(g(x)) = \sen(x^{2} + 6x)
+(f \circ g)(x) = f(g(x)) = sen(g(x)) = sen(x^{2} + 6x)
 \\]
 
 e
 
 \\[
-(g \circ f)(x) = g(f(x)) = \sen^{2}(x) + 6\sen(x)
+(g \circ f)(x) = g(f(x)) = sen^{2}(x) + 6sen(x)
 \\]
 
 Como a operação de composição de funções não é comutativa, \\( f \circ g \\) pode ser diferente de \\( g \circ f \\).
