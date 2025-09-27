@@ -1,6 +1,6 @@
 window.Mathjax = {
-    loader: {load: ['[tex]/cancel']},
-    tex: {packages: {'[+]': ['cancel']}}
+    loader: {load: ['[tex]/cancel', '[tex]/ams']},
+    tex: {packages: {'[+]': ['cancel', 'ams']}}
 };
 
 (function () {

@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Problema da Área - Notes</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="o-problema-da-Área"><a class="header" href="#o-problema-da-Área">O Problema da Área</a></h1>
+<p><em>Área</em> é um termo fácil de ser definido para regiões com lados retos. Em um retângulo, pro exemplo, a área é o produto do comprimento e da largura. Em um triângulo, é metade da base vezes a altura. Seguindo aquele método grego de exaustão, podemos encontrar a área de outros polígonos dividindo-os em múltiplos triângulos, somando as áreas desses triângulos no final.</p>
+<p>Isso não é tão fácil quando estamos lidando com uma região com lados curvos. Podemos fazer uma <em>aproximação</em> dessas áreas ao dividir o gráfico em retângulos e depois tomando o limite das áreas dos retângulos, a medida que o número de retângulos aumenta.</p>
+<h2 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h2>
+<p>Use retângulos para estimar a área sob a parábola \( y = x^{2} \) de 0 até 1.</p>
+<details>
+Como estamos fazendo de 0 até 1, podemos imaginar um quadrado na área do gráfico de com lados de comprimento 1. Dividindo a área \\( S \\) em quatro faixas, \\( S_{1} \\), \\( S_{2} \\), \\( S_{3} \\), e \\( S_{4} \\), com as retas veticais \\( x = \frac{1}{4} \\), \\( \frac{1}{2} \\), \\( \frac{3}{4} \\) e a existente \\( 1 \\) dividindo-as.
+<p>Podemos aproximar cada faixa por um retângulo com base igual à largura da faixa e altura igual ao lado direito da faixa. As alturas dos retângulos são os valores da função \( f(x) = x^{2} \) nas extremidades <em>diretas</em> dos subintervalos \( \left[0, \frac{1}{4}\right] \), \( \left[\frac{1}{4}, \frac{1}{2}\right] \), \( \left[\frac{1}{2}, \frac{3}{4}\right] \) e \( \left[\frac{3}{4}, 1\right] \).</p>
+<p>Cada retângulo tem largura de \( \frac{1}{4} \) e altura de \( \left(\frac{1}{4}\right)^{2} \), \( \left(\frac{1}{2}\right)^{2} \), \( \left(\frac{3}{4}\right)^{2} \) e \( \left(1\right)^{2} \). Se \( R_{4} \) for a soma das áreas dos retângulos aproximantes, teremos</p>
+<p>\[
+R_{4} = \frac{1}{4} \cdot \left(\frac{1}{4}\right)^{2} + \frac{1}{4} \cdot \left(\frac{1}{2}\right)^{2} + \frac{1}{4} \cdot \left(\frac{3}{4}\right)^{2} + \frac{1}{4} \cdot 1^{2} = \frac{15}{32} = 0,46875
+\]</p>
+<blockquote>
+<p>[!NOTE]
+Os valores aqui estão ao quadrado pois estamos aplicando a função neles!</p>
+</blockquote>
+<p>Por ser uma aproximação, temos que a área \( A \) de \( S \) é</p>
+<p>\[
+A &lt; 0,46875
+\]</p>
+<p>Fazendo retângulos menores que tocam a curva em apenas um ponto (extremidade <em>esquerda</em> dos subintervalos), descobrimos uma outra área que server ajuda a definir o intervalo de \( A \).</p>
+<p>\[
+L_{4} = \frac{1}{4} \cdot 0^{2} + \frac{1}{4} \cdot \left(\frac{1}{4}\right)^{2} + \frac{1}{4} \cdot \left(\frac{1}{2}\right)^{2} + \frac{1}{4} \cdot \left(\frac{3}{4}\right)^{2} = \frac{7}{32} = 0,21875
+\]</p>
+<p>\[
+0,21875 &lt; A &lt; 0,46875
+\]</p>
+<p>Podemos repetir esse procedimento com <strong>números maiores de faixas</strong> para encontrar <strong>resultados mais precisos</strong>. Fazendo isso, podemos chegar a deduzir um resultado como foi feito em <a href="../calculo-a/limites.html">limites</a>.</p>
+<p>Nesse exemplo, mil faixas nos dão</p>
+<p>\[
+0,3328336 &lt; A &lt; 0,3338335
+\]</p>
+<p>Que, por ser próximo de 0,3333..., podemos dizer que tende a \( \frac{1}{3} \).</p>
+</details>
+<h2 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h2>
+<p>Para a região \( S \) do Exemplo 1, mostre que a soma das áreas dos retângulos aproximantes superiores tende a \( \frac{1}{3} \), isto é,</p>
+<p>\[
+\lim_{n \to \infty} R_{n} = \frac{1}{3}
+\]</p>
+<details>
+R_{n} é a soma das áreas dos retângulos. Cada retângulo tem uma largura \\( \frac{1}{n} \\), e as alturas são os valores da função \\( f(x) = x^{2} \\) nos pontos \\( \frac{1}{n} \\), \\( \frac{2}{n} \\), \\( \frac{3}{n} \\), ..., \\( \frac{n}{n} \\). Logo
+<p>\[
+R_{n} = \frac{1}{n} \cdot \left(\frac{1}{n}\right)^{2} + \frac{1}{n} \cdot\left(\frac{2}{n}\right)^{2} + \frac{1}{n} \cdot \left(\frac{3}{n}\right)^{2} + ... + \frac{1}{n} \cdot \left(\frac{n}{n}\right)^{2} \
+= \frac{1}{n} \cdot \frac{1}{n^{2}} (1^{2} + 2^{2} + 3^{2} + ... + n^{2}) \
+= \frac{1}{n^{3}} (1^{2} + 2^{2} + 3^{2} + ... n^{2})
+\]</p>
+<p>Utilizamos aqui a fórmula para a soma dos quadrados dos \( n \) primeiros inteiros positivos:</p>
+<p>\[
+1^{2} + 2^{2} + 3^{2} + ... + n^{2} = \frac{n(n + 1)(2n + 1)}{6}
+\]</p>
+<p>Colocando essa fórmula em R_{n}, temos</p>
+<p>\[
+R_{n} = \frac{1}{n^{3}} \cdot \frac{n(n + 1)(2n + 1)}{6} = \frac{(n + 1)(2n + 1)}{6n^{2}}
+\]</p>
+<p>Então, temos</p>
+<p>\[
+\lim_{n \to \infty} R_{n} = \lim_{n \to \infty} \frac{(n + 1)(2n + 1)}{6n^{2}} \
+= \lim_{n \to \infty} \frac{1}{6} \left(\frac{n + 1}{n}\right)\left(\frac{2n + 1}{n}\right) \
+\text{Dividindo os termos em parênteses por $n$...} \
+= \lim_{n \to \infty} \frac{1}{6} \left(1 + \frac{1}{n}\right)\left(2 + \frac{1}{n}\right) \
+\text{Lembrando que $\lim_{n \to \infty} \frac{1}{n} = 0$ e que o limite de uma constante é a própria constante...} \
+= \frac{1}{6} \cdot 1 \cdot 2 = \frac{1}{3}
+\]</p>
+<p>Com isso, podemos definir a área de \( S \)</p>
+<p>\[
+A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty} L_{n} = \frac{1}{3}
+\]</p>
+</details>
+<h2 id="Área"><a class="header" href="#Área">Área</a></h2>
+<p>A <strong>área</strong> \( A \) da região \( S \) que está sob o gráfico de uma função contínua \( f \) é o limite da soma das áreas dos retângulos aproximantes:</p>
+<p>\[
+A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty}\left[f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x}\right] \
+\delta{x} = \frac{b - a}{n} \
+b = \text{fim do intervalo} \
+a = \text{início do intervalo}
+\]</p>
+<p>Tomando a extremidade esquerda chegamos no mesmo valor, só que com um \( n \) diferente</p>
+<p>\[
+A = \lim_{n \to \infty} L_{n} = \lim_{n \to \infty}\left[f(x_{0})\delta{x} + f(x_{1})\delta{x} + ... + f(x_{n - 1})\delta{x}\right] \
+\delta{x} = \frac{b - a}{n} \
+b = \text{fim do intervalo} \
+a = \text{início do intervalo}
+\]</p>
+<p>Devido a essa igualdade, em vez de usarmos as extremidades, podemos usar outras partes dos intervalos onde a curva toca os retângulos primeiro. Esses pontos, representados por \( x_{n}^{*} \) são chamados de <strong>pontos amostrais</strong>.</p>
+<p>\[
+A = \lim_{n \to \infty} \left[f(x_{1}^{<em>})\delta{x} + f(x_{2}^{</em>})\delta{x} + ... + f(x_{n}^{*})\delta{x}\right]
+\]</p>
+<p>Um jeito de reescrever isso é usando somatório:</p>
+<p>\[
+A = \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_{i}^{*}) \delta{x}
+\]</p>
+<h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
+<p>Seja \( A \) a área da região que está sob o gráfico de \( f(x) = e^{-x} \) entre \( x = 0 \) e \( x = 2 \).</p>
+<p>(a) Usando as extremidades direitas, encontre uma expressão para \( A \) como um limite. Não calcule o limite.
+(b) Estime a área tomando como pontos amostrais os pontos médios e usando quatro e depois dez subintervalos.</p>
+<details>
+(a) Uma vez que \\( a = 0 \\) e \\( b = 2 \\), a largura de um subintervalo é
+<p>\[
+\delta{x} = \frac{2 - 0}{n} = \frac{2}{n}
+\]</p>
+<p>Portanto, \( x_{1} = \frac{2}{n} \), \( x_{2} = \frac{4}{n} \), \( x_{3} = \frac{6}{n} \), \( x_{i} = \frac{2i}{n} \). A soma dos retângulos aproximantes é</p>
+<p>\[
+R_{n} = f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x} \
+= e^{-x_{1}}\delta{x} + e^{-x_{2}}\delta{x} + ... + e^{-x_{n}}\delta{x} \
+= e^{\frac{-2}{n}}\left(\frac{2}{n}\right) + e^{\frac{-4}{n}}\left\frac{2}{n}\right) + ... + e^{\frac{-2n}{n}}\left(\frac{2}{n}\right)
+\]</p>
+<p>Segundo a nossa definição, a área é</p>
+<p>\[
+A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty} \frac{2}{n} (e^{\frac{-2}{n}} + e^{\frac{-4}{n}} + e^{\frac{-6}{n}} + ... + e^{\frac{-2n}{n}})
+\]</p>
+<p>Usando somatório teríamos</p>
+<p>\[
+A = \lim_{n \to \infty} \frac{2}{n} \sum_{i = 1}^{n} e^{\frac{-2i}{n}}
+\]</p>
+<p>(b) Com \( n = 4 \), os subintervalos com mesma largura \( \delta{x} = 0,5 \) são \( [0; 0.5] \), \( [0,5; 1] \), \( [1; 1,5] \), e \( [1,5;2] \). Os pontos médios desses intervalos são \( x_{1}^{*} = 0,25 \), \( x_{2}^{*} = 0,75 \), \( x_{3}^{*} = 1,25 \) e \( x_{4}^{*} = 1,75 \), e a soma das áreas dos quatro retângulos aproximantes é</p>
+<p>\[
+M_{4} = \sum_{i = 1}^{4} f(x_{1}^{*}) \delta{x} \
+= f(0,25) \delta{x} + f(0,75) \delta{x} + f(1,25) \delta{x} + f(1,75) \delta{x} \
+= e^{-0,25} (0,5) + e^{-0,75} (0,5) + e^{-1,25} (0,5) + e^{-1,75} (0,5) \
+= \frac{1}{2} (e^{-0,25} + e^{-0,75} + e^{-1,25} + e^{-1,75}) \sim 0,8557
+\]</p>
+<p>Logo, uma estimativa para a área é</p>
+<p>\[
+A \sim 0,8557
+\]</p>
+<p>Com \( n = 10 \), os subintervalos são \( [0; 0,2] \), \( [0,2; 0,4], ..., [1,8; 2] \) e os pontos médios são \( x_{1}^{*} = 0,1 \), \( x_{2}^{*} = 0,3 \), \( x_{3}^{*} = 0,5 \), ..., \( x_{10}^{*} = 1,9 \). Assim</p>
+<p>\[
+A \sim M_{10} = f(0,1) \delta{x} + f(0,3) \delta{x} + f(0,5) \delta{x} + ... + f(1,9) \delta{x} \
+= 0,2(e^{-0,1} + e^{-0,3} + e^{-0,5} + ... + e^{-1,9}) \sim 0,8632
+\]</p>
+</details>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../calculo/calculo-b/calculo-b.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../calculo/calculo-b/problema-da-distancia.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../calculo/calculo-b/calculo-b.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../calculo/calculo-b/problema-da-distancia.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../custom/mathjax.js"></script>
+
+
+    </div>
+    </body>
+</html>

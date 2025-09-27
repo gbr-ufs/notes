@@ -1,0 +1,640 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Material de Estudos PSEL Coretech 2025 - Notes</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="material-de-estudos-psel-coretech-2025"><a class="header" href="#material-de-estudos-psel-coretech-2025">Material de Estudos PSEL Coretech 2025</a></h1>
+<p>Material de estudos ofertado para a dinâmica em grupo da liga acadêmica Coretech em 2025.</p>
+<h2 id="os-fundamentos-da-lógica-digital"><a class="header" href="#os-fundamentos-da-lógica-digital">Os Fundamentos da Lógica Digital</a></h2>
+<h3 id="abstração-digital"><a class="header" href="#abstração-digital">Abstração Digital</a></h3>
+<h4 id="da-física-contínua-à-lógica-discreta"><a class="header" href="#da-física-contínua-à-lógica-discreta">Da Física Contínua à Lógica Discreta</a></h4>
+<p><strong>Sinais Analógicos</strong></p>
+<ul>
+<li>Confiabilidade quase perfeita.</li>
+<li>Funções contínuas do tempo.</li>
+<li>Capturam a natureza do mundo físico com fidelidade.</li>
+<li>Suscetíveis a interferência externa.</li>
+</ul>
+<p><strong>Sinais Digitais</strong></p>
+<ul>
+<li>Precisão infinita.</li>
+<li>Construídos com base em abstração.</li>
+<li>Operam com um conjunto finito de valores discretos.
+<ul>
+<li>O mais famoso sendo o binário.</li>
+<li>Fornece <strong>imunidade a ruído</strong> (basicamente, dados irrelevantes são fácilmente bloqueados).</li>
+</ul>
+</li>
+<li>Sistemas robustos e reproduzíveis.</li>
+</ul>
+<p><strong>Conversores</strong></p>
+<p>São eles que conectam sistemas analógicos e digitais. Um Conversor Analógico-Digital (ADC) converte um sinal analógico em formato digital mediante dois processos:</p>
+<ul>
+<li><strong>Discretização</strong>: Amostra o sinal em intervalos de tempo discretos.</li>
+<li><strong>Quantização</strong>: Mapeia a amplitude contínua de cada amostra para um valor digital finito..</li>
+</ul>
+<p>Um Conversor Digital-Analógico (DAC) faz o inverso.</p>
+<h4 id="sistemas-binários-e-codificação-da-informação"><a class="header" href="#sistemas-binários-e-codificação-da-informação">Sistemas Binários e Codificação da Informação</a></h4>
+<p><strong>Bit</strong></p>
+<ul>
+<li>Unidade do sistema binário.</li>
+<li><code>0</code> ou <code>1</code>.</li>
+<li>Usado principalmente para a representação de números.</li>
+</ul>
+<p><strong>BCD (Binary-Coded Decimal)</strong></p>
+<p>Representa cada dígito decimal (0-9) com um grupo de quatro bits.</p>
+<p><strong>ASCII (American Standard Code for Information Interchange)</strong></p>
+<p>Código de 8 bits que mapeia números, letras e símbolos para valores binários, permitindo o processamento e armazenamento de texto ("ultrapassado" pelo Unicode).</p>
+<p><strong>Código Gray</strong></p>
+<p>Sistema de codificação binária onde dois valores sucessivos diferem em apenas um bit. Base para a organização do Mapa de Karnaugh, uma ferramenta de simplificação lógica.</p>
+<h4 id="sistemas-de-numeração-e-conversão-de-bases"><a class="header" href="#sistemas-de-numeração-e-conversão-de-bases">Sistemas de Numeração e Conversão de Bases</a></h4>
+<p>A base de todos os sistemas de numeração modernos é a <strong>notação posicional</strong>, onde o valor de um dígito é determinado tanto pelo seu valor intrínseco quanto pela sua posição dentro do número, ponderado por uma potência de base (radix).</p>
+<p><strong>De Decimal para Outras Bases</strong></p>
+<p>Para converter a parte inteira de um número decimal para uma base \( r \), utiliza-se o método das divisões sucessivas. O número é repetidamente dividido pela nova base \( r \), e os restos são coletados. o primeiro resto é o digito menos significativo (LSB) e o último quociente é o digito mais significativo (MSB).</p>
+<p>Exemplo: Converta o número 100 para binário.</p>
+<details>
+\\[
+100 \div 2 = 50 (0) \\
+50 \div 2 = 25 (0) \\
+25 \div 2 = 12 (1) \\
+12 \div 2 = 6 (0) \\
+6 \div 2 = 3 (0) \\
+3 \div 2 = 1 (1) \\
+1 \div 2 = 0 (1)
+\\]
+<p>Portanto, 100 em binário é <code>1100100</code>.</p>
+</details>
+<p><strong>De Outras Bases para Decimal</strong></p>
+<p>Utiliza-se a expansão polinomial. Cada dígito do número é multiplicado pela base \( r \) elevada à potência de sua posição (começando em 0 para o dígito mais à direita) e os resultados são somados.</p>
+<p>Exemplo: Converta o número binário <code>11012</code> para decimal.</p>
+<details>
+\\[
+1 \cdot 23 + 1 \cdot 22 + 0 \cdot 21 + 1 \cdot 20 = 8 + 4 + 0 + 1 = 1310
+\\]
+</details>
+<p><strong>Atalhos entre Binário, Octal e Hexadecimal</strong></p>
+<ul>
+<li><strong>Binário → Octal</strong>: Os bits são agrupados em conjuntos de três, da direita para a esquerda (se tiver menos que três, o número é preenchido à esquerda por zeros). Cada número é então substituído pelo seu octal equivalente.
+Exemplo: Converta o número binário <code>1100100</code> para octal.</li>
+</ul>
+<details>
+Agrupando da direita para a esquerda:
+<p>\[
+1 100 100
+\]</p>
+<p>Como o grupo à esquerda possui apenas um dígito, temos que preenchê-lo:</p>
+<p>\[
+001 100 100
+\]</p>
+<p>E agora podemos fazer a conversão de verdade:</p>
+<p>\[
+001 = 1 \
+100 = 4 \
+100 = 4
+\]</p>
+</details>
+<p>Aqui está uma tabela de conversão entre eles:</p>
+<div class="table-wrapper"><table><thead><tr><th>Binário</th><th>Octal</th></tr></thead><tbody>
+<tr><td>000</td><td>0</td></tr>
+<tr><td>001</td><td>1</td></tr>
+<tr><td>010</td><td>2</td></tr>
+<tr><td>011</td><td>3</td></tr>
+<tr><td>100</td><td>4</td></tr>
+<tr><td>101</td><td>5</td></tr>
+<tr><td>110</td><td>6</td></tr>
+<tr><td>111</td><td>7</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li><strong>Binário → Hexadecimal</strong>: Os bits são agrupados em conjuntos de quatro (se tiver menos que quatro, o número é preenchido à esquerda por zeros). Para descobrir o valor de um grupo, cada número dele é multiplicado por 2 elevado ao seu índice (começando por 0) da direita para a esquerda—depois, é feito a soma dos resultados. Isso é feito com todos os grupos, da direita para a esquerda. Daí a gente junta os resultados (\( 2 \circ 2 = 22 \)).</li>
+</ul>
+<p>Exemplo: Converta o número binário <code>1100100</code> para hexadecimal.</p>
+<details>
+\\[
+0100 110 \to 0100 0110
+\\]
+<p>Pro primeiro grupo:</p>
+<p>\[
+0 \cdot 2^{3} + 1 \cdot 2^{2} + 1 \cdot 2^{1} + 0 \cdot 2^{0} = 0 + 4 + 2 + 0 = 6
+\]</p>
+<p>Pro segundo:</p>
+<p>\[
+0 \cdot 2^{3} + 1 \cdot 2^{2} + 0 \cdot 2^{1} + 0 \cdot 2^{0} = 4
+\]</p>
+<p>E daí a gente junta eles:</p>
+<p>\[
+6 \circ 4 = 64
+\]</p>
+</details>
+<p>Note que convertemos o número binário para decimal primeiro, e daí o convertemos para hexadecimal.</p>
+<p>Aqui está uma tabela de conversão entre eles:</p>
+<div class="table-wrapper"><table><thead><tr><th>Decimal</th><th>Hexadecimal</th></tr></thead><tbody>
+<tr><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>6</td></tr>
+<tr><td>7</td><td>7</td></tr>
+<tr><td>8</td><td>8</td></tr>
+<tr><td>9</td><td>9</td></tr>
+<tr><td>10</td><td>A</td></tr>
+<tr><td>11</td><td>B</td></tr>
+<tr><td>12</td><td>C</td></tr>
+<tr><td>13</td><td>D</td></tr>
+<tr><td>14</td><td>E</td></tr>
+<tr><td>15</td><td>F</td></tr>
+</tbody></table>
+</div>
+<h4 id="a-arítmética-binária-em-hardware"><a class="header" href="#a-arítmética-binária-em-hardware">A Arítmética Binária em Hardware</a></h4>
+<p>Números com sinal ("sinal" se referindo a positivo ou negativo) são representados por padrão utilizando o sistema de <strong>complemento de dois</strong>.</p>
+<p><strong>Complemento de Dois</strong></p>
+<p>O complemento de dois de um número binário é calculado em um processo de dois passos: primeiro, todos os bits são invertidos (<em>complemento de um</em>), e em seguida, 1 é somado ao resultado. Neste sistema, o bit mais significativo (MSB) atua como indicador de sinal: 0 para números positivos e 1 para números negativos.</p>
+<h2 id="a-linguagem-e-a-otimização-de-circuitos"><a class="header" href="#a-linguagem-e-a-otimização-de-circuitos">A Linguagem e a Otimização de Circuitos</a></h2>
+<h3 id="a-linguagem-dos-circuitos-Álgebra-booleana"><a class="header" href="#a-linguagem-dos-circuitos-Álgebra-booleana">A Linguagem dos Circuitos: Álgebra Booleana</a></h3>
+<p>Esse campo da matemática descreve as relações entre variaveis lógicas.</p>
+<h4 id="fundamentos-axiomáticos"><a class="header" href="#fundamentos-axiomáticos">Fundamentos Axiomáticos</a></h4>
+<ul>
+<li>Conjunto de elementos (todos os valores do campo): \( {0, 1} \).</li>
+<li>Operadores básicos: <code>AND</code> (<em>produto</em> lógico), <code>OR</code> (<em>soma</em> lógica) e <code>NOT</code> (<em>complemento</em> lógico).</li>
+</ul>
+<p><strong>Postulados Fundamentais</strong></p>
+<ul>
+<li><strong>Fechamento</strong>: O resultado de uma operação com elementos do conjunto também pertence ao conjunto.</li>
+<li><strong>Elementos de Identidade</strong>: Existe um elemento de identidade para cada operação: 0 para a operação <code>OR</code> (\( (A + 0 = A) \)) e 1 para a operação <code>AND</code> (\( A \cdot 1 = A \)).</li>
+<li><strong>Comutatividade</strong>: \( A + B = B + A; A \cdot B = B \cdot A \).</li>
+<li><strong>Distributividade</strong>: \( A \cdot (B + C) = A \cdot B + A \cdot C; A + (B \cdot C) = (A + B) \cdot (A + C) \).</li>
+</ul>
+<p><strong>Teoremas</strong></p>
+<ul>
+<li><strong>Idempotência</strong>: \( A + A = A \).</li>
+<li><strong>Absorção</strong>: \( A + A \cdot B = A \).</li>
+<li><strong>Associatividade</strong>: \( (A + B) + C = A + (B + C) \).</li>
+</ul>
+<p><strong>Princípio da Dualidade</strong></p>
+<p>Qualquer teorema booleano válido permanece válido se os operadores <code>AND</code> e <code>OR</code> forem trocados entre si, e os elementos de identidade 0 e 1 também forem trocados.</p>
+<h4 id="teoremas-de-de-morgan"><a class="header" href="#teoremas-de-de-morgan">Teoremas de De Morgan</a></h4>
+<p>Fornecem um método formal para negar expressões complexas e estabelecem a base matemática para a equivalência entre diferentes formas de formas lógicas.</p>
+<ol>
+<li>O complemento de uma soma é o produto dos complementos: \( (A + B)' = A' \cdot B' \)</li>
+<li>O complemento de um produto é a soma dos complementos: \( (A \cdot B)' = A' + B' \)</li>
+</ol>
+<h4 id="formas-canônicas"><a class="header" href="#formas-canônicas">Formas Canônicas</a></h4>
+<p>Existem algumas formas de representar uma função booleana.</p>
+<p><strong>Tabela-Verdade</strong></p>
+<p>A representação mais fundamental. Lista os resultados de cada combinação possível.</p>
+<p>Exemplo:</p>
+<p>|  P  |  Q  |  P <code>AND</code> Q  |
+|-----------|-------------|
+|  V  |  V  |  V          |
+|  V  |  F  |  F          |
+|  F  |  V  |  F          |
+|  F  |  F  |  F          |</p>
+<p><strong>Mintermos e Maxtermos</strong></p>
+<p>Um <strong>mintermo</strong> é um termo produto (<code>AND</code>) que inclui todas as variáveis de entrada e que resulta em <code>1</code>, Um <strong>maxtermo</strong> é um termo soma (<code>OR</code>) que resulta em <code>0</code> para uma única combinação de entrada.</p>
+<p><strong>Soma de Produtos (SOP) e Produto de Soma(POS)</strong></p>
+<p>Qualquer função lógica pode ser expressa de duas formas canônicas: como uma soma lógica (<code>OR</code>) de todos os mintermos para os quais a função é <code>1</code> (forma SOP), ou como um produto lógico (<code>AND</code>) de todos os maxtermos para os quais a função <code>0</code> (forma POS). É basicamente os conceitos de <em>Forma Normal Disjuntiva</em> e <em>Forma Normal Conjuntiva</em> de Fundamentos.</p>
+<h4 id="portas-lógicas-como-implementações-físicas"><a class="header" href="#portas-lógicas-como-implementações-físicas">Portas Lógicas como Implementações Físicas</a></h4>
+<p>A implementação física da álgebra booleana tem como base as <em>portas lógicas</em>, os circuitos eletrônicos que executam as operações lógicas fundamentais.</p>
+<ul>
+<li><strong>Portas Básicas</strong>: <code>AND</code>, <code>OR</code> e <code>NOT</code> (inversor).</li>
+<li><strong>Portas Universais</strong>: <code>NAND</code> (<code>NOT-AND</code>) e <code>NOR</code> (<code>NOT-OR</code>). Tem esse nome pois qualquer função booleana pode ser construída usando exclusivamente elas.</li>
+</ul>
+<p>Esses circuitos são implementados com transistores.</p>
+<p>A tabela a seguir consolida os postulados e teoremas fundamentais da Álgebra Booleana.</p>
+<div class="table-wrapper"><table><thead><tr><th>Nome</th><th>Forma <code>AND</code> (Produto)</th><th>Forma <code>OR</code> (Soma)</th></tr></thead><tbody>
+<tr><td><strong>Postulados</strong></td><td></td><td></td></tr>
+<tr><td>Identidade</td><td>\( A \cdot 1 = A \)</td><td>\( A + 0 = A \)</td></tr>
+<tr><td>Nulidade</td><td>\( A \cdot 0 = 0 \)</td><td>\( A + 1 = 1 \)</td></tr>
+<tr><td>Comutatividade</td><td>\( A \cdot B = B \cdot A \)</td><td>\( A + B = B + A \)</td></tr>
+<tr><td>Associatividade</td><td>\( (A \cdot B) \cdot C = A \cdot (B \cdot C) \)</td><td>\( (A + B) + C = A + (B + C) \)</td></tr>
+<tr><td>Distributividade</td><td>\( A (B + C) = (A \cdot B) + (A \cdot C) \)</td><td>\( A + (B \cdot C) = (A + B) \cdot (A + C) \)</td></tr>
+<tr><td><strong>Teoremas</strong></td><td></td><td></td></tr>
+<tr><td>Idempotência</td><td>\( A \cdot A = A \)</td><td>\( A + A = A \)</td></tr>
+<tr><td>Involução</td><td>\( (A')' = A \)</td><td></td></tr>
+<tr><td>Complemento</td><td>\( A \cdot A' = 0 \)</td><td>\( A + A' = 1 \)</td></tr>
+<tr><td>Absorção</td><td>\( A \cdot (A + B) = A \)</td><td>\( A + (A \cdot B) = A \)</td></tr>
+<tr><td>De Morgan</td><td>\( (A \cdot B)' = A' + B' \)</td><td>\( (A + B)' = A' \cdot B' \)</td></tr>
+</tbody></table>
+</div>
+<h3 id="princípios-de-minimização-lógica"><a class="header" href="#princípios-de-minimização-lógica">Princípios de Minimização Lógica</a></h3>
+<p>Passo essencial para otimização e economia.</p>
+<h4 id="a-lógica-da-simplificação"><a class="header" href="#a-lógica-da-simplificação">A Lógica da Simplificação</a></h4>
+<p>Implementando uma função booleana na base de SOP ou POS gera um circuito que funciona, mas muito extenso. A simplificação busca encontrar uma expressão equivalente que utilize menos recursos.</p>
+<h4 id="minimização-gráfica-o-mapa-de-karnaugh-k-map"><a class="header" href="#minimização-gráfica-o-mapa-de-karnaugh-k-map">Minimização Gráfica: O Mapa de Karnaugh (K-Map)</a></h4>
+<p>Usado para funções com até quatro ou cinco variáveis.</p>
+<p><strong>Estrutura</strong></p>
+<p>É uma tabela-verdade reorganizada em uma grade bidimensional. A numeração das linhas e colunas segue o Código Gray, onde células adjacentes (incluindo as bordas opostas, como se o mapa estivesse enrolado) diferem em apenas um bit. Essa adjacência é a chave para a simplificação.</p>
+<p><strong>Agrupamento</strong></p>
+<p>O processo de simplificação envolve agrupar células adjacentes que contem <code>1</code>s. Os grupos devem ser retangulares e conter um número de células que seja uma potência de dois (1, 2, 4, ...). O objetivo é formar os maiores grupos possíveis, cobrindo todos os <code>1</code>s.</p>
+<p><strong>Eliminação de Variáveis</strong></p>
+<p>Cada grupo corresponde a um único termo produto na expressão simplificada. As variáveis que mudam de estados (aparecem com <code>0</code> e <code>1</code>) em um grupo são eliminadas. Por exemplo, um grupo de duas células elimina uma variável, um grupo de quatro elimina duas, e assim por diante.</p>
+<p>** Condições "Don't Care"**</p>
+<p>Em muitos projetos, certas combinações de entrada nunca ocorrem, ou a saída é irrelevante. Podemos incluí-las em grupos de <code>1</code> para formar grupos maiores, mas é ideal cortá-las.</p>
+<h2 id="blocos-de-construção-de-sistemas-digitais"><a class="header" href="#blocos-de-construção-de-sistemas-digitais">Blocos de Construção de Sistemas Digitais</a></h2>
+<h3 id="circuitos-lógicos-combinacionais"><a class="header" href="#circuitos-lógicos-combinacionais">Circuitos Lógicos Combinacionais</a></h3>
+<p>Circuitos combinacionais são definidos pela propriedade de que suas saídas são função exclusivamente de suas entradas atuais. Eles não possuem memória de eventos passados; para um dado conjunto de entradas, a saída será sempre a mesma.</p>
+<h4 id="circuitos-aritméticos"><a class="header" href="#circuitos-aritméticos">Circuitos Aritméticos</a></h4>
+<p><strong>Meio Somador (Half-Adder)</strong></p>
+<p>Circuito mais simples para adição, somando dois bits de entrada (\( A \) e \( B \)) para produzir uma Soma \( S \) e um "Vai-um" de saída <code>Cout</code>. As equações lógicas são \( S = A + B \) (<code>XOR</code>) e \( <code>Cout</code> = A \cdot B \) (<code>AND</code>).</p>
+<p><strong>Somador Completo (Full-Adder)</strong></p>
+<p>Adiciona três bits: \( A \), \( B \) e um "Vai-um" de entrada <code>Cin</code> (standard input). Permite somar números de múltiplos bits. Pode ser construído a partir de dois meio somadores e uma porta <code>OR</code>.</p>
+<p><strong>Somador de Propagação (Ripple-Carry Adder)</strong></p>
+<p>Para somar números de \( n \) bits, \( n \) somadores completos são conectados em cascata. O <code>Cout</code> (standard output) de um estágio se torna o <code>Cin</code> do próximo, da direita para a esquerda. Note que esse tipo de somador possui uma limitação de desempenho.</p>
+<p><strong>Circuitos Subtratores</strong></p>
+<p>Feito a partir da conversão de um somador de propagação. Para calcular \( A - B \), o operando \( B \) é invertido (formando seu complemento de um) e o <code>Cin</code> do primeiro somador completo é ajustado para <code>1</code>. A soma resultante é \( A + B' + 1 \), que é a definição de substração usando complemento de dois.</p>
+<h4 id="circuitos-de-roteamento-e-seleção-de-dados"><a class="header" href="#circuitos-de-roteamento-e-seleção-de-dados">Circuitos de Roteamento e Seleção de Dados</a></h4>
+<p><strong>Multiplexador (MUX)</strong></p>
+<p>Atua como uma chave digital. Possui \( 2n \) entradas de dados \( n \), \( n \) linhas de seleção e uma única saída. O valor binário nas linhas de seleção determina qual das entradas de dados é conectada à saída. É um componente fundamental para selecionar entre diferentes fontes de dados, como em barramentos de dados de um processador.</p>
+<p><strong>Decodificador</strong></p>
+<p>Converte um código de entrada binário de \( n \) bits em \( 2n \) saídas únicas. Para qualquer código de entrada, apenas uma das linhas de saída é ativada. Serve para decodificar endereços de memória e instruções de CPU.</p>
+<h4 id="circuitos-de-codificação"><a class="header" href="#circuitos-de-codificação">Circuitos de Codificação</a></h4>
+<p><strong>Codificador (Encoder)</strong></p>
+<p>Realiza a operação inversa de um decodificador. Possui \( 2n \) linhas de entrada e produz um código de saída binário de \( n \) bits correspondente à única linha de entrada que está ativa.</p>
+<p><strong>Codificador de Prioridade</strong></p>
+<p>Determina os processos mais críticos aos quais o processador deveria focar.</p>
+<h3 id="circuitos-lógicos-sequenciais"><a class="header" href="#circuitos-lógicos-sequenciais">Circuitos Lógicos Sequenciais</a></h3>
+<p>Introduzem o conceito de <strong>estado</strong>, onde a saída depende não apenas das entradas atuais, mas também da sequência de entradas passadas.</p>
+<h4 id="latches-vs-flip-flops-uma-distinção-crítica"><a class="header" href="#latches-vs-flip-flops-uma-distinção-crítica">Latches vs. Flip-Flops: Uma Distinção Crítica</a></h4>
+<p><strong>Latches (Sensíveis ao Nível)</strong></p>
+<p>Elementos de memória "transparentes". a saída segue sua entrada de dados enquanto o sinal de habilitação (ou clock) está em um nível ativo.</p>
+<p><strong>Flip-Flops (Disparados por Borda)</strong></p>
+<p>Blocos de construção dos sistemas síncronos. Muda seu estado armazenado apenas em uma transição específica do sinal do clock (a borda de subida, <em>posedge</em>, ou a borda de descida, <em>negedge</em>). Tem alguns tipos:</p>
+<ul>
+<li><strong>Flip-Flop D</strong>: O mais utilizado para armazenamento de dados.</li>
+<li><strong>Flip-Flop JK</strong>: Uma versão mais versátil. Pode manter o estado, setar, resetar ou alternar (<em>toggle</em>) seu estado.</li>
+<li><strong>Flip-Flop T</strong>: Uma versão simplificada do \( JK \). Alterna seu estado a cada pulso de clock.</li>
+</ul>
+<p>De um lado, os latches são mais simples—por outro, os flip-flops funcionam melhor com projetos mais complexos.</p>
+<h4 id="máquinas-de-estados-finitos-fsms"><a class="header" href="#máquinas-de-estados-finitos-fsms">Máquinas de Estados Finitos (FSMs)</a></h4>
+<p>Modelo matemático e conceitual para o projeto de qualquer circuito sequencial. Existem dois modelos principais:</p>
+<ul>
+<li><strong>Máquina de Moore</strong>: As saídas são função <em>apenas</em> do estado atual do sistema. Mais complexas.</li>
+<li><strong>Máquina de Mealy</strong>: As saídas são função <em>tanto</em> do estado atual quanto das entradas atuais. Mais compactas, porém introduzem desafios de temporização em sistemas mais complexos.</li>
+</ul>
+<h2 id="de-lógica-a-sistemas-arquiteturas-embarcadas-e-verilog-hdl"><a class="header" href="#de-lógica-a-sistemas-arquiteturas-embarcadas-e-verilog-hdl">De Lógica a Sistemas: Arquiteturas Embarcadas e Verilog HDL</a></h2>
+<h3 id="a-arquitetura-de-sistemas-embarcados"><a class="header" href="#a-arquitetura-de-sistemas-embarcados">A Arquitetura de Sistemas Embarcados</a></h3>
+<h4 id="definindo-o-paradigma-embarcado"><a class="header" href="#definindo-o-paradigma-embarcado">Definindo o Paradigma Embarcado</a></h4>
+<p>Um sistema embarcado é um sistema especializado, projetado para executar uma função dedicada como parte de um dispositivo maior.</p>
+<p><strong>Características</strong></p>
+<ul>
+<li><strong>Dedicados</strong> a uma tarefa específica</li>
+<li>Operam sob <strong>restrições de tempo real</strong></li>
+<li>Otimizados para métricas como <strong>custo, consumo de energia e tamanho físico</strong></li>
+</ul>
+<h4 id="o-núcleo-de-processamento-mcu-vs-mpu"><a class="header" href="#o-núcleo-de-processamento-mcu-vs-mpu">O Núcleo de Processamento: MCU vs. MPU</a></h4>
+<ul>
+<li><strong>Microcontrolador (MCU)</strong>: Integra a CPU, memória e uma variedade de periféricos em um único circuito integrado. Minimiza o tamanho, o custo e o consumo de energia do sistema, pois todas as conexões são internas. Entretanto, a quantidade de memória e o conjunto de periféricos são fixos no momento de fabricação.</li>
+<li><strong>Microprocessador (MPU)</strong>: Consiste principalmente na CPU. Memória e periféricos são componentes externos conectados através de um barramento, permitindo que um projetista escolha a quantidade exata de RAM, o tipo de armazenamento e os periféricos específicos necessários para a aplicação. Entretanto, isso resulta num sistema, maior, mais caro e com maior consumo de energia.</li>
+</ul>
+<h4 id="memória-e-periféricos"><a class="header" href="#memória-e-periféricos">Memória e Periféricos</a></h4>
+<p><strong>Hierarquia de Memória</strong></p>
+<ul>
+<li><strong>Memória não volátil</strong> (Flash, EEPROM): Guarda o que deveria ser permanente, como o programa a ser executado.</li>
+<li><strong>Memória volátil</strong> (SRAM): Guarda o resto.</li>
+</ul>
+<p><strong>Periféricos Comuns</strong></p>
+<ul>
+<li><strong>GPIO (General-Purpose Input/Output)</strong>: Pinos digitais para ler o estado de sensores (como botões) e controlar atuadores (como LEDs).</li>
+<li><strong>Temporizadores/Contadores</strong>: Essenciais para gerar atrasos precisos, criar sinais de Modulação por Largura de Pulso (PWM) para controlar motores e medir a frequência de eventos externos.</li>
+</ul>
+<p><strong>Interfaces de Comunicação</strong></p>
+<p>Protocolos padronizados como <strong>UART</strong> (comunicação serial assíncrona simples), <strong>SPI</strong> e <strong>I2C</strong> (protocolos seriais síncronos para comunicação com outros chips na mesma placa).</p>
+<h3 id="descrição-de-hardware-com-verilog-hdl"><a class="header" href="#descrição-de-hardware-com-verilog-hdl">Descrição de Hardware com Verilog HDL</a></h3>
+<h4 id="a-mudança-de-paradigma-para-hdls"><a class="header" href="#a-mudança-de-paradigma-para-hdls">A Mudança de Paradigma para HDLs</a></h4>
+<p>Em vez de desenho manual, usamos Linguagens de Descrição de Hardware (HDLs). Verilog e VHDL são as duas linguagens dominantes na indústria.</p>
+<h4 id="fundamentos-de-verilog"><a class="header" href="#fundamentos-de-verilog">Fundamentos de Verilog</a></h4>
+<p><strong>Módulo</strong></p>
+<p>Um <code>module</code> define um componente de hardware com uma lista de portas (entradas e saídas) e uma descrição de sua lógica interna.</p>
+<p><strong>Tipos de dados</strong></p>
+<ul>
+<li><strong><code>wire</code></strong>: Representa uma conexão física, como um fio. Não pode armazenar um valor; deve ser continuamente dirigido por algo, como a saída de uma porta lógica ou uma atribuição contínua (<code>assign</code>). Usado para modelar conexões em lógica combinacional.</li>
+<li><strong><code>reg</code></strong>: Representa um elemento de armazenamento de dados. Retém seu valor até que um novo seja atribuido a ele em um bloco procedural (<code>always</code> ou <code>initial</code>).</li>
+</ul>
+<h4 id="níveis-de-abstração"><a class="header" href="#níveis-de-abstração">Níveis de Abstração</a></h4>
+<ul>
+<li><strong>Estrutural (Nível de Porta)</strong>: O nível mais baixo de abstração. Análoga a um diagrama esquemático.</li>
+<li><strong>Fluxo de Dados (Dataflow)</strong>: Descreve como os dados fluem através do circuito usando atribuições contínuas (<code>assign</code>) e operadores lógicos. Ideal para descrever uma lógica combinacional com base em suas equações booleanas.</li>
+<li><strong>Comportamental (Behavioral)</strong>: O nível mais alto de abstração. A funcionalidade do circuito é descrita algoritmicamente usando blocos procedurais como <code>always</code> e <code>initial</code>, e construções de linguagem de alto nível como <code>if-else</code>, <code>case</code> e laços (loops). Usado para descrever tanto lógica combinacional complexa quanto toda a lógica sequencial (FSMs, contadores, registradores).</li>
+</ul>
+<h4 id="o-fluxo-de-projeto-digital"><a class="header" href="#o-fluxo-de-projeto-digital">O Fluxo de Projeto Digital</a></h4>
+<ol>
+<li><strong>Projeto RTL (Register-Transfer Level)</strong>: O projetista escreve o código Verilog em nível de abstração conhecido como RTL. Este é um estilo de codificação, principalmente comportamental e de fluxo de dados, que descreve como os dados são transferidos entre registradores e processados pela lógica combinacional. É o nível de entrada para as ferramentas de síntese.</li>
+<li><strong>Simulação Funcional (Verificação)</strong>: Antes de criar o hardware físico, o projeto deve ser verificado. Um <strong>testbench</strong> — módulo Verilog separado que não é sintetizável — é escrito para instanciar o projeto (chamado de Device Under Test, ou DUT), gerar sinais de estímulo para suas entradas e verificar se as saídas correspondem ao comportamento esperado. Garante a correção lógica do projeto.</li>
+<li><strong>Síntese Lógica</strong>: Uma ferramenta de síntese de software converte o código Verilog RTL em uma netlist de nível de porta, que é uma descrição estrutural baseada em uma biblioteca de células lógicas específicas de uma tecnologia.</li>
+<li><strong>Verificação de Temporização</strong>: Após a síntese, a netlist é analisada para verificar se o circuito atenderá aos requisitos de temporização e para determinar a frequência máxima de operação.</li>
+</ol>
+<h2 id="aplicação-prática"><a class="header" href="#aplicação-prática">Aplicação Prática</a></h2>
+<h3 id="o-microcontrolador-atmega328p"><a class="header" href="#o-microcontrolador-atmega328p">O Microcontrolador ATmega328P</a></h3>
+<p>É o cérebro do Arduino Uno. Serve como exemplo de um MCU.</p>
+<h4 id="arquitetura-e-núcleo"><a class="header" href="#arquitetura-e-núcleo">Arquitetura e Núcleo</a></h4>
+<ul>
+<li><strong>CPU</strong>: O ATmega328P é construído em torno de um núcleo RISC (Reduced Instruction Set Computer) AVR de 8 bits.</li>
+<li><strong>Arquitetura de Memória</strong>: Utiliza uma arquitetura Harvard modificada, que possui espaços de endereço e barramentos separados para a Memória de Programa (Flash) ea Memória de Dados (SRAM).</li>
+</ul>
+<h4 id="mapa-de-memória-e-registradores"><a class="header" href="#mapa-de-memória-e-registradores">Mapa de Memória e Registradores</a></h4>
+<ul>
+<li><strong>Memória de Programa (Flash)</strong>: Possui 32 KB de memória Flash não volátil para armazenar o código do usuário. Uma seção desta memória pode ser dedicada a um <strong>Bootloader</strong>, eliminando a necessidade de um programador de hardware externo.</li>
+<li><strong>Memória de Dados (SRAM)</strong>: Possui 2 KB de memória SRAM volátil. Seu mapa de memória é dividido em três seções principais:
+<ol>
+<li><strong>Registradores de Propósito Geral (R0-R31)</strong>: Os primeiros 32 bytes são mapeados para os 32 registradores de 8 bits da CPU. São os registradores de trabalho mais rápidos, diretamente conectados à ALU.</li>
+<li><strong>Registradores de I/O (SFRs)</strong>: Os próximos 64 bytes (mais uma seção estendida) são mapeados para os Registradores de Função Especial (SFRs), que controlam todos os periféricos do chip.</li>
+<li><strong>SRAM Interna</strong>: O restante do espaço é usado para variáveis da aplicação e para a pilha de execução.</li>
+</ol>
+</li>
+<li><strong>EEPROM</strong>: Possui 1 KB de memória de dados não volátil, ideal para armazenar dados de configuração ou calibração que precisam persistir mesmo quando a energia é desligada.</li>
+</ul>
+<h4 id="interface-com-periféricos-os-registradores-de-io"><a class="header" href="#interface-com-periféricos-os-registradores-de-io">Interface com Periféricos: Os Registradores de I/O</a></h4>
+<p>A arquitetura de <strong>I/O mapeada em memória</strong> é o mecanismo fundamental que permite que software de alto nível controle hardware físico.</p>
+<p>Para controlar o pinos de I/O de propósito geral (GPIO), três registradores são essenciais para cada porta:</p>
+<ul>
+<li><strong>DDRD (Data Direction Register D)</strong>: Configura a direção de cada pino da porta D. Escrever <code>1</code> em um bit o torna uma saída; escrever <code>0</code> o torna uma entrada.</li>
+<li><strong>PORTD (Port D Data Register)</strong>: Se um pino é configurado como saída, escrever <code>1</code> em seu bit correspondente no PORTD o leva a um nível de tensão alto, e <code>0</code> a um nível baixo. Se o pino é uma entrada, escrever <code>1</code> ativa um resistor de pull-up interno, o que é útil para conectar botões.</li>
+<li><strong>PND (Port D Input Pins Register)</strong>: A leitura deste registrador retorna o estado lógico atual dos pinos físicos da Porta D, independentemente de estarem configurados como entrada ou saída.</li>
+</ul>
+<h3 id="o-fluxo-de-trabalho-moderno-de-projeto-e-verificação"><a class="header" href="#o-fluxo-de-trabalho-moderno-de-projeto-e-verificação">O Fluxo de Trabalho Moderno de Projeto e Verificação</a></h3>
+<h4 id="simulação-com-testbenches-verilog"><a class="header" href="#simulação-com-testbenches-verilog">Simulação com Testbenches Verilog</a></h4>
+<p>A arquitetura típica de um <strong>testbench</strong> inclui:</p>
+<ol>
+<li><strong>Instanciação do DUT</strong>: O módulo a ser testado é instanciado dentro do testbench.</li>
+<li><strong>Geração de Estímulos</strong>: Blocos <code>initial</code> e <code>always</code> são usados para gerar sianis de entrada para o DUT, como o clock, o reset e os dados de teste.</li>
+<li><strong>Verificação de Saídas</strong>: O testbench monitora as saídas do DUT e as compara com os valores esperados.</li>
+</ol>
+<p>Ferramentas como <strong>ModelSim</strong> são o padrão da indústria para simulação, enquanto plataformas online como <a href="https://www.edaplayground.com/">EDA Playground</a> oferecem simuladores para aprendizado e prototipagem.</p>
+<h4 id="módulos-verilog-de-exemplo"><a class="header" href="#módulos-verilog-de-exemplo">Módulos Verilog de Exemplo</a></h4>
+<p><strong>Contador de 4 bits</strong></p>
+<p>Implementa um contador síncrono de 4 bits com um reset síncrono. Na borda de subida do clock, se o reset estiver ativo, o contador vai para zero; caso contrário, ele incrementa.</p>
+<pre><code class="language-verilog">module counter_4bit (
+    output reg [3:0] count,
+    input wire clk,
+    input wire reset
+);
+
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            count &lt;= 4'b0000;
+
+        else
+            count &lt;= count + 1;
+    end
+endmodule
+</code></pre>
+<p><strong>Detector de Sequência "1011" (Moore FSM)</strong></p>
+<p>Traduz o diagrama de estados de uma FSM de Moore para Verilog. Usa um registrador para o estado atual (<code>current_state</code>) e lógica combinacional para determinar o próximo estado (<code>next_state</code>) com base no estado atual e na entrada. A saída depende apenas do estado atual.</p>
+<pre><code class="language-verilog">module sequence_detector_moore (
+    output reg detector_out,
+    input wire sequence_in,
+    input wire clk,
+    input wire reset
+);
+    parameter S_IDLE = 3'b000, S_1 = 3'b001, S_10 = 3'b010, S_101 = 3'b011, S_1011 = 3'b100;
+    reg [2:0] current_state, next_state;
+
+    // Lógica sequencial para atualização do estado
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            current_state &lt;= S_IDLE;
+        else
+            current_state &lt;= next_state;
+    end
+
+    // Lógica combinacional para transição de estado
+    always @(current_state or sequence_in) begin
+        case (current_state)
+            S_IDLE: next_state = sequence_in? S_1 : S_IDLE;
+            S_1: next_state = sequence_in? S_1 : S_10;
+            S_10: next_state = sequence_in? S_101 : S_IDLE;
+            S_101: next_state = sequence_in? S_1011 : S_10;
+            S_1011: next_state = sequence_in? S_1 : S_IDLE;
+            default: next_state = S_IDLE;
+        endcase // case (current_state)
+    end
+    // Lógica de saída (depende apenas do estado)
+    always @(current_state) begin
+        if (current_state == S_1011)
+            detector_out = 1'b1;
+        else
+            detector_out = 1'b0;
+    end
+endmodule
+</code></pre>
+<p><strong>ALU Simples de 8 bits</strong></p>
+<p>Descreve um ALU comportamental que realiza uma de oito operações (adição, subtração, <code>AND</code>, <code>OR</code>, etc.) em duas entradas de 8 bits, com base em um código de operação (0p) de 3 bits.</p>
+<pre><code class="language-verilog">module simple_alu (
+    output reg [7:0] R,
+    input wire [7:0] A, B,
+    input wire [2:0] Op);
+    always @(*) begin
+        case (Op)
+            3'b000: R = A + B;     // Adição
+            3'b001: R = A - B;    // Subtração
+            3'b010: R = A &amp; B;    // AND
+            3'b011: R = A | B;    // OR
+            3'b100: R = A ^ B;    // XOR
+            3'b101: R = ~A;       // NOT
+            3'b110: R = ~(A &amp; B); // NAND
+            3'b111: R = ~(A | B); // NOR
+            default: R = 8'h00;
+        endcase // case (Op)
+endmodule
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../programacao/programacao-funcional/colecoes-de-dados/filtragem-de-elementos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../programacao/programacao-funcional/colecoes-de-dados/filtragem-de-elementos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../custom/mathjax.js"></script>
+
+
+    </div>
+    </body>
+</html>

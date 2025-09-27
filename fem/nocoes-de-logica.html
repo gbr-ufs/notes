@@ -1,0 +1,515 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Noções de Lógica - Notes</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="noções-de-lógica"><a class="header" href="#noções-de-lógica">Noções de Lógica</a></h1>
+<h2 id="cálculo-proposicional"><a class="header" href="#cálculo-proposicional">Cálculo Proposicional</a></h2>
+<p>Na maioria das ciências, o raciocínio utilizado é <strong>indutivo</strong>, isto é, aquele baseado na experiência e experimentação. Na matemática, esse tipo de raciocínio também chega a ser usado, mas nem sempre é confiável.</p>
+<p>Nesse campo, o mais usado é o <strong>dedutivo</strong>. Se as premissas (hipóteses) são verdadeiras e as leis aplicadas estão corretas, então a conclusão é necessariamente verdadeira.</p>
+<h3 id="proposição"><a class="header" href="#proposição">Proposição</a></h3>
+<p>Uma <strong>proposição</strong> é uma afirmação que é verdadeira ou falsa, mas não ambas. Chamamos este fato de <strong>princípio do meio excluído</strong>.</p>
+<h4 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h4>
+<p>Consideremos as seguintes afirmações:</p>
+<p>(1) \( \sqrt{2} \) é um número irracional.
+(2) Todo triângulo é isósceles.
+(3) Que horas são?
+(4) \( x + 1 = 2 \).
+(5) Existem infinitos números primos.
+(6) Vixe Maria!
+(7) Esta afirmação é falsa.
+(8) Paulo é um bom professor.</p>
+<p>Questões imperativas e exclamativas não são proposições, como em (3) e (6). A afirmação (4) pode ser verdadeira ou falsa, dependendo do valor de \( x \) associado. Ela é um <strong>predicado</strong>, uma afirmação contendo uma ou mais variáveis que se torna uma proposição quando atribuímos valores às variáveis. Por exemplo, chamando esse predicado de \( A(x) \) e fazendo \( A(1) \), temos que a proposição é verdadeira (o que não é o caso para \( A(2) \), ou qualquer valor de \( x \) na verdade).</p>
+<p>A afirmação (7) é um <strong>paradoxo</strong>. A afirmação (8) não pode ser considerada uma proposição, pois é apenas uma opinião.</p>
+<p>(1), (2) e (5) são proposições.</p>
+<p>No estudo de lógica, usamos letras maiúsculas para representar proposições simples (geralmente \( P \), \( Q \), \( R \) e \( S \)), e atribuímos o valor \( V \) ou \( F \) a uma proposição se ela for verdadeira ou falsa, respectivamente. Usamos dos chamados <strong>conectivos lógicos</strong> para formar novas proposições a partir de outras existentes.</p>
+<div class="table-wrapper"><table><thead><tr><th>Conectivo</th><th>Símbolo</th></tr></thead><tbody>
+<tr><td>e (conjunção)</td><td>\( \land \)</td></tr>
+<tr><td>ou (disjunção)</td><td>\( \lor \)</td></tr>
+<tr><td>não (negação)</td><td>\( ~ \) ou \( \neg \)</td></tr>
+</tbody></table>
+</div>
+<h3 id="conjunção"><a class="header" href="#conjunção">Conjunção</a></h3>
+<p>Numa <strong>conjunção</strong>, sendo \( P \) e \( Q \) proposições, então \( P \land Q \) é uma afirmação verdadeira quando ambos, \( P \) e \( Q \), são verdadeiros, e falsa caso contrário.</p>
+<p>Esta afirmação é usualmente apresentada na forma de uma <strong>tabela-verdade</strong>, na qual se verifica o valor lógico de uma afirmação composta a partir das combinações dos valores lógicos das sentenças individuais que ela contém. O número de possibilidades para uma proposição como esta é de \( 2^{n} \), sendo \( n \) o número de proposições.</p>
+<p>A estratégia para construir uma tabela-verdade com esse tipo de preposição é de sugerir que a proposição inicial é verdadeira na primeira metade dos casos e falsa no resto. Onde a primeira é verdadeira, em metade dos casos a segunda é verdadeira e na outra metade falsa; onde a primeira é falsa, a segunda é verdadeira em metade dos casos e falsa na outra metade.</p>
+<p>Podemos fazer isso com quantas proposições quisermos.</p>
+<p>Aqui temos um exemplo com duas:</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( P \land Q \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+</tbody></table>
+</div>
+<p>E outro com três:</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( R \)</th><th>\( P \land Q \land R \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+</tbody></table>
+</div>
+<h3 id="disjunção"><a class="header" href="#disjunção">Disjunção</a></h3>
+<p>Numa <strong>disjunção</strong>, sendo \( P \) e \( Q \) proposições, então \( P \lor Q \) é uma afirmação verdadeira quando pelo menos um ds componentes for verdadeiro, e falso quando ambas forem falsas.</p>
+<p>Aqui temos um exemplo com duas:</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( P \lor Q \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+</tbody></table>
+</div>
+<p>E outro com três:</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( R \)</th><th>\( P \land Q \land R \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+</tbody></table>
+</div>
+<p>Uma disjunção pode ser <strong>exclusiva</strong> ("ou um ou outro, nunca ambos", denotado por \( \oplus \) ou \( \underline{\lor} \)) ou <strong>inclusiva</strong>.</p>
+<h3 id="negação"><a class="header" href="#negação">Negação</a></h3>
+<p>Na matemática, a dupla negação de uma proposição resulta na negação da negação, resultando nela mesma.</p>
+<h4 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h4>
+<ul>
+<li>\( P \): "Gosto de sorvete"</li>
+<li>\( ~P \): "Não gosto de sorvete"</li>
+<li>\( ~(~P) \): "Gosto de sorvete"</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( ~P \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td></tr>
+</tbody></table>
+</div>
+<h4 id="observação"><a class="header" href="#observação">Observação</a></h4>
+<p>A negação somente inverte o valor lógico de uma proposição, ou seja, não é só porque que uma proposição esteja sendo negada que ela é falsa. Ela pode ser falsa por padrão (fazendo com que sua negação seja verdadeira).</p>
+<h3 id="implicações"><a class="header" href="#implicações">Implicações</a></h3>
+<p>Uma implicação \( P \implies Q \) é falsa somente quando a hipótese \( P \) é verdadeira e a conclusão \( Q \) é falsa. Um modo de entender o valor verdade de uma afirmação condicional é pensar nela como uma obrigação, uma promessa ou um contrato.</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( P \implies Q \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+</tbody></table>
+</div>
+<p>Em uma implicação \( P \implies Q \), \( P \) é chamada de <strong>hipótese</strong> e \( Q \) de <strong>conclusão</strong> (ou tese).</p>
+<h4 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h4>
+<p>(1) Se o número \( a \) divide \( b \) e, por usa vez, \( b \) divide \( c \), então \( a \) divide \( c \).
+(2) Se \( x \neq 0 \), então \( x^{2} &gt; 0 \).
+(3) Se \( p \) é primo e \( p &gt; 2 \), então \( p \) é impar.</p>
+<h3 id="equivalência-lógica"><a class="header" href="#equivalência-lógica">Equivalência Lógica</a></h3>
+<p>Duas afirmações \( P \) e \( Q \), simples ou compostas, são <strong>logicamente equivalentes</strong> se possuem a mesma tabela-verdade, ou seja, se possuem os mesmos valores lógicos. Denotamos este fato por \( P \equiv Q \).</p>
+<h4 id="exemplos-de-equivalência"><a class="header" href="#exemplos-de-equivalência">Exemplos de Equivalência</a></h4>
+<ul>
+<li>\( ~(P \lor Q) \equiv ~P \land ~Q \)</li>
+<li>\( ~(P \land Q) \equiv ~P \or ~Q \)</li>
+<li>\( (P \implies Q) \equiv (~P \lor Q) \)</li>
+</ul>
+<h4 id="inversa"><a class="header" href="#inversa">Inversa</a></h4>
+<p>\[
+~P \implies ~Q
+\]</p>
+<p>Assim como a negação, o sinal não importa, e sim o conteúdo.</p>
+<h5 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h5>
+<p>(1) "Se eu sou sergipano, então eu sou brasileiro p" é um implicação válida, porém sua inversa é falsa: "Se eu não sou sergipano, então eu não sou brasileiro".
+(2) "Se \( x \) é par, então x^{2} é par" é uma implicação verdadeira que possui uma inversa também vedadeira? "Se x é ímpar, então x^{2} é ímpar".</p>
+<h4 id="contrapositiva"><a class="header" href="#contrapositiva">Contrapositiva</a></h4>
+<p>\[
+~Q \implies ~P
+\]</p>
+<h4 id="recíproca"><a class="header" href="#recíproca">Recíproca</a></h4>
+<p>\[
+Q \implies P
+\]</p>
+<h3 id="se-e-somente-se"><a class="header" href="#se-e-somente-se">Se, e somente se</a></h3>
+<p>Quando em uma implicação \( P \implies Q \) é verdadeira e sua recíproca \( Q \implies P \) também é verdadeirqa, dizemos que temos uma bi-implicação (ou bicondicional), denotada por \( P \iff Q \) (tê-se \( P \) se, e somente se, \( Q \)).</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( P \iff Q \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+</tbody></table>
+</div>
+<h2 id="tautologias-e-contradições"><a class="header" href="#tautologias-e-contradições">Tautologias e Contradições</a></h2>
+<p>Uma <em>tautologia</em> é uma afirmação sempre verdadeira.</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( P \lor Q \)</th><th>\( P \implies (P \lor Q) \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+</tbody></table>
+</div>
+<p>Uma <em>contradição</em> é uma afirmação sempre falsa.</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( ~P \)</th><th>\( ~Q \)</th><th>\( ~P \land Q \)</th><th>\( P \lor ~Q \)</th><th>\( (~P \land Q) \land (P \lor ~Q) \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+</tbody></table>
+</div>
+<h3 id="observação-1"><a class="header" href="#observação-1">Observação</a></h3>
+<p>Expressões lógicas regulares são chamadas de <strong>contingências</strong>.</p>
+<h2 id="formas-normais-disjuntiva-e-conjuntiva"><a class="header" href="#formas-normais-disjuntiva-e-conjuntiva">Formas Normais Disjuntiva e Conjuntiva</a></h2>
+<p>A Forma Normal Disjuntiva permite encontrar uma função lógica indeterminada mediante uma conjunção de disjunções, enquanto a conjuntiva usa uma disjunção de conjunções.</p>
+<h3 id="exemplo-4"><a class="header" href="#exemplo-4">Exemplo</a></h3>
+<p>Qual a sentença lógica que fornecea tabela-verdade abaixo?</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( R \)</th><th>Função Lógica</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+</tbody></table>
+</div><details>
+Para encontrar o FND, olhamos para as linhas em que o resultado da função lógica é verdadeiro (1, 2, 4, 6 e 7). Então criamos fórmulas que fornece um resultado verdadeiro através de conjunções:
+<p>\[
+FND: (P \land Q \land R) \lor (P \land Q \land ~R) \lor (P \land ~Q \land ~R) \lor (~P \land Q \land ~R) \lor (~P \land ~Q \land R)
+\]</p>
+<p>Por outro lado, para o FNC, olhamos as linhas em uqe o resultado é falso (3, 5 e8 ); e tomamos disjunções de forma que forneça este resultado:</p>
+<p>\[
+FNC: (~P \lor Q \lor ~R) \land (P \lor ~Q \lor ~R) \land (~P \lor ~Q \lor ~R)
+\]</p>
+</details>
+<h2 id="quantificadores"><a class="header" href="#quantificadores">Quantificadores</a></h2>
+<p>Uma <em>sentença aberta</em> (ou <em>predicado</em>) é uma sentença contendo uma ou mais variáveis, que, ao serem substituídas por valores, viram proposições. O universo de discurso é o conjunto dos valores válidos das variáveis.</p>
+<h3 id="exemplo-5"><a class="header" href="#exemplo-5">Exemplo</a></h3>
+<ul>
+<li>\( x &gt; 3 \) é uma <em>sentença aberta</em></li>
+<li>\( 2 &gt; 3 \) é uma <em>proposição falsa</em>, derivada da sentença aberta</li>
+</ul>
+<h3 id="quantificador-universal"><a class="header" href="#quantificador-universal">Quantificador Universal</a></h3>
+<p>Para uma sentença aberta \( P(x) \) com variável \( x \) num universo de discurso \( \mathbb{U} \), a sentença \( \forall x \in \mathbb{U}, P(x) \) (lida: para todo x em U, P(x)) é verdadeira precisamente quando \( P(x) \) é verdadeiro qualquer que seja \( x \) em \( \mathbb{U} \). O símbolo \( \forall \) é chamado de <strong>quantificador universal</strong>.</p>
+<h3 id="quantificador-existencial"><a class="header" href="#quantificador-existencial">Quantificador Existencial</a></h3>
+<p>A sentença \( \exists x \in \mathbb{U}, P(x) \) (lida: existe x em U tal que P(x)) é verdadeira quando existe pelo menos um \( x \) no universo de discurso \( \mathbb{U} \) tal que \( P(x) \) é verdadeiro. O símbolo \( \exists \) chamado de <strong>quantificador existencial</strong>. Quando o objeto é único, denotamos este fato pelo símbolo \( \exists ! \).</p>
+<h3 id="exemplo-6"><a class="header" href="#exemplo-6">Exemplo</a></h3>
+<p>(1) \( \forall x \in \mathbb{R}, x^{2} \geq 0 \)
+(2) \( \forall x, y \in \mathbb{Q} \) (o produto \( xy \) e a soma \( x + y \) são racionais)
+(3) \( \forall x \in \mathbb{R}, (x \geq 3 \implies x^{2} \geq 9) \)
+(4) \( \exists x \in \mathbb{Z}, x^{2} = 4 \)
+(5) Existem dois números primos tal que sua soma é um número primo
+(6) Para cada número primo \( x \) menor que 10, \( x^{2} + 4 \) é primo.
+(7) Existe alguém que não entendeu a definição de quantificador existencial.</p>
+<h3 id="negação-1"><a class="header" href="#negação-1">Negação</a></h3>
+<p>A negação de um quantificador universal resulta num existencial e vice-versa.</p>
+<h4 id="exemplo-7"><a class="header" href="#exemplo-7">Exemplo</a></h4>
+<p>"Todos serão reprovados em Fundamentos de Matemática \( (\forall x \in \mathbb{U}, P(x)) \) ⇝ "Existe uma pessoa que não será reprovada em Fundamentos de Matemática" \( (\exists x \in \mathbb{U}, ~P(x)) \)</p>
+<h2 id="validade-de-argumentos"><a class="header" href="#validade-de-argumentos">Validade de Argumentos</a></h2>
+<p>Um arugmento com hipóteses \( P_{1} \), \( P_{2} \), ..., \( P_{n} \) e conclusão \( Q \) é dito ser válido. se sempre que \( P_{1} \), \( P_{2} \), ..., \( P_{n} \) forem verdadeiros, então \( Q \) também o for. Denotaremos um argumento por</p>
+<p>\[
+P_{1}, P_{2}, ..., P_{n} \vdash Q
+\]</p>
+<p>Assim,</p>
+<p>\[
+(P_{1} \land P_{2} \land ... \land P_{n}) \implies Q
+\]</p>
+<p>é uma tautologia. Caso contrário, dizemos que o argumento é inválido.</p>
+<h2 id="tabela-verdade"><a class="header" href="#tabela-verdade">Tabela-Verdade</a></h2>
+<p>Nela, consideramos todas as possibilidades.</p>
+<h3 id="exemplo-8"><a class="header" href="#exemplo-8">Exemplo</a></h3>
+<p>Verificar mediante tabela-verdade a validade do argumento seguinte: "Se Carlos está com fome, então, ele come. Carlos dorme ou não come. Carlos está acordado. Portanto, Carlos não está com fome."</p>
+<details>
+O primeiro passo consiste na representação do argumento na forma simbólica, em termo de proposições simples. Chamando as proposições simples "...fome", "...come" e "..acordado" de \\( P \\), \\( Q \\) e \\( R \\), respectivamente, o argumento pode ser escrito na linguagem da lógica proposicional como
+<p>\[
+P \implies Q, ~R \lor ~Q, R \vdash ~P
+\]</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>* \( R \)</th><th>\( ~Q \)</th><th>\( ~R \)</th><th>* \( P \implies Q \)</th><th>* \( ~R \lor ~Q \)</th><th>* \( ~P \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>* \( V \)</td><td>\( F \)</td><td>\( V \)</td><td>* \( V \)</td><td>* \( V \)</td><td>* \( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>* \( V \)</td><td>\( V \)</td><td>\( V \)</td><td>* \( V \)</td><td>* \( V \)</td><td>* \( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+</tbody></table>
+</div>
+<p>As células marcadas com "*" destacam as hipóteses e a conclusão do argumento, bem como as linhas em que as hipótese são simultaneamente verdadeiras e o respectivo valor da conclusão.</p>
+</details>
+<h3 id="exemplo-9"><a class="header" href="#exemplo-9">Exemplo</a></h3>
+<p>Se o Vasco cair pra série \( B \), então seu treinador será demitido. Se seu treinador for demitido, então o astro do time, Dinamite, também sairá. Se Dinamite sair, então não mais torcerei pelo Vasco. Continuo sendo torcedor do Vasco. Logo, Dinamite não saiu do time e vasco não caiu para série B.</p>
+<details>
+Simbolicamente, temos
+<p>\[
+P \implies Q, Q \implies R, R \implies S, ~S \vDash ~R \land P
+\]</p>
+<div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( R \)</th><th>\( S \)</th><th>* \( P \implies Q \)</th><th>* \( Q \implies R \)</th><th>* \( R \implies S \)</th><th>* \( ~S \)</th><th>\( ~R \)</th><th>\( ~P \)</th><th>* \( ~R \land ~P \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>* \( V \)</td><td>* \( V \)</td><td>* \( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>* \( V \)</td></tr>
+</tbody></table>
+</div></details>
+<h3 id="exemplo-10"><a class="header" href="#exemplo-10">Exemplo</a></h3>
+<p>Ou matemática é difícil ou os alunos não gostam de matemática. Se o português é fácil, então a matemática é facil. Os alunos gostam de matemática. Portanto, se matemática é difícil, então português é fácil.</p>
+<details>
+Simbolicamente, temos
+<p>\[
+A \underline{\lor} B, C \implies ~A, ~B \vDash A \implies C
+\]</p>
+<div class="table-wrapper"><table><thead><tr><th>\( A \)</th><th>\( B \)</th><th>\( C \)</th><th>* \( A \underline{\lor} B \)</th><th>\( ~A \)</th><th>* \( C \implies ~A \)</th><th>* \( ~B \)</th><th>* \( A \implies C \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>* \( V \)</td><td>\( F \)</td><td>* \( V \)</td><td>* \( V \)</td><td>* \( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+</tbody></table>
+</div>
+<p>A tabela mostra que o argumento é <strong>inválido</strong>.</p>
+</details>
+<h3 id="exemplo-11"><a class="header" href="#exemplo-11">Exemplo</a></h3>
+<p>Se eu ganhar na megasena darei um carro a cada um de vocês. Eu não ganhei. Logo, vocês perderam os carros prometidos.</p>
+<details>
+| \\( P_{1} \\) | \\( P_{2} \\) | * \\( P_{1} \implies P_{2} \\) | \\( ~P_{1} \\) | \\( ~P_{2} \\) |
+|---------------|---------------|--------------------------------|----------------|----------------|
+| \\( V \\)     | \\( V \\)     | \\( V \\)                      | \\( F \\)      | \\( F \\)      |
+| \\( V \\)     | \\( F \\)     | \\( F \\)                      | \\( F \\)      | \\( V \\)      |
+| \\( F \\)     | \\( V \\)     | * \\( V \\)                    | * \\( V \\)    | * \\( F \\)    |
+| \\( F \\)     | \\( F \\)     | \\( V \\)                      | \\( V \\)      | \\( V \\)      |
+<p>A tabela mostra que o argumento é inválido.</p>
+</details>
+<h2 id="regras-de-inferência"><a class="header" href="#regras-de-inferência">Regras de Inferência</a></h2>
+<p>O método de tabela-verdade pode ser exaustivo. Neste método, derivamos uma sequência de proposições a partir das hipóteses até atingir a conclusão. Aqui estão elas:</p>
+<div class="table-wrapper"><table><thead><tr><th>Nome</th><th>Premissas</th><th>Conclusão</th></tr></thead><tbody>
+<tr><td>Simplificação</td><td>\( P \land Q \)</td><td>\( P \)</td></tr>
+<tr><td>Adição</td><td>\( P \)</td><td>\( P \lor Q \)</td></tr>
+<tr><td>Conjunção</td><td>\( P, Q \)</td><td>\( P \land Q \)</td></tr>
+<tr><td>Silogismo Disjuntivo</td><td>\( P \lor Q, ~P \)</td><td>\( Q \)</td></tr>
+<tr><td>Modus Ponens</td><td>\( P \implies Q, P \)</td><td>\( Q \)</td></tr>
+<tr><td>Modus Tollens</td><td>\( P \implies Q, ~Q \)</td><td>\( ~P \)</td></tr>
+<tr><td>Silogismo Hipotético</td><td>\( P \implies Q, Q \implies R \)</td><td>\( P \implies R \)</td></tr>
+<tr><td>Absorção</td><td>\( P \implies Q \)</td><td>\( P \implies (P \land Q) \)</td></tr>
+<tr><td>Dilema Construtivo</td><td>\( P \implies Q, R \implies S, P \lor R \)</td><td>\( Q \lor S \)</td></tr>
+<tr><td>Dilema Destrutivo</td><td>\( P \implies Q, R \implies S, ~Q \lor ~S \)</td><td>\( ~P \lor ~R \)</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../fem/fem.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../fem/conjuntos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../fem/fem.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../fem/conjuntos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../custom/mathjax.js"></script>
+
+
+    </div>
+    </body>
+</html>

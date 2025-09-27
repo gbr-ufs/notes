@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Vetores - Notes</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="vetores"><a class="header" href="#vetores">Vetores</a></h1>
+<ul>
+<li>\( \vec{i} \): vetor com origem no ponto \( (0, 0) \) e extremidade no ponto \( (1, 0, 0) \)</li>
+<li>\( \vec{j} \): vetor com origem no ponto \( (0, 0) \) e extremidade no ponto \( (0, 1, 0) \)</li>
+<li>\( \vec{k} \): vetor com origem no ponto \( (0, 0) \) e extremidade no ponto \( (0, 0, 1) \)</li>
+</ul>
+<p>Dado um vetor \( \vec{v} \) no espaço, existem números reais \( x \), \( y \) e \( z \) tais que</p>
+<p>\[
+\vec{v} = x\vec{i} + y\vec{j} + z\vec{zk}
+\]</p>
+<h2 id="expressão-analítica"><a class="header" href="#expressão-analítica">Expressão Analítica</a></h2>
+<p>A representação de um vetor \( \vec{v} \) por \( \vec{v} = (x, y, z \).</p>
+<h2 id="paralelismo-de-vetores"><a class="header" href="#paralelismo-de-vetores">Paralelismo de Vetores</a></h2>
+<p>\[
+\vec{u} || \vec{v} \iff \vec{u} = k\vec{v}, k \in \mathbb{R}
+\]</p>
+<h3 id="observação"><a class="header" href="#observação">Observação</a></h3>
+<p>Com \( x_{2} \neq 0 \), \( y_{2} \neq 0 \) e \( z_{2} \neq 0 \), podemos fazer</p>
+<p>\[
+\vec{v} || \vec{v} \iff \frac{x_{1}}{x_{2}} = \frac{y_{1}}{y_{2}} = \frac{z_{1}}{z_{2}}
+\]</p>
+<h2 id="módulo"><a class="header" href="#módulo">Módulo</a></h2>
+<p>\[
+||\vec{v}|| = \sqrt{x^{2} + y^{2} + z^{2}}
+\]</p>
+<h2 id="distância-entre-dois-pontos"><a class="header" href="#distância-entre-dois-pontos">Distância entre dois pontos</a></h2>
+<p>\[
+d(A, B) = \sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2} + (z_{2} - z_{1})^{2}}
+\]</p>
+<h2 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h2>
+<p>Considere o vetor \( \vec{v} = (2, -1, -3) \). Determine o vetor \( \vec{w} \) tal que \( \vec{w} || \vec{v} \), \( \vec{w} \) tem o mesmo sentido de \( \vec{v} \) e \( ||\vec{w}|| = 3||\vec{v}|| \).</p>
+<details>
+\\[
+\vec{w} = k\vec{v}, k \in \mathbb{R} \\
+||\vec{w} = 3||\vec{v}|| \implies k||\vec{v}|| = 3||\vec{v}|| \implies k = 3 \therefore \\
+\vec{w} = (6, -3, -9)
+\\]
+</details>
+<h2 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h2>
+<p>Considere os pontos \( A = (0, 1, -1) \) e \( B = (1, 2, -1) \), e os vetores \( \vec{u} = (-2, -1, 1) \), \( \vec{v} = (3, 0, -1) \) e \( \vec{w} = (-2, 2, 2) \). Existem números \( a \), \( b \) e \( c \in \mathbb{R} \) tais que</p>
+<p>\[
+\vec{w} = a\vec{AB} + b\vec{u} + c\vec{v}
+\]</p>
+<details>
+\\[
+\vec{AB} = B - A = (1 - 0, 2 - 1, -1 -(-1)) = (1, 1, 0) \\
+(-2, 2, 2) = (a - 2b + 3c, a - b, b - c) \\
+\begin{enumerate}
+\item a - 2b + 3c = -2
+\item a - b = 2
+\item b - c = 2
+\end{enumerate}
+\text{Da equação (3), podemos isolar $c$:} \\
+c = b - 2 \\
+\text{Da equação (2), podemos isolar $a$:} \\
+a = b + 2 \\
+\text{substituindo em (1):} \\
+(b + 2) - 2b + 3(b - 2)= -2 \\
+b + 2 - 2b + 3b - 6 = -2 \\
+2b - 4 = -2 \\
+2b = 2 \\
+b = 1 \\
+a = b + 2 \implies a = 3 \\
+c = b - 2 \implies c = -1
+\\]
+</details>
+<h2 id="produto-interno"><a class="header" href="#produto-interno">Produto Interno</a></h2>
+<h3 id="plano"><a class="header" href="#plano">Plano</a></h3>
+<p>O <strong>produto interno</strong> ou <strong>produto escalar</strong> entre dois vetores do plano \( \vec{u} = (x_{1}, y_{1}) \) e \( \vec{v} = (x_{2}, y_{2}) \), é denotado por \( \langle \vec{u}, \vec{v} \) (ou \( \vec{u} \cdot \vec{v} \)), e definido por</p>
+<p>\[
+\langle \vec{u}, \vec{v} \rangle = x_{1}x_{2} + y_{1}y_{2}
+\]</p>
+<h4 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h4>
+<p>Calcule o produto interno entre os vetores \( \vec{u} = (2, -5) \) e \( \vec{v} = (-1, 1) \).</p>
+<details>
+\\[
+\langle \vec{u}, \vec{v} \rangle = (2 \cdot (-1) + (-5) 1) = (-2 - 5) = -7
+\\]
+</details>
+<h3 id="espaço"><a class="header" href="#espaço">Espaço</a></h3>
+<p>\[
+\langle \vec{u}, \vec{v} \rangle = x_{1}x_{2} + y_{1}y_{2} + z_{1}z_{2}
+\]</p>
+<h4 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h4>
+<p>Calcule o produto interno entre os vetores \( \vec{u} = (1, -4, 0) \) e \( \vec{v} = (3, 1, -5) \).</p>
+<details>
+\\[
+\langle \vec{u}, \vec{v} \rangle = (1 \cdot 3 + (-4) \cdot 1 + 0 \cdot (-5)) = (3 - 4) = -1
+\\]
+</details>
+<h3 id="propriedades"><a class="header" href="#propriedades">Propriedades</a></h3>
+<ul>
+<li>\( \langle \vec{u}, \vec{v} \rangle = \langle \vec{v}, \vec{u} \rangle \)</li>
+<li>\( \langle \vec{u}, \vec{v} + \vec{w} \rangle = \langle \vec{u}, \vec{v} \rangle + \langle \vec{u}, \vec{w} \rangle \text{ e } \langle \vec{u} + \vec{v}, \vec{w} \rangle = \langle \vec{u}, \vec{w} \rangle + \langle \vec{v}, \vec{w} \rangle \)</li>
+<li>\( k \langle \vec{u}, \vec{v} \rangle = \langle k\vec{u}, \vec{v} \rangle = \langle \vec{u}, k\vec{v} \rangle \)</li>
+<li>\( \langle \vec{u}, \vec{u} \rangle = ||\vec{u}||^{2}</li>
+<li>\( \langle \vec{u}, \vec{u} \rangle = 0 \iff \vec{u} = 0 \)</li>
+</ul>
+<h3 id="proposição"><a class="header" href="#proposição">Proposição</a></h3>
+<p>Sejam \( \vec{u} \neq \vec{0} \) e \( \vec{v} \neq \vec{0} \) vetores e \( \theta \in [0, \pi] \) o ângulo entre \( \vec{u} \) e \( \vec{v} \). Então,</p>
+<p>\[
+\langle \vec{u}, \vec{v} \rangle = ||\vec{u}|| ||\vec{v}|| \text{cos } \theta
+\]</p>
+<h3 id="interpretação-geométrica-do-produto-escalar"><a class="header" href="#interpretação-geométrica-do-produto-escalar">Interpretação Geométrica do Produto Escalar</a></h3>
+<p>O produto escalar entre dois vetore não-nulos é o produto entre os seus módulos e o cosseno do ângulo entre eles.</p>
+<ul>
+<li>\( \langle \vec{u}, \vec{v} \rangle &gt; 0 \iff 0 \leq \theta &lt; \frac{\pi}{2} \)</li>
+<li>\( \langle \vec{u}, \vec{v} \rangle &lt; 0 \iff \frac{\pi}{2} &lt; \theta \leq \pi \)</li>
+<li>\( \langle \vec{u}, \vec{v} \rangle = 0 \iff \theta = \frac{\pi}{2} \)</li>
+</ul>
+<h4 id="ortogonalidade"><a class="header" href="#ortogonalidade">Ortogonalidade</a></h4>
+<p>\[
+\vec{u} \bot \vec{v} \iff \langle \vec{u}, \vec{v} \rangle = 0
+\]</p>
+<h4 id="exemplo-4"><a class="header" href="#exemplo-4">Exemplo</a></h4>
+<p>Determine o ângulo entre os vetores \( \vec{u} = (2, -1, -1) \) e \( \vec{v} = (-1, -1, 2) \).</p>
+<details>
+\\[
+-3 = 6 \text{ cos } \theta \implies \text{cos } \theta = -\frac{3}{6} \implies \text{cos } \theta = -\frac{1}{2} \implies \\
+\theta = \text{arcos } \left(-\frac{1}{2}\right) \implies \theta = 120^{\circ} \text{ ou } \frac{2\pi}{3}
+\\]
+</details>
+<h4 id="exemplo-5"><a class="header" href="#exemplo-5">Exemplo</a></h4>
+<p>Determine \( k \) para que os vetores \( \vec{u} = (-2, 3) \) e \( \vec{v} = (k, -4) \) sejam</p>
+<p>(a) Ortogonais
+(b) Paralelos</p>
+<details>
+(a)
+<p>\[
+\vec{u} \bot \vec{v} \implies \langle \vec{u}, \vec{v} \rangle = 0 \implies \
+(-2 \cdot k + 3 \cdot (-4)) = 0 \implies -2k - 12 = 0 \implies -2k = 12 \implies \
+k = -6
+\]</p>
+<p>(b)</p>
+<p>\[
+\vec{u} // \vec{v} \implies \vec{v} = x\vec{u} \implies \
+(k, -4) = (-2x, 3x) \implies 3x = -4 \implies x = -\frac{4}{3} \implies \
+-2 \cdot \left(-\frac{4}{3}\right) \implies k = \frac{8}{3}
+\]</p>
+</details>
+<h4 id="exemplo-6"><a class="header" href="#exemplo-6">Exemplo</a></h4>
+<p>Calcule \( ||\vec{u} + \vec{v}|| \), \( ||\vec{u} - \vec{v}|| \) e \( \langle \vec{u}, \vec{v} \rangle \) sabendo que \( ||\vec{u}|| = 4 \), \( ||\vec{v}|| = 3 \) e o ângulo entre \( \vec{u} \) e \( \vec{v} \) é \( \frac{\pi}{3} \).</p>
+<details>
+1. Cálculo do Produto Escalar
+<p>\[
+||\vec{u}|| = 4 \
+||\vec{v}|| = 3 \
+\theta = \frac{\pi}{3} \
+\langle \vec{u}, \vec{v} \rangle = 4 \cdot 3 \cdot \text{cos } \frac{\pi}{3} \implies \
+\langle \vec{u}, \vec{v} \rangle = 4 \cdot 3 \cdot \frac{1}{2} = \frac{12}{2} = 6 \
+\]</p>
+<ol start="2">
+<li>Cálculo do Módulo da Soma</li>
+</ol>
+<p>\[
+||\vec{u} + \vec{v}||^{2} = ||\vec{u}^{2}|| + 2(\vec{u} \cdot \vec{v}) + ||\vec{v}||^{2} \implies \
+||\vec{u} + \vec{v}||^{2} = 16 + 2(6) + 9 \implies ||\vec{u} + \vec{v}||^{2} = 16 + 12 + 9 = 37 \implies \
+||\vec{u} + \vec{v}||= \sqrt{37}
+\]</p>
+<ol start="3">
+<li>Cálculo do Módulo da Diferença</li>
+</ol>
+<p>\[
+||\vec{u} - \vec{v}||^{2} = ||\vec{u}^{2}|| - 2(\vec{u} \cdot \vec{v}) + ||\vec{v}||^{2} \implies \
+||\vec{u} - \vec{v}||^{2} = 16 - 12 + 9 = 13 \implies ||\vec{u} - \vec{v}|| = \sqrt{13}
+\]</p>
+</details>
+<h2 id="projeção-ortogonal"><a class="header" href="#projeção-ortogonal">Projeção Ortogonal</a></h2>
+<p>A "sombra" que um vetor faz sob uma outra reta. Por ser a "sombra" de um vetor, também é um vetor.</p>
+<p>Sejam \( \vec{u} \) e \vec{v} \) dois vetores. A <strong>projeção ortogonal</strong> de \( \vec{u} \) e \( \vec{v} \) (denotada por \( Proj_{\vec{v}}^{\vec{U}} \)) é</p>
+<p>\[
+Proj_{\vec{v}}^{\vec{u}} = \frac{\langle \vec{u}, \vec{v} \rangle}{||\vec{v}||^{2}} \cdot \vec{v}
+\]</p>
+<h3 id="exemplo-7"><a class="header" href="#exemplo-7">Exemplo</a></h3>
+<p>Considere os vetores no plano \( \vec{v} = (1, 1) \) e \( \vec{u} = (2, 5) \). Calcule a projeção ortogonal de \( \vec{u} \) e \( \vec{v} \). Decomponha \( \vec{u} \) como soma de \( \vec{u}<em>{1} \) com \( \vec{u}</em>{2} \), onde \( \vec{u}<em>{1} || \vec{v} \) e \( \vec{u}</em>{2} \bot \vec{v} \).</p>
+<details>
+\\[
+\langle \vec{u}, \vec{v} \rangle = (1 \cdot 2 + 1 \cdot 5) = 7 \\
+||\vec{v}|| = \sqrt{(1)^{2} + (1)^{2}} = \sqrt{2} \\
+||\vec{v}||^{2} = 2 \\
+Proj_{\vec{v}}^{\vec{u}} = \frac{7}{2} (1, 1) = \left(\frac{7}{2}, \frac{7}{2}\right) \\
+\vec{u}_{1} = \left(\frac{7}{2}, \frac{7}{2}\right) \\
+\vec{u}_{2} = \vec{u} - \vec{u}_{1} = (2 - \frac{7}{2}, 5 - \frac{7}{2}) \implies \vec{u}_{2} = \left(\frac{4}{2} - \frac{7}{2}, \frac{10}{2} - \frac{7}{2}\right) = \left(-\frac{3}{2}, \frac{3}{2}\right)
+\\]
+</details>
+<h2 id="produto-vetorial"><a class="header" href="#produto-vetorial">Produto Vetorial</a></h2>
+<p>Resulta num vetor.</p>
+<p>\[
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+\vec{i} &amp; \vec{j} &amp; \vec{k} \
+x_{1} &amp; y_{1} &amp; z_{1} \
+x_{2} &amp; y_{2} &amp; z_{2}
+\end{vmatrix}
+\]</p>
+<p>Com os vetores não tendo um valor definido. Eles apenas servem para indicar as posições (\( \vec_{i} = x \), \( \vec{j} = y \), \( \vec{k} = z \)).</p>
+<h3 id="observação-1"><a class="header" href="#observação-1">Observação</a></h3>
+<p>Para a operação fazemos \( \vec{i} (y_{1} \cdot z_{2} - y_{2} \cdot z_{1}) - \vec{j} (x_{1} \cdot z_{2} - x_{2} \cdot z_{1}) + \vec{k} (x_{1} \cdot y_{2} - x_{2} \cdot y_{1}) = (a, -b, c) \).</p>
+<h3 id="exemplo-8"><a class="header" href="#exemplo-8">Exemplo</a></h3>
+<p>Considere os vetores \( \vec{u} = (3, -1, -2) \) e \( \vec{v} = (2, 4, -1) \). Calcule \( \vec{u} \times \vec{v} \).</p>
+<details>
+\\[
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+3 & -1 & -2 \\
+2 & 4 & -1
+\end{vmatrix}
+= \vec_{i} (1 + 8) - \vec{j} (-3 + 4) + \vec{k} (12 + 2) = (9, -1, 14)
+\\]
+</details>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../geometria-analitica/espaco/sistema-cartesiano.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../geometria-analitica/espaco/operacoes/operacoes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../geometria-analitica/espaco/sistema-cartesiano.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../geometria-analitica/espaco/operacoes/operacoes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../custom/mathjax.js"></script>
+
+
+    </div>
+    </body>
+</html>
