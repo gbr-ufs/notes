@@ -61,8 +61,8 @@ Para a região \\( S \\) do Exemplo 1, mostre que a soma das áreas dos retângu
 R_{n} é a soma das áreas dos retângulos. Cada retângulo tem uma largura \\( \frac{1}{n} \\), e as alturas são os valores da função \\( f(x) = x^{2} \\) nos pontos \\( \frac{1}{n} \\), \\( \frac{2}{n} \\), \\( \frac{3}{n} \\), ..., \\( \frac{n}{n} \\). Logo
 
 \\[
-R_{n} = \frac{1}{n} \cdot \left(\frac{1}{n}\right)^{2} + \frac{1}{n} \cdot\left(\frac{2}{n}\right)^{2} + \frac{1}{n} \cdot \left(\frac{3}{n}\right)^{2} + ... + \frac{1}{n} \cdot \left(\frac{n}{n}\right)^{2} \\
-= \frac{1}{n} \cdot \frac{1}{n^{2}} (1^{2} + 2^{2} + 3^{2} + ... + n^{2}) \\
+R_{n} = \frac{1}{n} \cdot \left(\frac{1}{n}\right)^{2} + \frac{1}{n} \cdot\left(\frac{2}{n}\right)^{2} + \frac{1}{n} \cdot \left(\frac{3}{n}\right)^{2} + ... + \frac{1}{n} \cdot \left(\frac{n}{n}\right)^{2}
+= \frac{1}{n} \cdot \frac{1}{n^{2}} (1^{2} + 2^{2} + 3^{2} + ... + n^{2})
 = \frac{1}{n^{3}} (1^{2} + 2^{2} + 3^{2} + ... n^{2})
 \\]
 
@@ -81,11 +81,11 @@ R_{n} = \frac{1}{n^{3}} \cdot \frac{n(n + 1)(2n + 1)}{6} = \frac{(n + 1)(2n + 1)
 Então, temos
 
 \\[
-\lim_{n \to \infty} R_{n} = \lim_{n \to \infty} \frac{(n + 1)(2n + 1)}{6n^{2}} \\
-= \lim_{n \to \infty} \frac{1}{6} \left(\frac{n + 1}{n}\right)\left(\frac{2n + 1}{n}\right) \\
-\text{Dividindo os termos em parênteses por $n$...} \\
-= \lim_{n \to \infty} \frac{1}{6} \left(1 + \frac{1}{n}\right)\left(2 + \frac{1}{n}\right) \\
-\text{Lembrando que $\lim_{n \to \infty} \frac{1}{n} = 0$ e que o limite de uma constante é a própria constante...} \\
+\lim_{n \to \infty} R_{n} = \lim_{n \to \infty} \frac{(n + 1)(2n + 1)}{6n^{2}}
+= \lim_{n \to \infty} \frac{1}{6} \left(\frac{n + 1}{n}\right)\left(\frac{2n + 1}{n}\right)
+\text{Dividindo os termos em parênteses por $n$...}
+= \lim_{n \to \infty} \frac{1}{6} \left(1 + \frac{1}{n}\right)\left(2 + \frac{1}{n}\right)
+\text{Lembrando que $\lim_{n \to \infty} \frac{1}{n} = 0$ e que o limite de uma constante é a própria constante...}
 = \frac{1}{6} \cdot 1 \cdot 2 = \frac{1}{3}
 \\]
 
@@ -101,18 +101,18 @@ A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty} L_{n} = \frac{1}{3}
 A **área** \\( A \\) da região \\( S \\) que está sob o gráfico de uma função contínua \\( f \\) é o limite da soma das áreas dos retângulos aproximantes:
 
 \\[
-A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty}\left[f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x}\right] \\
-\delta{x} = \frac{b - a}{n} \\
-b = \text{fim do intervalo} \\
+A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty}\left[f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x}\right]
+\delta{x} = \frac{b - a}{n}
+b = \text{fim do intervalo}
 a = \text{início do intervalo}
 \\]
 
 Tomando a extremidade esquerda chegamos no mesmo valor, só que com um \\( n \\) diferente
 
 \\[
-A = \lim_{n \to \infty} L_{n} = \lim_{n \to \infty}\left[f(x_{0})\delta{x} + f(x_{1})\delta{x} + ... + f(x_{n - 1})\delta{x}\right] \\
-\delta{x} = \frac{b - a}{n} \\
-b = \text{fim do intervalo} \\
+A = \lim_{n \to \infty} L_{n} = \lim_{n \to \infty}\left[f(x_{0})\delta{x} + f(x_{1})\delta{x} + ... + f(x_{n - 1})\delta{x}\right]
+\delta{x} = \frac{b - a}{n}
+b = \text{fim do intervalo}
 a = \text{início do intervalo}
 \\]
 
@@ -145,8 +145,8 @@ Seja \\( A \\) a área da região que está sob o gráfico de \\( f(x) = e^{-x} 
 Portanto, \\( x_{1} = \frac{2}{n} \\), \\( x_{2} = \frac{4}{n} \\), \\( x_{3} = \frac{6}{n} \\), \\( x_{i} = \frac{2i}{n} \\). A soma dos retângulos aproximantes é
 
 \\[
-R_{n} = f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x} \\
-= e^{-x_{1}}\delta{x} + e^{-x_{2}}\delta{x} + ... + e^{-x_{n}}\delta{x} \\
+R_{n} = f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x}
+= e^{-x_{1}}\delta{x} + e^{-x_{2}}\delta{x} + ... + e^{-x_{n}}\delta{x}
 = e^{\frac{-2}{n}}\left(\frac{2}{n}\right) + e^{\frac{-4}{n}}\left\frac{2}{n}\right) + ... + e^{\frac{-2n}{n}}\left(\frac{2}{n}\right)
 \\]
 
@@ -165,9 +165,9 @@ A = \lim_{n \to \infty} \frac{2}{n} \sum_{i = 1}^{n} e^{\frac{-2i}{n}}
 (b) Com \\( n = 4 \\), os subintervalos com mesma largura \\( \delta{x} = 0,5 \\) são \\( [0; 0.5] \\), \\( [0,5; 1] \\), \\( [1; 1,5] \\), e \\( [1,5;2] \\). Os pontos médios desses intervalos são \\( x_{1}^{\*} = 0,25 \\), \\( x_{2}^{*} = 0,75 \\), \\( x_{3}^{\*} = 1,25 \\) e \\( x_{4}^{\*} = 1,75 \\), e a soma das áreas dos quatro retângulos aproximantes é
 
 \\[
-M_{4} = \sum_{i = 1}^{4} f(x_{1}^{*}) \delta{x} \\
-= f(0,25) \delta{x} + f(0,75) \delta{x} + f(1,25) \delta{x} + f(1,75) \delta{x} \\
-= e^{-0,25} (0,5) + e^{-0,75} (0,5) + e^{-1,25} (0,5) + e^{-1,75} (0,5) \\
+M_{4} = \sum_{i = 1}^{4} f(x_{1}^{*}) \delta{x}
+= f(0,25) \delta{x} + f(0,75) \delta{x} + f(1,25) \delta{x} + f(1,75) \delta{x}
+= e^{-0,25} (0,5) + e^{-0,75} (0,5) + e^{-1,25} (0,5) + e^{-1,75} (0,5)
 = \frac{1}{2} (e^{-0,25} + e^{-0,75} + e^{-1,25} + e^{-1,75}) \sim 0,8557
 \\]
 
@@ -180,7 +180,7 @@ A \sim 0,8557
 Com \\( n = 10 \\), os subintervalos são \\( [0; 0,2] \\), \\( [0,2; 0,4], ..., [1,8; 2] \\) e os pontos médios são \\( x_{1}^{\*} = 0,1 \\), \\( x_{2}^{\*} = 0,3 \\), \\( x_{3}^{\*} = 0,5 \\), ..., \\( x_{10}^{\*} = 1,9 \\). Assim
 
 \\[
-A \sim M_{10} = f(0,1) \delta{x} + f(0,3) \delta{x} + f(0,5) \delta{x} + ... + f(1,9) \delta{x} \\
+A \sim M_{10} = f(0,1) \delta{x} + f(0,3) \delta{x} + f(0,5) \delta{x} + ... + f(1,9) \delta{x}
 = 0,2(e^{-0,1} + e^{-0,3} + e^{-0,5} + ... + e^{-1,9}) \sim 0,8632
 \\]
 </details>

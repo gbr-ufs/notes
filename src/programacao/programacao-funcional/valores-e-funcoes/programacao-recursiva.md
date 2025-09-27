@@ -16,7 +16,7 @@ Observe a sequência aritmética a seguir e crie um programa para encontrar o va
 ***Formulação recursiva***
 
 \\[
-f(1) = 2 \\
+f(1) = 2
 f(n) = f(n - 1) + 5
 \\]
 
@@ -41,8 +41,8 @@ N-ésimo termo da sequência \\( \{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...\} \\
 ***Formulação recursiva***
 
 \\[
-fib(0) = 0 \\
-fib(1) = 1 \\
+fib(0) = 0
+fib(1) = 1
 fib(n) = fib(n - 1) + fib(n - 2)
 \\]
 
@@ -71,7 +71,7 @@ Implemente o operador de exponenciação para permitir calcular a potência natu
 ***Formulação recursiva***
 
 \\[
-pot(m, 0) = 1 \\
+pot(m, 0) = 1
 pot(m, n) = m \cdot pot(m, n - 1)
 \\]
 </details>
@@ -114,7 +114,7 @@ Implemente o operador de divisão a fim de encontrar o resto da divisão entre d
 ***Formulação recursiva***
 
 \\[
-resto(n, m) = n, \forall n < m \\
+resto(n, m) = n, \forall n < m
 resto(n, m) = resto(n - m, m), \forall n \geq m
 \\]
 

@@ -127,9 +127,9 @@ e a função \\( f \\) é sobrejetiva. Desse modo, \\( f \\) é uma função bij
 Seja \\( f : A \rightarrow B \\) e \\( g : B \rightarrow C \\). A **composição** de \\( g \\) e \\( f \\) é a relação
 
 \\[
-g \circ f = \\{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\\} \\
-= \\{(x, z) : \exists y \in B, f(x) = y \land g(y) = z\\} \\
-= \\{(x, z) : g(f(x)) = z\\} \\
+g \circ f = \\{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\\}
+= \\{(x, z) : \exists y \in B, f(x) = y \land g(y) = z\\}
+= \\{(x, z) : g(f(x)) = z\\}
 \\]
 
 Logo, \\( g \circ f : A \rightarrow C \\) será definida por \\( (g \circ f)(x) = g(f(x)) \\).

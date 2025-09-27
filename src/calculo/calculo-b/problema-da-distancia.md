@@ -25,11 +25,11 @@ Para termos o tempo e a velocidade em unidades constantes, podemos a velocidade 
 Multiplicando as velocidades pelos tempos podemos fazer estimativas das distâncias percorridas nos intervalos
 
 \\[
-\text{De 0 a 5 segundos} \\
-7,5 \text{ m/s } \times 5 \text{ s } = 37,5 \text{ m} \\
-\text{De 5 a 10 segundos} \\
-9,4 \text{ m/s } \times 5 \text{ s } = 47 \text{ m} \\
-\text{Fazendo o resto...} \\
+\text{De 0 a 5 segundos}
+7,5 \text{ m/s } \times 5 \text{ s } = 37,5 \text{ m}
+\text{De 5 a 10 segundos}
+9,4 \text{ m/s } \times 5 \text{ s } = 47 \text{ m}
+\text{Fazendo o resto...}
 (7,5 \times 5) + (9,4 \times 5) + (10,6 \times 5) + (12,8 \times 5) + (14,2 \times 5) + (13,9 \times 5) = 342 \text{ m}
 \\]
 

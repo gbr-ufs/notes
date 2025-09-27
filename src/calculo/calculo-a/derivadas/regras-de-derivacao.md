@@ -94,9 +94,9 @@ Se \\( c \\) for uma constante e \\( f \\), uma função derivável, então
 #### Exemplo
 
 \\[
-\frac{d}{dx} (x^{8} + 12x^{5} - 4x^{4} + 10x^{3} - 6x + 5) \\
-= \frac{d}{dx} (x^{8}) + 12 \frac{d}{dx} (x^{5}) - 4 \frac{d}{dx} (x^{4}) + 10 \frac{d}{dx} (x^{3}) - 6 \frac{d}{dx} (x) + \frac{d}{dx} (5) \\
-= 8x^{7} + 12(5x^{4}) - 4(4x^{3}) + 10(3x^{2}) - 6(1) + 0 \\
+\frac{d}{dx} (x^{8} + 12x^{5} - 4x^{4} + 10x^{3} - 6x + 5)
+= \frac{d}{dx} (x^{8}) + 12 \frac{d}{dx} (x^{5}) - 4 \frac{d}{dx} (x^{4}) + 10 \frac{d}{dx} (x^{3}) - 6 \frac{d}{dx} (x) + \frac{d}{dx} (5)
+= 8x^{7} + 12(5x^{4}) - 4(4x^{3}) + 10(3x^{2}) - 6(1) + 0
 = 8x^{7} + 60x^{4} - 16x^{3} + 30x^{2} - 6
 \\]
 
@@ -108,7 +108,7 @@ Encontre os pontos sobre a curva \\( y = x^{4} - 6x^{2} + 4 \\), onde a reta tan
 As tangentes horizontais ocorrem quando a derivada for zero. Temos
 
 \\[
-\frac{dy}{dx} = \frac{d}{dx} (x^{4}) - 6 \frac{d}{dx} (x^{2}) + \frac{d}{dx} (4) \\
+\frac{dy}{dx} = \frac{d}{dx} (x^{4}) - 6 \frac{d}{dx} (x^{2}) + \frac{d}{dx} (4)
 = 4x^{3} - 12x + 0 = 4x(x^{2} - 3)
 \\]
 
@@ -174,23 +174,23 @@ Os gráficos serão feitos, algum dia :v
 (a)
 
 \\[
-f'(x) = \frac{d}{dx} (xe^{x}) \\
-= x \frac{d}{dx} (e^{x}) + e^{x} \frac{d}{dx} (x) \\
+f'(x) = \frac{d}{dx} (xe^{x})
+= x \frac{d}{dx} (e^{x}) + e^{x} \frac{d}{dx} (x)
 = xe^{x} + e^{x} \cdot 1 = (x + 1)e^{x}
 \\]
 
 (b)
 
 \\[
-f''(x) = \frac{d}{dx} [(x + 1)^{x}] \\
-= (x + 1) \frac{d}{dx} (e^{x}) + e^{x} \frac{d}{dx} (x + 1) \\
+f''(x) = \frac{d}{dx} [(x + 1)^{x}]
+= (x + 1) \frac{d}{dx} (e^{x}) + e^{x} \frac{d}{dx} (x + 1)
 = = (x + 1)x^{x} + e^{x} \cdot 1 = (x + 2)e^{x}
 \\]
 
 Aplicações subsequentes da Regra do Produto nos dão
 
 \\[
-f'''(x) = (x + 3)e^{x} \\
+f'''(x) = (x + 3)e^{x}
 f^{(4)}(x) = (x + 4)e^{x}
 \\]
 
@@ -206,8 +206,8 @@ f^{(n)}(x) = (x + n)e^{x}
 Derive a função \\( f(t) = \sqrt[t} (a + bt) \\).
 
 \\[
-f'(t) = \sqrt{t} \frac{d}{dt} (a + bt) + (a + bt) \frac{d}{dt} (\sqrt{t}) \\
-= \sqrt{t} \cdot b + (a + bt) \cdot \frac{1}{2} t^{-\frac{1}{2}} \\
+f'(t) = \sqrt{t} \frac{d}{dt} (a + bt) + (a + bt) \frac{d}{dt} (\sqrt{t})
+= \sqrt{t} \cdot b + (a + bt) \cdot \frac{1}{2} t^{-\frac{1}{2}}
 = b \sqrt{t} + \frac{a + bt}{2 \sqrt{t}} = \frac{a + 3bt}{2 \sqrt{3}}
 \\]
 
@@ -219,8 +219,8 @@ Se \\( f(x) = \sqrt{x} g(x) \\), onde \\( g(4) = 2 \\) e \\( g'(4) = 3 \\), enco
 
 <details>
 \\[
-f'(x) = \frac{d}{dx} [\sqrt{x} g(x)] = \sqrt{x} \frac{d}{dx} [g(x)] + g(x) \frac{d}{dx} [\sqrt{x}] \\
-= \sqrt{x} g'(x) + g(x) \cdot \frac{1}{2} x^{-\frac{1}{2}} \\
+f'(x) = \frac{d}{dx} [\sqrt{x} g(x)] = \sqrt{x} \frac{d}{dx} [g(x)] + g(x) \frac{d}{dx} [\sqrt{x}]
+= \sqrt{x} g'(x) + g(x) \cdot \frac{1}{2} x^{-\frac{1}{2}}
 = \sqrt{x} g'(x) + \frac{g(x)}{2 \sqrt{x}}
 \\]
 
@@ -242,9 +242,9 @@ f'(4) = \sqrt{4} g'(4) + \frac{g(4)}{2 \sqrt{4}} = 2 \cdot 3 + \frac{2}{2 \cdot 
 Seja \\( y = \frac{x^{2} + x - 2}{x^{3} + 6} \\). Então
 
 \\[
-y' = \frac{(x^{3} + 6) \frac{d}{dx} (x^{2} + x - 2) - (x^{2} + x - 2) \frac{d}{dx} (x^{3} + 6)}{(x^{3} + 6)^{2}} \\
-= \frac{(x^{3} + 6)(2x + 1) - (x^{2} + x - 2)(3x^{2})}{(x^{3} + 6)^{2}} \\
-= \frac{(2x^{4} + x^{3} + 12x + 6) - (3x^{4} + 3x^{3} - 6x^{2})}{(x^{3} + 6)^{2}} \\
+y' = \frac{(x^{3} + 6) \frac{d}{dx} (x^{2} + x - 2) - (x^{2} + x - 2) \frac{d}{dx} (x^{3} + 6)}{(x^{3} + 6)^{2}}
+= \frac{(x^{3} + 6)(2x + 1) - (x^{2} + x - 2)(3x^{2})}{(x^{3} + 6)^{2}}
+= \frac{(2x^{4} + x^{3} + 12x + 6) - (3x^{4} + 3x^{3} - 6x^{2})}{(x^{3} + 6)^{2}}
 = \frac{-x^{4} - 2x^{3} + 6x^{2} + 12x + 6}{(x^{3} + 6)^{2}}
 \\]
 
@@ -254,8 +254,8 @@ Encontre uma equação da reta tangente à curva \\( y = \frac{e^{x}}{(1 + x^{2}
 
 <details>
 \\[
-\frac{dy}{dx} = \frac{(1 + x^{2}) \frac{d}{dx} (e^{x}) - e^{x} \frac{d}{dx} (1 + x^{2})}{(1 + x^{2})^{2}} \\
-= \frac{(1 + x^{2})e^{x} - e^{x}(2x)}{(1 + x^{2})^{2}} \\
+\frac{dy}{dx} = \frac{(1 + x^{2}) \frac{d}{dx} (e^{x}) - e^{x} \frac{d}{dx} (1 + x^{2})}{(1 + x^{2})^{2}}
+= \frac{(1 + x^{2})e^{x} - e^{x}(2x)}{(1 + x^{2})^{2}}
 = \frac{e^{x}(1 - x)^{2}}{(1 + x^{2})^{2}}
 \\]
 
@@ -290,7 +290,7 @@ Derive \\( y = x^{2} \text{ sen x} \\).
 
 <details>
 \\[
-\frac{dy}{dx} = x^{2} \frac{d}{dx} (\text{sen x}) + \text{ sen x} \frac{d}{dx} (x^{2}) \\
+\frac{dy}{dx} = x^{2} \frac{d}{dx} (\text{sen x}) + \text{ sen x} \frac{d}{dx} (x^{2})
 = x^{2} \text{ cos x} + 2x \text{ sen x}
 \\]
 </details>
@@ -331,9 +331,9 @@ Derive \\( f(x) = \frac{\text{sec x}}{1 + \text{ tg x}} \\). Para quais valores 
 
 <details>
 \\[
-f'(x) = \frac{(1 + \text{ tg x}) \frac{d}{dx} (\text{sec x}) - \text{ sec x} \frac{d}{dx} (1 + \text{ tg x})}{(1 + \text{ tg x})^{2}} \\
-= \frac{(1 + \text{ tg x}) \text{ sec x} \text{ tg x} - \text{ sec x} \cdot \text{ sec}^{2} x}{(1 + \text{ sec x})^{2}} \\
-= \frac{\text{sec x} (\text{tg x} + \text{ tg}^{2} x - \text{ sec}^{2} x)}{(1 + \text{ tg x})^{2}} \\
+f'(x) = \frac{(1 + \text{ tg x}) \frac{d}{dx} (\text{sec x}) - \text{ sec x} \frac{d}{dx} (1 + \text{ tg x})}{(1 + \text{ tg x})^{2}}
+= \frac{(1 + \text{ tg x}) \text{ sec x} \text{ tg x} - \text{ sec x} \cdot \text{ sec}^{2} x}{(1 + \text{ sec x})^{2}}
+= \frac{\text{sec x} (\text{tg x} + \text{ tg}^{2} x - \text{ sec}^{2} x)}{(1 + \text{ tg x})^{2}}
 = \frac{\text{sec x} (\text{tg x} - 1)}{(1 + \text{ tg x})^{2}}
 \\]
 
@@ -352,7 +352,7 @@ Encontre a velocidade e a aceleração no tempo \\( t \\) e use-as para analisar
 
 <details>
 \\[
-v = \frac{ds}{dt} = \frac{d}{dt} (4 \text{ cos t}) = 4 \frac{d}{dt} (\text{cos t}) = -4 \text{ sen t} \\
+v = \frac{ds}{dt} = \frac{d}{dt} (4 \text{ cos t}) = 4 \frac{d}{dt} (\text{cos t}) = -4 \text{ sen t}
 a = \frac{dv}{dt} = \frac{d}{dt} (-4 \text{ sen t}) = -4 \frac{d}{dt} (\text{ sen t}) = -4 \text{ cos t}
 \\]
 </details>
@@ -375,7 +375,7 @@ Encontre \\( \lim_{x \to 0} \frac{\text{sen } 7x}{4x} \\).
 Se fizermos \\( \theta = 7x \\), então \\( \theta \to 0 \\) quando \\( x \to 0 \\), logo, pelo Limite Fundamental Trigonométrico, temos
 
 \\[
-\frac{\text{sen } 7x}{4x} = \lim_{x \to 0} \frac{7}{4}\left(\frac{\text{sen }7x}{7x}\right) \\
+\frac{\text{sen } 7x}{4x} = \lim_{x \to 0} \frac{7}{4}\left(\frac{\text{sen }7x}{7x}\right)
 = \frac{7}{4} \lim_{\theta \to 0} \frac{\text{sen } \theta}{\theta} = \frac{7}{4} \cdot 1 = \frac{7}{4}
 \\]
 </details>
@@ -386,8 +386,8 @@ Calcule \\( \lim_{x \to 0} \text{x cotg x} \\).
 
 <details>
 \\[
-\lim_{x \to 0} \text{x cotg x} = \lim_{x \to 0} \frac{\text{x cos x}}{\text{sen x}} \\
-= \lim_{x \to 0} \frac{\text{cos x}}{\frac{\text{sen x}}{x}} = \frac{\lim_{x \to 0} \text{cos x}}{\lim_{x \to 0} \frac{\text{sen x}}{x}} \\
+\lim_{x \to 0} \text{x cotg x} = \lim_{x \to 0} \frac{\text{x cos x}}{\text{sen x}}
+= \lim_{x \to 0} \frac{\text{cos x}}{\frac{\text{sen x}}{x}} = \frac{\lim_{x \to 0} \text{cos x}}{\lim_{x \to 0} \frac{\text{sen x}}{x}}
 = \frac{\text{cos } 0}{1} = 1
 \\]
 </details>
@@ -414,14 +414,14 @@ Encontre \\( F'(x) \\) se \\( F(x) = \sqrt{x^{2} + 1} \\).
 Aqui, \\( f(u) = \sqrt{u} \\) e \\( g(x) = x^{2} + 1 \\). Uma vez que
 
 \\[
-f'(u) = \frac{1}[2}u^{-\frac{1}{2}} = \frac{1}{2\sqrt{u}} \\
+f'(u) = \frac{1}[2}u^{-\frac{1}{2}} = \frac{1}{2\sqrt{u}}
 g'(x) = 2x
 \\]
 
 temos
 
 \\[
-F'(x) = f'(g(x)) \cdot g'(x) \\
+F'(x) = f'(g(x)) \cdot g'(x)
 = \frac{1}{2\sqrt{x^{2} + 1}} \cdot 2x = \frac{x}{\sqrt{x^{2} + 1}}
 \\]
 </details>
@@ -469,7 +469,7 @@ Derive \\( y = (x^{3} - 1)^{100} \\).
 Fazendo \\( u = g(x) = x^{3} - 1 \\) e \\( n = 100 \\), temos
 
 \\[
-\frac{dy}{dx} = \frac{d}{dx} (x^{3} - 1)^{100} = 100(x^{3} - 1)^{99} \frac{d}{dx} (x^{3} - 1) \\
+\frac{dy}{dx} = \frac{d}{dx} (x^{3} - 1)^{100} = 100(x^{3} - 1)^{99} \frac{d}{dx} (x^{3} - 1)
 = 100(x^{3} - 1)^{99} \cdot 3x^{2} = 300x^{2} (x^{3} - 1)^{99}
 \\]
 </details>
@@ -482,7 +482,7 @@ Encontre \\( f'(x) \\) se \\( f(x) = \frac{1}{\sqrt[3]{x^{2} + x + 1}} \\).
 Reescrevendo \\( f \\) como \\( f(x) = (x^{2} + x + 1)^{-\frac{1}{3}} \\), temos
 
 \\[
-f'(x) = -\frac{1}{3} (x^{2} + x + 1)^{-\frac{4}{3}} \frac{d}{dx} (x^{2} + x + 1) \\
+f'(x) = -\frac{1}{3} (x^{2} + x + 1)^{-\frac{4}{3}} \frac{d}{dx} (x^{2} + x + 1)
 = -\frac{1}{3} (x^{2} + x + 1)^{-\frac{4}{3}} (2x + 1)
 \\]
 </details>
@@ -497,7 +497,7 @@ g(t) = \left(\frac{t - 2}{2t + 1}\right)^{9}
 
 <details>
 \\[
-g'(t) = 9\left(\frac{t - 2}{2t + 1}\right)^{8} \frac{d}{dt} \left(\frac{t - 2}{2t + 1}\right) \\
+g'(t) = 9\left(\frac{t - 2}{2t + 1}\right)^{8} \frac{d}{dt} \left(\frac{t - 2}{2t + 1}\right)
 = 9\left(\frac{t - 2}{2t + 1}\right)^{8} \frac{(2t + 1) \cdot 1 - 2(t - 2)}{(2t + 1)^{2}} = \frac{45(t - 2)^{8}}{(2t + 1)^{10}}
 \\]
 </details>
@@ -508,8 +508,8 @@ Derive \\( y = (2x + 1)^{5} (x^{3} - x + 1)^{4} \\).
 
 <details>
 \\[
-\frac{dy}{dx} = (2x + 1)^{5} \frac{d}{dx} (x^{3} - x + 1)^{4} + (x^{3} - x + 1)^{4} \frac{d}{dx} (2x + 1)^{5} \\
-= (2x + 1)^{5} \cdot 4(x^{3} - x + 1)^{3} \frac{d}{dx} (x^{3} - x + 1) + (x^{3} - x + 1)^{4} \cdot 5(2x + 1)^{4} \frac{d}{dx} (2x + 1) \\
+\frac{dy}{dx} = (2x + 1)^{5} \frac{d}{dx} (x^{3} - x + 1)^{4} + (x^{3} - x + 1)^{4} \frac{d}{dx} (2x + 1)^{5}
+= (2x + 1)^{5} \cdot 4(x^{3} - x + 1)^{3} \frac{d}{dx} (x^{3} - x + 1) + (x^{3} - x + 1)^{4} \cdot 5(2x + 1)^{4} \frac{d}{dx} (2x + 1)
 = 4(2x + 1)^{5} (x^{3} - x + 1)^{3} (3x^{2} - 1) + 5(x^{3} - x + 1)^{4} (2x + 1)^{4} \cdot 2
 \\]
 
@@ -550,14 +550,14 @@ y' = -\frac{x^{3}}{y^{3}}
 Para encontrar \\( y'' \\) derivamos esta expressão para \\( y' \\), usando a Regra do Quociente e lembrando que \\( y \\) é uma função de \\( x \\):
 
 \\[
-y'' = \frac{d}{dx} \left(-\frac{x^{3}}{y^{3}}\right) = -\frac{y^{3} (\frac{d}{dx}) (x^{3}) - x^{3} (\frac{d}{dx}) (y^{3})}{(y^{3})^{2}} \\
+y'' = \frac{d}{dx} \left(-\frac{x^{3}}{y^{3}}\right) = -\frac{y^{3} (\frac{d}{dx}) (x^{3}) - x^{3} (\frac{d}{dx}) (y^{3})}{(y^{3})^{2}}
 = -\frac{y^{3} \cdot 3x^{2} - x^{3} (3y^{2} y')}{y^{6}}
 \\]
 
 Colocando o valor de \\( y' \\) que achamos na equação, obtemos
 
 \\[
-y'' = -\frac{3x^{2}y^{3} - 3x^{3}y^{2} \left(-\frac{x^{3}}{y^{3}}\right)}{y^{6}} \\
+y'' = -\frac{3x^{2}y^{3} - 3x^{3}y^{2} \left(-\frac{x^{3}}{y^{3}}\right)}{y^{6}}
 = -\frac{3(x^{2}y^{4} + x^{6})}{y^{7}} = -\frac{3x^{2}(y^{4} + x^{4})}{y^{7}}
 \\]
 
@@ -595,7 +595,7 @@ Derive \\( y = \ln (x^{3} + 1) \\).
 Para usarmos a Regra da Cadeia, vamos fazer \\( u = x^{3} + 1 \\). Então, \\( y = \ln u \\), logo
 
 \\[
-\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} = \frac{1}{u} \frac{du}{dx} \\
+\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} = \frac{1}{u} \frac{du}{dx}
 = \frac{1}{x^{3} + 1} (3x^{2}) = \frac{3x^{2}}{x^{3} + 1}
 \\]
 </details>
@@ -632,8 +632,8 @@ Derive \\( f(x) = \log_{10} (2 + \text{sen x}) \\).
 
 <details>
 \\[
-f'(x) = \frac{d}{dx} \log_{10} (2 + \tex{sen x}) \\
-= \frac{1}{(2 + \text{sen x}) \ln 10} \frac{d}{dx} (2 + \text{sen x}) \\
+f'(x) = \frac{d}{dx} \log_{10} (2 + \tex{sen x})
+= \frac{1}{(2 + \text{sen x}) \ln 10} \frac{d}{dx} (2 + \text{sen x})
 = \frac{\text{cos x}}{(2 + \text{sen x}) \ln 10}
 \\]
 </details>
@@ -646,7 +646,7 @@ Encontre \\( \frac{d}{dx} \ln \frac{x + 1}{\sqrt{x - 2}} \\).
 Podemos simplificar a função usando as propriedades do logaritmo.
 
 \\[
-\frac{d}{dx} \ln \frac{x + 1}{\sqrt{x - 2}} = \frac{d}{dx} [\ln(x + 1) - \frac{1}{2} \ln (x - 2)] \\
+\frac{d}{dx} \ln \frac{x + 1}{\sqrt{x - 2}} = \frac{d}{dx} [\ln(x + 1) - \frac{1}{2} \ln (x - 2)]
 = \frac{1}{x + 1} - \frac{1}{2} \left(\frac{1}{x - 2}\right)
 \\]
 </details>
@@ -696,8 +696,8 @@ Como temos uma expressão explícita para \\( y \\), podemos substituí-lo por e
 Derive \\( y = x^{\sqrt{x}} \\).
 
 <details>
-\ln y = \ln x^{\sqrt{x}} = \sqrt{x} \ln x \\
-\frac{y'}{y} = \sqrt{x} \cdot \frac{1}{x} + (\ln x) \frac{1}{2\sqrt{x}} \\
+\ln y = \ln x^{\sqrt{x}} = \sqrt{x} \ln x
+\frac{y'}{y} = \sqrt{x} \cdot \frac{1}{x} + (\ln x) \frac{1}{2\sqrt{x}}
 y' = y\left(\frac{1}{\sqrt{x}} + \frac{\ln x}{2 \sqrt{x}}\right) = x^{\sqrt{x}} \left(\frac{2 + \ln x}{2 \sqrt{x}}\right)
 </details>
 
@@ -755,8 +755,8 @@ use o fato de que a população mundial era 2560 milhões em 1950 e 3040 milhõe
 Medimos o tempo \\( t \\0 em anos e fazemos \\( t = 0 \\) no ano 1950. Medimos a população \\( P(t) \\) em milhões de pessoas. Então \\( P(0) = 2560 \\) e \\( P(10) = 3040 \\). Uma vez que estamos supondo que \\( \frac{dP}{dt} = kP \\), o teorema nos dá
 
 \\[
-P(t) = P(0)e^{kt} = 2560e^{kt} \\
-P(10) = 2560e^{10k} = 3040 \\
+P(t) = P(0)e^{kt} = 2560e^{kt}
+P(10) = 2560e^{10k} = 3040
 k = \frac{1}{10} \ln \frac{3040}{2560} \sim 0,017185
 \\]
 
@@ -825,7 +825,7 @@ Para determinarmos o valor de \\( k \\), usamos o fato de que \\( y(1590) = \fra
 e
 
 \\[
-1590k = \ln \frac{1}{2} = -\ln 2 \\
+1590k = \ln \frac{1}{2} = -\ln 2
 k = -\frac{\ln 2}{1590}
 \\]
 
@@ -897,7 +897,7 @@ Uma garrafa de refrigerante que está à temperatura ambiente (22 °C) é coloca
 Se tomarmos \\( y = T - 7 \\), então \\( y(0) = T(0) - 7 = 22 - 7 = 15 \\), e \\( y \\) assim é uma solução do problema de valor inicial
 
 \\[
-\frac{dy}{dt} = ky \\
+\frac{dy}{dt} = ky
 y(0) = 15
 \\]
 
@@ -910,7 +910,7 @@ y(t) = y(0)e^{kt} = 15e^{kt}
 Foi-nos dado que \\( T(30) = 16 \\), assim \\( y(30) = 16 - 7 = 9 \\) e
 
 \\[
-15e^{30k} = 9 \\
+15e^{30k} = 9
 e^{30k} \frac{3}{5}
 \\]
 
@@ -923,8 +923,8 @@ k = \frac{\ln(\frac{3}{5})}{30} \sim -0,01703
 Logo,
 
 \\[
-y(t) = 15e^{-0,01703t} \\
-T(t) = 7 + 15e^{-0,01703t} \\
+y(t) = 15e^{-0,01703t}
+T(t) = 7 + 15e^{-0,01703t}
 T(60) = 7 + 15e^{-0,01703(60)} \sim 12,4
 \\]
 
@@ -933,8 +933,8 @@ Assim, depois de mais meia hora, o refrigerante terá resfriado para cerca de 12
 (b) Teremos \\( T(t) = 10 \\) quando
 
 \\[
-7 + 15e^{-0,01703t} = 10 \\
-e^{-0,01703t} = \frac{3}{15} = \frac{1}{5} \\
+7 + 15e^{-0,01703t} = 10
+e^{-0,01703t} = \frac{3}{15} = \frac{1}{5}
 t = \frac{\ln(\frac{1}{5})}{-0,01703} \sim 94,5
 \\]
 

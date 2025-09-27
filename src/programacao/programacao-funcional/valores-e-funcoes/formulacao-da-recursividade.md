@@ -19,7 +19,7 @@ a_{0} = \text{base}
 Usando a notação de funções, temos:
 
 \\[
-f(0) = \text{base} \\
+f(0) = \text{base}
 f(n) = f(n - 1) + \text{base}
 \\]
 
@@ -28,6 +28,6 @@ f(n) = f(n - 1) + \text{base}
 Observe a sequência aritmética a seguir e encontre uma fórmula recursiva apropriada: \\( \{2, 7, 12, 17, 22, ...\} \\).
 
 <details>
-f(0) = 2 \\
+f(0) = 2
 f(n) = f(n - 1) + 5
 </details>

@@ -46,8 +46,8 @@ Considere o vetor \\( \vec{v} = (2, -1, -3) \\). Determine o vetor \\( \vec{w} \
 
 <details>
 \\[
-\vec{w} = k\vec{v}, k \in \mathbb{R} \\
-||\vec{w} = 3||\vec{v}|| \implies k||\vec{v}|| = 3||\vec{v}|| \implies k = 3 \therefore \\
+\vec{w} = k\vec{v}, k \in \mathbb{R}
+||\vec{w} = 3||\vec{v}|| \implies k||\vec{v}|| = 3||\vec{v}|| \implies k = 3 \therefore
 \vec{w} = (6, -3, -9)
 \\]
 </details>
@@ -62,24 +62,24 @@ Considere os pontos \\( A = (0, 1, -1) \\) e \\( B = (1, 2, -1) \\), e os vetore
 
 <details>
 \\[
-\vec{AB} = B - A = (1 - 0, 2 - 1, -1 -(-1)) = (1, 1, 0) \\
-(-2, 2, 2) = (a - 2b + 3c, a - b, b - c) \\
+\vec{AB} = B - A = (1 - 0, 2 - 1, -1 -(-1)) = (1, 1, 0)
+(-2, 2, 2) = (a - 2b + 3c, a - b, b - c)
 \begin{enumerate}
 \item a - 2b + 3c = -2
 \item a - b = 2
 \item b - c = 2
 \end{enumerate}
-\text{Da equação (3), podemos isolar $c$:} \\
-c = b - 2 \\
-\text{Da equação (2), podemos isolar $a$:} \\
-a = b + 2 \\
-\text{substituindo em (1):} \\
-(b + 2) - 2b + 3(b - 2)= -2 \\
-b + 2 - 2b + 3b - 6 = -2 \\
-2b - 4 = -2 \\
-2b = 2 \\
-b = 1 \\
-a = b + 2 \implies a = 3 \\
+\text{Da equação (3), podemos isolar $c$:}
+c = b - 2
+\text{Da equação (2), podemos isolar $a$:}
+a = b + 2
+\text{substituindo em (1):}
+(b + 2) - 2b + 3(b - 2)= -2
+b + 2 - 2b + 3b - 6 = -2
+2b - 4 = -2
+2b = 2
+b = 1
+a = b + 2 \implies a = 3
 c = b - 2 \implies c = -1
 \\]
 </details>
@@ -156,7 +156,7 @@ Determine o ângulo entre os vetores \\( \vec{u} = (2, -1, -1) \\) e \\( \vec{v}
 
 <details>
 \\[
--3 = 6 \text{ cos } \theta \implies \text{cos } \theta = -\frac{3}{6} \implies \text{cos } \theta = -\frac{1}{2} \implies \\
+-3 = 6 \text{ cos } \theta \implies \text{cos } \theta = -\frac{3}{6} \implies \text{cos } \theta = -\frac{1}{2} \implies
 \theta = \text{arcos } \left(-\frac{1}{2}\right) \implies \theta = 120^{\circ} \text{ ou } \frac{2\pi}{3}
 \\]
 </details>
@@ -172,16 +172,16 @@ Determine \\( k \\) para que os vetores \\( \vec{u} = (-2, 3) \\) e \\( \vec{v} 
 (a)
 
 \\[
-\vec{u} \bot \vec{v} \implies \langle \vec{u}, \vec{v} \rangle = 0 \implies \\
-(-2 \cdot k + 3 \cdot (-4)) = 0 \implies -2k - 12 = 0 \implies -2k = 12 \implies \\
+\vec{u} \bot \vec{v} \implies \langle \vec{u}, \vec{v} \rangle = 0 \implies
+(-2 \cdot k + 3 \cdot (-4)) = 0 \implies -2k - 12 = 0 \implies -2k = 12 \implies
 k = -6
 \\]
 
 (b)
 
 \\[
-\vec{u} // \vec{v} \implies \vec{v} = x\vec{u} \implies \\
-(k, -4) = (-2x, 3x) \implies 3x = -4 \implies x = -\frac{4}{3} \implies \\
+\vec{u} // \vec{v} \implies \vec{v} = x\vec{u} \implies
+(k, -4) = (-2x, 3x) \implies 3x = -4 \implies x = -\frac{4}{3} \implies
 -2 \cdot \left(-\frac{4}{3}\right) \implies k = \frac{8}{3}
 \\]
 </details>
@@ -194,25 +194,25 @@ Calcule \\( ||\vec{u} + \vec{v}|| \\), \\( ||\vec{u} - \vec{v}|| \\) e \\( \lang
 1. Cálculo do Produto Escalar
 
 \\[
-||\vec{u}|| = 4 \\
-||\vec{v}|| = 3 \\
-\theta = \frac{\pi}{3} \\
-\langle \vec{u}, \vec{v} \rangle = 4 \cdot 3 \cdot \text{cos } \frac{\pi}{3} \implies \\
-\langle \vec{u}, \vec{v} \rangle = 4 \cdot 3 \cdot \frac{1}{2} = \frac{12}{2} = 6 \\
+||\vec{u}|| = 4
+||\vec{v}|| = 3
+\theta = \frac{\pi}{3}
+\langle \vec{u}, \vec{v} \rangle = 4 \cdot 3 \cdot \text{cos } \frac{\pi}{3} \implies
+\langle \vec{u}, \vec{v} \rangle = 4 \cdot 3 \cdot \frac{1}{2} = \frac{12}{2} = 6
 \\]
 
 2. Cálculo do Módulo da Soma
 
 \\[
-||\vec{u} + \vec{v}||^{2} = ||\vec{u}^{2}|| + 2(\vec{u} \cdot \vec{v}) + ||\vec{v}||^{2} \implies \\
-||\vec{u} + \vec{v}||^{2} = 16 + 2(6) + 9 \implies ||\vec{u} + \vec{v}||^{2} = 16 + 12 + 9 = 37 \implies \\
+||\vec{u} + \vec{v}||^{2} = ||\vec{u}^{2}|| + 2(\vec{u} \cdot \vec{v}) + ||\vec{v}||^{2} \implies
+||\vec{u} + \vec{v}||^{2} = 16 + 2(6) + 9 \implies ||\vec{u} + \vec{v}||^{2} = 16 + 12 + 9 = 37 \implies
 ||\vec{u} + \vec{v}||= \sqrt{37}
 \\]
 
 3. Cálculo do Módulo da Diferença
 
 \\[
-||\vec{u} - \vec{v}||^{2} = ||\vec{u}^{2}|| - 2(\vec{u} \cdot \vec{v}) + ||\vec{v}||^{2} \implies \\
+||\vec{u} - \vec{v}||^{2} = ||\vec{u}^{2}|| - 2(\vec{u} \cdot \vec{v}) + ||\vec{v}||^{2} \implies
 ||\vec{u} - \vec{v}||^{2} = 16 - 12 + 9 = 13 \implies ||\vec{u} - \vec{v}|| = \sqrt{13}
 \\]
 </details>
@@ -233,11 +233,11 @@ Considere os vetores no plano \\( \vec{v} = (1, 1) \\) e \\( \vec{u} = (2, 5) \\
 
 <details>
 \\[
-\langle \vec{u}, \vec{v} \rangle = (1 \cdot 2 + 1 \cdot 5) = 7 \\
-||\vec{v}|| = \sqrt{(1)^{2} + (1)^{2}} = \sqrt{2} \\
-||\vec{v}||^{2} = 2 \\
-Proj_{\vec{v}}^{\vec{u}} = \frac{7}{2} (1, 1) = \left(\frac{7}{2}, \frac{7}{2}\right) \\
-\vec{u}_{1} = \left(\frac{7}{2}, \frac{7}{2}\right) \\
+\langle \vec{u}, \vec{v} \rangle = (1 \cdot 2 + 1 \cdot 5) = 7
+||\vec{v}|| = \sqrt{(1)^{2} + (1)^{2}} = \sqrt{2}
+||\vec{v}||^{2} = 2
+Proj_{\vec{v}}^{\vec{u}} = \frac{7}{2} (1, 1) = \left(\frac{7}{2}, \frac{7}{2}\right)
+\vec{u}_{1} = \left(\frac{7}{2}, \frac{7}{2}\right)
 \vec{u}_{2} = \vec{u} - \vec{u}_{1} = (2 - \frac{7}{2}, 5 - \frac{7}{2}) \implies \vec{u}_{2} = \left(\frac{4}{2} - \frac{7}{2}, \frac{10}{2} - \frac{7}{2}\right) = \left(-\frac{3}{2}, \frac{3}{2}\right)
 \\]
 </details>
@@ -249,8 +249,8 @@ Resulta num vetor.
 \\[
 \vec{u} \times \vec{v} =
 \begin{vmatrix}
-\vec{i} & \vec{j} & \vec{k} \\
-x_{1} & y_{1} & z_{1} \\
+\vec{i} & \vec{j} & \vec{k}
+x_{1} & y_{1} & z_{1}
 x_{2} & y_{2} & z_{2}
 \end{vmatrix}
 \\]
@@ -269,7 +269,7 @@ Considere os vetores \\( \vec{u} = (3, -1, -2) \\) e \\( \vec{v} = (2, 4, -1) \\
 \\[
 \vec{u} \times \vec{v} =
 \begin{vmatrix}
-3 & -1 & -2 \\
+3 & -1 & -2
 2 & 4 & -1
 \end{vmatrix}
 = \vec_{i} (1 + 8) - \vec{j} (-3 + 4) + \vec{k} (12 + 2) = (9, -1, 14)

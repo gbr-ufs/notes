@@ -16,8 +16,8 @@ Encontre uma equação da reta tangente à parábola \\( y = x^{2} \\) no ponto 
 
 <details>
 \\[
-m = \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1} = \lim_{x \to 1} \frac{x^{2} - 1}{x - 1} \\
-= \lim_{x \to 1} \frac{(x - 1)(x + 1)}{x - 1} \\
+m = \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1} = \lim_{x \to 1} \frac{x^{2} - 1}{x - 1}
+= \lim_{x \to 1} \frac{(x - 1)(x + 1)}{x - 1}
 = \lim_{x \to 1} (x + 1) = 1 + 1 = 2
 \\]
 
@@ -42,7 +42,7 @@ Encontre uma equação da reta tangente à hipérbole \\( y = \frac{3}{x} \\) no
 
 <details>
 \\[
-m = \lim_{x \to 0} \frac{f(3 + h) - f(3)}{h} = \lim_{h \to 0} \frac{\frac{1}{3 + h} - 1}{h} = \lim_{h \to 0} \frac{\frac{3 - (3 + h)}{3 + h}}{h} \\
+m = \lim_{x \to 0} \frac{f(3 + h) - f(3)}{h} = \lim_{h \to 0} \frac{\frac{1}{3 + h} - 1}{h} = \lim_{h \to 0} \frac{\frac{3 - (3 + h)}{3 + h}}{h}
 = \lim_{h \to 0} \frac{-h}{h(3 + h)} = \lim_{h \to 0} -\frac{1}{3 + h} = -\frac{1}{3}
 \\]
 
@@ -68,8 +68,8 @@ Suponha que uma bola foi deixada cair do posto de observação de uma torre, 450
 
 <details>
 \\[
-v(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} = \lim_{h \to 0} \frac{4,9(a + h)^{2} - 4,9a^{2}}{h} \\
-= \lim_{h \to 0} \frac{4,9(a^{2} + 2ah + h^{2} - a^{2})}{h} = \lim_{h \to 0} \frac{4,9(2ah + h^{2})}{h} \\
+v(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} = \lim_{h \to 0} \frac{4,9(a + h)^{2} - 4,9a^{2}}{h}
+= \lim_{h \to 0} \frac{4,9(a^{2} + 2ah + h^{2} - a^{2})}{h} = \lim_{h \to 0} \frac{4,9(2ah + h^{2})}{h}
 = \lim_{h \to 0} 4,9(2a + h) = 9,8a
 \\]
 
@@ -121,10 +121,10 @@ Encontre a derivada da função \\( f(x) = x^{2} - 8x + 9 \\) em um número \\( 
 
 <details>
 \\[
-f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} \\
-= \lim_{h \to 0} \frac{[(a + h)^{2} - 8(a + h) + 9] - [a^{2} - 8a + 9]}{h} \\
-= \lim_{h \to 0} \frac{a^{2} + 2ah + h^{2} - 8a - 8h + 9 - a^{2} + 8a - 9}{h} \\
-= lim_{h \to 0} \frac{2ah + h^{2} - 8h}{h} = \lim_{h \to 0} (2a + h - 8) \\
+f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+= \lim_{h \to 0} \frac{[(a + h)^{2} - 8(a + h) + 9] - [a^{2} - 8a + 9]}{h}
+= \lim_{h \to 0} \frac{a^{2} + 2ah + h^{2} - 8a - 8h + 9 - a^{2} + 8a - 9}{h}
+= lim_{h \to 0} \frac{2ah + h^{2} - 8h}{h} = \lim_{h \to 0} (2a + h - 8)
 = 2a - 8
 \\]
 </details>
@@ -150,8 +150,8 @@ f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
 (a)
 
 \\[
-f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} \frac{[(x + 3)^{3} - (x + h)] - [x^{3} - x]}{h} \\
-= \lim_{h \to 0} \frac{x^{3} + 3x^{2}h + 3xh^{2} + h^{3} - x - h - x^{3} + x}{h} \\
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} \frac{[(x + 3)^{3} - (x + h)] - [x^{3} - x]}{h}
+= \lim_{h \to 0} \frac{x^{3} + 3x^{2}h + 3xh^{2} + h^{3} - x - h - x^{3} + x}{h}
 = \lim_{h \to 0} \frac{3x^{2}h + 3xh^{2} + h^{3} - h}{h} = \lim_{h \to 0} (3x^{2} + 3xh + h^{2} - 1) = 3x^{2} - 1
 \\]
 
@@ -164,9 +164,9 @@ Se \\( f(x) = \sqrt{x} \\), encontre a derivada de \\( f \\). Diga qual é o dom
 
 <details>
 \\[
-f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \\
-= \lim_{h \to 0} \left(\frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}\right) \\
-= \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})} = \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt{x}} \\
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h}
+= \lim_{h \to 0} \left(\frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}\right)
+= \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})} = \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt{x}}
 = \frac{1}{\sqrt{x} + \sqrt{x}} = \frac{1}{2\sqrt{x}}
 \\]
 
@@ -179,9 +179,9 @@ Encontre \\( f' \\) se \\( f(x) = \frac{1 - x}{2 + x} \\).
 
 <details>
 \\[
-f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} \frac{\frac{1 - (x + h)}{2 + (x + h)} - \frac{1 - x}{2 + x}}{h} \\
-= \lim_{h \to 0} \frac{(1 - x - h)(2 + x) - (1 - x)(2 + x + h)}{h(2 + x + h)(2 + x)} \\
-= \lim_{h \to 0} \frac{(2 - x - 2h - x^{2} - xh) - (2 - x + h - x^{2} - xh)}{h(2 + x + h)(2 + x)} \\
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} \frac{\frac{1 - (x + h)}{2 + (x + h)} - \frac{1 - x}{2 + x}}{h}
+= \lim_{h \to 0} \frac{(1 - x - h)(2 + x) - (1 - x)(2 + x + h)}{h(2 + x + h)(2 + x)}
+= \lim_{h \to 0} \frac{(2 - x - 2h - x^{2} - xh) - (2 - x + h - x^{2} - xh)}{h(2 + x + h)(2 + x)}
 = lim_{h \to 0} \frac{-3h}{j(2 + x + h)(2 + x)} = \lim_{h \to 0} \frac{-3}{(2 + x + h)(2 + x)} = -\frac{3}{(2 + x)^{2}}
 \\]
 </details>
@@ -208,7 +208,7 @@ Onde a função \\( f(x) = |x| \\) é diferenciável?
 Se \\( x > 0 \\), então \\( |x| = x \\) e podemos escolher \\( h \\) suficientemente pequeno para \\( x + h > 0 \\) e portanto \\( |x + h| = x + h \\). Consequentemente, para \\( x > 0 \\) temos
 
 \\[
-f'(x) = \lim_{h \to 0} \frac{|x + h| - |x|}{h} = \lim_{h \to 0} \frac{(x + h) - x}{h} \\
+f'(x) = \lim_{h \to 0} \frac{|x + h| - |x|}{h} = \lim_{h \to 0} \frac{(x + h) - x}{h}
 = \lim_{h \to 0} \frac{h}{h} = \lim_{h \to 0} 1 = 1
 \\]
 
@@ -217,7 +217,7 @@ e, dessa forma, \\( f \\) é diferenciável para qualquer \\( x > 0 \\).
 Analogamente, para \\( x < 0 \\) temos \\( |x| = -x \\) e podemos escolher \\( h \\) suficientemente pequeno para que \\( x + h < 0 \\), e assim \\( |x + h| = -(x + h) \\). Portanto, para \\( x < 0 \\),
 
 \\[
-f'(x) = \lim_{h \to 0} \frac{|x + h| - |x|}{h} \lim_{h \to 0} \frac{-(x + h) - (-x)}{h} \\
+f'(x) = \lim_{h \to 0} \frac{|x + h| - |x|}{h} \lim_{h \to 0} \frac{-(x + h) - (-x)}{h}
 = \lim_{h \to 0} \frac{-h}{h} = \lim_{h \to 0} (-1) = -1
 \\]
 
@@ -226,14 +226,14 @@ e, dessa forma, \\( f \\) é diferenciável para qualquer \\( x < 0 \\).
 Para \\( x = 0 \\) temos de averiguar
 
 \\[
-f'(0) = \lim_{h \to 0} \frac{(0 + h) - f(0)}{h} \\
+f'(0) = \lim_{h \to 0} \frac{(0 + h) - f(0)}{h}
 = \lim_{h \to 0} \frac{|0 + h| - |0|}{h} \text{(se existir)}
 \\]
 
 Vamos calcular os limites à esquerda e à direita:
 
 \\[
-\lim_{h \to 0^{+}} \frac{|0 + h| - |0|}{h} = \lim_{h \to 0^{+}} \frac{|h|}{h} = \lim_{h \to 0^{+}} \frac{h}{h} = \lim_{h \to 0^{+}} 1 = 1 \\
+\lim_{h \to 0^{+}} \frac{|0 + h| - |0|}{h} = \lim_{h \to 0^{+}} \frac{|h|}{h} = \lim_{h \to 0^{+}} \frac{h}{h} = \lim_{h \to 0^{+}} 1 = 1
 \lim_{h \to 0^{-}} \frac{|0 + h| - |0|}{h} = \lim_{h \to 0^{-}} \frac{|h|}{h} = \lim_{h \to 0^{-}} \frac{-h}{h} = \lim_{h \to 0^{-}} (-1) = -1
 \\]
 
@@ -244,7 +244,7 @@ Logo, a derivada de \\( f(x) = |x| \\) é
 \\[
 f(x) =
 \begin{cases}
-1 & \text{se } x > 0 \\
+1 & \text{se } x > 0
 -1 & \text{se } x < 0
 \end{cases}
 \\]
@@ -282,9 +282,9 @@ Se \\( f(x) = x^{3} - x \\), encontre e interprete \\( f''(x) \\).
 Em um exemplo anterior, descobrimos que a derivada é \\( f'(x) = 3x^{2} - 1 \\). Assim, a segunda derivada é
 
 \\[
-f''(x) = (f')'(x) = \lim_{h \to 0} \frac{f'(x + h) - f'(x)}{h} \\
-= \lim_{h \to 0} \frac{[3(x + h^)^{2} - 1] - [3x^{2} - 1]}{h} \\
-= \lim_{h \to 0} \frac{3x^{2} + 6xh + 3h^{2} - 1 - 3x^{2} + 1}{h} \\
+f''(x) = (f')'(x) = \lim_{h \to 0} \frac{f'(x + h) - f'(x)}{h}
+= \lim_{h \to 0} \frac{[3(x + h^)^{2} - 1] - [3x^{2} - 1]}{h}
+= \lim_{h \to 0} \frac{3x^{2} + 6xh + 3h^{2} - 1 - 3x^{2} + 1}{h}
 = \lim_{h \to 0} (6x + 3h) = 6x
 \\]
 

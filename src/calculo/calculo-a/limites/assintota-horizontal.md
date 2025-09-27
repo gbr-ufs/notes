@@ -72,10 +72,10 @@ e indique quais propriedades de limites foram usadas em cada etapa.
 Para calcular o limite no infinito de uma função racional, primeiro dividimos ela pela maior potência de \\( x \\) que ocorre no denominador
 
 \\[
-\lim_{x \to \infty} \frac{3x^{2} - x - 2}{5x^{2} + 4x + 1} = \lim_{x \to \infty} \frac{\frac{3x^{2} - x - 2}{x^{2}}}{\frac{5x^{2} + 4x + 1}{x^{2}}} = \lim_{x \to \infty} \frac{3 - \frac{1}{x} - \frac{2}{x^{2}}}{5 + \frac{4}{x} + \frac{1}{x^{2}}} \\
-= \frac{\lim_{x \to \infty} \left(3 - \frac{1}{x} - \frac{2}{x^{2}}\right)}{\lim_{x \to \infty} \left(5 + \frac{4}{x} + \frac{1}{x^{2}}\right)} \\
-= \frac{\lim_{x \to \infty} 3 - \lim_{x \to \infty} \frac{1}{x} - 2 \lim_{x \to \infty} \frac{1}{x^{2}}}{\lim_{x \to \infty} 5 + 4 \lim_{x \to \infty} \frac{1}{x} + \lim_{x \to \infty} \frac{1}{x^{2}}} \\
-= \frac{3 - 0 - 0}{5 + 0 + 0} \\
+\lim_{x \to \infty} \frac{3x^{2} - x - 2}{5x^{2} + 4x + 1} = \lim_{x \to \infty} \frac{\frac{3x^{2} - x - 2}{x^{2}}}{\frac{5x^{2} + 4x + 1}{x^{2}}} = \lim_{x \to \infty} \frac{3 - \frac{1}{x} - \frac{2}{x^{2}}}{5 + \frac{4}{x} + \frac{1}{x^{2}}}
+= \frac{\lim_{x \to \infty} \left(3 - \frac{1}{x} - \frac{2}{x^{2}}\right)}{\lim_{x \to \infty} \left(5 + \frac{4}{x} + \frac{1}{x^{2}}\right)}
+= \frac{\lim_{x \to \infty} 3 - \lim_{x \to \infty} \frac{1}{x} - 2 \lim_{x \to \infty} \frac{1}{x^{2}}}{\lim_{x \to \infty} 5 + 4 \lim_{x \to \infty} \frac{1}{x} + \lim_{x \to \infty} \frac{1}{x^{2}}}
+= \frac{3 - 0 - 0}{5 + 0 + 0}
 = \frac{3}{5}
 \\]
 </details>
@@ -92,7 +92,7 @@ f(x) = \frac{\sqrt{2x^{2} + 1}}{3x - 5}
 Dividindo o numerador e o denominador por \\( x \\) temos
 
 \\[
-\lim_{x \to \infty} \frac{\sqrt{2x^{2} + 1}}{3x - 5} = \lim_{x \to \infty} \frac{\sqrt{2 + \frac{1}{x^{2}}}}{3 - \frac{5}{x}} \\
+\lim_{x \to \infty} \frac{\sqrt{2x^{2} + 1}}{3x - 5} = \lim_{x \to \infty} \frac{\sqrt{2 + \frac{1}{x^{2}}}}{3 - \frac{5}{x}}
 = \frac{\lim_{x \to \infty} \sqrt{2 + \frac{1}{x^{2}}}}{\lim_{x \to \infty} \left(3 - \frac{5}{x}\right)} = \frac{\sqrt{\lim_{x \to \infty} 2 + \lim_{x \to \infty} \frac{1}{x^{2}}}}{\lim_{x \to \infty} 3 - 5 \lim_{x \to \infty} \frac{1}{x}} = \frac{\sqrt{2 + 0}}{3 - 5 \cdot 0} = \frac{\sqrt{2}}{3}
 \\]
 
@@ -130,7 +130,7 @@ Calcule \\( \lim_{x \to \infty} (\sqrt{x^{2} + 1} - x) \\).
 Multiplicamos o numerador e o denominador pelo conjugado radical:
 
 \\[
-\lim_{x \to \infty} (\sqrt{x^{2} + 1} - x) = \lim_{x \to \infty} (\sqrt{x^{2} + 1} - x) \cdot \frac{\sqrt{x^{2} + 1} + x}{\sqrt{x^{2} + 1} + x} \\
+\lim_{x \to \infty} (\sqrt{x^{2} + 1} - x) = \lim_{x \to \infty} (\sqrt{x^{2} + 1} - x) \cdot \frac{\sqrt{x^{2} + 1} + x}{\sqrt{x^{2} + 1} + x}
 = \lim_{x \to \infty} \frac{(x^{2} + 1) - x^{2}}{\sqrt{x^{2} + 1} + x} = \lim_{x \to \infty} \frac{1}{\sqrt{x^{2} + 1} + x} = 0
 \\]
 </details>

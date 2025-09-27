@@ -8,8 +8,8 @@ Dados os vetores \\( \vec{u} = (2, -1) \\) e \\( \vec{v} = (1, 3) \\), determine
 
 <details>
 \\[
-2\vec{v} = (1 \cdot 2, 3 \cdot 2) = (2, 6) \\
-\vec{u} + 2\vec{v} = (2 + 2, -1 + 6) = (4, 5) \\
+2\vec{v} = (1 \cdot 2, 3 \cdot 2) = (2, 6)
+\vec{u} + 2\vec{v} = (2 + 2, -1 + 6) = (4, 5)
 \vec{u} - 2\vec{v} = (2 - 2, -1 - 6) = (0 , -7)
 \\]
 </details>
@@ -20,12 +20,12 @@ Dados os vetores \\( \vec{u} = (2, -4) \\), \\( \vec{v} = (-5, 1) \\) e \\( \vec
 
 <details>
 \\[
-(-12, 6) = (2a -5b, -4a + b) \\
-I) 2a - 5b = -12 \\
-II) -4a + b = 6 \\
-b = 6 + 4a \\
-2a - 5(6 + 4a) = -12 \implies 2a - 30 -20a = -12 \implies \\
--18a = 18 \implies a = -1 \\
+(-12, 6) = (2a -5b, -4a + b)
+I) 2a - 5b = -12
+II) -4a + b = 6
+b = 6 + 4a
+2a - 5(6 + 4a) = -12 \implies 2a - 30 -20a = -12 \implies
+-18a = 18 \implies a = -1
 b = 6 - 4 \implies b = 2
 \\]
 </details>

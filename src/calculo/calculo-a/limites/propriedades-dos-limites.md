@@ -21,18 +21,18 @@ Calcule os limites.
 (a)
 
 \\[
-\lim_{x \to 5} (2x^{2} - 3x + 4) = \lim_{x \to 5} (2x^{2}) - \lim_{x \to 5} (3x) + \lim_{x \to 5} 4 \\
-= 2 \lim_{x \to 5} x^{2} = 3 \lim_{x \to 5} x + \lim_{x \to 5} 4 \\
-= 2(5^{2}) - 3(5) + 4 \\
+\lim_{x \to 5} (2x^{2} - 3x + 4) = \lim_{x \to 5} (2x^{2}) - \lim_{x \to 5} (3x) + \lim_{x \to 5} 4
+= 2 \lim_{x \to 5} x^{2} = 3 \lim_{x \to 5} x + \lim_{x \to 5} 4
+= 2(5^{2}) - 3(5) + 4
 = 39
 \\]
 
 (b)
 
 \\[
-\lim_{x \to -2} \frac{x^{3} + 2x^{2} - 1}{5 - 3x} = \frac{\lim_{x \to -2} (x^{3} + 2x^{2} - 1)}{\lim_{x \to -2} (5 - 3x)} \\
-= \frac{\lim_{x \to -2} x^{3} + 2 \lim_{x \to -2} x^{2} - \lim_{x \to -2} 1}{\lim_{x \to -2} 5 - 3 \lim_{x \to -2} x} \\
-= \frac{(-2)^{3} + 2(-2)^{2} - 1}{5 - 3(-2)} \\
+\lim_{x \to -2} \frac{x^{3} + 2x^{2} - 1}{5 - 3x} = \frac{\lim_{x \to -2} (x^{3} + 2x^{2} - 1)}{\lim_{x \to -2} (5 - 3x)}
+= \frac{\lim_{x \to -2} x^{3} + 2 \lim_{x \to -2} x^{2} - \lim_{x \to -2} 1}{\lim_{x \to -2} 5 - 3 \lim_{x \to -2} x}
+= \frac{(-2)^{3} + 2(-2)^{2} - 1}{5 - 3(-2)}
 = -\frac{1}{11}
 \\]
 </details>
@@ -61,7 +61,7 @@ Podemos fatorar o numerador como uma diferença de quadrados para eliminar o den
 Isso é possível pois, quando \\( x \\) tende a 1, temos que \\( x \neq 1 \\) e, assim, \\( x - 1 \neq 0 \\).
 
 \\[
-= \lim_{x \to 1} (x + 1) \\
+= \lim_{x \to 1} (x + 1)
 = 1 + 1 = 2
 \\]
 </details>
@@ -77,7 +77,7 @@ Encontre \\( \lim_{ \to 1} g(x) \\) onde
 \\[
 g(x) =
 \begin{cases}
-x + 1 & \text{se } x \neq 1 \\
+x + 1 & \text{se } x \neq 1
 \pi & \text{se } x = 1
 \end{cases}
 \\]
@@ -122,11 +122,11 @@ Encontre \\(lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} \\).
 
 <details>
 \\[
-\lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} = \lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} \cdot \frac{\sqrt{x^{2} + 9} + 3}{\sqrt{x^{2} + 9} + 3} \\
-= \lim_{t \to 0} \frac{(t^{2} + 9) - 9}{t^{2}(\sqrt{t^{2} + 9} + 3)} \\
-= \lim_{t \to 0} \frac{t^{2}}{t^{2}(\sqrt{t^{2} + 9} + 3)} \\
-= \lim_{t \to 0} \frac{1}{\sqrt{t^{2} + 9} + 3} \\
-= \lim_{t \to 0} \frac{1}{\sqrt{\lim_{t \to 0} (t^{2} + 9)} + 3} \\
+\lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} = \lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} \cdot \frac{\sqrt{x^{2} + 9} + 3}{\sqrt{x^{2} + 9} + 3}
+= \lim_{t \to 0} \frac{(t^{2} + 9) - 9}{t^{2}(\sqrt{t^{2} + 9} + 3)}
+= \lim_{t \to 0} \frac{t^{2}}{t^{2}(\sqrt{t^{2} + 9} + 3)}
+= \lim_{t \to 0} \frac{1}{\sqrt{t^{2} + 9} + 3}
+= \lim_{t \to 0} \frac{1}{\sqrt{\lim_{t \to 0} (t^{2} + 9)} + 3}
 = \frac{1}{3 + 3} = \frac{1}{6}
 \\]
 </details>
@@ -139,7 +139,7 @@ Mostre que \\( \lim_{x \to 0} |x| = 0 \\).
 \\[
 |x| =
 \begin{cases}
-x & \text{se } \geq 0 \\
+x & \text{se } \geq 0
 -x & \text{se } < 0
 \end{cases}
 \\]
@@ -190,7 +190,7 @@ Se
 \\[
 f(x) =
 \begin{cases}
-\sqrt{x - 4} & \text{se } x > 4 \\
+\sqrt{x - 4} & \text{se } x > 4
 8 - 2x & \text{se } x < 4
 \end{cases}
 \\]

@@ -37,7 +37,7 @@ resultado \\( \to quarta(n) \\)
 Subproblemas são gerados...
 
 \\[
-n = ? \\
+n = ?
 quarta(n) = ?
 \\]
 

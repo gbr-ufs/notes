@@ -62,10 +62,10 @@ Mostre que a função \\( f(x) = 1 - \sqrt{1 - x^{2}} \\) é contínua no interv
 
 <details>
 \\[
-\lim_{x \to a} f(x) = \lim_{x \to a} (1 - \sqrt{1 - x^{2}}) \\
-= 1 \lim_{x \to a} \sqrt{1 - x^{2}} \\
-= 1 - \sqrt{\lim_{x \to a} (1 - x^{2})} \\
-= 1 - \sqrt{1 - a^{2}} \\
+\lim_{x \to a} f(x) = \lim_{x \to a} (1 - \sqrt{1 - x^{2}})
+= 1 \lim_{x \to a} \sqrt{1 - x^{2}}
+= 1 - \sqrt{\lim_{x \to a} (1 - x^{2})}
+= 1 - \sqrt{1 - a^{2}}
 = f(a)
 \\]
 
@@ -109,7 +109,7 @@ f(x) = \frac{x^{3} + 2x^{2} - 1}{5 - 3x}
 Logo
 
 \\[
-\lim_{x \to -2} \frac{x^{3} + 2x^{2} - 1}{5 - 3x} = \lim_{x \to -2} f(x) = f(-2) \\
+\lim_{x \to -2} \frac{x^{3} + 2x^{2} - 1}{5 - 3x} = \lim_{x \to -2} f(x) = f(-2)
 = \frac{(-2)^{3} + 2(-2)^{2} - 1}{5 - 3(-2)} = -\frac{1}{11}
 \\]
 </details>
@@ -180,9 +180,9 @@ Calcule \\( \lim_{x \to 1} \text{arcsen } \left(\frac{1 - \sqrt{x}}{1 - x}\right
 Uma vez que \\( \text{arcsen} \\) é uma função contínua, podemos aplicar o Teorema das Funções Compostas:
 
 \\[
-\lim_{x \to 1} \text{arcsen } \left(\frac{1 - \sqrt{x}}{1 - x}\right) = \text{arcsen } \left(\lim_{x \to 1} \frac{1 - \sqrt{x}}{1 - x}\right) \\
-= \text{arcsen } \left(\lim_{x \to 1} \frac{1 - \sqrt{x}}{(1 - \sqrt{x})(1 + \sqrt{x})}\right) \\
-= \text{arcsen } \left(\lim_{x \to 1} \frac{1}{1 + \sqrt{x}}\right) \\
+\lim_{x \to 1} \text{arcsen } \left(\frac{1 - \sqrt{x}}{1 - x}\right) = \text{arcsen } \left(\lim_{x \to 1} \frac{1 - \sqrt{x}}{1 - x}\right)
+= \text{arcsen } \left(\lim_{x \to 1} \frac{1 - \sqrt{x}}{(1 - \sqrt{x})(1 + \sqrt{x})}\right)
+= \text{arcsen } \left(\lim_{x \to 1} \frac{1}{1 + \sqrt{x}}\right)
 = \text{arcsen } \frac{1}{2} = \frac{\pi}{6}
 \\]
 </details>
@@ -206,7 +206,7 @@ entre 1 e 2.
 Seja \\( f(x) = 4x^{3} - 6x^{2} + 3x - 2 \\). Estamos procurando por uma solução da equação dada, isto é, um número \\( c \\) entre 1 e 2 tal que \\( f(c) = 0 \\). Portanto, tomamos \\( a = 1 \\), \\( b = 2 \\) e \\( N = 0 \\) no Teorema do Valor Intermediário. Temos
 
 \\[
-f(1) = 4 - 6 + 3 - 2 = -1 < 0 \\
+f(1) = 4 - 6 + 3 - 2 = -1 < 0
 f(2) = 32 - 24 + 6 - 2 = 12 > 0
 \\]
 
