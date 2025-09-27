@@ -205,24 +205,24 @@
 <p>Para converter a parte inteira de um número decimal para uma base \( r \), utiliza-se o método das divisões sucessivas. O número é repetidamente dividido pela nova base \( r \), e os restos são coletados. o primeiro resto é o digito menos significativo (LSB) e o último quociente é o digito mais significativo (MSB).</p>
 <p>Exemplo: Converta o número 100 para binário.</p>
 <details>
-\\[
-100 \div 2 = 50 (0)
-50 \div 2 = 25 (0)
-25 \div 2 = 12 (1)
-12 \div 2 = 6 (0)
-6 \div 2 = 3 (0)
-3 \div 2 = 1 (1)
+<p>\[
+100 \div 2 = 50 (0) \to
+50 \div 2 = 25 (0) \to
+25 \div 2 = 12 (1) \to
+12 \div 2 = 6 (0) \to
+6 \div 2 = 3 (0) \to
+3 \div 2 = 1 (1) \to
 1 \div 2 = 0 (1)
-\\]
+\]</p>
 <p>Portanto, 100 em binário é <code>1100100</code>.</p>
 </details>
 <p><strong>De Outras Bases para Decimal</strong></p>
 <p>Utiliza-se a expansão polinomial. Cada dígito do número é multiplicado pela base \( r \) elevada à potência de sua posição (começando em 0 para o dígito mais à direita) e os resultados são somados.</p>
 <p>Exemplo: Converta o número binário <code>11012</code> para decimal.</p>
 <details>
-\\[
+<p>\[
 1 \cdot 23 + 1 \cdot 22 + 0 \cdot 21 + 1 \cdot 20 = 8 + 4 + 0 + 1 = 1310
-\\]
+\]</p>
 </details>
 <p><strong>Atalhos entre Binário, Octal e Hexadecimal</strong></p>
 <ul>
@@ -230,7 +230,7 @@
 Exemplo: Converta o número binário <code>1100100</code> para octal.</li>
 </ul>
 <details>
-Agrupando da direita para a esquerda:
+<p>Agrupando da direita para a esquerda:</p>
 <p>\[
 1 100 100
 \]</p>
@@ -262,9 +262,9 @@ Agrupando da direita para a esquerda:
 </ul>
 <p>Exemplo: Converta o número binário <code>1100100</code> para hexadecimal.</p>
 <details>
-\\[
+<p>\[
 0100 110 \to 0100 0110
-\\]
+\]</p>
 <p>Pro primeiro grupo:</p>
 <p>\[
 0 \cdot 2^{3} + 1 \cdot 2^{2} + 1 \cdot 2^{1} + 0 \cdot 2^{0} = 0 + 4 + 2 + 0 = 6

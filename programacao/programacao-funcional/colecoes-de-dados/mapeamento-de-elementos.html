@@ -163,48 +163,40 @@
 <h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
 <p>Programa para aplicar um desconto de 10% em uma lista de produtos.</p>
 <details>
-```javascript
-const desconto = (desc) => (lista) => lista.map((x) => x - x * (desc) / 100)
+<pre><code class="language-javascript">const desconto = (desc) =&gt; (lista) =&gt; lista.map((x) =&gt; x - x * (desc) / 100)
 const desconto10 = desconto(10)
 const listaProdutosR$ = [10.60, 8.50, 5.55, 6.40, 41.00, 23.05, 19.90, 15.90, 22.10, 2.75]
 const resultado = desconto10(listaProdutosR$)
-<p>console.log(resultado)</p>
-<pre><code>
-`[ 9.54, 7.65, 4.995, 5.760000000000001, 36.9, 20.745, 17.91, 14.31, 19.89, 2.475 ]`
-&lt;/details&gt;
 
-### Exemplo
-
-Programa para calcular o triplo de cada elemento de uma lista.
-
-&lt;details&gt;
-```javascript
-const valores = [3, 4, -2, 0, 1, 40]
+console.log(resultado)
+</code></pre>
+<p><code>[ 9.54, 7.65, 4.995, 5.760000000000001, 36.9, 20.745, 17.91, 14.31, 19.89, 2.475 ]</code></p>
+</details>
+<h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
+<p>Programa para calcular o triplo de cada elemento de uma lista.</p>
+<details>
+<pre><code class="language-javascript">const valores = [3, 4, -2, 0, 1, 40]
 const triplo = valores.map((x) =&gt; 3 * x)
 
 console.log(triplo)
 </code></pre>
 <p><code>[9, 12, -6, 0, 3, 120 ]</code></p>
 </details>
-<h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
+<h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
 <p>Programa para extrair a inicial de cada nome de uma lista.</p>
 <details>
-```javascript
-const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa']
-const primeiraLetra = (texto) => texto[0]
+<pre><code class="language-javascript">const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa']
+const primeiraLetra = (texto) =&gt; texto[0]
 const iniciais = nomes.map(primeiraLetra)
-<p>console.log(iniciais)</p>
-<pre><code>
-`[ "A", "B", "G", "L", "R" ]`
-&lt;/details&gt;
 
-### Exemplo
-
-Programa para adicionar um sobrenome a cada nome de uma lista.
-
-&lt;details&gt;
-```javascript
-const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa']
+console.log(iniciais)
+</code></pre>
+<p><code>[ "A", "B", "G", "L", "R" ]</code></p>
+</details>
+<h3 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h3>
+<p>Programa para adicionar um sobrenome a cada nome de uma lista.</p>
+<details>
+<pre><code class="language-javascript">const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa']
 const addSobrenome = (sobrenome) =&gt; (nome) =&gt; `${nome} ${sobrenome}`
 const nomeCompleto = nomes.map(addSobrenome('Costa'))
 

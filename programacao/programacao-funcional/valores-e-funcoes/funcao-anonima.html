@@ -160,10 +160,9 @@
 <h2 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h2>
 <p>Escreva um programa para calcular o maior e o menor valor real das raízes de uma equação de segundo grau. A expressão genérica para cálculo das raízes é dada por \( \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} \).</p>
 <details>
-```javascript
-const raiz = (a, b, c, f) => {
+<pre><code class="language-javascript">const raiz = (a, b, c, f) =&gt; {
     const delta = (b * b) - (4 * a * c)
-    if (delta < 0) {
+    if (delta &lt; 0) {
         return undefined
     }
     const pos = ((-b) + Math.sqrt(delta)) / (2 * a)
@@ -171,19 +170,22 @@ const raiz = (a, b, c, f) => {
     // A função é aplicada aqui.
     return f(pos, neg)
 }
-<p>const a = 1
+
+const a = 1
 const b = -5
-const c = 6</p>
-<p>// Executa a função raiz e retorna qual delas é a maior.
+const c = 6
+
+// Executa a função raiz e retorna qual delas é a maior.
 const maiorRaiz = raiz(a, b, c, (x, y) =&gt; (x &gt;= y ? x : y))
 // Executa a função raiz e retorna qual delas é a menor.
-const menorRaiz = raiz(a, b, c, (x, y) =&gt; (x &lt;= y ? x : y))</p>
-<p>const texto = (x, y) =&gt; x == undefined ? 'Não há raizes reais.' : <code>As raizes da equação são ${x} e ${y}.</code></p>
-<p>console.log(texto(menorRaiz, maiorRaiz))</p>
-<pre><code>
-`As raizes da equação são 2 e 3.`
-&lt;/details&gt;
+const menorRaiz = raiz(a, b, c, (x, y) =&gt; (x &lt;= y ? x : y))
+
+const texto = (x, y) =&gt; x == undefined ? 'Não há raizes reais.' : `As raizes da equação são ${x} e ${y}.`
+
+console.log(texto(menorRaiz, maiorRaiz))
 </code></pre>
+<p><code>As raizes da equação são 2 e 3.</code></p>
+<p>o</details></p>
 
                     </main>
 

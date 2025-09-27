@@ -158,41 +158,42 @@
                         <h1 id="definição-de-função-como-argumento"><a class="header" href="#definição-de-função-como-argumento">Definição de função como argumento</a></h1>
 <p>Se uma função é um valor comum, então ela também pode ser <strong>passada como argumento</strong> para outra função.</p>
 <details>
-```javascript
-const subtrair = (x, y) => x - y
-const somar = (x, y) => x + y
-const multiplicar = (x, y) => x * y
-const dividir = (x, y) => x / y
-const concatenar = (x, y, sep=' ') => x + sep + y
-const iniciais = (x, y) => x[0] + y[0]
-const negativo = (y) => subtrair(0, y) // Função parcial.
-<p>// Função como argumento.
-const exec = (f, x, y) =&gt; f(x, y) // Processo de aplicação de função padrão.</p>
-<p>const res1 = exec(subtrair, 50, 25)
+<pre><code class="language-javascript">const subtrair = (x, y) =&gt; x - y
+const somar = (x, y) =&gt; x + y
+const multiplicar = (x, y) =&gt; x * y
+const dividir = (x, y) =&gt; x / y
+const concatenar = (x, y, sep=' ') =&gt; x + sep + y
+const iniciais = (x, y) =&gt; x[0] + y[0]
+const negativo = (y) =&gt; subtrair(0, y) // Função parcial.
+
+// Função como argumento.
+const exec = (f, x, y) =&gt; f(x, y) // Processo de aplicação de função padrão.
+
+const res1 = exec(subtrair, 50, 25)
 const res2 = exec(somar, 50, 25)
 const res3 = exec(multiplicar, 50, 25)
 const res4 = exec(dividir, 50, 25)
 const res5 = exec(concatenar, 'Isaac', 'Newton')
 const res6 = exec(iniciais, 'Isaac', 'Newton')
-const res7 = exec(negativo, 30)</p>
-<p>console.log(res1)
+const res7 = exec(negativo, 30)
+
+console.log(res1)
 console.log(res2)
 console.log(res3)
 console.log(res4)
 console.log(res5)
 console.log(res6)
-console.log(res7)</p>
-<pre><code>
+console.log(res7)
 </code></pre>
-<p>25
+<pre><code>25
 75
 1250
 2
 Isaac Newton
 IN
--30</p>
-<pre><code>&lt;/details&gt;
+-30
 </code></pre>
+</details>
 
                     </main>
 

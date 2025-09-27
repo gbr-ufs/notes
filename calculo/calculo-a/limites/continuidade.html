@@ -166,8 +166,8 @@
 (b) \( f(x) = \begin{cases} \frac{1}{x^{2}} &amp; \text{se } x \neq 0 \ 1 &amp; \text{se } x = 0 \end{cases} \)
 (c) \( f(x) = \begin{cases} \frac{x^{2} - x - 2}{x - 2} &amp; \text{se } x \neq 2 \ 1 &amp; \text{se } x = 2 \end{cases} \)</p>
 <details>
-(a) Observe que \\( f(2) \\) não está definida; logo, \\( f \\) é descontínua em 2.
-(b) Aqui \\( f(0) = 1\\) está definida, mas
+<p>(a) Observe que \( f(2) \) não está definida; logo, \( f \) é descontínua em 2.
+(b) Aqui \( f(0) = 1\) está definida, mas</p>
 <p>\[
 \lim_{x \to 0} f(x) = \lim_{x \to 0} \frac{1}{x^{2}}
 \]</p>
@@ -196,13 +196,13 @@
 <h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
 <p>Mostre que a função \( f(x) = 1 - \sqrt{1 - x^{2}} \) é contínua no intervalo [-1, 1].</p>
 <details>
-\\[
+<p>\[
 \lim_{x \to a} f(x) = \lim_{x \to a} (1 - \sqrt{1 - x^{2}})
 = 1 \lim_{x \to a} \sqrt{1 - x^{2}}
 = 1 - \sqrt{\lim_{x \to a} (1 - x^{2})}
 = 1 - \sqrt{1 - a^{2}}
 = f(a)
-\\]
+\]</p>
 <p>Assim, pela definição, \( f \) é contínua em \( a \) se \( -1 &lt; a &lt; 1 \). Cálculos análogos mostram que</p>
 <p>\[
 \lim_{x \to -1^{+}} f(x) = 1 = f(-1) \text{ e } \lim_{x \to 1^{-}} f(x) = 1 = f(1)
@@ -224,7 +224,7 @@
 <h4 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h4>
 <p>Encontre \( \lim_{x \to - 2} \frac{x^{3} + 2x^{2} - 1}{5 - 3x} \).</p>
 <details>
-A função
+<p>A função</p>
 <p>\[
 f(x) = \frac{x^{3} + 2x^{2} - 1}{5 - 3x}
 \]</p>
@@ -258,14 +258,14 @@ f(x) = \frac{x^{3} + 2x^{2} - 1}{5 - 3x}
 <h4 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h4>
 <p>Onde a função \( f(x) = \frac{\ln x + \text{tg}^{-} x}{x^{2} - 1} \) é contínua?</p>
 <details>
-Pelo Teorema dos Tipos de Funções Contínuas, sabemos que \\( y = \ln x \\) é contínua para \\( x > 0 \\) e que \\( y = \text{tg}^{-1} x \\) é contínua em \\( \mathbb{R} \\). Assim, pelo Teorema dos Tipos de Funções Contínuas, \\( y = \ln x + \text{tg}^{-1} x \\) é contínua em \\( (0, \infty) \\).
+<p>Pelo Teorema dos Tipos de Funções Contínuas, sabemos que \( y = \ln x \) é contínua para \( x &gt; 0 \) e que \( y = \text{tg}^{-1} x \) é contínua em \( \mathbb{R} \). Assim, pelo Teorema dos Tipos de Funções Contínuas, \( y = \ln x + \text{tg}^{-1} x \) é contínua em \( (0, \infty) \).</p>
 <p>O denominador \( y = x^{2} - 1 \) é um polinômio, portanto é contínuo em toda a parte.</p>
 <p>Assim, \( f \) é contínua em todos os números postivos \( x \), exceto onde \( x^{2} - 1 = 0 \). Logo, \( f \) é contínua nos intervalos aberto \( (0, 1) \) e \( (1, \infty) \).</p>
 </details>
 <h4 id="exemplo-4"><a class="header" href="#exemplo-4">Exemplo</a></h4>
 <p>Calcule \( \lim_{x \to \pi} \frac{\text{sen } x}{2 + \text{cos } x} \).</p>
 <details>
-O Teorema ods Tipos de Funções Contínuas nos diz que \\( y = \text{sen } x \\) é contínua. \\( y = 2 + \text{cos } x \\) é a soma de duas funções contínuas, e, portanto, é contínua. Logo, a razão
+<p>O Teorema ods Tipos de Funções Contínuas nos diz que \( y = \text{sen } x \) é contínua. \( y = 2 + \text{cos } x \) é a soma de duas funções contínuas, e, portanto, é contínua. Logo, a razão</p>
 <p>\[
 f(x) = \frac{\text{sen } x}{2 + \text{cos } x}
 \]</p>
@@ -281,7 +281,7 @@ f(x) = \frac{\text{sen } x}{2 + \text{cos } x}
 <h4 id="exemplo-5"><a class="header" href="#exemplo-5">Exemplo</a></h4>
 <p>Calcule \( \lim_{x \to 1} \text{arcsen } \left(\frac{1 - \sqrt{x}}{1 - x}\right) \).</p>
 <details>
-Uma vez que \\( \text{arcsen} \\) é uma função contínua, podemos aplicar o Teorema das Funções Compostas:
+<p>Uma vez que \( \text{arcsen} \) é uma função contínua, podemos aplicar o Teorema das Funções Compostas:</p>
 <p>\[
 \lim_{x \to 1} \text{arcsen } \left(\frac{1 - \sqrt{x}}{1 - x}\right) = \text{arcsen } \left(\lim_{x \to 1} \frac{1 - \sqrt{x}}{1 - x}\right)
 = \text{arcsen } \left(\lim_{x \to 1} \frac{1 - \sqrt{x}}{(1 - \sqrt{x})(1 + \sqrt{x})}\right)
@@ -298,7 +298,7 @@ Uma vez que \\( \text{arcsen} \\) é uma função contínua, podemos aplicar o T
 <p>\]</p>
 <p>entre 1 e 2.</p>
 <details>
-Seja \\( f(x) = 4x^{3} - 6x^{2} + 3x - 2 \\). Estamos procurando por uma solução da equação dada, isto é, um número \\( c \\) entre 1 e 2 tal que \\( f(c) = 0 \\). Portanto, tomamos \\( a = 1 \\), \\( b = 2 \\) e \\( N = 0 \\) no Teorema do Valor Intermediário. Temos
+<p>Seja \( f(x) = 4x^{3} - 6x^{2} + 3x - 2 \). Estamos procurando por uma solução da equação dada, isto é, um número \( c \) entre 1 e 2 tal que \( f(c) = 0 \). Portanto, tomamos \( a = 1 \), \( b = 2 \) e \( N = 0 \) no Teorema do Valor Intermediário. Temos</p>
 <p>\[
 f(1) = 4 - 6 + 3 - 2 = -1 &lt; 0
 f(2) = 32 - 24 + 6 - 2 = 12 &gt; 0

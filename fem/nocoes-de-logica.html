@@ -330,7 +330,7 @@ Expressões lógicas regulares são chamadas de <strong>contingências</strong>.
 <tr><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td></tr>
 </tbody></table>
 </div><details>
-Para encontrar o FND, olhamos para as linhas em que o resultado da função lógica é verdadeiro (1, 2, 4, 6 e 7). Então criamos fórmulas que fornece um resultado verdadeiro através de conjunções:
+<p>Para encontrar o FND, olhamos para as linhas em que o resultado da função lógica é verdadeiro (1, 2, 4, 6 e 7). Então criamos fórmulas que fornece um resultado verdadeiro através de conjunções:</p>
 <p>\[
 FND: (P \land Q \land R) \lor (P \land Q \land ~R) \lor (P \land ~Q \land ~R) \lor (~P \land Q \land ~R) \lor (~P \land ~Q \land R)
 \]</p>
@@ -377,7 +377,7 @@ P_{1}, P_{2}, ..., P_{n} \vdash Q
 <h3 id="exemplo-8"><a class="header" href="#exemplo-8">Exemplo</a></h3>
 <p>Verificar mediante tabela-verdade a validade do argumento seguinte: "Se Carlos está com fome, então, ele come. Carlos dorme ou não come. Carlos está acordado. Portanto, Carlos não está com fome."</p>
 <details>
-O primeiro passo consiste na representação do argumento na forma simbólica, em termo de proposições simples. Chamando as proposições simples "...fome", "...come" e "..acordado" de \\( P \\), \\( Q \\) e \\( R \\), respectivamente, o argumento pode ser escrito na linguagem da lógica proposicional como
+<p>O primeiro passo consiste na representação do argumento na forma simbólica, em termo de proposições simples. Chamando as proposições simples "...fome", "...come" e "..acordado" de \( P \), \( Q \) e \( R \), respectivamente, o argumento pode ser escrito na linguagem da lógica proposicional como</p>
 <p>\[
 P \implies Q, ~R \lor ~Q, R \vdash ~P
 \]</p>
@@ -397,7 +397,7 @@ P \implies Q, ~R \lor ~Q, R \vdash ~P
 <h3 id="exemplo-9"><a class="header" href="#exemplo-9">Exemplo</a></h3>
 <p>Se o Vasco cair pra série \( B \), então seu treinador será demitido. Se seu treinador for demitido, então o astro do time, Dinamite, também sairá. Se Dinamite sair, então não mais torcerei pelo Vasco. Continuo sendo torcedor do Vasco. Logo, Dinamite não saiu do time e vasco não caiu para série B.</p>
 <details>
-Simbolicamente, temos
+<p>Simbolicamente, temos</p>
 <p>\[
 P \implies Q, Q \implies R, R \implies S, ~S \vDash ~R \land P
 \]</p>
@@ -423,7 +423,7 @@ P \implies Q, Q \implies R, R \implies S, ~S \vDash ~R \land P
 <h3 id="exemplo-10"><a class="header" href="#exemplo-10">Exemplo</a></h3>
 <p>Ou matemática é difícil ou os alunos não gostam de matemática. Se o português é fácil, então a matemática é facil. Os alunos gostam de matemática. Portanto, se matemática é difícil, então português é fácil.</p>
 <details>
-Simbolicamente, temos
+<p>Simbolicamente, temos</p>
 <p>\[
 A \underline{\lor} B, C \implies ~A, ~B \vDash A \implies C
 \]</p>
@@ -443,12 +443,13 @@ A \underline{\lor} B, C \implies ~A, ~B \vDash A \implies C
 <h3 id="exemplo-11"><a class="header" href="#exemplo-11">Exemplo</a></h3>
 <p>Se eu ganhar na megasena darei um carro a cada um de vocês. Eu não ganhei. Logo, vocês perderam os carros prometidos.</p>
 <details>
-| \\( P_{1} \\) | \\( P_{2} \\) | * \\( P_{1} \implies P_{2} \\) | \\( ~P_{1} \\) | \\( ~P_{2} \\) |
-|---------------|---------------|--------------------------------|----------------|----------------|
-| \\( V \\)     | \\( V \\)     | \\( V \\)                      | \\( F \\)      | \\( F \\)      |
-| \\( V \\)     | \\( F \\)     | \\( F \\)                      | \\( F \\)      | \\( V \\)      |
-| \\( F \\)     | \\( V \\)     | * \\( V \\)                    | * \\( V \\)    | * \\( F \\)    |
-| \\( F \\)     | \\( F \\)     | \\( V \\)                      | \\( V \\)      | \\( V \\)      |
+<div class="table-wrapper"><table><thead><tr><th>\( P_{1} \)</th><th>\( P_{2} \)</th><th>* \( P_{1} \implies P_{2} \)</th><th>\( ~P_{1} \)</th><th>\( ~P_{2} \)</th></tr></thead><tbody>
+<tr><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td></tr>
+<tr><td>\( V \)</td><td>\( F \)</td><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td></tr>
+<tr><td>\( F \)</td><td>\( V \)</td><td>* \( V \)</td><td>* \( V \)</td><td>* \( F \)</td></tr>
+<tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( V \)</td></tr>
+</tbody></table>
+</div>
 <p>A tabela mostra que o argumento é inválido.</p>
 </details>
 <h2 id="regras-de-inferência"><a class="header" href="#regras-de-inferência">Regras de Inferência</a></h2>

@@ -163,7 +163,7 @@
 <h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
 <p>Observe a sequência aritmética a seguir e crie um programa para encontrar o valor do n-ésimo elemento: \( {2, 7, 12, 17, 22, ...} \).</p>
 <details>
-***Formulação recursiva***
+<p><em><strong>Formulação recursiva</strong></em></p>
 <p>\[
 f(1) = 2
 f(n) = f(n - 1) + 5
@@ -181,7 +181,7 @@ f(n) = f(n - 1) + 5
 <h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
 <p>N-ésimo termo da sequência \( {0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...} \).</p>
 <details>
-***Formulação recursiva***
+<p><em><strong>Formulação recursiva</strong></em></p>
 <p>\[
 fib(0) = 0
 fib(1) = 1
@@ -203,7 +203,7 @@ fib(n) = fib(n - 1) + fib(n - 2)
 <h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
 <p>Implemente o operador de exponenciação para permitir calcular a potência natural de um número \( m \) qualquer: \( m^{n} \).</p>
 <details>
-***Formulação recursiva***
+<p><em><strong>Formulação recursiva</strong></em></p>
 <p>\[
 pot(m, 0) = 1
 pot(m, n) = m \cdot pot(m, n - 1)
@@ -212,7 +212,7 @@ pot(m, n) = m \cdot pot(m, n - 1)
 <h3 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h3>
 <p>Implemente o operador de exponenciação para permitir calcular a potência <em>inteira</em> de um número \( m \) qualquer: \( m^{n} \).</p>
 <details>
-Em alguns casos, é recomendado elaborarmos uma **função auxiliar** para ajudar.
+<p>Em alguns casos, é recomendado elaborarmos uma <strong>função auxiliar</strong> para ajudar.</p>
 <pre><code class="language-javascript">const pot = (m, n) =&gt; {
     // Neste caso, a função auxiliar é meio que a principal, já que a ela faz a
     // multiplicação.
@@ -237,7 +237,7 @@ Em alguns casos, é recomendado elaborarmos uma **função auxiliar** para ajuda
 <h3 id="exemplo-4"><a class="header" href="#exemplo-4">Exemplo</a></h3>
 <p>Implemente o operador de divisão a fim de encontrar o resto da divisão entre dois números inteiros positivos fornecidos, \( n \) e \( m \).</p>
 <details>
-***Formulação recursiva***
+<p><em><strong>Formulação recursiva</strong></em></p>
 <p>\[
 resto(n, m) = n, \forall n &lt; m
 resto(n, m) = resto(n - m, m), \forall n \geq m
