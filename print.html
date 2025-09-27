@@ -848,7 +848,7 @@ R_{n} = \frac{1}{n} \cdot \left(\frac{1}{n}\right)^{2} + \frac{1}{n} \cdot\left(
 <p>\[
 1^{2} + 2^{2} + 3^{2} + ... + n^{2} = \frac{n(n + 1)(2n + 1)}{6}
 \]</p>
-<p>Colocando essa fórmula em R_{n}, temos</p>
+<p>Colocando essa fórmula em \( R_{n} \), temos</p>
 <p>\[
 R_{n} = \frac{1}{n^{3}} \cdot \frac{n(n + 1)(2n + 1)}{6} = \frac{(n + 1)(2n + 1)}{6n^{2}}
 \]</p>
@@ -869,25 +869,25 @@ A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty} L_{n} = \frac{1}{3}
 <h2 id="Área"><a class="header" href="#Área">Área</a></h2>
 <p>A <strong>área</strong> \( A \) da região \( S \) que está sob o gráfico de uma função contínua \( f \) é o limite da soma das áreas dos retângulos aproximantes:</p>
 <p>\[
-A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty}\left[f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x}\right]
-\delta{x} = \frac{b - a}{n}
+A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty}\left[f(x_{1})\Delta{x} + f(x_{2})\Delta{x} + ... + f(x_{n})\Delta{x}\right]
+\Delta{x} = \frac{b - a}{n}
 b = \text{fim do intervalo }
 a = \text{início do intervalo}
 \]</p>
 <p>Tomando a extremidade esquerda chegamos no mesmo valor, só que com um \( n \) diferente</p>
 <p>\[
-A = \lim_{n \to \infty} L_{n} = \lim_{n \to \infty}\left[f(x_{0})\delta{x} + f(x_{1})\delta{x} + ... + f(x_{n - 1})\delta{x}\right]
-\delta{x} = \frac{b - a}{n}
+A = \lim_{n \to \infty} L_{n} = \lim_{n \to \infty}\left[f(x_{0})\Delta{x} + f(x_{1})\Delta{x} + ... + f(x_{n - 1})\Delta{x}\right]
+\Delta{x} = \frac{b - a}{n}
 b = \text{fim do intervalo}
 a = \text{início do intervalo}
 \]</p>
 <p>Devido a essa igualdade, em vez de usarmos as extremidades, podemos usar outras partes dos intervalos onde a curva toca os retângulos primeiro. Esses pontos, representados por \( x_{n}^{*} \) são chamados de <strong>pontos amostrais</strong>.</p>
 <p>\[
-A = \lim_{n \to \infty} \left[f(x_{1}^{*})\delta{x} + f(x_{2}^{*})\delta{x} + ... + f(x_{n}^{*})\delta{x}\right]
+A = \lim_{n \to \infty} \left[f(x_{1}^{*})\Delta{x} + f(x_{2}^{*})\Delta{x} + ... + f(x_{n}^{*})\Delta{x}\right]
 \]</p>
 <p>Um jeito de reescrever isso é usando somatório:</p>
 <p>\[
-A = \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_{i}^{*}) \delta{x}
+A = \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_{i}^{*}) \Delta{x}
 \]</p>
 <h3 id="exemplo-32"><a class="header" href="#exemplo-32">Exemplo</a></h3>
 <p>Seja \( A \) a área da região que está sob o gráfico de \( f(x) = e^{-x} \) entre \( x = 0 \) e \( x = 2 \).</p>
@@ -896,12 +896,12 @@ A = \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_{i}^{*}) \delta{x}
 <details>
 <p>(a) Uma vez que \( a = 0 \) e \( b = 2 \), a largura de um subintervalo é</p>
 <p>\[
-\delta{x} = \frac{2 - 0}{n} = \frac{2}{n}
+\Delta{x} = \frac{2 - 0}{n} = \frac{2}{n}
 \]</p>
 <p>Portanto, \( x_{1} = \frac{2}{n} \), \( x_{2} = \frac{4}{n} \), \( x_{3} = \frac{6}{n} \), \( x_{i} = \frac{2i}{n} \). A soma dos retângulos aproximantes é</p>
 <p>\[
-R_{n} = f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x}
-= e^{-x_{1}}\delta{x} + e^{-x_{2}}\delta{x} + ... + e^{-x_{n}}\delta{x}
+R_{n} = f(x_{1})\Delta{x} + f(x_{2})\Delta{x} + ... + f(x_{n})\Delta{x}
+= e^{-x_{1}}\Delta{x} + e^{-x_{2}}\Delta{x} + ... + e^{-x_{n}}\Delta{x}
 = e^{\frac{-2}{n}}\left(\frac{2}{n}\right) + e^{\frac{-4}{n}}\left(\frac{2}{n}\right) + ... + e^{\frac{-2n}{n}}\left(\frac{2}{n}\right)
 \]</p>
 <p>Segundo a nossa definição, a área é</p>
@@ -912,10 +912,10 @@ A = \lim_{n \to \infty} R_{n} = \lim_{n \to \infty} \frac{2}{n} (e^{\frac{-2}{n}
 <p>\[
 A = \lim_{n \to \infty} \frac{2}{n} \sum_{i = 1}^{n} e^{\frac{-2i}{n}}
 \]</p>
-<p>(b) Com \( n = 4 \), os subintervalos com mesma largura \( \delta{x} = 0,5 \) são \( [0; 0.5] \), \( [0,5; 1] \), \( [1; 1,5] \), e \( [1,5;2] \). Os pontos médios desses intervalos são \( x_{1}^{*} = 0,25 \), \( x_{2}^{*} = 0,75 \), \( x_{3}^{*} = 1,25 \) e \( x_{4}^{*} = 1,75 \), e a soma das áreas dos quatro retângulos aproximantes é</p>
+<p>(b) Com \( n = 4 \), os subintervalos com mesma largura \( \Delta{x} = 0,5 \) são \( [0; 0.5] \), \( [0,5; 1] \), \( [1; 1,5] \), e \( [1,5;2] \). Os pontos médios desses intervalos são \( x_{1}^{*} = 0,25 \), \( x_{2}^{*} = 0,75 \), \( x_{3}^{*} = 1,25 \) e \( x_{4}^{*} = 1,75 \), e a soma das áreas dos quatro retângulos aproximantes é</p>
 <p>\[
-M_{4} = \sum_{i = 1}^{4} f(x_{1}^{*}) \delta{x}
-= f(0,25) \delta{x} + f(0,75) \delta{x} + f(1,25) \delta{x} + f(1,75) \delta{x}
+M_{4} = \sum_{i = 1}^{4} f(x_{1}^{*}) \Delta{x}
+= f(0,25) \Delta{x} + f(0,75) \Delta{x} + f(1,25) \Delta{x} + f(1,75) \Delta{x}
 = e^{-0,25} (0,5) + e^{-0,75} (0,5) + e^{-1,25} (0,5) + e^{-1,75} (0,5)
 = \frac{1}{2} (e^{-0,25} + e^{-0,75} + e^{-1,25} + e^{-1,75}) \sim 0,8557
 \]</p>
@@ -925,7 +925,7 @@ A \sim 0,8557
 \]</p>
 <p>Com \( n = 10 \), os subintervalos são \( [0; 0,2] \), \( [0,2; 0,4], ..., [1,8; 2] \) e os pontos médios são \( x_{1}^{*} = 0,1 \), \( x_{2}^{*} = 0,3 \), \( x_{3}^{*} = 0,5 \), ..., \( x_{10}^{*} = 1,9 \). Assim</p>
 <p>\[
-A \sim M_{10} = f(0,1) \delta{x} + f(0,3) \delta{x} + f(0,5) \delta{x} + ... + f(1,9) \delta{x}
+A \sim M_{10} = f(0,1) \Delta{x} + f(0,3) \Delta{x} + f(0,5) \Delta{x} + ... + f(1,9) \Delta{x}
 = 0,2(e^{-0,1} + e^{-0,3} + e^{-0,5} + ... + e^{-1,9}) \sim 0,8632
 \]</p>
 </details>
@@ -961,23 +961,23 @@ A \sim M_{10} = f(0,1) \delta{x} + f(0,3) \delta{x} + f(0,5) \delta{x} + ... + f
 \]</p>
 <p>Para <strong>aumentar a precisão</strong>, podemos <strong>reduzir os segundos feitos entre leituras</strong>.</p>
 <p>Que nem no problema da área, podemos fazer os retângulos nos gráfico. Os resultados que conseguimos são as áreas dos triângulos (o primeiro triângulo teem área 37,5).</p>
-<p>Em geral, suponha que o objeto se mova com velocidade \( v = f(t) \), em que \( a \leq t \leq b \) e \( f(t) \geq 0 \) (logo, o objeto move-se sempre no sentido positivo). Vamos registrar as velocidades nos instantes \( t_{0} (= a) \), \( t_{1} \), \( t_{2} \), ..., \( t_{n} (= b) \), de forma que a velocidade seja aproximadamente constante em cada subintervalo. Se esses tempos forem igualmente espaçados, então entre duas leituras consecutivas temos o período de tempo \( \delta{t} = \frac{b - a}{n} \). Durante o primeiro intervalo de tempo a velocidade é aproximadamente \( f(t_{0}) \) e, portanto, a distância percorrida é de aproximadamente \( f(t_{0}) \delta{t} \). Analogamente, a distância percorrida durante o segundo intervalo de tempo é cerca de \( f(t_{1}) \delta{t} \) e a distância total percorrida durante o intervalo de tempo \( [a, b] \) é de aproximadamente</p>
+<p>Em geral, suponha que o objeto se mova com velocidade \( v = f(t) \), em que \( a \leq t \leq b \) e \( f(t) \geq 0 \) (logo, o objeto move-se sempre no sentido positivo). Vamos registrar as velocidades nos instantes \( t_{0} (= a) \), \( t_{1} \), \( t_{2} \), ..., \( t_{n} (= b) \), de forma que a velocidade seja aproximadamente constante em cada subintervalo. Se esses tempos forem igualmente espaçados, então entre duas leituras consecutivas temos o período de tempo \( \Delta{t} = \frac{b - a}{n} \). Durante o primeiro intervalo de tempo a velocidade é aproximadamente \( f(t_{0}) \) e, portanto, a distância percorrida é de aproximadamente \( f(t_{0}) \Delta{t} \). Analogamente, a distância percorrida durante o segundo intervalo de tempo é cerca de \( f(t_{1}) \Delta{t} \) e a distância total percorrida durante o intervalo de tempo \( [a, b] \) é de aproximadamente</p>
 <p>\[
-f(t_{0}) \delta{t} + f(t_{1}) \delta{t} + ... + f(t_{n} - 1) \delta{t} = \sum_{i = 1}^{n} f(t_{i - 1}) \delta{t}
+f(t_{0}) \Delta{t} + f(t_{1}) \Delta{t} + ... + f(t_{n} - 1) \Delta{t} = \sum_{i = 1}^{n} f(t_{i - 1}) \Delta{t}
 \]</p>
 <p>Se uarmos as velocidades nas extremidades direitas em vez de nas extremidades esquerdas, nossa estimativa para a distância total ficará</p>
 <p>\[
-t(t_{1}) \delta{t} + f(t_{2}) \delta{t} + ... + f(t_{n}) \delta{t} = \sum_{i = 1}^{n} f(t_{i}) \delta{t}
+t(t_{1}) \Delta{t} + f(t_{2}) \Delta{t} + ... + f(t_{n}) \Delta{t} = \sum_{i = 1}^{n} f(t_{i}) \Delta{t}
 \]</p>
 <p>Quanto mais frequentemente medirmos a velocidade, mais precisa será nossa estimativa, então parece plausível que a distância <em>exata d</em> percorrida é o <em>limite</em> de tais expressões:</p>
 <p>\[
-d = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i - 1}) \delta{t} = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i}) \delta{t}
+d = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i - 1}) \Delta{t} = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i}) \Delta{t}
 \]</p>
 <p>Com isso, temos que a distância percorrida é igual à área sob o gráfico da função velocidade.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="integral"><a class="header" href="#integral">Integral</a></h1>
-<p>Se \( f \) é uma função contínua definida em \( a \leq x \leq b \), dividimos o intervalo \( [a, b] \) em \( n \) subintervalos de comprimentos iguais \( \delta{x} = \frac{(b - a)}{n} \). Sejam \( x_{0} (= a) \), \( x_{1} \), \( x_{2} \), ..., \( x_{n} (= b) \) as extremidades desses subintervalos, e sejam \( x_{1}^{<em>} \), \( x_{2}^{*} \), ..., \( x_{n}^{</em>} \) <strong>pontos amostrais arbitrários</strong> nesses subintervalos, de forma que \( x_{i}^{*} \) esteja no i-ésimo subintervalo \( [x_{i - 1}, x_{i}] \). Então a <strong>integral definida de</strong> \( f \) <strong>de</strong> \( a \) a \( b \) é</p>
+<p>Se \( f \) é uma função contínua definida em \( a \leq x \leq b \), dividimos o intervalo \( [a, b] \) em \( n \) subintervalos de comprimentos iguais \( \Delta{x} = \frac{(b - a)}{n} \). Sejam \( x_{0} (= a) \), \( x_{1} \), \( x_{2} \), ..., \( x_{n} (= b) \) as extremidades desses subintervalos, e sejam \( x_{1}^{<em>} \), \( x_{2}^{*} \), ..., \( x_{n}^{</em>} \) <strong>pontos amostrais arbitrários</strong> nesses subintervalos, de forma que \( x_{i}^{*} \) esteja no i-ésimo subintervalo \( [x_{i - 1}, x_{i}] \). Então a <strong>integral definida de</strong> \( f \) <strong>de</strong> \( a \) a \( b \) é</p>
 <p>\[
-\int_{a}^{b} f(x)dx = \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_{i}^{*}) \delta{x}
+\int_{a}^{b} f(x)dx = \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_{i}^{*}) \Delta{x}
 \]</p>
 <p>E dizemos que \( f \) é <strong>integrável</strong> em \( [a, b] \).</p>
 <h2 id="legenda"><a class="header" href="#legenda">Legenda</a></h2>
@@ -3484,7 +3484,7 @@ const texto = (x, y) =&gt; x == undefined ? 'Não há raizes reais.' : `As raize
 console.log(texto(menorRaiz, maiorRaiz))
 </code></pre>
 <p><code>As raizes da equação são 2 e 3.</code></p>
-<p>o</details></p>
+</details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="formulação-da-recursividade"><a class="header" href="#formulação-da-recursividade">Formulação da recursividade</a></h1>
 <p>Muitos problemas computacionais são resolvidos repetindo-se uma mesma computação sobre coleções de dados de tamanho cada vez menor até que se chege a um ponto onde não há mais necessidade de continuar esse processo.</p>
 <p>Em uma <strong>fórmula recursiva</strong>, cada termo é definido como uma função do seu precedente. Assim, temos que o \( n \)<em>-ésimo</em> termo da sequência é formado pelo \( (n - 1) \)<em>-ésimo</em> termo mais um <em>step</em>. Essa etapa é conhecida por <strong>passo indutivo</strong> da formulação.</p>
