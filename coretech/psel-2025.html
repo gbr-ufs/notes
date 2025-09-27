@@ -337,12 +337,13 @@ Agrupando da direita para a esquerda:
 <p><strong>Tabela-Verdade</strong></p>
 <p>A representação mais fundamental. Lista os resultados de cada combinação possível.</p>
 <p>Exemplo:</p>
-<p>|  P  |  Q  |  P <code>AND</code> Q  |
-|-----------|-------------|
-|  V  |  V  |  V          |
-|  V  |  F  |  F          |
-|  F  |  V  |  F          |
-|  F  |  F  |  F          |</p>
+<div class="table-wrapper"><table><thead><tr><th>P</th><th>Q</th><th>P <code>AND</code> Q</th></tr></thead><tbody>
+<tr><td>V</td><td>V</td><td>V</td></tr>
+<tr><td>V</td><td>F</td><td>F</td></tr>
+<tr><td>F</td><td>V</td><td>F</td></tr>
+<tr><td>F</td><td>F</td><td>F</td></tr>
+</tbody></table>
+</div>
 <p><strong>Mintermos e Maxtermos</strong></p>
 <p>Um <strong>mintermo</strong> é um termo produto (<code>AND</code>) que inclui todas as variáveis de entrada e que resulta em <code>1</code>, Um <strong>maxtermo</strong> é um termo soma (<code>OR</code>) que resulta em <code>0</code> para uma única combinação de entrada.</p>
 <p><strong>Soma de Produtos (SOP) e Produto de Soma(POS)</strong></p>
@@ -382,7 +383,7 @@ Agrupando da direita para a esquerda:
 <p>O processo de simplificação envolve agrupar células adjacentes que contem <code>1</code>s. Os grupos devem ser retangulares e conter um número de células que seja uma potência de dois (1, 2, 4, ...). O objetivo é formar os maiores grupos possíveis, cobrindo todos os <code>1</code>s.</p>
 <p><strong>Eliminação de Variáveis</strong></p>
 <p>Cada grupo corresponde a um único termo produto na expressão simplificada. As variáveis que mudam de estados (aparecem com <code>0</code> e <code>1</code>) em um grupo são eliminadas. Por exemplo, um grupo de duas células elimina uma variável, um grupo de quatro elimina duas, e assim por diante.</p>
-<p>** Condições "Don't Care"**</p>
+<p><strong>Condições "Don't Care"</strong></p>
 <p>Em muitos projetos, certas combinações de entrada nunca ocorrem, ou a saída é irrelevante. Podemos incluí-las em grupos de <code>1</code> para formar grupos maiores, mas é ideal cortá-las.</p>
 <h2 id="blocos-de-construção-de-sistemas-digitais"><a class="header" href="#blocos-de-construção-de-sistemas-digitais">Blocos de Construção de Sistemas Digitais</a></h2>
 <h3 id="circuitos-lógicos-combinacionais"><a class="header" href="#circuitos-lógicos-combinacionais">Circuitos Lógicos Combinacionais</a></h3>

@@ -334,8 +334,10 @@ Não podemos encontrar o limite fazendo \\( x = 1 \\), então temos que encontra
 = 1 + 1 = 2
 \]</p>
 </details>
-<h3 id="observação"><a class="header" href="#observação">Observação</a></h3>
-<p>Se \( f(x) = g(x) \) quando \( x neq a \), então \( \lim_{x \to a} f(x) = \lim_{x \to a} g(x) \), desde que o limite exista.</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Se \( f(x) = g(x) \) quando \( x neq a \), então \( \lim_{x \to a} f(x) = \lim_{x \to a} g(x) \), desde que o limite exista.</p>
+</blockquote>
 <h2 id="exemplo-6"><a class="header" href="#exemplo-6">Exemplo</a></h2>
 <p>Encontre \( \lim_{ \to 1} g(x) \) onde</p>
 <p>\[
@@ -809,7 +811,7 @@ Como estamos fazendo de 0 até 1, podemos imaginar um quadrado na área do gráf
 R_{4} = \frac{1}{4} \cdot \left(\frac{1}{4}\right)^{2} + \frac{1}{4} \cdot \left(\frac{1}{2}\right)^{2} + \frac{1}{4} \cdot \left(\frac{3}{4}\right)^{2} + \frac{1}{4} \cdot 1^{2} = \frac{15}{32} = 0,46875
 \]</p>
 <blockquote>
-<p>[!NOTE]
+<p><em><strong>Observação</strong></em>
 Os valores aqui estão ao quadrado pois estamos aplicando a função neles!</p>
 </blockquote>
 <p>Por ser uma aproximação, temos que a área \( A \) de \( S \) é</p>
@@ -836,7 +838,7 @@ L_{4} = \frac{1}{4} \cdot 0^{2} + \frac{1}{4} \cdot \left(\frac{1}{4}\right)^{2}
 \lim_{n \to \infty} R_{n} = \frac{1}{3}
 \]</p>
 <details>
-R_{n} é a soma das áreas dos retângulos. Cada retângulo tem uma largura \\( \frac{1}{n} \\), e as alturas são os valores da função \\( f(x) = x^{2} \\) nos pontos \\( \frac{1}{n} \\), \\( \frac{2}{n} \\), \\( \frac{3}{n} \\), ..., \\( \frac{n}{n} \\). Logo
+\\( R_{n} \\) é a soma das áreas dos retângulos. Cada retângulo tem uma largura \\( \frac{1}{n} \\), e as alturas são os valores da função \\( f(x) = x^{2} \\) nos pontos \\( \frac{1}{n} \\), \\( \frac{2}{n} \\), \\( \frac{3}{n} \\), ..., \\( \frac{n}{n} \\). Logo
 <p>\[
 R_{n} = \frac{1}{n} \cdot \left(\frac{1}{n}\right)^{2} + \frac{1}{n} \cdot\left(\frac{2}{n}\right)^{2} + \frac{1}{n} \cdot \left(\frac{3}{n}\right)^{2} + ... + \frac{1}{n} \cdot \left(\frac{n}{n}\right)^{2}
 = \frac{1}{n} \cdot \frac{1}{n^{2}} (1^{2} + 2^{2} + 3^{2} + ... + n^{2})
@@ -900,7 +902,7 @@ A = \lim_{n \to \infty} \sum_{i = 1}^{n} f(x_{i}^{*}) \delta{x}
 <p>\[
 R_{n} = f(x_{1})\delta{x} + f(x_{2})\delta{x} + ... + f(x_{n})\delta{x}
 = e^{-x_{1}}\delta{x} + e^{-x_{2}}\delta{x} + ... + e^{-x_{n}}\delta{x}
-= e^{\frac{-2}{n}}\left(\frac{2}{n}\right) + e^{\frac{-4}{n}}\left\frac{2}{n}\right) + ... + e^{\frac{-2n}{n}}\left(\frac{2}{n}\right)
+= e^{\frac{-2}{n}}\left(\frac{2}{n}\right) + e^{\frac{-4}{n}}\left(\frac{2}{n}\right) + ... + e^{\frac{-2n}{n}}\left(\frac{2}{n}\right)
 \]</p>
 <p>Segundo a nossa definição, a área é</p>
 <p>\[
@@ -1080,8 +1082,11 @@ d = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i - 1}) \delta{t} = \lim_{n \to \i
 <tr><td>\( F \)</td><td>\( V \)</td></tr>
 </tbody></table>
 </div>
-<h4 id="observação-1"><a class="header" href="#observação-1">Observação</a></h4>
-<p>A negação somente inverte o valor lógico de uma proposição, ou seja, não é só porque que uma proposição esteja sendo negada que ela é falsa. Ela pode ser falsa por padrão (fazendo com que sua negação seja verdadeira).</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+A negação somente inverte o valor lógico de uma proposição, ou seja, não é só porque que uma proposição esteja sendo negada que ela é falsa.
+Ela pode ser falsa por padrão (fazendo com que sua negação seja verdadeira).</p>
+</blockquote>
 <h3 id="implicações"><a class="header" href="#implicações">Implicações</a></h3>
 <p>Uma implicação \( P \implies Q \) é falsa somente quando a hipótese \( P \) é verdadeira e a conclusão \( Q \) é falsa. Um modo de entender o valor verdade de uma afirmação condicional é pensar nela como uma obrigação, uma promessa ou um contrato.</p>
 <div class="table-wrapper"><table><thead><tr><th>\( P \)</th><th>\( Q \)</th><th>\( P \implies Q \)</th></tr></thead><tbody>
@@ -1146,8 +1151,10 @@ Q \implies P
 <tr><td>\( F \)</td><td>\( F \)</td><td>\( V \)</td><td>\( V \)</td><td>\( F \)</td><td>\( V \)</td><td>\( F \)</td></tr>
 </tbody></table>
 </div>
-<h3 id="observação-2"><a class="header" href="#observação-2">Observação</a></h3>
-<p>Expressões lógicas regulares são chamadas de <strong>contingências</strong>.</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Expressões lógicas regulares são chamadas de <strong>contingências</strong>.</p>
+</blockquote>
 <h2 id="formas-normais-disjuntiva-e-conjuntiva"><a class="header" href="#formas-normais-disjuntiva-e-conjuntiva">Formas Normais Disjuntiva e Conjuntiva</a></h2>
 <p>A Forma Normal Disjuntiva permite encontrar uma função lógica indeterminada mediante uma conjunção de disjunções, enquanto a conjuntiva usa uma disjunção de conjunções.</p>
 <h3 id="exemplo-38"><a class="header" href="#exemplo-38">Exemplo</a></h3>
@@ -1325,11 +1332,13 @@ B = \{-1, 0, 1, 2, 3, 4\}
 C = \{2\}
 \]</p>
 </details>
-<h3 id="observação-3"><a class="header" href="#observação-3">Observação</a></h3>
-<p>É importante decompor as condições.
-Neste exemplo, \( x^2 &lt; 4 \implies x^2 - 4 &lt; 0 \implies (x - 2)( x + 2) &lt; 0 \implies \)
-\( x - 2 &lt; 0 \land x + 2 &gt; 0 \lor x - 2 &gt; 0 \land x + 2 &gt; 0 \implies \)
-\( x &gt; 2 \land x - 2 \), o que é impossível.</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+É importante decompor as condições.
+Neste exemplo,
+\( x^2 &lt; 4 \implies x^2 - 4 &lt; 0 \implies (x - 2)( x + 2) &lt; 0 \implies x - 2 &lt; 0 \land x + 2 &gt; 0 \lor x - 2 &gt; 0 \land x + 2 &gt; 0 \implies x &gt; 2 \land x - 2 \),
+o que é impossível.</p>
+</blockquote>
 <h2 id="subconjunto"><a class="header" href="#subconjunto">Subconjunto</a></h2>
 <p>\[
 (A \subset B) = \forall x \in \mathbb{U}, x \in A \implies x \in B
@@ -1363,12 +1372,15 @@ A \subset B \land B \subset C \implies A \subset C
 Se \\( A \subset B \\) e \\( B \subset C \\), então \\( \forall a, a \in A \implies a \in B \land \forall b, b \in B \implies b \in C \\).
 Portanto, \\( \forall x, x \in A \implies x \in B \implies x \in C \equiv A \subset C \\).
 </details>
-<h2 id="observação--a-notsubset-b-"><a class="header" href="#observação--a-notsubset-b-">Observação \( (A \not\subset B) \)</a></h2>
-<p>Para provar uma afirmação da forma \( A \not\subset B \), basta encontrar um \( a \in A \), \( a \not\in B \). \( A \subset B \equiv \forall x, x \in A \implies x \in B \), então \( A \not\subset B \equiv \exists x \), \( x \in A \land x \not\in B \).</p>
-<h2 id="observação--a--b-"><a class="header" href="#observação--a--b-">Observação \( (A = B) \)</a></h2>
-<p>\[
-A = B \iff A \subset B \land B \subset A
-\]</p>
+<blockquote>
+<p><em><strong>Observação \( (A \not\subset B) \)</strong></em>
+Para provar uma afirmação da forma \( A \not\subset B \), basta encontrar um \( a \in A \), \( a \not\in B \).
+\( A \subset B \equiv \forall x, x \in A \implies x \in B \), então \( A \not\subset B \equiv \exists x \), \( x \in A \land x \not\in B \).</p>
+</blockquote>
+<blockquote>
+<p><em><strong>Observação \( (A = B) \)</strong></em>
+\( A = B \iff A \subset B \land B \subset A \)</p>
+</blockquote>
 <h2 id="exemplo-49"><a class="header" href="#exemplo-49">Exemplo</a></h2>
 <p>\[
 P = \{x \in \mathbb{R}: x^2 - 5x + 6 &lt; 0\}
@@ -1746,8 +1758,10 @@ g \circ f = \{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\}
 (g \circ f)(x) = g(f(x)) = sen^{2}(x) + 6sen(x)
 \]</p>
 <p>Como a operação de composição de funções não é comutativa, \( f \circ g \) pode ser diferente de \( g \circ f \).</p>
-<h4 id="observação-4"><a class="header" href="#observação-4">Observação</a></h4>
-<p>Como a composição de relações é associativa e funções são relações, a composição de funções também é associativa, ou seja, \( f : A \rightarrow B, g : B \rightarrow C \land h : C \rightarrow \implies (h \circ f) \circ g = h \circ (f \circ g) \).</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Como a composição de relações é associativa e funções são relações, a composição de funções também é associativa, ou seja, \( f : A \rightarrow B, g : B \rightarrow C \land h : C \rightarrow \implies (h \circ f) \circ g = h \circ (f \circ g) \).</p>
+</blockquote>
 <h3 id="definição-9"><a class="header" href="#definição-9">Definição</a></h3>
 <p>Se uma função \( f : A \rightarrow B \) é bijetiva, então ela é invertível.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="matemática-básica"><a class="header" href="#matemática-básica">Matemática Básica</a></h1>
@@ -2755,25 +2769,21 @@ d(P, d) = d(P, P') = \sqrt{(x + a)^{2}} = |x + a|
 <li>O <em>eixo maior</em> é o segmento \( A_{1}A_{2} \)</li>
 <li>O <em>eixo menor</em> é o segmento \( B_{1}B_{2} \)</li>
 </ul>
-<h2 id="observação-5"><a class="header" href="#observação-5">Observação</a></h2>
-<p>\[
-d(A_{1}, C) = d(A_{2}, C) = a
-\]</p>
-<p>\[
-d(B_{1}, C) = d(B_{2}, C) = b
-\]</p>
-<p>\[
-d(F_{1}, C) = d(F_{2}, C) = c
-\]</p>
-<p>\[
-d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = a - c
-\]</p>
-<h2 id="observação-6"><a class="header" href="#observação-6">Observação</a></h2>
-<p>O comprimento do eixo maior da elipse é igual a \( 2a \), enquando o do eixo menor é \( 2b \).</p>
-<h2 id="observação-7"><a class="header" href="#observação-7">Observação</a></h2>
-<p>\[
-b^{2} = a^{2} - c^{2}
-\]</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+\( d(A_{1}, C) = d(A_{2}, C) = a \)
+\( d(B_{1}, C) = d(B_{2}, C) = b \)
+\( d(F_{1}, C) = d(F_{2}, C) = c \)
+\( d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = a - c \)</p>
+</blockquote>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+O comprimento do eixo maior da elipse é igual a \( 2a \), enquando o do eixo menor é \( 2b \).</p>
+</blockquote>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+\( b^{2} = a^{2} - c^{2} \)</p>
+</blockquote>
 <h2 id="equação-reduzida"><a class="header" href="#equação-reduzida">Equação Reduzida</a></h2>
 <h3 id="elipse-com-centro-na-origem-e-eixo-focal-coincidente-com-o-eixo--y-"><a class="header" href="#elipse-com-centro-na-origem-e-eixo-focal-coincidente-com-o-eixo--y-">Elipse com centro na origem e eixo focal coincidente com o eixo \( y \)</a></h3>
 <ul>
@@ -2797,8 +2807,10 @@ b^{2} = a^{2} - c^{2}
 <li>\( F_{2} = (c, 0) \)</li>
 <li>\( P = (x, y) \in \mathcal{E} \iff \frac{x^{2}}{a^{2}} \frac{y^{2}}{b^{2}} = 1\)</li>
 </ul>
-<h3 id="observação-8"><a class="header" href="#observação-8">Observação</a></h3>
-<p>Um jeito fácil de descobrir com qual eixo o eixo focal coincide é olhando os valores dos denominadores, e lembrando que \( a &gt; b \).</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Um jeito fácil de descobrir com qual eixo o eixo focal coincide é olhando os valores dos denominadores, e lembrando que \( a &gt; b \).</p>
+</blockquote>
 <h3 id="elipse-com-centro--c--x_0-y_0--e-eixo-focal-paralelo-ao-eixo--y-"><a class="header" href="#elipse-com-centro--c--x_0-y_0--e-eixo-focal-paralelo-ao-eixo--y-">Elipse com centro \( C = (x_{0}, y_{0}) \) e eixo focal paralelo ao eixo \( y \)</a></h3>
 <ul>
 <li>\( A_{1} = (x_{0}, y_{0} - a) \)</li>
@@ -2823,8 +2835,10 @@ b^{2} = a^{2} - c^{2}
 <li>\( l : y = y_{0} \)</li>
 <li>\( P = (x, y) \in \mathcal{E} \iff \frac{(x - x_{0})^{2}}{a^{2}} + \frac{(y - y_{0})^{2}}{b^{2}} = 1\)</li>
 </ul>
-<h3 id="observação-9"><a class="header" href="#observação-9">Observação</a></h3>
-<p>Para ver com que eixo o eixo focal é paralelo, basta ver o denominador da equação. Se o que tem \( x \) em cima é maior, então é paralelo com o eixo \( x \), e se o que tem \( y \) é maior, então é paralelo com \( y \).</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Para ver com que eixo o eixo focal é paralelo, basta ver o denominador da equação. Se o que tem \( x \) em cima é maior, então é paralelo com o eixo \( x \), e se o que tem \( y \) é maior, então é paralelo com \( y \).</p>
+</blockquote>
 <h2 id="excentricidade"><a class="header" href="#excentricidade">Excentricidade</a></h2>
 <p>Diz o quão achatada a elipse é.</p>
 <p>\[
@@ -2842,7 +2856,7 @@ Ax^{2} + By^{2} + Cx + Dy + E = 0
 <p>\[
 \mathcal{H} = \{P; |d(P, F_{1}) - d(P, F_{2})| = 2a\}
 \]</p>
-<h2 id="observação-10"><a class="header" href="#observação-10">Observação</a></h2>
+<h2 id="observação"><a class="header" href="#observação">Observação</a></h2>
 <p>Pela desigualdade triangular, obtemos que \( a &lt; c \).</p>
 <ul>
 <li>Uma hipérbole possui dois focos, \( F_{1} e F_{2} \)</li>
@@ -2856,20 +2870,20 @@ Ax^{2} + By^{2} + Cx + Dy + E = 0
 <li>O <em>eixo imaginário</em> da hipérbole é o segmento \( B_{1}B_{2} \)</li>
 <li>A <em>excentricidade</em> de uma hipérbole é o número real \( e = \frac{c}{a}, (e &gt; 1) \)</li>
 </ul>
-<h2 id="observação-11"><a class="header" href="#observação-11">Observação</a></h2>
-<p>\[
-d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = c - a
-\]</p>
-<p>\[
-d(A_{1}, C) = d(A_{2}, C) = a
-\]</p>
-<h2 id="observação-12"><a class="header" href="#observação-12">Observação</a></h2>
-<p>O comprimento do eixo real da hipérbole é igual a \( 2a \).</p>
-<h2 id="observação-13"><a class="header" href="#observação-13">Observação</a></h2>
-<p>Pelo Teorema de Pitágoras, temos que \( d(C, B_{1}) = d(C, B_{2}) = b \) onde</p>
-<p>\[
-c^{2} = a^{2} + b^{2}
-\]</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+\( d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = c - a \)
+\( d(A_{1}, C) = d(A_{2}, C) = a \)</p>
+</blockquote>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+O comprimento do eixo real da hipérbole é igual a \( 2a \).</p>
+</blockquote>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Pelo Teorema de Pitágoras, temos que \( d(C, B_{1}) = d(C, B_{2}) = b \) onde
+\( c^{2} = a^{2} + b^{2} \)</p>
+</blockquote>
 <h2 id="equação-reduzida-1"><a class="header" href="#equação-reduzida-1">Equação Reduzida</a></h2>
 <h3 id="hipérbole-com-centro-na-origem-e-reta-focal-coincidente-com-o-eixo--y-"><a class="header" href="#hipérbole-com-centro-na-origem-e-reta-focal-coincidente-com-o-eixo--y-">Hipérbole com centro na origem e reta focal coincidente com o eixo \( y \)</a></h3>
 <ul>
@@ -2972,11 +2986,11 @@ Com isso, temos que \( O = (0, 0 , 0)
 <p>\[
 \vec{u} || \vec{v} \iff \vec{u} = k\vec{v}, k \in \mathbb{R}
 \]</p>
-<h3 id="observação-14"><a class="header" href="#observação-14">Observação</a></h3>
-<p>Com \( x_{2} \neq 0 \), \( y_{2} \neq 0 \) e \( z_{2} \neq 0 \), podemos fazer</p>
-<p>\[
-\vec{v} || \vec{v} \iff \frac{x_{1}}{x_{2}} = \frac{y_{1}}{y_{2}} = \frac{z_{1}}{z_{2}}
-\]</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Com \( x_{2} \neq 0 \), \( y_{2} \neq 0 \) e \( z_{2} \neq 0 \), podemos fazer
+\( \vec{v} || \vec{v} \iff \frac{x_{1}}{x_{2}} = \frac{y_{1}}{y_{2}} = \frac{z_{1}}{z_{2}} \)</p>
+</blockquote>
 <h2 id="módulo"><a class="header" href="#módulo">Módulo</a></h2>
 <p>\[
 ||\vec{v}|| = \sqrt{x^{2} + y^{2} + z^{2}}
@@ -3152,8 +3166,10 @@ x_{2} &amp; y_{2} &amp; z_{2}
 \end{vmatrix}
 \]</p>
 <p>Com os vetores não tendo um valor definido. Eles apenas servem para indicar as posições (\( \vec_{i} = x \), \( \vec{j} = y \), \( \vec{k} = z \)).</p>
-<h3 id="observação-15"><a class="header" href="#observação-15">Observação</a></h3>
-<p>Para a operação fazemos \( \vec{i} (y_{1} \cdot z_{2} - y_{2} \cdot z_{1}) - \vec{j} (x_{1} \cdot z_{2} - x_{2} \cdot z_{1}) + \vec{k} (x_{1} \cdot y_{2} - x_{2} \cdot y_{1}) = (a, -b, c) \).</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Para a operação fazemos \( \vec{i} (y_{1} \cdot z_{2} - y_{2} \cdot z_{1}) - \vec{j} (x_{1} \cdot z_{2} - x_{2} \cdot z_{1}) + \vec{k} (x_{1} \cdot y_{2} - x_{2} \cdot y_{1}) = (a, -b, c) \).</p>
+</blockquote>
 <h3 id="exemplo-84"><a class="header" href="#exemplo-84">Exemplo</a></h3>
 <p>Considere os vetores \( \vec{u} = (3, -1, -2) \) e \( \vec{v} = (2, 4, -1) \). Calcule \( \vec{u} \times \vec{v} \).</p>
 <details>
@@ -3261,7 +3277,7 @@ if (media &gt;= 7) {
 <p>Prioriza o <a href="programacao/programacao-funcional/fundamentos/../../../fem/funcoes.html">conceito matemático de funções</a> na hora de escrever os códigos. A ideia é pensar no <strong>algoritmo</strong> como sendo uma grande e única função por uma <strong>combinação</strong> de várias outras pequenas <strong>funções</strong>, cada uma resolvendo uma parte do problema.</p>
 <h2 id="organizando-o-pensamento-computacional"><a class="header" href="#organizando-o-pensamento-computacional">Organizando o pensamento computacional</a></h2>
 <blockquote>
-<p>[!NOTE]
+<p><em><strong>Observação</strong></em>
 Essa é apenas a sugestão do professor Hendrik.
 Codifique da maneira que achar comfortável.
 Mas geralmente você vai precisar seguir esses passos.</p>
@@ -3852,12 +3868,13 @@ Agrupando da direita para a esquerda:
 <p><strong>Tabela-Verdade</strong></p>
 <p>A representação mais fundamental. Lista os resultados de cada combinação possível.</p>
 <p>Exemplo:</p>
-<p>|  P  |  Q  |  P <code>AND</code> Q  |
-|-----------|-------------|
-|  V  |  V  |  V          |
-|  V  |  F  |  F          |
-|  F  |  V  |  F          |
-|  F  |  F  |  F          |</p>
+<div class="table-wrapper"><table><thead><tr><th>P</th><th>Q</th><th>P <code>AND</code> Q</th></tr></thead><tbody>
+<tr><td>V</td><td>V</td><td>V</td></tr>
+<tr><td>V</td><td>F</td><td>F</td></tr>
+<tr><td>F</td><td>V</td><td>F</td></tr>
+<tr><td>F</td><td>F</td><td>F</td></tr>
+</tbody></table>
+</div>
 <p><strong>Mintermos e Maxtermos</strong></p>
 <p>Um <strong>mintermo</strong> é um termo produto (<code>AND</code>) que inclui todas as variáveis de entrada e que resulta em <code>1</code>, Um <strong>maxtermo</strong> é um termo soma (<code>OR</code>) que resulta em <code>0</code> para uma única combinação de entrada.</p>
 <p><strong>Soma de Produtos (SOP) e Produto de Soma(POS)</strong></p>
@@ -3897,7 +3914,7 @@ Agrupando da direita para a esquerda:
 <p>O processo de simplificação envolve agrupar células adjacentes que contem <code>1</code>s. Os grupos devem ser retangulares e conter um número de células que seja uma potência de dois (1, 2, 4, ...). O objetivo é formar os maiores grupos possíveis, cobrindo todos os <code>1</code>s.</p>
 <p><strong>Eliminação de Variáveis</strong></p>
 <p>Cada grupo corresponde a um único termo produto na expressão simplificada. As variáveis que mudam de estados (aparecem com <code>0</code> e <code>1</code>) em um grupo são eliminadas. Por exemplo, um grupo de duas células elimina uma variável, um grupo de quatro elimina duas, e assim por diante.</p>
-<p>** Condições "Don't Care"**</p>
+<p><strong>Condições "Don't Care"</strong></p>
 <p>Em muitos projetos, certas combinações de entrada nunca ocorrem, ou a saída é irrelevante. Podemos incluí-las em grupos de <code>1</code> para formar grupos maiores, mas é ideal cortá-las.</p>
 <h2 id="blocos-de-construção-de-sistemas-digitais"><a class="header" href="#blocos-de-construção-de-sistemas-digitais">Blocos de Construção de Sistemas Digitais</a></h2>
 <h3 id="circuitos-lógicos-combinacionais"><a class="header" href="#circuitos-lógicos-combinacionais">Circuitos Lógicos Combinacionais</a></h3>

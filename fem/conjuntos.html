@@ -182,11 +182,13 @@ B = \{-1, 0, 1, 2, 3, 4\}
 C = \{2\}
 \]</p>
 </details>
-<h3 id="observação"><a class="header" href="#observação">Observação</a></h3>
-<p>É importante decompor as condições.
-Neste exemplo, \( x^2 &lt; 4 \implies x^2 - 4 &lt; 0 \implies (x - 2)( x + 2) &lt; 0 \implies \)
-\( x - 2 &lt; 0 \land x + 2 &gt; 0 \lor x - 2 &gt; 0 \land x + 2 &gt; 0 \implies \)
-\( x &gt; 2 \land x - 2 \), o que é impossível.</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+É importante decompor as condições.
+Neste exemplo,
+\( x^2 &lt; 4 \implies x^2 - 4 &lt; 0 \implies (x - 2)( x + 2) &lt; 0 \implies x - 2 &lt; 0 \land x + 2 &gt; 0 \lor x - 2 &gt; 0 \land x + 2 &gt; 0 \implies x &gt; 2 \land x - 2 \),
+o que é impossível.</p>
+</blockquote>
 <h2 id="subconjunto"><a class="header" href="#subconjunto">Subconjunto</a></h2>
 <p>\[
 (A \subset B) = \forall x \in \mathbb{U}, x \in A \implies x \in B
@@ -220,12 +222,15 @@ A \subset B \land B \subset C \implies A \subset C
 Se \\( A \subset B \\) e \\( B \subset C \\), então \\( \forall a, a \in A \implies a \in B \land \forall b, b \in B \implies b \in C \\).
 Portanto, \\( \forall x, x \in A \implies x \in B \implies x \in C \equiv A \subset C \\).
 </details>
-<h2 id="observação--a-notsubset-b-"><a class="header" href="#observação--a-notsubset-b-">Observação \( (A \not\subset B) \)</a></h2>
-<p>Para provar uma afirmação da forma \( A \not\subset B \), basta encontrar um \( a \in A \), \( a \not\in B \). \( A \subset B \equiv \forall x, x \in A \implies x \in B \), então \( A \not\subset B \equiv \exists x \), \( x \in A \land x \not\in B \).</p>
-<h2 id="observação--a--b-"><a class="header" href="#observação--a--b-">Observação \( (A = B) \)</a></h2>
-<p>\[
-A = B \iff A \subset B \land B \subset A
-\]</p>
+<blockquote>
+<p><em><strong>Observação \( (A \not\subset B) \)</strong></em>
+Para provar uma afirmação da forma \( A \not\subset B \), basta encontrar um \( a \in A \), \( a \not\in B \).
+\( A \subset B \equiv \forall x, x \in A \implies x \in B \), então \( A \not\subset B \equiv \exists x \), \( x \in A \land x \not\in B \).</p>
+</blockquote>
+<blockquote>
+<p><em><strong>Observação \( (A = B) \)</strong></em>
+\( A = B \iff A \subset B \land B \subset A \)</p>
+</blockquote>
 <h2 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h2>
 <p>\[
 P = \{x \in \mathbb{R}: x^2 - 5x + 6 &lt; 0\}
