@@ -17,12 +17,11 @@
 
 >Escrever [instruções] em uma linguagem específica que a máquina entenda [para] poder gerar essas aplicações [em referência às imagens].
 >
->— MACEDO, H. (ED.). 01Oqueprogramar, 16 Feb. 2022. Disponível em: <https://www.youtube.com/watch?v=OtznOZE6-ns>. Acesso em: 27 mai. 2025.
+>— TEIXEIRA MACEDO, H. (ED.). 01Oqueprogramar, 16 feb. 2022. Disponível em: <https://www.youtube.com/watch?v=OtznOZE6-ns>. Acesso em: 27 mai. 2025.
 
-## Pureza
+>Na disciplina, acho que não chegamos a receber uma resposta do professor do que seria, mas para mim é dar instruções para executar tarefas.
+>— SANTOS DE SOUZA, G. Notes, 16 set. 2025. Disponível em: <https://gbr-ufs.github.io/notes/>.
 
-O resultado de uma função depende dos argumentos que foram passados a esta.
+# Referências Bibliográficas
 
-## Refatoramento
-
-## Parâmetros
+TEIXEIRA MACEDO, H. PF, 23 jan. 2022. Disponível em: <https://hendrikdcomp.github.io/pf/>.

@@ -1,11 +1,12 @@
-### Programação Funcional
+# Programação Funcional
 
 Segue o modelo das funções matemáticas.
 
-#### Imutabilidade
+## Imutabilidade
 
 Por padrão, uma variável, mesmo que modificada em uma função, mantém o mesmo valor.
 
+<details>
 ```javascript
 const variavel = 10;
 
@@ -19,7 +20,13 @@ console.log(divideByTwo(variavel));
 console.log(variavel);
 ```
 
-#### Determinismo
+```
+5
+10
+```
+</details>
+
+## Determinismo
 
 Dado um mesmo argumento, uma função deve sempre produzir o mesmo resultado.
 

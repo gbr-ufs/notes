@@ -1,8 +1,8 @@
-### JavaScript
+# JavaScript
 
 Linguagem multi-paradigma usada principalmente para o desenvolvimento web.
 
-#### Hello, World!
+## Hello, World!
 
 ```javascript
 // A partir de uma função.
@@ -16,7 +16,12 @@ console.log(helloWorld()); // Maneira de printar uma mensagem para o console.
 console.log("Hello, World!");
 ```
 
-#### Comparação
+```
+Hello, World!
+Hello, World!
+```
+
+## Comparação
 
 O operador de comparação (`==`) verifica se duas variáveis possuem o mesmo valor, enquanto o operador de comparação estrito (`===`) faz o mesmo, mas adicionalmente verifica se dois valores são do mesmo tipo.
 
@@ -26,4 +31,9 @@ const big = 0n; // tipo "BigInt".
 
 console.log(num == big); // true
 console.log(num === big); // false
+```
+
+```
+true
+false
 ```
