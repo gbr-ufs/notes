@@ -86,3 +86,7 @@
         - [Listas e Registros](programacao/programacao-funcional/colecoes-de-dados/listas-e-registros.md)
         - [Mapeamento de elementos](programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.md)
         - [Filtragem de elementos](programacao/programacao-funcional/colecoes-de-dados/filtragem-de-elementos.md)
+
+## Coretech
+
+- [Material de Estudos PSEL Coretech 2025](coretech/psel-2025.md)
