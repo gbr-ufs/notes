@@ -13,6 +13,7 @@ Em JavaScript, fazemos esse mapeamento com uso de uma função pré-definida `ma
 Programa para aplicar um desconto de 10% em uma lista de produtos.
 
 <details>
+
 ```javascript
 const desconto = (desc) => (lista) => lista.map((x) => x - x * (desc) / 100)
 const desconto10 = desconto(10)
@@ -23,6 +24,7 @@ console.log(resultado)
 ```
 
 `[ 9.54, 7.65, 4.995, 5.760000000000001, 36.9, 20.745, 17.91, 14.31, 19.89, 2.475 ]`
+
 </details>
 
 ### Exemplo
@@ -30,6 +32,7 @@ console.log(resultado)
 Programa para calcular o triplo de cada elemento de uma lista.
 
 <details>
+
 ```javascript
 const valores = [3, 4, -2, 0, 1, 40]
 const triplo = valores.map((x) => 3 * x)
@@ -38,6 +41,7 @@ console.log(triplo)
 ```
 
 `[9, 12, -6, 0, 3, 120 ]`
+
 </details>
 
 ### Exemplo
@@ -45,6 +49,7 @@ console.log(triplo)
 Programa para extrair a inicial de cada nome de uma lista.
 
 <details>
+
 ```javascript
 const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa']
 const primeiraLetra = (texto) => texto[0]
@@ -54,6 +59,7 @@ console.log(iniciais)
 ```
 
 `[ "A", "B", "G", "L", "R" ]`
+
 </details>
 
 ### Exemplo
@@ -61,6 +67,7 @@ console.log(iniciais)
 Programa para adicionar um sobrenome a cada nome de uma lista.
 
 <details>
+
 ```javascript
 const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa']
 const addSobrenome = (sobrenome) => (nome) => `${nome} ${sobrenome}`
@@ -70,4 +77,5 @@ console.log(nomeCompleto)
 ```
 
 `[ 'Ana Costa', 'Bia Costa', 'Gui Costa', 'Lia Costa', 'Rafa Costa' ]
+
 </details>

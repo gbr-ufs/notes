@@ -5,6 +5,7 @@ Um elemento numa linguagem de programação é dito ser *de primeira classe* se 
 A maneira mais simples de explicar isso é com um exemplo. Em C, não podemos usar uma definição de função como uma expressão.
 
 <details>
+
 ```c
 #include <stdio.h>
 
@@ -28,11 +29,13 @@ bla.c:3:5: note: previous definition of ‘main’ with type ‘int’
     3 | int main = int () {
       |     ^~~~
 ```
+
 </details>
 
 Mas em JavaScript, você pode:
 
 <details>
+
 ```javascript
 const main = function () {
     console.log("Hello, World!");
@@ -42,4 +45,5 @@ main();
 ```
 
 `Hello, World!`
+
 </details>

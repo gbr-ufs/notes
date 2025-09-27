@@ -1,5 +1,5 @@
 # Oposto
 
 \\[
-\vec_{v} = (x, y, z) \implies -\vec{v} = (-x, -y, -z)
+\vec{v} = (x, y, z) \implies -\vec{v} = (-x, -y, -z)
 \\]

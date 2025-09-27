@@ -7,6 +7,7 @@
 Escreva um programa para calcular o maior e o menor valor real das raízes de uma equação de segundo grau. A expressão genérica para cálculo das raízes é dada por \\( \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} \\).
 
 <details>
+
 ```javascript
 const raiz = (a, b, c, f) => {
     const delta = (b * b) - (4 * a * c)
@@ -34,4 +35,5 @@ console.log(texto(menorRaiz, maiorRaiz))
 ```
 
 `As raizes da equação são 2 e 3.`
+
 </details>

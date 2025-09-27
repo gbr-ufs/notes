@@ -15,6 +15,7 @@ significa que podemos fazer os valores de \\( f(x) \\) ficarem arbitrariamente g
 Encontre \\( \lim_{x \to 0} \frac{1}{x^{2}} \\), se existir.
 
 <details>
+
 À medida que \\( x \\) tende a 0, \\( x^{2} \\) também tende a 0, e \\( \frac{1}{x^{2}} \\) fica muito grande.
 
 Assim, os valores de \\( f(x) \\) **não tendem a um número**, e \\( \lim_{x \to 0} \frac{1}{x^{2}} \\) portanto **não existe**.
@@ -24,6 +25,7 @@ Por isso, escrevemos
 \\[
 \lim_{x \to 0} \frac{1}{x^{2}} = \infty
 \\]
+
 </details>
 
 ## Negativo

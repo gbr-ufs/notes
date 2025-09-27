@@ -43,22 +43,22 @@ Para **aumentar a precisão**, podemos **reduzir os segundos feitos entre leitur
 
 Que nem no problema da área, podemos fazer os retângulos nos gráfico. Os resultados que conseguimos são as áreas dos triângulos (o primeiro triângulo teem área 37,5).
 
-Em geral, suponha que o objeto se mova com velocidade \\( v = f(t) \\), em que \\( a \leq t \leq b \\) e \\( f(t) \geq 0 \\) (logo, o objeto move-se sempre no sentido positivo). Vamos registrar as velocidades nos instantes \\( t_{0} (= a) \\), \\( t_{1} \\), \\( t_{2} \\), ..., \\( t_{n} (= b) \\), de forma que a velocidade seja aproximadamente constante em cada subintervalo. Se esses tempos forem igualmente espaçados, então entre duas leituras consecutivas temos o período de tempo \\( \delta{t} = \frac{b - a}{n} \\). Durante o primeiro intervalo de tempo a velocidade é aproximadamente \\( f(t_{0}) \\) e, portanto, a distância percorrida é de aproximadamente \\( f(t_{0}) \delta{t} \\). Analogamente, a distância percorrida durante o segundo intervalo de tempo é cerca de \\( f(t_{1}) \delta{t} \\) e a distância total percorrida durante o intervalo de tempo \\( [a, b] \\) é de aproximadamente
+Em geral, suponha que o objeto se mova com velocidade \\( v = f(t) \\), em que \\( a \leq t \leq b \\) e \\( f(t) \geq 0 \\) (logo, o objeto move-se sempre no sentido positivo). Vamos registrar as velocidades nos instantes \\( t_{0} (= a) \\), \\( t_{1} \\), \\( t_{2} \\), ..., \\( t_{n} (= b) \\), de forma que a velocidade seja aproximadamente constante em cada subintervalo. Se esses tempos forem igualmente espaçados, então entre duas leituras consecutivas temos o período de tempo \\( \Delta{t} = \frac{b - a}{n} \\). Durante o primeiro intervalo de tempo a velocidade é aproximadamente \\( f(t_{0}) \\) e, portanto, a distância percorrida é de aproximadamente \\( f(t_{0}) \Delta{t} \\). Analogamente, a distância percorrida durante o segundo intervalo de tempo é cerca de \\( f(t_{1}) \Delta{t} \\) e a distância total percorrida durante o intervalo de tempo \\( [a, b] \\) é de aproximadamente
 
 \\[
-f(t_{0}) \delta{t} + f(t_{1}) \delta{t} + ... + f(t_{n} - 1) \delta{t} = \sum_{i = 1}^{n} f(t_{i - 1}) \delta{t}
+f(t_{0}) \Delta{t} + f(t_{1}) \Delta{t} + ... + f(t_{n} - 1) \Delta{t} = \sum_{i = 1}^{n} f(t_{i - 1}) \Delta{t}
 \\]
 
 Se uarmos as velocidades nas extremidades direitas em vez de nas extremidades esquerdas, nossa estimativa para a distância total ficará
 
 \\[
-t(t_{1}) \delta{t} + f(t_{2}) \delta{t} + ... + f(t_{n}) \delta{t} = \sum_{i = 1}^{n} f(t_{i}) \delta{t}
+t(t_{1}) \Delta{t} + f(t_{2}) \Delta{t} + ... + f(t_{n}) \Delta{t} = \sum_{i = 1}^{n} f(t_{i}) \Delta{t}
 \\]
 
 Quanto mais frequentemente medirmos a velocidade, mais precisa será nossa estimativa, então parece plausível que a distância *exata d* percorrida é o *limite* de tais expressões:
 
 \\[
-d = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i - 1}) \delta{t} = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i}) \delta{t}
+d = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i - 1}) \Delta{t} = \lim_{n \to \infty} \sum_{i = 1}^{n} f(t_{i}) \Delta{t}
 \\]
 
 Com isso, temos que a distância percorrida é igual à área sob o gráfico da função velocidade.

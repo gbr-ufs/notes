@@ -9,6 +9,7 @@ Com isso, podemos separar os parâmetros de uma função, para deixá-los mais m
 Defina funções para calcular o **quadrado**, o **cubo** e a **raíz quadrada** de um número passado como argumento reaproveitando uma definição de função genérica chamada **expoente**.
 
 <details>
+
 ***Programa em JavaScript***
 
 ```javascript
@@ -28,4 +29,5 @@ console.log(raizq(81))
 9
 9
 ```
+
 </details>

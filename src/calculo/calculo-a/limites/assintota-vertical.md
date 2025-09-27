@@ -14,6 +14,7 @@ A reta \\( x = a \\) é chamada **assíntota vertical** da curva \\( y = f(x) \\
 Encontre as assíntotas de \\( f(x) = \text{tg } x\\).
 
 <details>
+
 Como
 
 \\[
@@ -21,4 +22,5 @@ Como
 \\]
 
 Podemos encontrar assíntotas verticais onde \\( \text{cos } x = 0 \\). O valor para isso é \\( \frac{\pi}{2} \\).
+
 </details>

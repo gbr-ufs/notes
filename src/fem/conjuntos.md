@@ -21,6 +21,7 @@ Determine os conjuntos \\( A = \\{x \in \mathbb{R}: x^{2} < 4\\} \\), \\( B = \\
 ### Resolução
 
 <details>
+
 \\[
 A = (-2, 2)
 \\]
@@ -32,14 +33,14 @@ B = \\{-1, 0, 1, 2, 3, 4\\}
 \\[
 C = \\{2\\}
 \\]
+
 </details>
 
-### Observação
-
-É importante decompor as condições.
-Neste exemplo, \\( x^2 < 4 \implies x^2 - 4 < 0 \implies (x - 2)( x + 2) < 0 \implies \\)
-\\( x - 2 < 0 \land x + 2 > 0 \lor x - 2 > 0 \land x + 2 > 0 \implies \\)
-\\( x > 2 \land x - 2 \\), o que é impossível.
+> ***Observação***
+> É importante decompor as condições.
+> Neste exemplo,
+> \\( x^2 < 4 \implies x^2 - 4 < 0 \implies (x - 2)( x + 2) < 0 \implies x - 2 < 0 \land x + 2 > 0 \lor x - 2 > 0 \land x + 2 > 0 \implies x > 2 \land x - 2 \\),
+> o que é impossível.
 
 ## Subconjunto
 
@@ -68,6 +69,7 @@ Considere os conjuntos \\( A = \\{-4, 1, 2, 4, 10\\} \\), \\( B = \\{m \in \math
 ### Resolução
 
 <details>
+
 \\[
 B = \\{-12, -11, -10, ..., 10, 11, 12\\}
 \\]
@@ -75,6 +77,7 @@ B = \\{-12, -11, -10, ..., 10, 11, 12\\}
 Desse modo, temos que \\( A \subset B \\). Para \\( C \\), como \\( t \\) está elevado ao quadrado, se determinarmos os elementos positivos em C, os negativos também estarão. Assim, \\( 4 \leq t^{3} + 3 < 20 \implies \\)
 \\(1 \leq t^2 < 17 \implies 1 \leq t < \sqrt{17} \\).
 Logo, \\( C = \\{-4, -3, -2, -1, 1, 2, 3, 4\\} \\), \\( C \subset B \\), \\( (10 \in A \land 10 \not\in C) \implies A \not\in C \\).
+
 </details>
 
 ## Exemplo
@@ -86,19 +89,18 @@ A \subset B \land B \subset C \implies A \subset C
 ### Resolução
 
 <details>
+
 Se \\( A \subset B \\) e \\( B \subset C \\), então \\( \forall a, a \in A \implies a \in B \land \forall b, b \in B \implies b \in C \\).
 Portanto, \\( \forall x, x \in A \implies x \in B \implies x \in C \equiv A \subset C \\).
+
 </details>
 
-## Observação \\( (A \not\subset B) \\)
+> ***Observação \\( (A \not\subset B) \\)***
+> Para provar uma afirmação da forma \\( A \not\subset B \\), basta encontrar um \\( a \in A \\), \\( a \not\in B \\).
+> \\( A \subset B \equiv \forall x, x \in A \implies x \in B \\), então \\( A \not\subset B \equiv \exists x \\), \\( x \in A \land x \not\in B \\).
 
-Para provar uma afirmação da forma \\( A \not\subset B \\), basta encontrar um \\( a \in A \\), \\( a \not\in B \\). \\( A \subset B \equiv \forall x, x \in A \implies x \in B \\), então \\( A \not\subset B \equiv \exists x \\), \\( x \in A \land x \not\in B \\).
-
-## Observação \\( (A = B) \\)
-
-\\[
-A = B \iff A \subset B \land B \subset A
-\\]
+> ***Observação \\( (A = B) \\)***
+> \\( A = B \iff A \subset B \land B \subset A \\)
 
 ## Exemplo
 
@@ -115,6 +117,7 @@ Q = \\{x \in \mathbb{R}: 2 < x < 3\\}
 ### Resolução
 
 <details>
+
 Seja \\( y \in P \\). \\( y \in P \implies y^2 - 5y + 6 < 0 \equiv (y - 2)(y - 3) < 0 \\). Temos dois casos possíveis:
 
 I. \\( y - 2 < 0 \land y - 3 > 0 \\)
@@ -123,6 +126,7 @@ II. \\( y - 2 > 0 \land y - 3 < 0 \\)
 
 Em I, temos que \\( y < 2 \\) e \\( y > 3 \\), o que é um absurdo. Em II, \\( 2 < y < 3 \iff y \in \mathbb{Q} \\). Com isso, seria necessário que \\( \mathbb{Q} \subset P \\). Seja \\( z \in \mathbb{Q} \\). Então \\( 2 < z < 3 \\) e daí \\( y - 2 > 0 \land y - 3 < 0 \\). Logo,\\( (y - 2)(y - 3) < 0 \\) e, consequentemente, \\( z^{2} - 5z + 6 < 0 \\).
 Portanto, \\( z \in P \\).
+
 </details>
 
 ## Operações sobre Conjuntos

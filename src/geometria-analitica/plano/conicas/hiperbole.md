@@ -25,27 +25,16 @@ Pela desigualdade triangular, obtemos que \\( a < c \\).
 - O *eixo imaginário* da hipérbole é o segmento \\( B_{1}B_{2} \\)
 - A *excentricidade* de uma hipérbole é o número real \\( e = \frac{c}{a}, (e > 1) \\)
 
-## Observação
+> ***Observação***
+> \\( d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = c - a \\)
+> \\( d(A_{1}, C) = d(A_{2}, C) = a \\)
 
-\\[
-d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = c - a
-\\]
+> ***Observação***
+> O comprimento do eixo real da hipérbole é igual a \\( 2a \\).
 
-\\[
-d(A_{1}, C) = d(A_{2}, C) = a
-\\]
-
-## Observação
-
-O comprimento do eixo real da hipérbole é igual a \\( 2a \\).
-
-## Observação
-
-Pelo Teorema de Pitágoras, temos que \\( d(C, B_{1}) = d(C, B_{2}) = b \\) onde
-
-\\[
-c^{2} = a^{2} + b^{2}
-\\]
+> ***Observação***
+> Pelo Teorema de Pitágoras, temos que \\( d(C, B_{1}) = d(C, B_{2}) = b \\) onde
+> \\( c^{2} = a^{2} + b^{2} \\)
 
 ## Equação Reduzida
 

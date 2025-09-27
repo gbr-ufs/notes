@@ -25,20 +25,18 @@ A representação de um vetor \\( \vec{v} \\) por \\( \vec{v} = (x, y) \\).
 \vec{u} || \vec{v} \iff \vec{u} = k\vec{v}, k \in \mathbb{R}
 \\]
 
-### Observação
-
-Com \\( x_{2} \neq 0 \\) e \\( y_{2} \neq 0 \\), podemos fazer
-
-\\[
-\vec{v} || \vec{v} \iff \frac{x_{1}}{x_{2}} = \frac{y_{1}}{y_{2}} (= k)
-\\]
+> ***Observação***
+> Com \\( x_{2} \neq 0 \\) e \\( y_{2} \neq 0 \\), podemos fazer
+> \\( \vec{v} || \vec{v} \iff \frac{x_{1}}{x_{2}} = \frac{y_{1}}{y_{2}} (= k) \\)
 
 ### Exemplo
 
 (a) Os vetores \\( \vec{u} = (-2, 4) \\) e \\( \vec{v} = (1, -2) \\) são paralelos?
+
 (b) Os vetores \\( \vec{u} = (1, 1) \\) e \\( \vec{v} = (-1, -3) \\) são paralelos?
 
 <details>
+
 (a)
 
 \\[
@@ -54,6 +52,7 @@ Logo, \\( \vec{u} e \vec{v} \\) são paralelos.
 \\]
 
 Logo, \\( \vec{u} e \vec{v} \\) não são paralelos.
+
 </details>
 
 ## Módulo de um vetor

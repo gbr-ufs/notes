@@ -15,9 +15,11 @@
 Calcule os limites.
 
 (a) \\( \lim_{x \to 5} (2x^{2} - 3x + 4) \\)
+
 (b) \\( \lim_{x \to -2} \frac{x^{3} + 2x^{2} - 1}{5 - 3x} \\)
 
 <details>
+
 (a)
 
 \\[
@@ -35,6 +37,7 @@ Calcule os limites.
 = \frac{(-2)^{3} + 2(-2)^{2} - 1}{5 - 3(-2)}
 = -\frac{1}{11}
 \\]
+
 </details>
 
 ## Propriedade de Substituição Direta
@@ -50,6 +53,7 @@ Se \\( f \\) for uma função polinomial ou racional e \\( a \\) estiver no dom�
 Encontre \\( \lim_{x \to 1} \frac{x^{2} - 1}{x - 1} \\).
 
 <details>
+
 Não podemos encontrar o limite fazendo \\( x = 1 \\), então temos que encontrar outro jeito.
 
 Podemos fatorar o numerador como uma diferença de quadrados para eliminar o denominador:
@@ -64,11 +68,11 @@ Isso é possível pois, quando \\( x \\) tende a 1, temos que \\( x \neq 1 \\) e
 = \lim_{x \to 1} (x + 1)
 = 1 + 1 = 2
 \\]
+
 </details>
 
-### Observação
-
-Se \\( f(x) = g(x) \\) quando \\( x neq a \\), então \\( \lim_{x \to a} f(x) = \lim_{x \to a} g(x) \\), desde que o limite exista.
+> ***Observação***
+> Se \\( f(x) = g(x) \\) quando \\( x neq a \\), então \\( \lim_{x \to a} f(x) = \lim_{x \to a} g(x) \\), desde que o limite exista.
 
 ## Exemplo
 
@@ -83,11 +87,13 @@ x + 1 & \text{se } x \neq 1
 \\]
 
 <details>
+
 Aqui \\( g \\) está definida em \\( x = 1 \\), e \\( g(1) = \pi \\), mas o valor de um limite não depende do valor da função em 1. Como \\( g(x) = x + 1 \\) para x \neq 1, temos
 
 \\[
 \lim_{x \to 1} g(x) = \lim_{x \to 1} (x + 1) = 2
 \\]
+
 </details>
 
 ## Exemplo
@@ -95,6 +101,7 @@ Aqui \\( g \\) está definida em \\( x = 1 \\), e \\( g(1) = \pi \\), mas o valo
 Calcule \\( \lim_{h \to 0} \frac{(3 + h)^{2} - 9}{h} \\).
 
 <details>
+
 Não podemos simplesmente fazer \\( h = \\), então temos que usar um pouco de álgebra.
 
 Expandindo o [produto notável](../../matematica-basica/produtos-notaveis.md) do numerador, obtemos
@@ -114,6 +121,7 @@ Com isso, agora podemos fazer \\( h = 0 \\)
 \\[
 \\( \lim_{h \to 0} \frac{(3 + h)^{2} - 9}{h} \\) = \lim_{h \to 0} (6 + h) = 6
 \\]
+
 </details>
 
 ## Exemplo
@@ -121,6 +129,7 @@ Com isso, agora podemos fazer \\( h = 0 \\)
 Encontre \\(lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} \\).
 
 <details>
+
 \\[
 \lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} = \lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} \cdot \frac{\sqrt{x^{2} + 9} + 3}{\sqrt{x^{2} + 9} + 3}
 = \lim_{t \to 0} \frac{(t^{2} + 9) - 9}{t^{2}(\sqrt{t^{2} + 9} + 3)}
@@ -129,6 +138,7 @@ Encontre \\(lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} \\).
 = \lim_{t \to 0} \frac{1}{\sqrt{\lim_{t \to 0} (t^{2} + 9)} + 3}
 = \frac{1}{3 + 3} = \frac{1}{6}
 \\]
+
 </details>
 
 ## Exemplo
@@ -136,6 +146,7 @@ Encontre \\(lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} \\).
 Mostre que \\( \lim_{x \to 0} |x| = 0 \\).
 
 <details>
+
 \\[
 |x| =
 \begin{cases}
@@ -161,6 +172,7 @@ Pela conclusão de limites laterais, temos que
 \\[
 \lim_{x \to 0} |x| = 0
 \\]
+
 </details>
 
 ## Exemplo
@@ -168,6 +180,7 @@ Pela conclusão de limites laterais, temos que
 Demonstre que \\( \lim_{x \to 0} \frac{|x|}{x} \\) não existe.
 
 <details>
+
 Fazendo pela esquerda
 
 \\[
@@ -181,6 +194,7 @@ Agora pela direita
 \\]
 
 Como \\( -1 \neq 1 \\), o limite não existe.
+
 </details>
 
 ## Exemplo
@@ -198,6 +212,7 @@ f(x) =
 determine se \\( \lim_{x \to 4} f(x) \\) existe.
 
 <details>
+
 Fazendo pela esquerda
 
 \\[
@@ -211,6 +226,7 @@ Fazendo pela direita
 \\]
 
 Como \\( 0 = 0 \\), o limite existe.
+
 </details>
 
 ## Igualdade de Limites
@@ -240,6 +256,7 @@ então
 Mostre que \\( \lim_{x \to 0} x^{2} \tex{sen } \frac{1}{x} = 0 \\).
 
 <details>
+
 Como os valores de \\( \text{sen} \\) estão sempre -1 e 1, podemos escrever
 
 \\[
@@ -263,4 +280,5 @@ Usando o Teorema do Confronto, então temos que
 \\[
 \\( \lim_{x \to 0} x^{2} \tex{sen } \frac{1}{x} = 0 \\)
 \\]
+
 </details>

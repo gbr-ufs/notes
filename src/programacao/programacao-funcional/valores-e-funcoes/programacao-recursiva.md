@@ -13,6 +13,7 @@ Nesta seção, são destacados dois padrões que devem ser lembrados, para auxil
 Observe a sequência aritmética a seguir e crie um programa para encontrar o valor do n-ésimo elemento: \\( \{2, 7, 12, 17, 22, ...\} \\).
 
 <details>
+
 ***Formulação recursiva***
 
 \\[
@@ -31,6 +32,7 @@ const f = (n) => {
     }
 }
 ```
+
 </details>
 
 ### Exemplo
@@ -38,6 +40,7 @@ const f = (n) => {
 N-ésimo termo da sequência \\( \{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...\} \\).
 
 <details>
+
 ***Formulação recursiva***
 
 \\[
@@ -59,6 +62,7 @@ const fib = (n) => {
     }
 }
 ```
+
 </details>
 
 ## Operação formada por uma repetição de operações mais primitivas
@@ -68,12 +72,14 @@ const fib = (n) => {
 Implemente o operador de exponenciação para permitir calcular a potência natural de um número \\( m \\) qualquer: \\( m^{n} \\).
 
 <details>
+
 ***Formulação recursiva***
 
 \\[
 pot(m, 0) = 1
 pot(m, n) = m \cdot pot(m, n - 1)
 \\]
+
 </details>
 
 ### Exemplo
@@ -81,6 +87,7 @@ pot(m, n) = m \cdot pot(m, n - 1)
 Implemente o operador de exponenciação para permitir calcular a potência *inteira* de um número \\( m \\) qualquer: \\( m^{n} \\).
 
 <details>
+
 Em alguns casos, é recomendado elaborarmos uma **função auxiliar** para ajudar.
 
 ```javascript
@@ -104,6 +111,7 @@ const pot = (m, n) => {
     }
 }
 ```
+
 </details>
 
 ### Exemplo
@@ -111,6 +119,7 @@ const pot = (m, n) => {
 Implemente o operador de divisão a fim de encontrar o resto da divisão entre dois números inteiros positivos fornecidos, \\( n \\) e \\( m \\).
 
 <details>
+
 ***Formulação recursiva***
 
 \\[
@@ -129,4 +138,5 @@ const resto = (n, m) => {
     }
 }
 ```
+
 </details>

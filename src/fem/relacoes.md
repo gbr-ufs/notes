@@ -11,6 +11,7 @@ Seja \\( A = \\{1, 2, 3\\} \\) e \\( B = \\{2, 3, 4\\} \\). Defina a relação \
 ### Resolução
 
 <details>
+
 \\[
 R = \\{(1, 3), (1, 4), (2, 4)\\}
 \\]
@@ -22,6 +23,7 @@ D(R) = \\{1, 2\\}
 \\[
 I(R) = \\{3, 4\\}
 \\]
+
 </details>
 
 O domínio fica na esquerda e a imagem na direita.
@@ -35,7 +37,9 @@ O domínio fica na esquerda e a imagem na direita.
 (3) Seja \\( E = \\{(x, y) \in \mathbb{R} \times \mathbb{R} : \frac{x^{2}}{324} + \frac{y^{2}}{64} \leq 1\\} \\). O gráfico de \\( E \\) é constituído pelos pontos do plano que estão dentro e sobre a elipse.
 
 <details>
+
 ![Gráfico exibindo uma elipse no centro, com os pontos 8 e 18 pertencendo à ela](../img/fem/grafico_e.png)
+
 </details>
 
 (4, 5) Relações também podem ser representadas usando grafos e fluxogramas.
@@ -55,11 +59,13 @@ R^{-1} = \\{(x, y) \in B \times A : (x, y) \in R\\}
 (2) Seja \\( R \\) uma relação sobre o conjunto dos números reais \\( \mathbb{R} \\) definida por \\( xRy \iff y = x^{2} \\). Determine \\( R^{-1} \\).
 
 <details>
+
 Recorrendo à definição de relação inversa, temos que
 
 \\[
 R^{-1} = \\{(y, x) \in \mathbb{R}^{+} \times \mathbb{R} : y = x^{2}\\} = \\{(y, x) \i \mathbb{R}^{+} \times \mathbb{R} : x = \pm \sqrt{y}\\}
 \\]
+
 </details>
 
 ## Definição

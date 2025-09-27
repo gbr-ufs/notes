@@ -11,11 +11,15 @@ Uma função \\( f \\) é **contínua em un número** \\( a \\) se
 Onde cada uma das seguintes funções é descontínua?
 
 (a) \\( f(x) = \frac{x^{2} - x -}{x - 2} \\)
+
 (b) \\( f(x) = \begin{cases} \frac{1}{x^{2}} & \text{se } x \neq 0 \\ 1 & \text{se } x = 0 \end{cases} \\)
+
 (c) \\( f(x) = \begin{cases} \frac{x^{2} - x - 2}{x - 2} & \text{se } x \neq 2 \\ 1 & \text{se } x = 2 \end{cases} \\)
 
 <details>
+
 (a) Observe que \\( f(2) \\) não está definida; logo, \\( f \\) é descontínua em 2.
+
 (b) Aqui \\( f(0) = 1\\) está definida, mas
 
 \\[
@@ -23,6 +27,7 @@ Onde cada uma das seguintes funções é descontínua?
 \\]
 
 não existe. Então \\( f \\) é descontínua em 0.
+
 (c) Aqui \\( f(2) = 1 \\) está definida e
 
 \\[
@@ -36,6 +41,7 @@ existe. Mas
 \\]
 
 logo, \\( f \\) não é contínua em 2.
+
 </details>
 
 ## Lateralidade
@@ -61,6 +67,7 @@ Uma função \\( f \\) é **contínua em um intervalo** se for contínua em todo
 Mostre que a função \\( f(x) = 1 - \sqrt{1 - x^{2}} \\) é contínua no intervalo [-1, 1].
 
 <details>
+
 \\[
 \lim_{x \to a} f(x) = \lim_{x \to a} (1 - \sqrt{1 - x^{2}})
 = 1 \lim_{x \to a} \sqrt{1 - x^{2}}
@@ -76,6 +83,7 @@ Assim, pela definição, \\( f \\) é contínua em \\( a \\) se \\( -1 < a < 1 \
 \\]
 
 logo, \\( f \\) é contínua à direita em -1 e contínua à esquerda em 1. Consequentemente, de acordo com a definição de continuidade em intervalo, \\( f \\) é contínua em [-1, 1].
+
 </details>
 
 ### Teorema do Intervalo
@@ -91,6 +99,7 @@ Se \\( f \\) e \\( g \\) forem contínuas em \\( a \\) e se \\( c \\) for uma co
 ### Teorema dos Conjuntos
 
 (a) Qualquer polinômio é contínuo em toda a parte.
+
 (b) Qualquer função racional é contínua sempre que estiver definida; ou seja, é contínua em seu domínio
 
 #### Exemplo
@@ -98,6 +107,7 @@ Se \\( f \\) e \\( g \\) forem contínuas em \\( a \\) e se \\( c \\) for uma co
 Encontre \\\( \lim_{x \to - 2} \frac{x^{3} + 2x^{2} - 1}{5 - 3x} \\).
 
 <details>
+
 A função
 
 \\[
@@ -112,6 +122,7 @@ Logo
 \lim_{x \to -2} \frac{x^{3} + 2x^{2} - 1}{5 - 3x} = \lim_{x \to -2} f(x) = f(-2)
 = \frac{(-2)^{3} + 2(-2)^{2} - 1}{5 - 3(-2)} = -\frac{1}{11}
 \\]
+
 </details>
 
 ### Teorema das Operações
@@ -141,11 +152,13 @@ Os seguintes tipos de funções são contínuas para todo o número de seus dom�
 Onde a função \\( f(x) = \frac{\ln x + \text{tg}^{-} x}{x^{2} - 1} \\) é contínua?
 
 <details>
+
 Pelo Teorema dos Tipos de Funções Contínuas, sabemos que \\( y = \ln x \\) é contínua para \\( x > 0 \\) e que \\( y = \text{tg}^{-1} x \\) é contínua em \\( \mathbb{R} \\). Assim, pelo Teorema dos Tipos de Funções Contínuas, \\( y = \ln x + \text{tg}^{-1} x \\) é contínua em \\( (0, \infty) \\).
 
 O denominador \\( y = x^{2} - 1 \\) é um polinômio, portanto é contínuo em toda a parte.
 
 Assim, \\( f \\) é contínua em todos os números postivos \\( x \\), exceto onde \\( x^{2} - 1 = 0 \\). Logo, \\( f \\) é contínua nos intervalos aberto \\( (0, 1) \\) e \\( (1, \infty) \\).
+
 </details>
 
 #### Exemplo
@@ -153,6 +166,7 @@ Assim, \\( f \\) é contínua em todos os números postivos \\( x \\), exceto on
 Calcule \\( \lim_{x \to \pi} \frac{\text{sen } x}{2 + \text{cos } x} \\).
 
 <details>
+
 O Teorema ods Tipos de Funções Contínuas nos diz que \\( y = \text{sen } x \\) é contínua. \\( y = 2 + \text{cos } x \\) é a soma de duas funções contínuas, e, portanto, é contínua. Logo, a razão
 
 \\[
@@ -164,6 +178,7 @@ f(x) = \frac{\text{sen } x}{2 + \text{cos } x}
 \\[
 \lim_{x \to \pi} \frac{\text{sen } x}{2 + \text{cos } x} = \lim_{x \to \pi} f(x) = f(\pi) = \frac{\text{sen } \pi}{2 + \text{cos } \pi} = \frac{0}{2 - 1} = 0
 \\]
+
 </details>
 
 ### Teorema das Funções Compostas
@@ -177,6 +192,7 @@ f(x) = \frac{\text{sen } x}{2 + \text{cos } x}
 Calcule \\( \lim_{x \to 1} \text{arcsen } \left(\frac{1 - \sqrt{x}}{1 - x}\right) \\).
 
 <details>
+
 Uma vez que \\( \text{arcsen} \\) é uma função contínua, podemos aplicar o Teorema das Funções Compostas:
 
 \\[
@@ -185,6 +201,7 @@ Uma vez que \\( \text{arcsen} \\) é uma função contínua, podemos aplicar o T
 = \text{arcsen } \left(\lim_{x \to 1} \frac{1}{1 + \sqrt{x}}\right)
 = \text{arcsen } \frac{1}{2} = \frac{\pi}{6}
 \\]
+
 </details>
 
 ### Teorema do Valor Intermediário
@@ -203,6 +220,7 @@ Mostre que existe uma raiz da equação
 entre 1 e 2.
 
 <details>
+
 Seja \\( f(x) = 4x^{3} - 6x^{2} + 3x - 2 \\). Estamos procurando por uma solução da equação dada, isto é, um número \\( c \\) entre 1 e 2 tal que \\( f(c) = 0 \\). Portanto, tomamos \\( a = 1 \\), \\( b = 2 \\) e \\( N = 0 \\) no Teorema do Valor Intermediário. Temos
 
 \\[
@@ -211,4 +229,5 @@ f(2) = 32 - 24 + 6 - 2 = 12 > 0
 \\]
 
 Logo, \\( f(1) < 0 < f(2) \\), isto é, \\( N = 0 \\) é um número entre \\( f(1) e f(2) \\). Como \\( f \\) é contínua, por ser um polinômio, o Teorema Do Valor Intermediário afirma que existe um número \\( c \\) entre 1 e 2 tal que \\( f(c) = 0 \\). Em outras palavras, a equação \\( 4x^{3} - 6x^{2} + 3x - 2 = 0 \\) tem pelo menos uma raiz \\( c \\) no intervalo \\( (1, 2) \\).
+
 </details>

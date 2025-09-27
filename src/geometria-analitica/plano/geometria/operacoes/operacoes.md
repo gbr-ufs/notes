@@ -9,5 +9,7 @@ Sejam \\( \vec{u} \\) e \\( \vec{v} \\) vetores que não são paralelos. Represe
 ### Resolução
 
 <details>
+
 A ser feita algum dia :v
+
 </details>

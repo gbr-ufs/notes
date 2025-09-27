@@ -18,33 +18,17 @@ Sejam \\( F_{1} \\) e \\( F_{2} \\) pontos distintos do plano. Denote \\( d(F_{1
 - O *eixo maior* é o segmento \\( A_{1}A_{2} \\)
 - O *eixo menor* é o segmento \\( B_{1}B_{2} \\)
 
-## Observação
+> ***Observação***
+> \\( d(A_{1}, C) = d(A_{2}, C) = a \\)
+> \\( d(B_{1}, C) = d(B_{2}, C) = b \\)
+> \\( d(F_{1}, C) = d(F_{2}, C) = c \\)
+> \\( d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = a - c \\)
 
-\\[
-d(A_{1}, C) = d(A_{2}, C) = a
-\\]
+> ***Observação***
+> O comprimento do eixo maior da elipse é igual a \\( 2a \\), enquando o do eixo menor é \\( 2b \\).
 
-\\[
-d(B_{1}, C) = d(B_{2}, C) = b
-\\]
-
-\\[
-d(F_{1}, C) = d(F_{2}, C) = c
-\\]
-
-\\[
-d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = a - c
-\\]
-
-## Observação
-
-O comprimento do eixo maior da elipse é igual a \\( 2a \\), enquando o do eixo menor é \\( 2b \\).
-
-## Observação
-
-\\[
-b^{2} = a^{2} - c^{2}
-\\]
+> ***Observação***
+> \\( b^{2} = a^{2} - c^{2} \\)
 
 ## Equação Reduzida
 
@@ -70,9 +54,8 @@ b^{2} = a^{2} - c^{2}
 - \\( F_{2} = (c, 0) \\)
 - \\( P = (x, y) \in \mathcal{E} \iff \frac{x^{2}}{a^{2}} \frac{y^{2}}{b^{2}} = 1\\)
 
-### Observação
-
-Um jeito fácil de descobrir com qual eixo o eixo focal coincide é olhando os valores dos denominadores, e lembrando que \\( a > b \\).
+> ***Observação***
+> Um jeito fácil de descobrir com qual eixo o eixo focal coincide é olhando os valores dos denominadores, e lembrando que \\( a > b \\).
 
 ### Elipse com centro \\( C = (x_{0}, y_{0}) \\) e eixo focal paralelo ao eixo \\( y \\)
 
@@ -98,9 +81,8 @@ Um jeito fácil de descobrir com qual eixo o eixo focal coincide é olhando os v
 - \\( l : y = y_{0} \\)
 - \\( P = (x, y) \in \mathcal{E} \iff \frac{(x - x_{0})^{2}}{a^{2}} + \frac{(y - y_{0})^{2}}{b^{2}} = 1\\)
 
-### Observação
-
-Para ver com que eixo o eixo focal é paralelo, basta ver o denominador da equação. Se o que tem \\( x \\) em cima é maior, então é paralelo com o eixo \\( x \\), e se o que tem \\( y \\) é maior, então é paralelo com \\( y \\).
+> ***Observação***
+> Para ver com que eixo o eixo focal é paralelo, basta ver o denominador da equação. Se o que tem \\( x \\) em cima é maior, então é paralelo com o eixo \\( x \\), e se o que tem \\( y \\) é maior, então é paralelo com \\( y \\).
 
 ## Excentricidade
 

@@ -7,6 +7,7 @@ Segue o modelo das funções matemáticas.
 Por padrão, uma variável, mesmo que modificada em uma função, mantém o mesmo valor.
 
 <details>
+
 ```javascript
 const variavel = 10;
 
@@ -24,6 +25,7 @@ console.log(variavel);
 5
 10
 ```
+
 </details>
 
 ## Determinismo

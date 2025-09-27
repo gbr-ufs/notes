@@ -23,8 +23,11 @@ Logo,
 ### Exemplo
 
 (a) Se \\( f(x) = x^{6} \\), então \\( f'(x) = 6x^{5} \\).
+
 (b) Se \\( y = x^{1000} \\), então \\( y' = 1000x^{999} \\).
+
 (c) Se \\( y = t^{4} \\), então \\( \frac{dy}{dt} = 4t^{3} \\).
+
 (d) \\( \frac{d}{dr} (r^{3}) = 3r^{2} \\).
 
 ### Quando \\( n \\) não é um inteiro positivo
@@ -44,6 +47,7 @@ pois
 Derive:
 
 (a) \\( f(x) = \frac{1}{x^{2}} \\)
+
 (b) \\( y = \sqrt[3]{x^{2}} \\)
 
 (a)
@@ -71,6 +75,7 @@ Se \\( c \\) for uma constante e \\( f \\), uma função derivável, então
 #### Exemplo
 
 (a) \\( \frac{d}{dx} (3x^{4}) = 3(4x^{3}) = 12x^{3} \\)
+
 (b) \\( \frac{d}{dx} (-x) = \frac{d}{dx} [(-1)x] = (-1) \frac{d}{dx} (x) = -1(1) = -1 \\)
 
 ### A Regra da Soma
@@ -79,7 +84,7 @@ Se \\( c \\) for uma constante e \\( f \\), uma função derivável, então
 \frac{d}{dx} [f(x) + g(x)] = \frac{d}{dx} f(x) + \frac{d}{dx} g(x)
 \\]
 
-> [!NOTE]
+> ***Observação***
 > Ela é valida para qualquer número de funções.
 
 ### A Regra da Subtração
@@ -88,7 +93,7 @@ Se \\( c \\) for uma constante e \\( f \\), uma função derivável, então
 \frac{d}{dx} [f(x) - g(x)] = \frac{d}{dx} f(x) - \frac{d}{dx} g(x)
 \\]
 
-> [!NOTE]
+> ***Observação***
 > Ela é valida para qualquer número de funções.
 
 #### Exemplo
@@ -105,6 +110,7 @@ Se \\( c \\) for uma constante e \\( f \\), uma função derivável, então
 Encontre os pontos sobre a curva \\( y = x^{4} - 6x^{2} + 4 \\), onde a reta tangente é horizontal.
 
 <details>
+
 As tangentes horizontais ocorrem quando a derivada for zero. Temos
 
 \\[
@@ -113,6 +119,7 @@ As tangentes horizontais ocorrem quando a derivada for zero. Temos
 \\]
 
 Assim, \\( \frac{dy}{dx} = 0 \\) se \\( x = 0 \\) ou \\( x^{2} - 3 = 0 \\), ou seja, \\( x = \pm \sqrt{3} \\). Logo, a curva dada tem tangentes horizontais quando \\( x = 0 \\), \\( \sqrt{3} \\) e \\( -\sqrt{3} \\). Os pontos correspondentes são \\( (0, 4) \\), \\( (\sqrt{3}, -5) \\) e \\( (-\sqrt{3}, -5) \\).
+
 </details>
 
 #### Exemplo
@@ -120,6 +127,7 @@ Assim, \\( \frac{dy}{dx} = 0 \\) se \\( x = 0 \\) ou \\( x^{2} - 3 = 0 \\), ou s
 A equação de movimento de uma partícula é \\( s = 2t^{3} - 5t^{2} + 3t + 4 \\), onde \\( s \\) é medida em centímetros e \\( t \\), em segundos. Encontre a aceleração como uma função do tempo. Qual é a aceleração depois de 2 segundos?
 
 <details>
+
 A velocidade e a aceleração são
 
 \\[
@@ -131,6 +139,7 @@ a(t) = \frac{dv}{dt} = 12t - 10
 \\]
 
 A aceleração depois de 2 segundos é \\( a(2) = 14 \text{ cm/s}^{2} \\).
+
 </details>
 
 ### Funções Exponenciais
@@ -146,6 +155,7 @@ A aceleração depois de 2 segundos é \\( a(2) = 14 \text{ cm/s}^{2} \\).
 Se \\( f(x) = e^{x} - x \\), encontre \\( f' \\) e \\( f'' \\). Compare os gráficos de \\( f \\) e \\( f' \\).
 
 <details>
+
 \\[
 f'(x) = \frac{d}{dx} (e^{x} - x) = \frac{d}{dx} (e^{x}) - \frac{d}{dx} (x) = e^{x} - 1
 \\]
@@ -155,6 +165,7 @@ f''(x) = \frac{d}{dx} (e^{x} - 1) = \frac{d}{dx} (e^{x}) - \frac{d}{dx} (1) = e^
 \\]
 
 Os gráficos serão feitos, algum dia :v
+
 </details>
 
 ## As Regras de Produto e Quociente
@@ -168,9 +179,11 @@ Os gráficos serão feitos, algum dia :v
 #### Exemplo
 
 (a) Se \\( f(x) = xe^{x} \\), encontre \\( f'(x) \\).
+
 (b) Encontre a *n*-ésima derivada, \\( f^{(n)}(x) \\).
 
 <details>
+
 (a)
 
 \\[
@@ -199,6 +212,7 @@ Logo
 \\[
 f^{(n)}(x) = (x + n)e^{x}
 \\]
+
 </details>
 
 #### Exemplo
@@ -218,6 +232,7 @@ Se \\( f(x) = \sqrt{x} g(x) \\), onde \\( g(4) = 2 \\) e \\( g'(4) = 3 \\), enco
 ##### Exemplo
 
 <details>
+
 \\[
 f'(x) = \frac{d}{dx} [\sqrt{x} g(x)] = \sqrt{x} \frac{d}{dx} [g(x)] + g(x) \frac{d}{dx} [\sqrt{x}]
 = \sqrt{x} g'(x) + g(x) \cdot \frac{1}{2} x^{-\frac{1}{2}}
@@ -229,6 +244,7 @@ Logo
 \\[
 f'(4) = \sqrt{4} g'(4) + \frac{g(4)}{2 \sqrt{4}} = 2 \cdot 3 + \frac{2}{2 \cdot 2} = 6,5
 \\]
+
 </details>
 
 ### A Regra do Quociente
@@ -253,6 +269,7 @@ y' = \frac{(x^{3} + 6) \frac{d}{dx} (x^{2} + x - 2) - (x^{2} + x - 2) \frac{d}{d
 Encontre uma equação da reta tangente à curva \\( y = \frac{e^{x}}{(1 + x^{2})} \\) no ponto \\( (1, \frac{1}{2}e) \\).
 
 <details>
+
 \\[
 \frac{dy}{dx} = \frac{(1 + x^{2}) \frac{d}{dx} (e^{x}) - e^{x} \frac{d}{dx} (1 + x^{2})}{(1 + x^{2})^{2}}
 = \frac{(1 + x^{2})e^{x} - e^{x}(2x)}{(1 + x^{2})^{2}}
@@ -266,15 +283,12 @@ Logo, a inclinação da reta tangente em \\( (1, \frac{1}{2}e) \\) é
 \\]
 
 Isso significa que a reta tangente em \\( (1, \frac{1}{2}) \\) é horizontal, e sua equação é \\( y = \frac{1}{2}e \\).
+
 </details>
 
-#### Observação
-
-Não use a Regra do Quociente *toda* vez que você vir um quociente. Algumas vezes é mais fácil reescreve-lo primeiro.
-
-\\[
-f(x) = \frac{3x^{2} + 2\sqrt{x}}{x} \imples f(x) = 3x + 2x^{-\frac{1}{2}}
-\\]
+> ***Observação***
+> Não use a Regra do Quociente *toda* vez que você vir um quociente. Algumas vezes é mais fácil reescreve-lo primeiro.
+> \\( f(x) = \frac{3x^{2} + 2\sqrt{x}}{x} \imples f(x) = 3x + 2x^{-\frac{1}{2}} \\)
 
 ## Derivadas de Funções Trigonométricas
 
@@ -289,10 +303,12 @@ f(x) = \frac{3x^{2} + 2\sqrt{x}}{x} \imples f(x) = 3x + 2x^{-\frac{1}{2}}
 Derive \\( y = x^{2} \text{ sen x} \\).
 
 <details>
+
 \\[
 \frac{dy}{dx} = x^{2} \frac{d}{dx} (\text{sen x}) + \text{ sen x} \frac{d}{dx} (x^{2})
 = x^{2} \text{ cos x} + 2x \text{ sen x}
 \\]
+
 </details>
 
 ### A Regra do Cosseno
@@ -330,6 +346,7 @@ Derive \\( y = x^{2} \text{ sen x} \\).
 Derive \\( f(x) = \frac{\text{sec x}}{1 + \text{ tg x}} \\). Para quais valores de \\( x \\) o gráfico de \\( f \\) tem uma reta tangente horizontal?
 
 <details>
+
 \\[
 f'(x) = \frac{(1 + \text{ tg x}) \frac{d}{dx} (\text{sec x}) - \text{ sec x} \frac{d}{dx} (1 + \text{ tg x})}{(1 + \text{ tg x})^{2}}
 = \frac{(1 + \text{ tg x}) \text{ sec x} \text{ tg x} - \text{ sec x} \cdot \text{ sec}^{2} x}{(1 + \text{ sec x})^{2}}
@@ -338,6 +355,7 @@ f'(x) = \frac{(1 + \text{ tg x}) \frac{d}{dx} (\text{sec x}) - \text{ sec x} \fr
 \\]
 
 Na simplificação da resposta, usamos a identidade \\( \text{tg}^{2} x + 1 = \text{sec}^{2} x \\).
+
 </details>
 
 ### Exemplo
@@ -351,10 +369,12 @@ s = f(t) = 4 \text{ cos t}
 Encontre a velocidade e a aceleração no tempo \\( t \\) e use-as para analisar o movimento do objeto.
 
 <details>
+
 \\[
 v = \frac{ds}{dt} = \frac{d}{dt} (4 \text{ cos t}) = 4 \frac{d}{dt} (\text{cos t}) = -4 \text{ sen t}
 a = \frac{dv}{dt} = \frac{d}{dt} (-4 \text{ sen t}) = -4 \frac{d}{dt} (\text{ sen t}) = -4 \text{ cos t}
 \\]
+
 </details>
 
 O objeto oscila desde o ponto mais baixo \\( (s = 4 \text{cm}) \\) até o mais alto \\( (s = -4\text{cm}) \\). O período de oscilação é \\( 2\pi \\), o período de \\( \text{cos t} \\).
@@ -368,6 +388,7 @@ A aceleração \\( a = -4\text{ cos t} = 0 \\) quando \\( s = 0 \\). Ela tem seu
 Encontre \\( \lim_{x \to 0} \frac{\text{sen } 7x}{4x} \\).
 
 <details>
+
 \\[
 \frac{\text{sen } 7x}{4x} = \frac{7}{4}\left(\frac{\text{sen }7x}{7x}\right)
 \\]
@@ -378,6 +399,7 @@ Se fizermos \\( \theta = 7x \\), então \\( \theta \to 0 \\) quando \\( x \to 0 
 \frac{\text{sen } 7x}{4x} = \lim_{x \to 0} \frac{7}{4}\left(\frac{\text{sen }7x}{7x}\right)
 = \frac{7}{4} \lim_{\theta \to 0} \frac{\text{sen } \theta}{\theta} = \frac{7}{4} \cdot 1 = \frac{7}{4}
 \\]
+
 </details>
 
 ### Exemplo
@@ -385,11 +407,13 @@ Se fizermos \\( \theta = 7x \\), então \\( \theta \to 0 \\) quando \\( x \to 0 
 Calcule \\( \lim_{x \to 0} \text{x cotg x} \\).
 
 <details>
+
 \\[
 \lim_{x \to 0} \text{x cotg x} = \lim_{x \to 0} \frac{\text{x cos x}}{\text{sen x}}
 = \lim_{x \to 0} \frac{\text{cos x}}{\frac{\text{sen x}}{x}} = \frac{\lim_{x \to 0} \text{cos x}}{\lim_{x \to 0} \frac{\text{sen x}}{x}}
 = \frac{\text{cos } 0}{1} = 1
 \\]
+
 </details>
 
 ## A Regra da Cadeia
@@ -411,6 +435,7 @@ Na notação de Leibniz, se \\( y = f(u) \\) e \\( u = g(x) \\) forem funções 
 Encontre \\( F'(x) \\) se \\( F(x) = \sqrt{x^{2} + 1} \\).
 
 <details>
+
 Aqui, \\( f(u) = \sqrt{u} \\) e \\( g(x) = x^{2} + 1 \\). Uma vez que
 
 \\[
@@ -424,6 +449,7 @@ temos
 F'(x) = f'(g(x)) \cdot g'(x)
 = \frac{1}{2\sqrt{x^{2} + 1}} \cdot 2x = \frac{x}{\sqrt{x^{2} + 1}}
 \\]
+
 </details>
 
 #### Exemplo
@@ -431,9 +457,11 @@ F'(x) = f'(g(x)) \cdot g'(x)
 Derive
 
 (a) \\( y = \text{sen}(x^{2}) \\)
+
 (b) \\( y = \text{sen}^{2}x \\)
 
 <details>
+
 (a) Se \\( y = \tex{sen}(x^{2}) \\), então a função de fora é a função seno e a função de dentro é a função quadrática, logo, a Regra da Cadeia dá
 
 \\[
@@ -445,6 +473,7 @@ Derive
 \\[
 2 \cdot (\text{sen x}) \cdot \text{cos x} = \text{sen} 2x
 \\]
+
 </details>
 
 #### A Regra da Potência Combinada com a Regra da Cadeia
@@ -466,12 +495,14 @@ Alternativamente,
 Derive \\( y = (x^{3} - 1)^{100} \\).
 
 <details>
+
 Fazendo \\( u = g(x) = x^{3} - 1 \\) e \\( n = 100 \\), temos
 
 \\[
 \frac{dy}{dx} = \frac{d}{dx} (x^{3} - 1)^{100} = 100(x^{3} - 1)^{99} \frac{d}{dx} (x^{3} - 1)
 = 100(x^{3} - 1)^{99} \cdot 3x^{2} = 300x^{2} (x^{3} - 1)^{99}
 \\]
+
 </details>
 
 ##### Exemplo
@@ -479,12 +510,14 @@ Fazendo \\( u = g(x) = x^{3} - 1 \\) e \\( n = 100 \\), temos
 Encontre \\( f'(x) \\) se \\( f(x) = \frac{1}{\sqrt[3]{x^{2} + x + 1}} \\).
 
 <details>
+
 Reescrevendo \\( f \\) como \\( f(x) = (x^{2} + x + 1)^{-\frac{1}{3}} \\), temos
 
 \\[
 f'(x) = -\frac{1}{3} (x^{2} + x + 1)^{-\frac{4}{3}} \frac{d}{dx} (x^{2} + x + 1)
 = -\frac{1}{3} (x^{2} + x + 1)^{-\frac{4}{3}} (2x + 1)
 \\]
+
 </details>
 
 ##### Exemplo
@@ -496,10 +529,12 @@ g(t) = \left(\frac{t - 2}{2t + 1}\right)^{9}
 \\]
 
 <details>
+
 \\[
 g'(t) = 9\left(\frac{t - 2}{2t + 1}\right)^{8} \frac{d}{dt} \left(\frac{t - 2}{2t + 1}\right)
 = 9\left(\frac{t - 2}{2t + 1}\right)^{8} \frac{(2t + 1) \cdot 1 - 2(t - 2)}{(2t + 1)^{2}} = \frac{45(t - 2)^{8}}{(2t + 1)^{10}}
 \\]
+
 </details>
 
 ##### Exemplo
@@ -507,6 +542,7 @@ g'(t) = 9\left(\frac{t - 2}{2t + 1}\right)^{8} \frac{d}{dt} \left(\frac{t - 2}{2
 Derive \\( y = (2x + 1)^{5} (x^{3} - x + 1)^{4} \\).
 
 <details>
+
 \\[
 \frac{dy}{dx} = (2x + 1)^{5} \frac{d}{dx} (x^{3} - x + 1)^{4} + (x^{3} - x + 1)^{4} \frac{d}{dx} (2x + 1)^{5}
 = (2x + 1)^{5} \cdot 4(x^{3} - x + 1)^{3} \frac{d}{dx} (x^{3} - x + 1) + (x^{3} - x + 1)^{4} \cdot 5(2x + 1)^{4} \frac{d}{dx} (2x + 1)
@@ -518,6 +554,7 @@ Observando que cada termo tem o fator comum \\( 2(2x + 1)^{4} (x^{3} - x + 1)^{3
 \\[
 \frac{dy}{dx} = 2(2x + 1)^{4} (x^{3} - x + 1)^{3} (17x^{3} + 6x^{2} - 9x + 3)
 \\]
+
 </details>
 
 ### A Regra da Função Expoencial
@@ -535,6 +572,7 @@ A derivada implícita é quando derivamos dos dois lados.
 Encontre \\( y'' \\) se \\( x^{4} + y^{4} = 16 \\).
 
 <details>
+
 Derivando a equação implicitamente em relação a \\( x \\), obtemos
 
 \\[
@@ -566,6 +604,7 @@ Mas os valores de \\( x \\) e \\( y \\) devem satisfazer a equação original \\
 \\[
 y'' = -\frac{3x^{2}(16)}{y^{7}} = -48\frac{x^{2}}{y^{7}}
 \\]
+
 </details>
 
 ## Derivadas de Funções Trigonométricas Inversas
@@ -592,12 +631,14 @@ y'' = -\frac{3x^{2}(16)}{y^{7}} = -48\frac{x^{2}}{y^{7}}
 Derive \\( y = \ln (x^{3} + 1) \\).
 
 <details>
+
 Para usarmos a Regra da Cadeia, vamos fazer \\( u = x^{3} + 1 \\). Então, \\( y = \ln u \\), logo
 
 \\[
 \frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} = \frac{1}{u} \frac{du}{dx}
 = \frac{1}{x^{3} + 1} (3x^{2}) = \frac{3x^{2}}{x^{3} + 1}
 \\]
+
 </details>
 
 ### Combinando com a Regra da Cadeia
@@ -611,9 +652,11 @@ Para usarmos a Regra da Cadeia, vamos fazer \\( u = x^{3} + 1 \\). Então, \\( y
 Encontre \\( \frac{d}{dx} \ln(\text{sen x}) \\).
 
 <details>
+
 \\[
 \frac{d}{dx} \ln(\text{sen x}) = \frac{1}{\text{sen x}} \frac{d}{dx} (\text{sen x}) = \frac{1}{\text{sen x}} \text{cos x} = \text{cotg x}
 \\]
+
 </details>
 
 ### Exemplo
@@ -621,9 +664,11 @@ Encontre \\( \frac{d}{dx} \ln(\text{sen x}) \\).
 Derive \\( f(x) = \sqrt{\ln x} \\).
 
 <details>
+
 \\[
 f'(x) = \frac{1}{2}(\ln x)^{-\frac{1}{2}} \frac{d}{dx} (\ln x) = \frac{1}{2 \sqrt{\ln x}} \cdot \frac{1}{x} = \frac{1}{2x \sqrt{\ln x}}
 \\]
+
 </details>
 
 ### Exemplo
@@ -631,11 +676,13 @@ f'(x) = \frac{1}{2}(\ln x)^{-\frac{1}{2}} \frac{d}{dx} (\ln x) = \frac{1}{2 \sqr
 Derive \\( f(x) = \log_{10} (2 + \text{sen x}) \\).
 
 <details>
+
 \\[
 f'(x) = \frac{d}{dx} \log_{10} (2 + \tex{sen x})
 = \frac{1}{(2 + \text{sen x}) \ln 10} \frac{d}{dx} (2 + \text{sen x})
 = \frac{\text{cos x}}{(2 + \text{sen x}) \ln 10}
 \\]
+
 </details>
 
 ### Exemplo
@@ -643,12 +690,14 @@ f'(x) = \frac{d}{dx} \log_{10} (2 + \tex{sen x})
 Encontre \\( \frac{d}{dx} \ln \frac{x + 1}{\sqrt{x - 2}} \\).
 
 <details>
+
 Podemos simplificar a função usando as propriedades do logaritmo.
 
 \\[
 \frac{d}{dx} \ln \frac{x + 1}{\sqrt{x - 2}} = \frac{d}{dx} [\ln(x + 1) - \frac{1}{2} \ln (x - 2)]
 = \frac{1}{x + 1} - \frac{1}{2} \left(\frac{1}{x - 2}\right)
 \\]
+
 </details>
 
 ### A Regra do Logaritmo do Módulo
@@ -666,6 +715,7 @@ Funções complicadas podem muitas vezes ser simplificadas tomando-se os logarit
 Derive \\( y = \frac{x^{\frac{3}{4}} \sqrt{x^{2} + 1}}{(3x + 2)^{5}} \\).
 
 <details>
+
 Tome o logaritmo em ambos os lados da equação e use as Propriedades do Logaritmo para simplificar:
 
 \\[
@@ -689,6 +739,7 @@ Como temos uma expressão explícita para \\( y \\), podemos substituí-lo por e
 \\[
 \frac{dy}{dx} = \frac{x^{\frac{3}{4}} \sqrt{x^{2} + 1}}{(3x + 2)^{5}} \left(\frac{3}{4x} + \frac{x}{x^{2} + 1} - \frac{15}{3x + 2}\right)
 \\]
+
 </details>
 
 #### Exemplo
@@ -696,9 +747,11 @@ Como temos uma expressão explícita para \\( y \\), podemos substituí-lo por e
 Derive \\( y = x^{\sqrt{x}} \\).
 
 <details>
+
 \ln y = \ln x^{\sqrt{x}} = \sqrt{x} \ln x
 \frac{y'}{y} = \sqrt{x} \cdot \frac{1}{x} + (\ln x) \frac{1}{2\sqrt{x}}
 y' = y\left(\frac{1}{\sqrt{x}} + \frac{\ln x}{2 \sqrt{x}}\right) = x^{\sqrt{x}} \left(\frac{2 + \ln x}{2 \sqrt{x}}\right)
+
 </details>
 
 ## Crescimento e Decaimento Exponenciais
@@ -752,12 +805,13 @@ P(t) = P_{0}e^{0,02t}
 use o fato de que a população mundial era 2560 milhões em 1950 e 3040 milhões em 1960 para modelar a população do mundo na segunda metade do século XX. (Suponha que a taxa de crescimento seja proporcional ao tamanho da população.) Qual é a taxa de crescimento relativa? Use o modelo para estimar a população do mundo em 1993 e para prever a população no ano de 2020.
 
 <details>
+
 Medimos o tempo \\( t \\0 em anos e fazemos \\( t = 0 \\) no ano 1950. Medimos a população \\( P(t) \\) em milhões de pessoas. Então \\( P(0) = 2560 \\) e \\( P(10) = 3040 \\). Uma vez que estamos supondo que \\( \frac{dP}{dt} = kP \\), o teorema nos dá
 
 \\[
 P(t) = P(0)e^{kt} = 2560e^{kt}
 P(10) = 2560e^{10k} = 3040
-k = \frac{1}{10} \ln \frac{3040}{2560} \sim 0,017185
+k = \frac{1}{10} \ln \frac{3040}{2560} \approx 0,017185
 \\]
 
 A taxa de crescimento relativa é cerca de 1,7% ao ano, e o modelo é
@@ -769,14 +823,15 @@ P(t) = 2560e^{0,017185t}
 Estimamos que a população mundial em 1993 era
 
 \\[
-P(43) = 2560e^{0,017185(43)} \sim 5360 \text{ milhões}
+P(43) = 2560e^{0,017185(43)} \approx 5360 \text{ milhões}
 \\]
 
 O modelo prevê que a população em 2020 será
 
 \\[
-P(70) = 2560e^{0,0017185(70)} \sim 8524 \text{ milhões}
+P(70) = 2560e^{0,0017185(70)} \approx 8524 \text{ milhões}
 \\]
+
 </details>
 
 ### Decaimento Radioativo
@@ -806,10 +861,13 @@ Os físicos expressam a taxa de decaimento radioativo como **meia-vida**, o temp
 A meia-vida do rádio-226 é de 1590 anos.
 
 (a) Uma amostra de rádio-226 possui uma massa de 100 mg. Encontre uma fórmula para a massa da amostra que resta após \\( t \\) anos.
+
 (b) Encontre a massa depois de 1000 anos, com a precisão de um miligrama.
+
 (c) Quando a massa será reduzida para 30 gramas?
 
 <details>
+
 (a) Seja \\( m(t) \\) a massa do rádio-226 (em miligramas) que resta depois de \\( t \\) anos. Então, \\( \frac{dm}{dt} = km \\) e \\( y(0) = 100 \\), logo, o teorema nos fornece
 
 \\[
@@ -844,7 +902,7 @@ m(t) = 100 \times 2^{-\frac{t}{1590}}
 (b) A massa depois de 1000 anos é
 
 \\[
-m(1000) = 100e^{-\frac{(\ln 2) 1000}{1590}} \sim 65 \text{ mg}
+m(1000) = 100e^{-\frac{(\ln 2) 1000}{1590}} \approx 65 \text{ mg}
 \\]
 
 (c) Queremos encontrar o valor de \\9 t \\) tal que \\( m(t) = 30 \\), ou seja,
@@ -862,8 +920,9 @@ Resolvemos essa equação em \\( t \\) tomando o logaritmo natural em ambos os l
 Logo
 
 \\[
-t = -1590 \frac{\ln 0,3}{\ln 2} \sim 2762 \text{ anos}
+t = -1590 \frac{\ln 0,3}{\ln 2} \approx 2762 \text{ anos}
 \\]
+
 </details>
 
 ### Lei de Resfriamento de Newton
@@ -885,9 +944,11 @@ Para deixá-la mais parecida com a diferencial real, podemos fazr uma mudança d
 Uma garrafa de refrigerante que está à temperatura ambiente (22 °C) é colocada em um refrigerador, no qual a temperatura é 7 °C. Depois de meia hora o refrigerante esfriou para 16 °C.
 
 (a) Qual a temperatura do refrigerante depois de mais meia hora?
+
 (b) Quanto tempo demora para o refrigerante resfriar até 10 °C?
 
 <details>
+
 (a) Seja \\( T(t) \\) a temperatura do refrigerante depois de \\( t \\) minutos. A temperatura ambiente é de \\( T_{S} = 7 \text{ °C} \\), logo a Lei de Resfriamento de Newton afirma que
 
 \\[
@@ -917,7 +978,7 @@ e^{30k} \frac{3}{5}
 Tomando logaritmos, temos
 
 \\[
-k = \frac{\ln(\frac{3}{5})}{30} \sim -0,01703
+k = \frac{\ln(\frac{3}{5})}{30} \approx -0,01703
 \\]
 
 Logo,
@@ -925,7 +986,7 @@ Logo,
 \\[
 y(t) = 15e^{-0,01703t}
 T(t) = 7 + 15e^{-0,01703t}
-T(60) = 7 + 15e^{-0,01703(60)} \sim 12,4
+T(60) = 7 + 15e^{-0,01703(60)} \approx 12,4
 \\]
 
 Assim, depois de mais meia hora, o refrigerante terá resfriado para cerca de 12 °C.
@@ -935,10 +996,11 @@ Assim, depois de mais meia hora, o refrigerante terá resfriado para cerca de 12
 \\[
 7 + 15e^{-0,01703t} = 10
 e^{-0,01703t} = \frac{3}{15} = \frac{1}{5}
-t = \frac{\ln(\frac{1}{5})}{-0,01703} \sim 94,5
+t = \frac{\ln(\frac{1}{5})}{-0,01703} \approx 94,5
 \\]
 
 O refrigerante é resfriado para 10 °C depois de 1 hora e 35 minutos.
+
 </details>
 
 ## Taxas Relacionadas

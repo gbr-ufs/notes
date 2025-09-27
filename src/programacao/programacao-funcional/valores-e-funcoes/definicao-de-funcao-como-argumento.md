@@ -3,6 +3,7 @@
 Se uma função é um valor comum, então ela também pode ser **passada como argumento** para outra função.
 
 <details>
+
 ```javascript
 const subtrair = (x, y) => x - y
 const somar = (x, y) => x + y
@@ -41,4 +42,5 @@ Isaac Newton
 IN
 -30
 ```
+
 </details>

@@ -7,6 +7,7 @@ Em JavaScript, a **maneira mais intuitiva** para se representar funções como e
 Crie uma função que calcula a área de uma elipse (contendo valor de \\( \pi \\) pré-definido).
 
 <details>
+
 \\[
 areaEli(x, y, \pi = 3.14) = \pi xy
 \\]
@@ -19,6 +20,7 @@ Em JavaScript:
 ```javascript
 const areaEli = (x, y, pi = 3.14) => pi * x * y
 ```
+
 </details>
 
 ## Notação de funções *arrow* em JavaScript
@@ -28,6 +30,7 @@ const areaEli = (x, y, pi = 3.14) => pi * x * y
 Escreva uma função que retorne o valor de um número elevado à quarta potência. Essa função deve fazer use de uma outra que calcula o quadrado de um número qualquer.
 
 <details>
+
 ***Algoritmo em pseudocódigo***
 
 *De cima para baixo*
@@ -76,6 +79,7 @@ console.log(textoQuarta)
 ```
 
 `Quarta potência de 3 = 81`
+
 </details>
 
 ### Exemplo
@@ -85,6 +89,7 @@ Escreva um programa onde, dados o primeiro e o último sobrenome de uma pessoa q
 Fulano Santos → Santos, F.
 
 <details>
+
 ***Programa em JavaScript***
 
 ```javascript
@@ -98,4 +103,5 @@ console.log(citacao)
 ```
 
 `Como citar Albert Einstein: Einstein, A.`
+
 </details>

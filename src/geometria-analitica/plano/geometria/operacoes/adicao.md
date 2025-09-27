@@ -19,9 +19,8 @@ A soma desses dois vetores será o vetor do segmento orientado \\( AC \\), isto 
 - Feito da forma correta, você terá um paralelogramo.
 - \\( \vec{u} + \vec{v} \\) será a diagonal desse paralelogramo.
 
-### Observação
-
-Dois vetores que naõ são paralelos determinam um paralelogramo.
+> ***Observação***
+> Dois vetores que naõ são paralelos determinam um paralelogramo.
 
 ## Propriedades
 

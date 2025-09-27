@@ -15,12 +15,19 @@ Uma **proposição** é uma afirmação que é verdadeira ou falsa, mas não amb
 Consideremos as seguintes afirmações:
 
 (1) \\( \sqrt{2} \\) é um número irracional.
+
 (2) Todo triângulo é isósceles.
+
 (3) Que horas são?
+
 (4) \\( x + 1 = 2 \\).
+
 (5) Existem infinitos números primos.
+
 (6) Vixe Maria!
+
 (7) Esta afirmação é falsa.
+
 (8) Paulo é um bom professor.
 
 Questões imperativas e exclamativas não são proposições, como em (3) e (6). A afirmação (4) pode ser verdadeira ou falsa, dependendo do valor de \\( x \\) associado. Ela é um **predicado**, uma afirmação contendo uma ou mais variáveis que se torna uma proposição quando atribuímos valores às variáveis. Por exemplo, chamando esse predicado de \\( A(x) \\) e fazendo \\( A(1) \\), temos que a proposição é verdadeira (o que não é o caso para \\( A(2) \\), ou qualquer valor de \\( x \\) na verdade).
@@ -112,9 +119,9 @@ Na matemática, a dupla negação de uma proposição resulta na negação da ne
 | \\( V \\) | \\( F \\)  |
 | \\( F \\) | \\( V \\)  |
 
-#### Observação
-
-A negação somente inverte o valor lógico de uma proposição, ou seja, não é só porque que uma proposição esteja sendo negada que ela é falsa. Ela pode ser falsa por padrão (fazendo com que sua negação seja verdadeira).
+> ***Observação***
+> A negação somente inverte o valor lógico de uma proposição, ou seja, não é só porque que uma proposição esteja sendo negada que ela é falsa.
+> Ela pode ser falsa por padrão (fazendo com que sua negação seja verdadeira).
 
 ### Implicações
 
@@ -132,7 +139,9 @@ Em uma implicação \\( P \implies Q \\), \\( P \\) é chamada de **hipótese** 
 #### Exemplo
 
 (1) Se o número \\( a \\) divide \\( b \\) e, por usa vez, \\( b \\) divide \\( c \\), então \\( a \\) divide \\( c \\).
+
 (2) Se \\( x \neq 0 \\), então \\( x^{2} > 0 \\).
+
 (3) Se \\( p \\) é primo e \\( p > 2 \\), então \\( p \\) é impar.
 
 ### Equivalência Lógica
@@ -156,6 +165,7 @@ Assim como a negação, o sinal não importa, e sim o conteúdo.
 ##### Exemplo
 
 (1) "Se eu sou sergipano, então eu sou brasileiro p" é um implicação válida, porém sua inversa é falsa: "Se eu não sou sergipano, então eu não sou brasileiro".
+
 (2) "Se \\( x \\) é par, então x^{2} é par" é uma implicação verdadeira que possui uma inversa também vedadeira? "Se x é ímpar, então x^{2} é ímpar".
 
 #### Contrapositiva
@@ -201,9 +211,8 @@ Uma *contradição* é uma afirmação sempre falsa.
 | \\( F \\) | \\( V \\)   | \\( V \\)  | \\( F \\)  | \\( V \\)          | \\( F \\)         | \\( F \\)                              |
 | \\( F \\) | \\( F \\)   | \\( V \\)  | \\( V \\)  | \\( F \\)          | \\( V \\)         | \\( F \\)                              |
 
-### Observação
-
-Expressões lógicas regulares são chamadas de **contingências**.
+> ***Observação***
+> Expressões lógicas regulares são chamadas de **contingências**.
 
 ## Formas Normais Disjuntiva e Conjuntiva
 
@@ -225,6 +234,7 @@ Qual a sentença lógica que fornecea tabela-verdade abaixo?
 | \\( F \\) | \\( F \\) | \\( F \\) | \\( F \\)     |
 
 <details>
+
 Para encontrar o FND, olhamos para as linhas em que o resultado da função lógica é verdadeiro (1, 2, 4, 6 e 7). Então criamos fórmulas que fornece um resultado verdadeiro através de conjunções:
 
 \\[
@@ -236,6 +246,7 @@ Por outro lado, para o FNC, olhamos as linhas em uqe o resultado é falso (3, 5 
 \\[
 FNC: (~P \lor Q \lor ~R) \land (P \lor ~Q \lor ~R) \land (~P \lor ~Q \lor ~R)
 \\]
+
 </details>
 
 ## Quantificadores
@@ -257,12 +268,18 @@ A sentença \\( \exists x \in \mathbb{U}, P(x) \\) (lida: existe x em U tal que 
 
 ### Exemplo
 
-(1) \\( \forall x \in \mathbb{R}, x^{2} \geq 0 \\)
-(2) \\( \forall x, y \in \mathbb{Q} \\) (o produto \\( xy \\) e a soma \\( x + y \\) são racionais)
-(3) \\( \forall x \in \mathbb{R}, (x \geq 3 \implies x^{2} \geq 9) \\)
-(4) \\( \exists x \in \mathbb{Z}, x^{2} = 4 \\)
-(5) Existem dois números primos tal que sua soma é um número primo
+(1) \\( \forall x \in \mathbb{R}, x^{2} \geq 0 \\).
+
+(2) \\( \forall x, y \in \mathbb{Q} \\) (o produto \\( xy \\) e a soma \\( x + y \\) são racionais).
+
+(3) \\( \forall x \in \mathbb{R}, (x \geq 3 \implies x^{2} \geq 9) \\).
+
+(4) \\( \exists x \in \mathbb{Z}, x^{2} = 4 \\).
+
+(5) Existem dois números primos tal que sua soma é um número primo.
+
 (6) Para cada número primo \\( x \\) menor que 10, \\( x^{2} + 4 \\) é primo.
+
 (7) Existe alguém que não entendeu a definição de quantificador existencial.
 
 ### Negação
@@ -298,6 +315,7 @@ Nela, consideramos todas as possibilidades.
 Verificar mediante tabela-verdade a validade do argumento seguinte: "Se Carlos está com fome, então, ele come. Carlos dorme ou não come. Carlos está acordado. Portanto, Carlos não está com fome."
 
 <details>
+
 O primeiro passo consiste na representação do argumento na forma simbólica, em termo de proposições simples. Chamando as proposições simples "...fome", "...come" e "..acordado" de \\( P \\), \\( Q \\) e \\( R \\), respectivamente, o argumento pode ser escrito na linguagem da lógica proposicional como
 
 \\[
@@ -316,6 +334,7 @@ P \implies Q, ~R \lor ~Q, R \vdash ~P
 | \\( F \\) | \\( F \\) | \\( F \\)     | \\( V \\)  | \\( F \\)  | \\( V \\)              | \\( V \\)            | \\( V \\)    |
 
 As células marcadas com "*" destacam as hipóteses e a conclusão do argumento, bem como as linhas em que as hipótese são simultaneamente verdadeiras e o respectivo valor da conclusão.
+
 </details>
 
 ### Exemplo
@@ -323,6 +342,7 @@ As células marcadas com "*" destacam as hipóteses e a conclusão do argumento,
 Se o Vasco cair pra série \\( B \\), então seu treinador será demitido. Se seu treinador for demitido, então o astro do time, Dinamite, também sairá. Se Dinamite sair, então não mais torcerei pelo Vasco. Continuo sendo torcedor do Vasco. Logo, Dinamite não saiu do time e vasco não caiu para série B.
 
 <details>
+
 Simbolicamente, temos
 
 \\[
@@ -348,6 +368,7 @@ P \implies Q, Q \implies R, R \implies S, ~S \vDash ~R \land P
 | \\( F \\) | \\( F \\) | \\( F \\) | \\( V \\) | \\( V \\)              | \\( V \\)              | \\( V \\)              | \\( F \\)    | \\( V \\)  | \\( V \\)  | \\( V \\)             |
 | \\( F \\) | \\( F \\) | \\( F \\) | \\( F \\) | * \\( V \\)            | * \\( V \\)            | * \\( V \\)            | \\( V \\)    | \\( V \\)  | \\( V \\)  | * \\( V \\)           |
 
+
 </details>
 
 ### Exemplo
@@ -355,6 +376,7 @@ P \implies Q, Q \implies R, R \implies S, ~S \vDash ~R \land P
 Ou matemática é difícil ou os alunos não gostam de matemática. Se o português é fácil, então a matemática é facil. Os alunos gostam de matemática. Portanto, se matemática é difícil, então português é fácil.
 
 <details>
+
 Simbolicamente, temos
 
 \\[
@@ -373,6 +395,7 @@ A \underline{\lor} B, C \implies ~A, ~B \vDash A \implies C
 | \\( F \\) | \\( F \\) | \\( F \\) | \\( F \\)                      | \\( V \\)  | \\( V \\)               | \\( V \\)    | \\( V \\)              |
 
 A tabela mostra que o argumento é **inválido**.
+
 </details>
 
 ### Exemplo
@@ -380,6 +403,7 @@ A tabela mostra que o argumento é **inválido**.
 Se eu ganhar na megasena darei um carro a cada um de vocês. Eu não ganhei. Logo, vocês perderam os carros prometidos.
 
 <details>
+
 | \\( P_{1} \\) | \\( P_{2} \\) | * \\( P_{1} \implies P_{2} \\) | \\( ~P_{1} \\) | \\( ~P_{2} \\) |
 |---------------|---------------|--------------------------------|----------------|----------------|
 | \\( V \\)     | \\( V \\)     | \\( V \\)                      | \\( F \\)      | \\( F \\)      |
@@ -388,6 +412,7 @@ Se eu ganhar na megasena darei um carro a cada um de vocês. Eu não ganhei. Log
 | \\( F \\)     | \\( F \\)     | \\( V \\)                      | \\( V \\)      | \\( V \\)      |
 
 A tabela mostra que o argumento é inválido.
+
 </details>
 
 ## Regras de Inferência

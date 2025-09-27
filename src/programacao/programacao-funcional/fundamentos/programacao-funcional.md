@@ -4,7 +4,7 @@ Prioriza o [conceito matemático de funções](../../../fem/funcoes.md) na hora 
 
 ## Organizando o pensamento computacional
 
-> [!NOTE]
+> ***Observação***
 > Essa é apenas a sugestão do professor Hendrik.
 > Codifique da maneira que achar comfortável.
 > Mas geralmente você vai precisar seguir esses passos.
@@ -25,6 +25,7 @@ Na nomenclatura do professor Hendrik, algoritmos são elaborados **de cima para 
 Crie um programa que calcule a soma das áreas de duas figuras geométricas distintas: um retângulo e uma elipse.
 
 <details>
+
 ***Algoritmo Visual***
 ![Desenho de computador simples mostrando um retângulo à esquerda, um operador de soma no meio, e uma elipse na direita. Em baixo das figuras, temos as fórmulas de suas áreas.](https://github.com/hendrikdcomp/pf/blob/main/assets/figs/func02.png?raw=true)
 
@@ -106,4 +107,5 @@ resultado = soma(a1, a2)
 
 console.log(resultado)
 ```
+
 </details>

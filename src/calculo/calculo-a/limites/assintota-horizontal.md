@@ -29,6 +29,7 @@ Mesma coisa que o positivo, só que em vez de tomar valores arbitrariamente gran
 Encontre \\( \lim_{x \to \infty} \frac{1}{x} \\) e \\( \lim_{x \to -\infty} \frac{1}{x} \\).
 
 <details>
+
 Observe que quando \\( x \\) é grande, \\( \frac{1}{x} \\) é pequeno. Com isso, podemos fazer \\( \frac{1}{x} \\) tão próximo de 0 quanto quisermos. Portanto, segundo a definição, temos
 
 \\[
@@ -42,6 +43,7 @@ E também
 \\]
 
 Com isso, também temos a informação de que a reta \\( y = 0 \\) (o eixo \\( x \\) é uma assíntota horizontal de \\( y = \frac{1}{x} \\).
+
 </details>
 
 ## Teorema
@@ -69,6 +71,7 @@ Calcule
 e indique quais propriedades de limites foram usadas em cada etapa.
 
 <details>
+
 Para calcular o limite no infinito de uma função racional, primeiro dividimos ela pela maior potência de \\( x \\) que ocorre no denominador
 
 \\[
@@ -78,6 +81,7 @@ Para calcular o limite no infinito de uma função racional, primeiro dividimos 
 = \frac{3 - 0 - 0}{5 + 0 + 0}
 = \frac{3}{5}
 \\]
+
 </details>
 
 ### Exemplo
@@ -89,6 +93,7 @@ f(x) = \frac{\sqrt{2x^{2} + 1}}{3x - 5}
 \\]
 
 <details>
+
 Dividindo o numerador e o denominador por \\( x \\) temos
 
 \\[
@@ -120,6 +125,7 @@ A assíntota vertical ocorre quando a função dá numa indeterminação. Com um
 \\[
 \lim_{x \to \frac{5}{3}} \frac{\sqrt{2x^{2} + 1}}{3x - 5} = \infty
 \\]
+
 </details>
 
 ### Exemplo
@@ -127,12 +133,14 @@ A assíntota vertical ocorre quando a função dá numa indeterminação. Com um
 Calcule \\( \lim_{x \to \infty} (\sqrt{x^{2} + 1} - x) \\).
 
 <details>
+
 Multiplicamos o numerador e o denominador pelo conjugado radical:
 
 \\[
 \lim_{x \to \infty} (\sqrt{x^{2} + 1} - x) = \lim_{x \to \infty} (\sqrt{x^{2} + 1} - x) \cdot \frac{\sqrt{x^{2} + 1} + x}{\sqrt{x^{2} + 1} + x}
 = \lim_{x \to \infty} \frac{(x^{2} + 1) - x^{2}}{\sqrt{x^{2} + 1} + x} = \lim_{x \to \infty} \frac{1}{\sqrt{x^{2} + 1} + x} = 0
 \\]
+
 </details>
 
 ## Limite da Função Exponencial Natural
@@ -146,9 +154,11 @@ Multiplicamos o numerador e o denominador pelo conjugado radical:
 Calcule \\( \lim_{x \to 0^{-}} e^{\frac{1}{x}}.
 
 <details>
+
 \\[
 \lim_{x \to 0^{-}} e^{\frac{1}{x}} = \lim_{t \to -\infty} e^{t} = 0
 \\]
+
 </details>
 
 ## Exemplo
@@ -156,7 +166,9 @@ Calcule \\( \lim_{x \to 0^{-}} e^{\frac{1}{x}}.
 Calcule \\( \lim_{x \to \infty} \text{sen } x \\).
 
 <details>
+
 Quando \\( x \\) cresce, os valores de \\( \text{sen } x \\) oscilam entre 1 e -1 um número infinito de vezes; logo, eles não tendem a qualquer número definido. Portanto, \\( \lim_{X \to \infty} \text{sen } x \\) não existe.
+
 </details>
 
 ## Limites Infinitos no Infinito
@@ -176,6 +188,7 @@ Quando \\( x \\0 torna-se grande, \\( x^{3} \\) também fica grande. Então
 Encontre \\( \lim_{x \to \infty} (x^{2} - x) \\).
 
 <details>
+
 Não podemos escrever
 
 \\[
@@ -187,4 +200,5 @@ Pois \\( \infty \\) não é um número. Contudo, *podemos* escrever
 \\[
 \lim_{x \to \infty} (x^{2} - x) = \lim_{x \to \infty} x(x - 1) = \infty
 \\]
+
 </details>

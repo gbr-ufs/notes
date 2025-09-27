@@ -150,11 +150,8 @@ e
 
 Como a operação de composição de funções não é comutativa, \\( f \circ g \\) pode ser diferente de \\( g \circ f \\).
 
-#### Observação
-
-Como a composição de relações é associativa e funções são relações, a composição de funções também é associativa, ou seja, \\( f : A \rightarrow B, g : B \rightarrow C \land h : C \rightarrow \implies (h \circ f) \circ g = h \circ (f \circ g) \\).
-
-
+> ***Observação***
+> Como a composição de relações é associativa e funções são relações, a composição de funções também é associativa, ou seja, \\( f : A \rightarrow B, g : B \rightarrow C \land h : C \rightarrow \implies (h \circ f) \circ g = h \circ (f \circ g) \\).
 
 ### Definição
 

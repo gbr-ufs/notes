@@ -19,6 +19,7 @@ x \to a \implies \lim_{x \to a} f(x) = L \implies f(x) \to L, x \neq a
 Estime o valor de \\( \lim_{x \to 1} \frac{x - 1}{x^{2} - 1} \\).
 
 <details>
+
 Observe que \\( f(x) \\) não está definida quando \\( x = 1 \\), mas isso não importa, pois a definição diz que devemos considerar os valores *próximos*, não iguais.
 
 Pegando alguns valores próximos de 1
@@ -45,6 +46,7 @@ podemos concluir que
 \lim_{x \to 1} = \frac{x - 1}{x^{2} - 1} = 0,5
 \\]
 
+
 </details>
 
 ## Exemplo
@@ -52,6 +54,7 @@ podemos concluir que
 Estime o valor de \\( \lim_{t \to 0} \frac{\sqrt{t^{2} + 9} - 3}{t^{2}} \\).
 
 <details>
+
 Divisão por zero é impossível, então \\( f(t) \\) não está definida quando \\( t = 0 \\), por isso, devemos usar aquele mesmo método de exaustão anterior.
 
 |        t         | \\( \\frac{\sqrt{t^{2} + 9}}{t^{2}} \\) |
@@ -67,6 +70,7 @@ Com a tabela acima, podemos concluir que
 \\[
 \frac{\sqrt{t^{2} + 9}}{t^{2}} = \frac{1}{6}
 \\]
+
 </details>
 
 ## Exemplo
@@ -74,6 +78,7 @@ Com a tabela acima, podemos concluir que
 Faça uma estimativa de \\( \lim_{x \to 0} \frac{\text{sen x}}{x} \\).
 
 <details>
+
 Fazendo aquele mesmo esquema da tabela, notariamos que o valor de \\( f(x) \\) se aproxima cada vez mais de 1, e com isso podemos supor que
 
 \\[
@@ -87,6 +92,7 @@ Outro limite do tipo é
 \\[
 \lim_{\theta \to 0} \frac{\text{cos \theta} - 1}{\theta} = 0
 \\]
+
 </details>
 
 ## Exemplo
@@ -94,6 +100,7 @@ Outro limite do tipo é
 Analise \\( \lim_{x \to 0} \text{sen} \frac{\pi}{x} \\).
 
 <details>
+
 Tentando vários valores aqui, o resultado é zero, então podemos estimar que
 
 \\[
@@ -101,4 +108,5 @@ Tentando vários valores aqui, o resultado é zero, então podemos estimar que
 \\]
 
 Mas isto está **errado**, demonstrando que não podemos só tentar advinhando, precisamos de ferramentas reais para descobrir os limites.
+
 </details>
