@@ -4109,7 +4109,7 @@ endmodule
     input wire [2:0] Op);
     always @(*) begin
         case (Op)
-            3'b000: R = A + B;     // Adição
+            3'b000: R = A + B;    // Adição
             3'b001: R = A - B;    // Subtração
             3'b010: R = A &amp; B;    // AND
             3'b011: R = A | B;    // OR
