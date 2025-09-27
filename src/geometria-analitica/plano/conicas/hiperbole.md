@@ -1,8 +1,8 @@
-### Hipérbole
+# Hipérbole
 
 Quando o corte não é paralelo e os dois cones são cortados.
 
-#### Definição
+## Definição
 
 Sejam \\( F_{1} \\) e \\( F_{2} \\) pontos distintos do plano. Denote \\( d(F_{1}, F_{2}) = 2c > 0 \\). A hipérbole \\( \mathcal{H} \\) de focos \\( F_{1} \\) e \\( F_{2} \\) é o conjunto do plano que consiste de todos os pontos \\( P \\) tais que o módulo da diferença das distâncias a \\( F_{1} \\) e \\( F_{2} \\) é igual a uma constante \\( 2a > 0 \\), ou seja,
 
@@ -10,7 +10,7 @@ Sejam \\( F_{1} \\) e \\( F_{2} \\) pontos distintos do plano. Denote \\( d(F_{1
 \mathcal{H} = \\{P; |d(P, F_{1}) - d(P, F_{2})| = 2a\\}
 \\]
 
-#### Observação
+## Observação
 
 Pela desigualdade triangular, obtemos que \\( a < c \\).
 
@@ -25,7 +25,7 @@ Pela desigualdade triangular, obtemos que \\( a < c \\).
 - O *eixo imaginário* da hipérbole é o segmento \\( B_{1}B_{2} \\)
 - A *excentricidade* de uma hipérbole é o número real \\( e = \frac{c}{a}, (e > 1) \\)
 
-#### Observação
+## Observação
 
 \\[
 d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = c - a
@@ -35,11 +35,11 @@ d(A_{1}, F_{1}) = d(A_{2}, F_{2}) = c - a
 d(A_{1}, C) = d(A_{2}, C) = a
 \\]
 
-#### Observação
+## Observação
 
 O comprimento do eixo real da hipérbole é igual a \\( 2a \\).
 
-#### Observação
+## Observação
 
 Pelo Teorema de Pitágoras, temos que \\( d(C, B_{1}) = d(C, B_{2}) = b \\) onde
 
@@ -47,9 +47,9 @@ Pelo Teorema de Pitágoras, temos que \\( d(C, B_{1}) = d(C, B_{2}) = b \\) onde
 c^{2} = a^{2} + b^{2}
 \\]
 
-#### Equação Reduzida
+## Equação Reduzida
 
-##### Hipérbole com centro na origem e reta focal coincidente com o eixo \\( y \\)
+### Hipérbole com centro na origem e reta focal coincidente com o eixo \\( y \\)
 
 - \\( A_{1} = (0, -a) \\)
 - \\( A_{2} = (0, a) \\)
@@ -61,7 +61,7 @@ c^{2} = a^{2} + b^{2}
 - Equação das assíntotas: \\( y = -\frac{a}{b}x \text{ e } y = \frac{a}{b}x \\)
 - \\( P = (x, y) \in \mathcal{H} \iff \frac{y^{2}}{a^{2}} - \frac{x^{2}}{b^{2}} = 1\\)
 
-##### Hipérbole com centro na origem e reta focal coincidente com o eixo \\( x \\)
+### Hipérbole com centro na origem e reta focal coincidente com o eixo \\( x \\)
 
 - \\( A_{1} = (-a, 0) \\)
 - \\( A_{2} = (a, 0) \\)
@@ -73,7 +73,7 @@ c^{2} = a^{2} + b^{2}
 - Equação das assíntotas: \\( y = -\frac{b}{a}x \text{ e } y = \frac{b}{a}x \\)
 - \\( P = (x, y) \in \mathcal{H} \iff \frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\\)
 
-##### Hipérbole com centro em \\( C = (x_{0}, y_{0}) \\) e reta focal paralela ao eixo \\( y \\)
+### Hipérbole com centro em \\( C = (x_{0}, y_{0}) \\) e reta focal paralela ao eixo \\( y \\)
 
 - \\( A_{1} = (x_{0}, y_{0} - a) \\)
 - \\( A_{2} = (x_{0}, y_{0} + a) \\)
@@ -87,7 +87,7 @@ c^{2} = a^{2} + b^{2}
 - Reta imaginária: \\( l' : y = y_{0} \\)
 - \\( P = (x, y) \in \mathcal{H} \iff \frac{(y - y_{0})^{2}}{a^{2}} - \frac{(x - x_{0})^{2}}{b^{2}} = 1\\)
 
-##### Hipérbole com centro em \\( C = (x_{0}, y_{0}) \\) e reta focal paralela ao eixo \\( x \\)
+### Hipérbole com centro em \\( C = (x_{0}, y_{0}) \\) e reta focal paralela ao eixo \\( x \\)
 
 - \\( A_{1} = (x_{0} - a, y_{0}) \\)
 - \\( A_{2} = (x_{0} + a, y_{0}) \\)
@@ -101,7 +101,7 @@ c^{2} = a^{2} + b^{2}
 - Reta imaginária: \\( l' : y = y_{0} \\)
 - \\( P = (x, y) \in \mathcal{H} \iff \frac{(x - x_{0})^{2}}{a^{2}} - \frac{(y - y_{0})^{2}}{b^{2}} = 1\\)
 
-#### Equação Geral
+## Equação Geral
 
 \\[
 Ax^{2} + By^{2} + Cx + Dy + E = 0

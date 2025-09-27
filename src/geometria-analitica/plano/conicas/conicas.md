@@ -1,4 +1,4 @@
-## Cônicas
+# Cônicas
 
 Considere duas retas concorrentes e não-perpendiculares, \\( g \\) e \(( e \\), que se intersectam em um ponto \\( O \\). Fazendo \\( g \\) girar 360 graus em torno de \\( e \\), obtemos dois cones.
 
