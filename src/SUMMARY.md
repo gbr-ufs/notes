@@ -70,20 +70,20 @@
 ## Programação
 
 - [Programação](programacao/programacao.md)
-    - Programação Funcional
-      - Fundamentos
+    - [Programação Funcional](programacao/programacao-funcional/programacao-funcional.md)
+      - [Fundamentos](programacao/programacao-funcional/fundamentos/fundamentos.md)
         - [O que é programar?](programacao/programacao-funcional/fundamentos/o-que-e-programar.md)
         - [A linguagem JavaScript](programacao/programacao-funcional/fundamentos/a-linguagem-javascript.md)
         - [Programação Funcional](programacao/programacao-funcional/fundamentos/programacao-funcional.md)
         - [Enriquecendo a solução](programacao/programacao-funcional/fundamentos/enriquecendo-a-solucao.md)
-      - Valores e funções
+      - [Valores e funções](programacao/programacao-funcional/valores-e-funcoes/valores-e-funcoes.md)
         - [Funções como expressões](programacao/programacao-funcional/valores-e-funcoes/funcoes-como-expressoes.md)
         - [Definição de função como retorno](programacao/programacao-funcional/valores-e-funcoes/definicao-de-funcao-como-retorno.md)
         - [Definição de função como argumento](programacao/programacao-funcional/valores-e-funcoes/definicao-de-funcao-como-argumento.md)
         - [Função Anônima](programacao/programacao-funcional/valores-e-funcoes/funcao-anonima.md)
         - [Formulação da recursividade](programacao/programacao-funcional/valores-e-funcoes/formulacao-da-recursividade.md)
         - [Programação recursiva](programacao/programacao-funcional/valores-e-funcoes/programacao-recursiva.md)
-      - Coleções de dados
+      - [Coleções de dados](programacao/programacao-funcional/colecoes-de-dados/colecoes-de-dados.md)
         - [Listas e Registros](programacao/programacao-funcional/colecoes-de-dados/listas-e-registros.md)
         - [Mapeamento de elementos](programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.md)
         - [Filtragem de elementos](programacao/programacao-funcional/colecoes-de-dados/filtragem-de-elementos.md)
