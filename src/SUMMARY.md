@@ -23,6 +23,7 @@
 ## Fundamentos Elementares da Matemática
 
 - [Fundamentos Elementares da Matemática](fem/fem.md)
+  - [Noções de Lógica](fem/nocoes-de-logica.md)
   - [Conjuntos](fem/conjuntos.md)
   - [Relações](fem/relacoes.md)
   - [Funções](fem/funcoes.md)
