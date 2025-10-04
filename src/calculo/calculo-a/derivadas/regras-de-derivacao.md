@@ -1,4 +1,4 @@
-# Regras de Derivação
+f# Regras de Derivação
 
 ## Função Constante
 
@@ -288,7 +288,7 @@ Isso significa que a reta tangente em \\( (1, \frac{1}{2}) \\) é horizontal, e 
 
 > ***Observação***
 > Não use a Regra do Quociente *toda* vez que você vir um quociente. Algumas vezes é mais fácil reescreve-lo primeiro.
-> \\( f(x) = \frac{3x^{2} + 2\sqrt{x}}{x} \imples f(x) = 3x + 2x^{-\frac{1}{2}} \\)
+> \\( f(x) = \frac{3x^{2} + 2\sqrt{x}}{x} \implies f(x) = 3x + 2x^{-\frac{1}{2}} \\)
 
 ## Derivadas de Funções Trigonométricas
 
@@ -1004,3 +1004,399 @@ O refrigerante é resfriado para 10 °C depois de 1 hora e 35 minutos.
 </details>
 
 ## Taxas Relacionadas
+
+Cosnsite no cálculo da tada de variação de uma grandeza emtermos da taxa de variação de outra
+(mais facilmente medida).
+Então, achamos uma equação que relacione as duas grandezas
+e usamos a Regra da Cadeia para derivar ambos os lados em relação ao tempo.
+
+### Exemplo
+
+Ar está sendo bombeado para um balão esférico de modo que seu volume aumenta a uma taxa de 100 \\( cm^{3}/s \\).
+Quão rápido o raio do balão está aumentando quando o diâmetro for 50 cm.
+
+<details>
+
+Informação dada:
+
+> [...] uma taxa de 100 \\( cm^{3}/s \\).
+
+Incógnita:
+
+> Quão rápido o raio do balão está aumentando quando o diâmetro for 50 cm?
+
+Para expressarmos matemáticamente essas grandezas,
+introduzimos alguma *notação* sugestiva:
+
+\\[
+\text{Seja $V$ o volume do balão e seja $r$ seu raio.}
+\\]
+
+A chave está em lembrar que taxas de variação são derivadas.
+Neste problema, o volume e o raio são funções do tempo \\( t \\).
+A taxa de crescimento do volume em relação ao tempo é a derivada \\( \frac{dV}{dt} \\),
+e a taxa de crescimento do raio é \\( \frac{dr}{dt} \\).
+Podemos, portanto, reapresentar o que foi dado e a incógnita como a seguir:
+
+> *Dada*: \\( \frac{dV}{dt} = 100cm^{3}/s\\)
+
+> *Incógnita*: \\( \frac{dr}{dt} \text{ quando } r = 25 cm \\)
+
+Para conectarmos \\( \frac{dV}{dt} \\) e \\( \frac{dr}{dt} \\),
+primeiro relacionamos \\( V \\) e \\( r \\) pela fórmula para o volume de uma esfera:
+
+\\[
+V = \frac{4}{3} \pi r^{3}
+\\]
+
+Para usarmos a informação dada, derivamos cada lado dessa equação em relação a \\( t \\).
+Para derivarmos o lado direito preciamos usar a Regra da Cadeia:
+
+\\[
+\frac{dV}{dt} = \frac{dV}{dr} \frac{dr}{dt} = 4 \pi r^{2} \frac{dr}{dt}
+\\]
+
+Agora, isolamos a incógnita:
+
+\\[
+\frac{dr}{dt} = \frac{1}{4\pi r^{2}} \frac{dV}{dt}
+\\]
+
+Se colocarmos \\( r = 25 \\) e \\( \frac{dV}{dt} = 100 \\) nessa equação, obtemos
+
+\\[
+\frac{dr}{dt} = \frac{1}{4\pi (25)^{2}} 100 = \frac{1}{25\pi}
+\\]
+
+O raio do balão está crescendo a uma taxa de \\( \frac{1}{25\pi} \approx 0,0127 cm/s \\).
+
+</details>
+
+### Exemplo
+
+Uma escada com 5 m de comprimento está apoiada em uma parede vertical.
+Se a base da escada desliza, afastando-se da parede a uma taxa de 1 m/s,
+quão rápido o topo da escada está escorregando para baixo na parede quando a base da escada está a 3 m da parede?
+
+<details>
+
+Primeiro faça o desenho do triângulo e marque as variáveis (o comprimento apoiado à parede é a hipotenusa).
+\\( x \\) será os metros de distância da base da escada à parede,
+e \\( y \\) a distância do topo da escada ao solo.
+Ambos \\( x \\) e \\( y \\) são funções de \\( t \\)
+(tempo, medido em segundos).
+
+Temos que \\( \frac{dx}{dt} = 1 m/s \\), e nos foi pedido par encontrar \\( \frac{dy}{dt} \\) quando \\( x = 3 m \\).
+
+Podemos encontrar usando o Teorema de Pitágoras:
+
+\\[
+x^{2} + yÇ`2^= 25
+\\]
+
+Derivando cada lado em relação a \\( t \\) usando a Regra da Cadeia, temos
+
+\\[
+2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 0
+\\]
+
+e isolando a taxa desejada, obtemos
+
+\\[
+\frac{dy}{dt} = -\frac{x}{y} \frac{dx}{dt}
+\\]
+
+Quando \\( x = 3 \\), o Teorema de Pitágoras fornece \\( y = 4 \\) e,
+portanto, substituindo esses valores e \\( \frac{dx}{dt} = 1 \\), temos
+
+\\[
+\frac{dy}{dt} = -\frac{3}{4} (1) = -\frac{3}{4} m/s
+\\]
+
+O fato de \\( \frac{dy}{dt} \\) ser negativo indica que a distância do topo da escada ao solo está *decrescendo*
+a uma taxa de \\( \frac{3}{4} m/s\\).
+Em outras palavras, o topo da scada está deslizando para baixo a uma taxa de \\( \frac{3}{4} m/s\\).
+
+</details>
+
+### Exemplo
+
+Um tanque de água possui o formato de um cone circular invertido, com base de raio de 2 m e altura igual a 4 m.
+Se a água está sendo bombeada para o tanque a uma taxa de 2 \\( m^{3}/min \\),
+encontre a taxa na qual o nível de água está aumentando quando a água estiver a 3 m de profundidade.
+
+<details>
+
+Primeiro faça o desenho do cone e marque as variáveis.
+Vamos usar \\( V \\) para o volume da água, \\( r \\) para o raio da superfície e \\( h \\) para a altura no instante \\( t \\),
+onde \\( t \\) é medido em minutos.
+
+Temos que \\( \frac{dV}{dt} = 2 m^{3}/min \\) e nos foi pedido para encontrar \\( \frac{dh}{dt} \\) quando \\( h \\) for 3 m. As quantidades \\( V \\) e \\( h \\) são relacionadas pela equação
+
+\\[
+V = \fac{1}{3} \pi r^{2] h
+\\]
+
+mas podemos expressar \\( V \\) como uma função apenas de \\( h \\). Para eliminar \\( r \\), usamos os triângulos similares para escrever
+
+\\[
+\frac{r}{h} = \frac{2}{4} \implies r = \frac{h}{2}
+\\]
+
+e a expressão para \\( V \\) se torna
+
+\\[
+V = \frac{1}{3} \pi \left(\frac{h}{2}\right)^{2} h = \frac{\pi}{12} h^{3}
+\\]
+
+Agora podemos derivar cada lado em relação a \\( t \\):
+
+\\[
+\frac{dV}{dt} = \frac{\pi}{4} h^{2} \frac{dh}{dt}
+\\]
+
+então
+
+\\[
+\frac{dh}{dt} = \frac{4}{\pi r^{2}} \frac{dV}{dt}
+\\]
+
+Substituindo \\( h = 3 m \\) e \\( \frac{dV}{dt} = 2 m^{3}/min \\), temos
+
+\\[
+\frac{dh}{dt} = \frac{4}{\pi (3)^{2}} \cdot 2 = \frac{8}{9\pi}
+\\]
+
+O nível da água estará subindo a uma taxa de \\( \frac{8}{9\pi} \approx 0,28 m/min \\).
+
+</details>
+
+### Exemplo
+
+O carro \\( A \\) está se movimentando para o oeste a 90 km/h e o carro \\( B \\) está se movimentando para o norte a 100 km/h.
+Ambos vão em direção à intersecção de duas estradas.
+A que taxa os carros se aproximam um do outro quando o carro \\( A \\) está a 60 m e o carro \\( B \\) está a 80 m da intersecção?
+
+<details>
+
+Podemos desenhar o problema como um gráfico, que se assemelha a um triângulo
+(centro na origem, \\( B \\) no eixo das ordenadadas, \\( A \\) no eixo das abcissas).
+
+Em um dado instante \\( t \\), seja \\( x \\) a distância do carro \\( A \\) a \\( C \\), seja \\( y \\) a distância do carro \\( B \\) a \\( C \\), e seja \\( z \\) a distância entre os carros,
+em que \\( x \\), \\( y \\) e \\( z \\) são medidos em quilômetros.
+
+Foi-nos dado que \\( \frac{dx}{dt} = -90 km/h \\) e \\( \frac{dy}{dt} = -100 km/h \\).
+Foi-nos pedido para encontrar \\( \frac{dz}{dt} \\).
+A equação que relaciona \\( x \\), \\( y \\) e \\( z \\) é dada pelo Teorema de Pitágoras:
+
+\\z^{2} = x^{2} + y^{2}
+\\]
+
+Derivando cada lado em relação a \\( t \\), temos
+
+\\[
+2z \frac{dz}{dt} = 2x \frac{dx}{dt} + 2y \frac{dy}{dt}
+\\]
+
+\\[
+\frac{dz}{dt} = \frac{1}{z} \left(x \frac{dx}{dt} + y \frac{dy}{dt}\right)
+\\]
+
+Quando \\( x = 0,06 km \\) e \\( y = 0,08 km \\), o Teorema de Pitágoras nos dá \\( z = 0,1 km \\),
+portanto
+
+\\[
+\frac{dz}{dt} = \frac{1}{0,1} [0,06(-90) + 0,08(-100)] = -134 km/h
+\\]
+
+Os carros aproximam-se um do outro a uma taxa de 134 km/h.
+
+</details>
+
+### Exemplo
+
+Um homem ando ao longo de um caminho reto a uma velocidade de 1,5 m/s.
+Um holofote localizado no chão a 6 m do caminho é mantido focalizado no homem.
+A que taxa o holofote está girando quando o homem está a 8 m do ponto do caminho mais próximo da luz?
+
+<details>
+
+Também podemos representar esse problema usando um triângulo.
+Seja \\( x \\) a distância entre o homem e o ponto do caminho mais próximo ao holofote.
+Seja \\( \theta \\) o ângulo entre o feixe do holofote e a perpendicular ao caminho.
+
+Foi-nos dado que \\( \frac{dx}[dt] = 1,5 m/s \\) e nos foi pedido para encontrar \\( \frac{d\theta}{dt} \\) quando \\( x = 8 \\). A equação que relaciona \\( x \\) e \\( theta \\) pode ser escrita como:
+
+\\[
+\frac{x}{6} = \text{tg } \theta & x = 6 \text{tg } \theta
+\\]
+
+Derivando cad alado em relação a \\( t \\), obtemos
+
+\\[
+\frac{dx}{dt} = 6 \text{sec}^{2} \theta \frac{d\theta}{dt}
+\\]
+
+então
+
+\\[
+\frac{d\theta}{dt} = \frac{1}{6} \text{cos}^{2} \theta \frac{dx}{dt} = \frac{1}[6} \text{cos}^{2} \theta (1,5) = \frac{1}{4} \text{cos}^{2} \theta
+\\]
+
+Quando \\( x = 8 \\), o comprimento do feixe é 10, logo \\( \text{cos} \theta = \frac{3}{5} \\) e
+
+\\[
+\frac{dx}{dt} = \frac{1}{4} \left(\frac{3}{5}\right)^{2} = \frac{9}{100} = 0,09
+\\]
+
+O holofote está girando a uma tax a de 0,09 rad/s.
+
+</details>
+
+## Aproximações Lineares e Diferenciais
+
+Podemos usar a reta tangente em \\( (a, f(a)) \\) como uma aproximação para a curva \\( y = f(x) \\) quando \\( x \\) estiver próximo de \\( a \\). Uma equação dessa reta tangente é
+
+\\[
+y = f(a) + f'(a)(x - a)
+\\]
+
+e a aproximação
+
+\\[
+f(x) \approx f(a) + f'(a)(x - a)
+\\]
+
+é denominada **aproximação linear** ou **aproximação pela reta tangente** \\( f \\) em  \\( a \\). A função linear cujo gráfico é essa reta tangente, ou seja,
+
+\\[
+L(x) = f(a) + f'(a)(x - a)
+\\]
+
+é denominada **linearização** de \\( f \\) em \\( a \\).
+
+### Exemplo
+
+Encontre a linearização da função \\( f(x) = \sqrt{x + 3} \\) em \\( a = 1 \\) e use-a para aproximar os números \\( \sqrt{3,98} \\) e \\( \sqrt{4,05} \\). Essas aproximações estão superestimadas ou subestimadas?
+
+<details>
+
+A derivada de \\( f(x) = (x + 3)^{\frac{1}{2}} \\) é
+
+\\[
+f'(a) = \frac{1}{2}(x + 3)^{-\frac{1}{2}} = \frac{1}{2\sqrt{x + 3}}
+\\]
+
+e assim temos \\( f(1) = 2 \\) e \\( f'(1) = \frac{1}{4} \\). Colocando esses valores na equação de lineraização
+
+\\[
+L(x) = f(1) + f'(1)(x - 1) = 2 + \frac{1}{4}(x - 1) = \frac{7}{4} + \frac{x}{4}
+\\]
+
+A aproximação linear correspondente é
+
+\\[
+\sqrt{x + 3} \approx \frac{7}{4} + \frac{x}{4}
+\\]
+
+Em particular, temos
+
+\\[
+\sqrt{3,98} \approx \frac{7}{4} + \frac{0,98}{4} = 1,995 \text{ e } \sqrt{4,05} \approx \frac{7}{4} + \frac{1,05}{4} = 2,0125
+\\]
+
+Com isso, vemos que, realmente, a aproximação pela reta tangente é uma boa aproximação para a função dada quando \\( x \\) está próximo de 1. Vemos também que nossas aproximações são superestimadas, pois a reta tangente está acima da curva.
+
+</details>
+
+### Diferenciais
+
+Se \\( y = f(x) \\), onde \\( f \\) é uma função deriváve, então a **diferencial** \\( dx \\) é uma variável independente, ou seja, a \\( dx \\) pode ser dado um valor qualquer. A **diferencial** \\( dy \\) é então definida em termos de \\( dx \\) pela equação
+
+\\[
+dy = f'(x) dx
+\\]
+
+Assim \\( dy \\) é uma variável dependente; depende dos valores de \\( x \\) e \\( dx \\). Se a \\( dx \\) for dado um valor específico e \\( x \\) for algum número específico no domínio de \\( f \\), então o valor numérico de \\( dy \\) está determinado.
+
+Sejam \\( P(x, f(x)) \\) e \\( Q(x + \Delta{x}, f(x + \Delta{x})) \\) pontos sobre o gráfico de \\( f \\) e seja \\( dx = \Delta{x} \\). A variação corespondente me \\( y \\) é
+
+\\[
+\Delta{x} = f(x + \Delta{x}) - f(x)
+\\]
+
+A inclinação da reta tangente \\( PR \\) é a derivada \\( f'(x) \\). Assim, a distância direta de \\( R \\) para \\( R \\) é \\( f'(x)dx = dy \\). Consequentemente, \\( dy \\) representa a distância que a curva \\( y = f(x) \\) sobe ou desce quando \\( x \\) varia por uma quantidade \\( dx \\).
+
+#### Exemplo
+
+O raio de uma esfera foi medido e descobriu-se que possui 21 cm com uma possibilidade de erro na medida de no máximo 0,05 cm. Qual é o erro máximo usando esse valor de raio para computar o volume da esfera?
+
+<details>
+
+Se o raio da esfera for \\( r \\), então seu volume é \\( V = \frac{4}{3} \pi r^{3} \\). Se o error na medida do valor de \\( r \\) for denotado por \\( dr = \Delta{r} \\), então o erro correspondente no cálculo do valor de \\( V \\) é \\( \Delta{V} \\), que pode ser aproximado pela diferencial
+
+\\[
+dV = 4\pi r^{2} dr
+\\]
+
+Quando \\( r = 21 \\) e \\( dr = 0,05 \\), temos
+
+\\[
+dV = 4\pi (21)^{2} 0,05 \approx 277
+\\]
+
+O erro máximo no volume calculado é de cerca de 277 \\( cm^{3} \\).
+
+</details>
+
+## Funções Hiperbólicas
+
+### Seno
+
+- Função: \\( \text{senh x} = \frac{e^{x} - e^{-x}}{2} \\)
+- Identidades
+  - \\( senh(-x) = -\text{senh x} \\)
+  - \\( senh(x + y) = \text{senh x cosh y} + \text{cosh x senh y} \\)
+- Derivada: \\( \frac{d}{dx} (\text{senh x}) = \text{cosh x} \\)
+- Inversa: \\( senh^{-1}x = \ln (x + \sqrt{x^{2} + 1}), x \in \mathbb{R} \\)
+- Derivada da inversa: \\( \frac{d}{dx} (senh^{-1}x) = \frac{1}{\sqrt{1 + x^{2}}} \\)
+
+### Cosseno
+
+- Função: \\( \text{cosh x} = \frac{e^{x} + e^{-x}}{2} \\)
+- Identidades
+  - \\( cosh(-x) = \text{cosh x}
+  - \\( cosh(x + y) = \text{cosh x cosh y} + \text{senh x senh y} \\)
+  - \\( cosh^{2}x - senh^{2}x = 1 \\)
+- Derivada: \\( \frac{d}{dx} (\text{cosh x}) = \text{senh x} \\)
+- Inversa: \\( cosh^{-1}x = \ln (x + \sqrt{x^{2} - 1}), x \geq 1 \\)
+- Derivada da inversa: \\( \frac{d}{dx}(cosh^{-1}x) = \frac{1}{\sqrt{x^{2} - 1}} \\)
+
+### Tangente
+
+- Função: \\( \text{tgh x} = \frac{\text{senh x}{cosh x}} \\)
+- Identidade: \\( 1 - tgh^{2}x = sech^{2}x \\)
+- Derivada: \\( \frac{d}{dx} (\text{tgh x}) = sech^{2}x \\)
+- Inversa: \\( tgh^{-1}x = \frac{1}{2} \ln \left(\frac{1 + x}{1 - x}\right), -1 < x < 1 \\)
+- Derivada da inversa: \\( \frac{d}{dx} (tgh^{-1}x) = \frac{1}{1 - x^{2}} \\)
+
+### Cossecante
+
+- Função: \\( \text{cossech x} = \frac{1}{\text{senh x}} \\)
+- Derivada: \\( \frac{d}{dx} \text{(cossech x) = -\text{cossech x cotgh x}} \\)
+- Inversa: \\( cossech^{-1}x \ln \left(\frac{1}{x} + \sqrt{\frac{1}{x^{2}} + 1}\right) \\)
+- Derivada da inversa: \\( \frac{d}{dx} (cossech^{-1}x) = -\frac{1}{|x| \sqrt{x^{2} + 1}} \\)
+
+### Secante
+
+- Função: \\( \text{sech x} = \frac{1}{\tet{cosh x}} \\)
+- Derivada: \\( \frac{d}{dx} (\text{sech x}) = -\text{sech x tgh x} \\)
+- Inversa: \\( sech^{-1}x = \ln \left(\frac{1}{x} + \sqrt{\frac{1}{x^{2}} - 1}\right) \\)
+- Derivada da inversa: \\( \frac{d}{dx} (sech^{-1}x) = -\frac{1}{x \sqrt{1 - x^{2}}} \\)
+
+### Cotangente
+
+- Função: \\( \text{cotgh x} = \frac{\text{cosh x}}{\text{senh x}} \\)
+- Derivada: \\( \frac{d}{dx} (\text{cotgh x}) = -cossech^{2}x \\)
+- Inversa: \\( cotgh^{-1}x = \frac{1}{2} \ln \left(\frac{x + 1}{x - 1}\right) \\)
+- Derivada da inversa: \\( \frac{d}{dx} (cotgh^{-1}x) = \frac{1}{1 - x^{2}} \\)

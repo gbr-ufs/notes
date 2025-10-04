@@ -15,6 +15,7 @@
         - [Assíntota Horizontal](calculo/calculo-a/limites/assintota-horizontal.md)
     - [Derivadas](calculo/calculo-a/derivadas.md)
       - [Regras de Derivação](calculo/calculo-a/regras-de-derivacao.md)
+      - [Aplicações de Derivação](calculo/calculo-a/aplicacoes-de-derivacao.md)
   - [Cálculo B](calculo/calculo-b/calculo-b.md)
     - [Problema da Área](calculo/calculo-b/problema-da-area.md)
     - [Problema da Distância](calculo/calculo-b/problema-da-distancia.md)
@@ -24,6 +25,7 @@
 
 - [Fundamentos Elementares da Matemática](fem/fem.md)
   - [Noções de Lógica](fem/nocoes-de-logica.md)
+  - [Técnicas de Prova](fem/tecnicas-de-prova.md)
   - [Conjuntos](fem/conjuntos.md)
   - [Relações](fem/relacoes.md)
   - [Funções](fem/funcoes.md)
@@ -87,6 +89,20 @@
         - [Listas e Registros](programacao/programacao-funcional/colecoes-de-dados/listas-e-registros.md)
         - [Mapeamento de elementos](programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.md)
         - [Filtragem de elementos](programacao/programacao-funcional/colecoes-de-dados/filtragem-de-elementos.md)
+        - [Operações de Redução](programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.md)
+        - [Composição de funções](programacao/programacao-funcional/colecoes-de-dados/composicao-de-funcoes.md)
+        - [Manipulação de dados em arquivo](programacao/programacao-funcional/colecoes-de-dados/manipulacao-de-dados-em-arquivo.md)
+      - [Princípios do paradigma](programacao/programacao-funcional/principios-do-paradigma/principios-do-paradigma.md)
+        - [Pureza](programacao/programacao-funcional/principios-do-paradigma/pureza.md)
+        - [Funções de Alta Ordem](programacao/programacao-funcional/principios-do-paradigma/funcoes-de-alta-ordem.md)
+        - [Imutabilidade](programacao/programacao-funcional/principios-do-paradigma/imutabilidade.md)
+        - [Closure](programacao/programacao-funcional/principios-do-paradigma/closure.md)
+        - [Currying](programacao/programacao-funcional/principios-do-paradigma/currying.md)
+        - [Avaliação tardia](programacao/programacao-funcional/principios-do-paradigma/avaliacao-tardia.md)
+      - [Recursividade em lista](programacao/programacao-funcional/recursividade-em-lista/recursividade-em-lista.md)
+        - [Formulação da recursividade em listas](programacao/programacao-funcional/recursividade-em-lista/formulacao-da-recursividade-em-listas.md)
+        - [Programação recursiva em listas](programacao/programacao-funcional/recursividade-em-lista/programacao-recursiva-em-listas.md)
+        - [Recursividade na cauda](programacao/programacao-funcional/recursividade-em-lista/recursividade-na-cauda.md)
 
 ## Coretech
 

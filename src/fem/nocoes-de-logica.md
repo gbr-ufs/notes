@@ -431,3 +431,195 @@ O método de tabela-verdade pode ser exaustivo. Neste método, derivamos uma seq
 | Absorção             | \\( P \implies Q \\)                           | \\( P \implies (P \land Q) \\) |
 | Dilema Construtivo   | \\( P \implies Q, R \implies S, P \lor R \\)   | \\( Q \lor S \\)               |
 | Dilema Destrutivo    | \\( P \implies Q, R \implies S, ~Q \lor ~S \\) | \\( ~P \lor ~R \\)             |
+
+### Exemplo
+
+Passe o celular ou a carteira. Dou o relógio ou não dou o celular. Fico com os documentos ou não dou a carteira. Não fico com os documentos. Logo, dou o celular e o relógio. Em símbolos
+
+\\[
+P \lor C, L \or ~P, N \lor ~C, ~N \vDash P \land L
+\\]
+
+<details>
+
+(1) \\( P \lor C \\) Premissa
+
+(2) \\( L \lor ~P \\) Premissa
+
+(3) \\( N \lor ~C \\) Premissa
+
+(4) \\( ~N \\) Premissa
+
+(5) \\( ~C \\) (3, 4) Silogismo Disjuntivo
+
+(6) \\( P \\) (1, 5) Silogismo Disjuntivo
+
+(7) \\( L \\) (2, 6) Silogismo Disjuntivo
+
+(8) \\( P \land L \\) (6, 7) Conjunção
+
+</details>
+
+Como chegamos na conclusão, temos que o argumento é válido.
+
+### Exemplo
+
+Se não estudar, não serei aprovado. Se colar, não estudo. Se não perder a concentração, serei aprovado. Se desligo o celular, não perco a concentração. Logo, se colo, não desligo o celular. Em símbolos
+
+\\[
+~E \implies ~A, C \implies E, ~P \implies A, M \implies ~P \vDash C \implies ~M
+\\]
+
+<details>
+
+(1) \\( ~E \implies ~A \\) Premissa
+
+(2) \\( C \implies ~E \\) Premissa
+
+(3) \\( ~P \implies A \\) Premissa
+
+(4) \\( M \implies ~P \\) Premissa
+
+(5) \\( C \implies ~A \\) (1, 2) Silogismo Hipotético
+
+(6) \\( ~A \implies P \\) (3) Contrapositiva
+
+(7) \\( C \implies P \\) (5, 6) Silogismo Hipotético
+
+(8) \\( P \implies ~M \\) (4) Contrapositiva
+
+(9) \\( C \implies ~M \\) (7, 8) Silogismo Hipotético
+
+</details>
+
+## Árvore de Refutação
+
+Involve provar que o arugmento **não** pode ser inválido. Assumimos a conclusão como falsa, e, se não encontrarmos nenhum argumento a favor, então o argumento é válido.
+
+Uma conjunção gera somente um ramo, enquanto uma disjunção gera dois ramos.
+
+![](../img/fem/arvore-de-refutacao-1.png)
+
+Se encontarmos uma contradição tipo \\( P \\) e \\( ~P \\) então o ramo é fechado.
+
+### Exemplo
+
+Verificar por meio de árvore de refutação a validade do argumento \\( [(P \lor Q) \land ~P] \vDash Q \\).
+
+<details>
+
+![](../img/fem/arvore-de-refutacao-2.png)
+
+</details>
+
+### Exemplo
+
+\\[
+(Q \lor (R \implies T), Q \implies S, ~S \implies (T \implies P), ~S \vDash R \implies P
+\\]
+
+Dica: simplificamos ao converter \\( A \implies B \\) em \\( ~A \lor B \\).
+
+<details>
+
+![](../img/fem/arvore-de-refutacao-3.png)
+
+</details>
+
+### Exemplo
+
+Considere o argumento \\( \{[P \implies (R \lor S)] \land [(R \land S) \implies Q]\} \vDash (P \implies Q) \\).
+
+<details>
+
+![](../img/fem/arvore-de-refutacao-4.png)
+
+Como dois ramos ficaram abertos, o argumento é inválido.
+
+</details>
+
+### Exemplo
+
+Construa uma árvore de refutação para verificar se a fórmula \\( (P \implies Q) \lor (P \land ~Q) \\) é uma tautologia.
+
+<details>
+
+![](../img/fem/arvore-de-refutacao-5.png)
+
+</details>
+
+### Argumentos Envolvendo Quantificadores
+
+> **Regra 1**: Dada qualquer função proposicional \\( P(x) \\), da verdade de \\( \forall{x}, P(x) \\), podemos inferir a verdade de \\( P(a) \\) para qualquer \\( a \\) no universo de discurso.
+
+> **Regra 2**: Dada qualquer função proposicional \\( P(x) \\), da verdade de \\( \exists{x}, P(x) \\), podemos inferir que existe pelo menos um elemento \\( a \\) no universo de discurso para o qual \\( P(a) \\) é verdadeiro.
+
+Procure utilizar primeiro as proposições que envolvem quantificadores existenciais.
+
+#### Exemplo
+
+Prove a validade do seguinte argumento: "Todos os atletas são fisicamente fortes. Paulo é um atleta. Então Paulo é fisicamente forte."
+
+<details>
+
+Sejam \\( A(x) : x \\) é um atleta; \\( F(x) : x \\) é fisicamente forte. Assim,
+
+(1) \\( \forall{x}, A(x) \implies F(x) \\) Premissa
+
+(2) \\( A(p) \\) Premissa
+
+(3) \\( A(p) \implies F(p) \\) Regra 1
+
+(4) \\( F(p) \\) (2, 3) Modus Ponens
+
+</details>
+
+#### Exemplo
+
+"Tudo é caro ou ruim para você. Nem tudo é ruim para você. Assim, existem algumas coisas que são caras e não são ruins para você."
+
+<details>
+
+Fazendo \\( C(x) : x \\) é caro e \\( R(x) : x \\) é ruim, obtemos:
+
+(1) \\( \forall{x}, [C(x) \lor R(x)] \\) Premissa
+
+(2) \\( ~\forall{x}, R(x) \\) Premissa
+
+(3) \\( \exists{x}, ~R(x) \\) (2) Negação
+
+(4) \\( ~R(a) \\) Regra 2
+
+(5) \\( C(a) \lor R(a) \\) Regra 1
+
+(6) \\( C(a) \\) (5, 4) Silogismo Disjuntivo
+
+(7) \\( C(a) \land ~R(a) \\) (4, 6) Conjunção
+
+(8) \\( \exists{x}, [C(x) \land ~R(x)] \\) Regra 2
+
+</details>
+
+#### Exemplo
+
+"Todos os cientistas são estudiosos. Alguns cientistas são inventores. Alguns estudiosos são inventores."
+
+<details>
+
+Faça \\( C(x) : x \\) é cientista; \\( E(x) : x \\) é estudioso; e \\( I(x) : x \\) é inventor. Tomando a negação da conclusão como hipótese adicional, obtemos que o argumento é válido, conforme a árvore de refutação abaixo:
+
+![](../img/fem/arvore-de-refutacao-6.png)
+
+</details>
+
+#### Exemplo
+
+Consideremos o seguinte arugmento: "Nenhum estudante é velho. Alguns jovens não são estudantes. Logo, alguns velhos não são jovens."
+
+<details>
+
+Faça \\( E(x) : x \\) é estudante; \\( V(x) : x \\) é velho; e \\( J(x) : x \\) é jovem. Então
+
+![](../img/fem/arvore-de-refutacao-7.png)
+
+</details>

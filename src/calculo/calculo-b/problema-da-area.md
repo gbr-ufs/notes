@@ -10,7 +10,7 @@ Use retângulos para estimar a área sob a parábola \\( y = x^{2} \\) de 0 até
 
 <details>
 
-Como estamos fazendo de 0 até 1, podemos imaginar um quadrado na área do gráfico de com lados de comprimento 1. Dividindo a área \\( S \\) em quatro faixas, \\( S_{1} \\), \\( S_{2} \\), \\( S_{3} \\), e \\( S_{4} \\), com as retas veticais \\( x = \frac{1}{4} \\), \\( \frac{1}{2} \\), \\( \frac{3}{4} \\) e a existente \\( 1 \\) dividindo-as.
+Como estamos fazendo de 0 até 1, podemos imaginar um quadrado na área do gráfico com lados de comprimento 1. Dividindo a área \\( S \\) em quatro faixas, \\( S_{1} \\), \\( S_{2} \\), \\( S_{3} \\), e \\( S_{4} \\), com as retas veticais \\( x = \frac{1}{4} \\), \\( \frac{1}{2} \\), \\( \frac{3}{4} \\) e a existente \\( 1 \\) dividindo-as.
 
 Podemos aproximar cada faixa por um retângulo com base igual à largura da faixa e altura igual ao lado direito da faixa. As alturas dos retângulos são os valores da função \\( f(x) = x^{2} \\) nas extremidades *diretas* dos subintervalos \\( \left[0, \frac{1}{4}\right] \\), \\( \left[\frac{1}{4}, \frac{1}{2}\right] \\), \\( \left[\frac{1}{2}, \frac{3}{4}\right] \\) e \\( \left[\frac{3}{4}, 1\right] \\).
 
@@ -39,7 +39,7 @@ L_{4} = \frac{1}{4} \cdot 0^{2} + \frac{1}{4} \cdot \left(\frac{1}{4}\right)^{2}
 0,21875 < A < 0,46875
 \\]
 
-Podemos repetir esse procedimento com **números maiores de faixas** para encontrar **resultados mais precisos**. Fazendo isso, podemos chegar a deduzir um resultado como foi feito em [limites](../calculo-a/limites.md).
+Podemos repetir esse procedimento com **números maiores de faixas** para encontrar **resultados mais precisos**. Fazendo isso, podemos chegar a deduzir um resultado como foi feito em [limites](calculo/calculo-a/limites.html).
 
 Nesse exemplo, mil faixas nos dão
 
