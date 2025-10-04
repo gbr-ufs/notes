@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Filtragem de elementos - Notes</title>
+        <title>Programação recursiva em listas - Notes</title>
 
 
         <!-- Custom HTML head -->
@@ -155,47 +155,124 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="filtragem-de-elementos"><a class="header" href="#filtragem-de-elementos">Filtragem de Elementos</a></h1>
-<p>Listas podem ser filtradas, retornando somente os elementos que queremos (aqueles que se encaixam a um critério definido).</p>
-<h2 id="função-filter"><a class="header" href="#função-filter">Função <code>filter</code></a></h2>
-<p>Em JavaScript, fazemos essa filtragem com uso de uma função pré-definida <code>filter(f)</code> onde <code>f</code> é a função definida que representa o critério de seleção de cada elemento.</p>
+                        <h1 id="programação-recursiva-em-listas"><a class="header" href="#programação-recursiva-em-listas">Programação recursiva em listas</a></h1>
+<h2 id="padrão-1-realizar-uma-operação-de-redução-numérica-em-uma-lista-de-valores"><a class="header" href="#padrão-1-realizar-uma-operação-de-redução-numérica-em-uma-lista-de-valores">Padrão 1: realizar uma operação de redução numérica em uma lista de valores</a></h2>
 <h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
-<p>Programa para selecionar produtos que custem menos que R$15.</p>
+<p>Escreva um programa para calcular a soma dos valores de uma lista. Ex: \( {3, 8, 20, 21, 34, 44} \).</p>
 <details>
-<pre><code class="language-javascript">const menorQue = (limite) =&gt; (lista) =&gt; lista.filter((x) =&gt; x &lt; limite)
-const menorQue15 = menorQue(15)
-const listaProdutosR$ = [10.60, 8.50, 5.55, 6.40, 41.00, 23.05, 19.90, 15.90, 22.10, 2.75]
-const resultado = menorQue15(listaProdutosR$)
-console.log(resultado)
+<p><em><strong>Formulação recursiva</strong></em></p>
+<p>\( soma({}) = 0 \)
+\( soma({a_{1}, ...a_{n}}) = a_{1} + soma({...a_{n}}) \)</p>
+<p><em><strong>Implementação em JavaScript</strong></em></p>
+<pre><code class="language-javascript">const soma = (lista) =&gt; {
+    if (lista.length == 0) {
+        return 0
+    } else {
+        const head = lista[0]
+        const tail = lista.slice(1)
+        return (head + soma(tail))n
+    }
+}
 </code></pre>
-<p><code>[ 10.6, 8.5, 5.55, 6.4, 2.75 ]</code></p>
+<p>Versão com uso do já conhecido operador <strong>spread</strong> para listas.</p>
+<pre><code class="language-javascript">const soma = (lista) =&gt; {
+    if (lista.length == 0) {
+        return 0
+    } else {
+        const [x, ...xs] = lista
+        return x + soma(xs)
+    }
+}
+</code></pre>
+<p>Versão com teste acerca de <em>valor indefinido</em> e <em>operador condicional ternário</em></p>
+<pre><code class="language-javascript">const soma = ([x, ...xs]) =&gt; x === undefined ? 0 : x + soma(xs)
+</code></pre>
 </details>
+<h2 id="padrão-2-retornar-o-elemento-de-uma-lista-que-atenda-a-um-determinado-critério"><a class="header" href="#padrão-2-retornar-o-elemento-de-uma-lista-que-atenda-a-um-determinado-critério">Padrão 2: retornar o elemento de uma lista que atenda a um determinado critério</a></h2>
 <h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
-<p>Programa para selecionar os nomes que começam com a letra "A".</p>
+<p>Encontre o maior elemento de uma lista.</p>
 <details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
-
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
+<p><em><strong>Formulação recursiva</strong></em></p>
+<p>\( maior({}) = vazia \)
+\( maior({a_{1}}) = a_{1} \)
+\( maior({a_{1}, ...a_{n}}) = a_{1} \), se \( a_[1} &gt; maior({...a_{n}}) \)</p>
+<p><em><strong>Implementação em JavaScript</strong></em></p>
+<pre><code class="language-javascript">const maior = ([x, ...xs]) =&gt; {
+    if (x === undefined) {
+        return 'Lista vazia'
+    } else {
+        return maiorAux([x, ...xs])
+    }
+}
+const maiorAux = ([x, ...xs]) =&gt; {
+    if (xs.length == 0) {
+        return x
+    } else {
+        const maior = maiorAux([...xs])
+        return (x &gt; maior) ? x : maior
+    }
+}
 </code></pre>
-<p><code>[ "Ana"&lt; "Adele", "Adam" ]</code></p>
 </details>
+<h2 id="padrão-3-realizar-operações-sobre-elementos-de-uma-lista-gerando-uma-nova-lista"><a class="header" href="#padrão-3-realizar-operações-sobre-elementos-de-uma-lista-gerando-uma-nova-lista">Padrão 3: realizar operações sobre elementos de uma lista, gerando uma nova lista.</a></h2>
 <h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
-<p>Programa para selecionar os nomes com mais de 4 letras.</p>
+<p>Inverta a ordem dos elementos de uma lista.</p>
 <details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
-
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
-
-const tamanhoMaiorQue = (n) =&gt; (texto) =&gt; texto.length &gt; n
-const tamanhoMaiorQue4 = tamanhoMaiorQue(4)
-console.log(nomes.filter(tamanhoMaiorQue4))
+<p><em><strong>Formulação recursiva</strong></em></p>
+<p>\( inverte({}) = {} \)
+\( inverte({a_{1}, ...a_{n}}) = {inverte({...a_{n}}), a_{1}} \)</p>
+<p><em><strong>Implementação em JavaScript</strong></em></p>
+<pre><code class="language-javascript">const inverte = ([x, ...xs]) =&gt;
+    x === undefined ? [] : [...inverte(xs), x]
 </code></pre>
-<pre><code>[ "Ana", "Adele", "Adam" ]
-[ "Felipe", "Adele", "Maria" ]
+</details>
+<h3 id="exemplo-3"><a class="header" href="#exemplo-3">Exemplo</a></h3>
+<p>Duplique a presença de cada elemento de uma lista.</p>
+<details>
+<p><em><strong>Formulação recursiva</strong></em></p>
+<p>\( duplica({}) = {} \)
+\( duplica({a_{1} ...a_{n}}) = {a_{1}, a_{1}, ...duplica({...a_{n}})} \)</p>
+<p><em><strong>Implementação em JavaScript</strong></em></p>
+<pre><code class="language-javascript">const duplica = ([x, ...xs]) =&gt;
+    x === undefined ? [] : [x, x, ...duplica(xs)]
+</code></pre>
+</details>
+<h2 id="padrão-4-verificar-se-uma-lista-possui-um-elemento-que-atenda-a-uma-dada-propriedadecaracterística"><a class="header" href="#padrão-4-verificar-se-uma-lista-possui-um-elemento-que-atenda-a-uma-dada-propriedadecaracterística">Padrão 4: verificar se uma lista possui um elemento que atenda a uma dada propriedade/característica</a></h2>
+<h3 id="exemplo-4"><a class="header" href="#exemplo-4">Exemplo</a></h3>
+<p>Verifique se uma lista possui um determinado elemento.</p>
+<details>
+<p><em><strong>Formulação recursiva</strong></em>
+\( elem(e, {}) = F \)
+\( elem(e, {a_{1} ...a_{2}}) = (e = a_{1}) \lor elem(e, {...a_{n}}) \)</p>
+<p><em><strong>Implementação em JavaScript</strong></em></p>
+<pre><code class="language-javascript">const elem = (e, [x, ...xs]) =&gt; {
+    if (x === undefined) {
+        return false
+    } else {
+        return (e === x) || elem(e, [...xs])
+    }
+}
+</code></pre>
+</details>
+<h2 id="padrão-5-verificar-se-a-lista-atende-a-uma-determinada-propriedade"><a class="header" href="#padrão-5-verificar-se-a-lista-atende-a-uma-determinada-propriedade">Padrão 5: verificar se a lista atende a uma determinada propriedade</a></h2>
+<h3 id="exemplo-5"><a class="header" href="#exemplo-5">Exemplo</a></h3>
+<p>Teste se uma string consiste num <em>palíndromo</em>.</p>
+<details>
+<p><em><strong>Formulação recursiva</strong></em></p>
+<p>\( palindromo('') = T \)
+\( palindromo('char1') = T \)
+\( palindromo('char_{1}...meio...char_{n}') = (char_{1} = char_{n}) \land palindromo('meio') \)</p>
+<p><em><strong>Implementação em JavaScript</strong></em></p>
+<pre><code class="language-javascript">const palindromo = (str) =&gt; {
+    if (str.length &lt; 2) {
+        return true
+    } else {
+        const primeiro = str.slice(0, 1)
+        const ultimo = str.slice(-1)
+        const meio = str.slice(1, -1)
+        return (primeiro === ultimo) &amp;&amp; palindromo(meio)
+    }
+}
 </code></pre>
 </details>
 
@@ -203,11 +280,11 @@ console.log(nomes.filter(tamanhoMaiorQue4))
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../programacao/programacao-funcional/recursividade-em-lista/formulacao-da-recursividade-em-listas.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/recursividade-em-lista/recursividade-na-cauda.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -217,11 +294,11 @@ console.log(nomes.filter(tamanhoMaiorQue4))
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../programacao/programacao-funcional/recursividade-em-lista/formulacao-da-recursividade-em-listas.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/recursividade-em-lista/recursividade-na-cauda.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

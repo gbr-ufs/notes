@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Filtragem de elementos - Notes</title>
+        <title>Recursividade na cauda - Notes</title>
 
 
         <!-- Custom HTML head -->
@@ -155,59 +155,57 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="filtragem-de-elementos"><a class="header" href="#filtragem-de-elementos">Filtragem de Elementos</a></h1>
-<p>Listas podem ser filtradas, retornando somente os elementos que queremos (aqueles que se encaixam a um critério definido).</p>
-<h2 id="função-filter"><a class="header" href="#função-filter">Função <code>filter</code></a></h2>
-<p>Em JavaScript, fazemos essa filtragem com uso de uma função pré-definida <code>filter(f)</code> onde <code>f</code> é a função definida que representa o critério de seleção de cada elemento.</p>
-<h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
-<p>Programa para selecionar produtos que custem menos que R$15.</p>
-<details>
-<pre><code class="language-javascript">const menorQue = (limite) =&gt; (lista) =&gt; lista.filter((x) =&gt; x &lt; limite)
-const menorQue15 = menorQue(15)
-const listaProdutosR$ = [10.60, 8.50, 5.55, 6.40, 41.00, 23.05, 19.90, 15.90, 22.10, 2.75]
-const resultado = menorQue15(listaProdutosR$)
-console.log(resultado)
-</code></pre>
-<p><code>[ 10.6, 8.5, 5.55, 6.4, 2.75 ]</code></p>
-</details>
-<h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
-<p>Programa para selecionar os nomes que começam com a letra "A".</p>
-<details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
+                        <h1 id="recursividade-na-cauda"><a class="header" href="#recursividade-na-cauda">Recursividade na cauda</a></h1>
+<p>Observe a sequência aritmética a seguir e crie um programa para encontrar o valor do n-ésimo elemento: \( {2, 7, 12, 17, 22, ...} \)</p>
+<p><em><strong>Formulação recursiva</strong></em></p>
+<p>\( f(1) = 2 \)
+\( f(n) = 5 + f(n - 1) \)</p>
+<p>Observe com atenção o desdobramento da aplicação da formulação recursiva para o cálculo do quinto elemento da sequência.</p>
+<p><em><strong>Desdobramento</strong></em></p>
+<p>\( f(5 \)
+\( = 5 + f(4) \)
+\( = 5 + (5 + f(3)) \)
+\( = 5 + (5 + (5 + f(2))) \)
+\( = 5 + (5 + (5+ (5 + f(1)))) \)
+\( = 5 + (5 + (5 + (5 + 2))) \)
+\( = 22 \)</p>
+<p>A cada chamada recursiva, é formada uma sequência acumulada dde operações cujo resultado final permanece suspenso até a última aplicação da função. Esse acúmulo de valores <strong>exige espaço em memória</strong> da máquina e pode eventualemente causar problemas de estouro de memória.</p>
+<p>Uma forma <strong>alternativa</strong> de lidar com esse comportamento e <strong>antecipar toda a computação parcial possível</strong>, reduzindo a necessidade de armazenamento de valores em memória, <strong>é acrescentar um parâmetro à função para agir como acumulador</strong>.</p>
+<p><em><strong>Formulação recursiva com acumulador</strong></em></p>
+<p>\( f(n) = f(n, 2) \)
+\( f(1, acc) = acc \)
+\( f(n, acc) = f(n - 1, 5 + ac) \)</p>
+<p><em><strong>Desdobramento</strong></em></p>
+<p>\( f(5) = f(5, 2) \)
+\( = f(4, 5 + 2) \to f(4, 7) \)
+\( = f(3, 5 + 7) \to f(3, 12) \)
+\( = f(2, 5 + 12) \to f(2, 17) \)
+\( = f(1, 5 + 17) \to f(1, 22) \)
+\( = 22 \)</p>
+<p>Esse tipo de abordagem é conhecido como <strong>recursividade na cauda</strong> porque a chamada recursiva é a <strong>última</strong> operação realizada.</p>
+<p><em><strong>Implementação em JavaScript</strong></em></p>
+<pre><code class="language-javascript">const fAux = (n, acc) =&gt; {
+    if (n == 1) {
+        return acc
+    } else {
+        return fAux(n - 1, 5 + acc)
+    }
+}
 
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
+const f = (n) =&gt; {
+    return fAux(n, 2)
+}
 </code></pre>
-<p><code>[ "Ana"&lt; "Adele", "Adam" ]</code></p>
-</details>
-<h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
-<p>Programa para selecionar os nomes com mais de 4 letras.</p>
-<details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
-
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
-
-const tamanhoMaiorQue = (n) =&gt; (texto) =&gt; texto.length &gt; n
-const tamanhoMaiorQue4 = tamanhoMaiorQue(4)
-console.log(nomes.filter(tamanhoMaiorQue4))
-</code></pre>
-<pre><code>[ "Ana", "Adele", "Adam" ]
-[ "Felipe", "Adele", "Maria" ]
-</code></pre>
-</details>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../programacao/programacao-funcional/recursividade-em-lista/programacao-recursiva-em-listas.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../coretech/psel-2025.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -217,11 +215,11 @@ console.log(nomes.filter(tamanhoMaiorQue4))
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../programacao/programacao-funcional/recursividade-em-lista/programacao-recursiva-em-listas.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../coretech/psel-2025.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Filtragem de elementos - Notes</title>
+        <title>Pureza - Notes</title>
 
 
         <!-- Custom HTML head -->
@@ -155,59 +155,114 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="filtragem-de-elementos"><a class="header" href="#filtragem-de-elementos">Filtragem de Elementos</a></h1>
-<p>Listas podem ser filtradas, retornando somente os elementos que queremos (aqueles que se encaixam a um critério definido).</p>
-<h2 id="função-filter"><a class="header" href="#função-filter">Função <code>filter</code></a></h2>
-<p>Em JavaScript, fazemos essa filtragem com uso de uma função pré-definida <code>filter(f)</code> onde <code>f</code> é a função definida que representa o critério de seleção de cada elemento.</p>
-<h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
-<p>Programa para selecionar produtos que custem menos que R$15.</p>
-<details>
-<pre><code class="language-javascript">const menorQue = (limite) =&gt; (lista) =&gt; lista.filter((x) =&gt; x &lt; limite)
-const menorQue15 = menorQue(15)
-const listaProdutosR$ = [10.60, 8.50, 5.55, 6.40, 41.00, 23.05, 19.90, 15.90, 22.10, 2.75]
-const resultado = menorQue15(listaProdutosR$)
-console.log(resultado)
-</code></pre>
-<p><code>[ 10.6, 8.5, 5.55, 6.4, 2.75 ]</code></p>
-</details>
-<h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
-<p>Programa para selecionar os nomes que começam com a letra "A".</p>
-<details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
+                        <h1 id="pureza"><a class="header" href="#pureza">Pureza</a></h1>
+<p>Uma função <strong>pura</strong> é uma função em que o valor de retorno é determinado <strong>apenas</strong> por seus valores de entrada, sem efeitos colaterais observáveis.</p>
+<h2 id="constantes-globais-vs-locais-vs-parâmetros"><a class="header" href="#constantes-globais-vs-locais-vs-parâmetros">Constantes globais vs. locais vs. parâmetros</a></h2>
+<p>Uso de constantes definidas globalmente no código gera funções <em>impuras</em> e <em>instáveis</em>.</p>
+<pre><code class="language-javascript">// Constante global.
+const PI = 3.141592
 
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
+// Impura: se alguém modificar o valor de PI,
+// a mesma função gerará um valor diferente.
+function areaCirc(raio) {
+    return raio * raio * PI
+}
+console.log(`Impura: ${areaCirc(10)}`)
 </code></pre>
-<p><code>[ "Ana"&lt; "Adele", "Adam" ]</code></p>
-</details>
-<h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
-<p>Programa para selecionar os nomes com mais de 4 letras.</p>
-<details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
+<p><code>Impura: 314.1592</code></p>
+<p>Uso de constantes pré-definidas pela própria linguagem gera funções <em>impuras</em>, porém, <em>estáveis</em>.</p>
+<pre><code class="language-javascript">// Impura, mas estável.
+// Modificar o valor de Math.PI é bem mais raro.
+function areaCirc2(raio) {
+    return raio * raio * Math.PI
+}
+console.log(`Impura estável: ${areaCirc2(10)}`)
+</code></pre>
+<p><code>Impura estável: 314.1592653589793</code></p>
+<p>Constante definida na própria função promove <em>pureza</em>.</p>
+<pre><code class="language-javascript">// Pura: depende apenas dos argumentos passados.
+// Usa parâmetros inicializados.
+function areaCirc3(raio, pi=3.14) {
+    return raio * raio * pi
+}
+console.log(`Pura param: ${areaCirc3(10)}`)
+console.log(`Pura param: ${areaCirc3(10, 3.141592)}`)
+console.log(`Pura param: ${areaCirc3(10, Math.PI)}`)
 
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
+// Pura: depende apenas dos argumentos passados.
+// Usa constante local.
+function areaCirc4(raio) {
+    const PI = 3.14
 
-const tamanhoMaiorQue = (n) =&gt; (texto) =&gt; texto.length &gt; n
-const tamanhoMaiorQue4 = tamanhoMaiorQue(4)
-console.log(nomes.filter(tamanhoMaiorQue4))
+    return raio * raio * PI
+}
+console.log(`Pura local: ${areaCirc4(10)}`)
 </code></pre>
-<pre><code>[ "Ana", "Adele", "Adam" ]
-[ "Felipe", "Adele", "Maria" ]
+<pre><code>Pura param: 314
+Pura param: 314.1592
+Pura param: 314.1592653589793
+Pura local: 314
 </code></pre>
-</details>
+<h2 id="valores-aleatórios"><a class="header" href="#valores-aleatórios">Valores aleatórios</a></h2>
+<p>Função com geração aleatória é naturalmente impura. A cada execução, o resultado será diferente.</p>
+<pre><code class="language-javascript">function gerarNumeroAleatorio(min, max) {
+    const fator = max - min + 1
+    return parseInt(Math.random() * fator) + min
+}
+
+console.log(gerarNumeroAleatorio(1, 10000))
+console.log(gerarNumeroAleatorio(1, 10000))
+console.log(gerarNumeroAleatorio(1, 10000))
+console.log(gerarNumeroAleatorio(1, 10000))
+console.log(gerarNumeroAleatorio(1, 10000))
+</code></pre>
+<pre><code>7236
+6080
+1722
+7450
+4254
+</code></pre>
+<h2 id="efeitos-colaterais-observáveis"><a class="header" href="#efeitos-colaterais-observáveis">Efeitos colaterais observáveis</a></h2>
+<p>Alterar valores fora do escopo da função fere o paradigma.</p>
+<pre><code class="language-javascript">let qtde = 0
+
+// Impura
+function somar(a, b) {
+    qtde++ // efeitos colaterais observáveis.
+    return a + b
+}
+
+// Impura
+function imprimeQtde(valor) {
+    console.log(`Qtde: ${valor}`)
+}
+
+imprimeQtde(qtde)
+console.log(somar(68, 31))
+console.log(somar(68, 31))
+console.log(somar(68, 31))
+console.log(somar(68, 31))
+console.log(somar(68, 31))
+imprimeQtde(qtde)
+</code></pre>
+<pre><code>Qtde: 0
+99
+99
+99
+99
+99
+Qtde: 5
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../programacao/programacao-funcional/principios-do-paradigma/principios-do-paradigma.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/principios-do-paradigma/funcoes-de-alta-ordem.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -217,11 +272,11 @@ console.log(nomes.filter(tamanhoMaiorQue4))
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../programacao/programacao-funcional/principios-do-paradigma/principios-do-paradigma.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/principios-do-paradigma/funcoes-de-alta-ordem.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

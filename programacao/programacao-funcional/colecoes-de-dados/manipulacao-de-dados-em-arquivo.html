@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Filtragem de elementos - Notes</title>
+        <title>Manipulação de dados em arquivo - Notes</title>
 
 
         <!-- Custom HTML head -->
@@ -155,59 +155,66 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="filtragem-de-elementos"><a class="header" href="#filtragem-de-elementos">Filtragem de Elementos</a></h1>
-<p>Listas podem ser filtradas, retornando somente os elementos que queremos (aqueles que se encaixam a um critério definido).</p>
-<h2 id="função-filter"><a class="header" href="#função-filter">Função <code>filter</code></a></h2>
-<p>Em JavaScript, fazemos essa filtragem com uso de uma função pré-definida <code>filter(f)</code> onde <code>f</code> é a função definida que representa o critério de seleção de cada elemento.</p>
+                        <h1 id="manipulação-de-dados-em-arquivo"><a class="header" href="#manipulação-de-dados-em-arquivo">Manipulação de dados em arquivo</a></h1>
+<h2 id="modo-síncrono"><a class="header" href="#modo-síncrono">Modo síncrono</a></h2>
+<p>Neste modo, o arquivo é acessado e o programa interrompe seu processamento enquanto os dados estão sendo lidos.</p>
+<p>Para leitura síncrona, JavaScript disponibiliza a função <code>readFileSync</code>. Essa função possui o caminho do arquivo como parâmetro de entrada e retorna seu conteúdo.</p>
 <h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
-<p>Programa para selecionar produtos que custem menos que R$15.</p>
-<details>
-<pre><code class="language-javascript">const menorQue = (limite) =&gt; (lista) =&gt; lista.filter((x) =&gt; x &lt; limite)
-const menorQue15 = menorQue(15)
-const listaProdutosR$ = [10.60, 8.50, 5.55, 6.40, 41.00, 23.05, 19.90, 15.90, 22.10, 2.75]
-const resultado = menorQue15(listaProdutosR$)
-console.log(resultado)
+<p>Programa que lê o conteúdo de um arquivo de texto, exibe esse conteúdo no terminal e A SEGUIR, realiza a próxima operação programada.</p>
+<pre><code class="language-javascript">// Bibliotecas Node para ler arquivos.
+const fs = require('fs')
+const path = require('path')
+
+// Especifica o nome do arquivo.
+const caminho = path.join(__dirname, 'dados.txt')
+
+// Fica esperando a leitura do arquivo para avançar o código.
+console.log('=== INICIO da leitura do arquivo...')
+const conteudo = fs.readFileSync(caminho)
+console.log(conteudo.toString())
+console.log('=== FIM da leitura.\n')
+
+console.log('=== INICIO de uma outra operação qualquer...')
+const exec = (fn, a, b) =&gt; fn(a, b)
+const somarNoTerminal = (x, y) =&gt; console.log(`Resultado: ${x + y}.`)
+exec(somarNoTerminal, 56, 38)
+console.log('=== FIM da outra operação.\n')
 </code></pre>
-<p><code>[ 10.6, 8.5, 5.55, 6.4, 2.75 ]</code></p>
-</details>
+<h2 id="modo-assíncrono"><a class="header" href="#modo-assíncrono">Modo assíncrono</a></h2>
+<p>Executa sem travar a execução de outras funções. Executa depois do arquivo ter sido completamente lido.</p>
+<p>Para leitura assíncrona, JavaScript disponibiliza a função <code>readFile</code>. Além do caminho do arquivo, essa função exige um segundo parâmetro de entrada: uma função responsável por realizar o processamento desejado assim que o conteúdo do arquivo tiver sido completamente lido, uma função de <strong>callback</strong>.</p>
 <h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
-<p>Programa para selecionar os nomes que começam com a letra "A".</p>
-<details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
+<p>Programa que lê o conteúdo de um arquivo de texto no modo assíncrono, com <em>callback</em>.</p>
+<pre><code class="language-javascript">// Bibliotecas Node para ler arquivos.
+const fs = require('fs')
+const path = require('path')
 
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
-</code></pre>
-<p><code>[ "Ana"&lt; "Adele", "Adam" ]</code></p>
-</details>
-<h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
-<p>Programa para selecionar os nomes com mais de 4 letras.</p>
-<details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
+const caminho = path.join(__dirname, 'dados.txt')
 
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
+// Callback.
+const exibirConteudo = (_, conteudo) =&gt;
+      console.log(conteudo.toString())
 
-const tamanhoMaiorQue = (n) =&gt; (texto) =&gt; texto.length &gt; n
-const tamanhoMaiorQue4 = tamanhoMaiorQue(4)
-console.log(nomes.filter(tamanhoMaiorQue4))
+console.log('=== INICIO da leitura do arquivo...')
+fs.readFile(caminho, exibirConteudo)
+console.log('=== FIM da leitura.\n')
+
+console.log('=== INICIO de uma outra operação qualquer...')
+const exec = (fn, a, b) =&gt; fn(a, b)
+const somarNoTerminal = (x, y) =&gt; console.log(`Resultado: ${x + y}.`)
+exec(somarNoTerminal, 56, 38)
+console.log('=== FIM da outra operação.\n')
 </code></pre>
-<pre><code>[ "Ana", "Adele", "Adam" ]
-[ "Felipe", "Adele", "Maria" ]
-</code></pre>
-</details>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/composicao-de-funcoes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/principios-do-paradigma/principios-do-paradigma.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -217,11 +224,11 @@ console.log(nomes.filter(tamanhoMaiorQue4))
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/composicao-de-funcoes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/principios-do-paradigma/principios-do-paradigma.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

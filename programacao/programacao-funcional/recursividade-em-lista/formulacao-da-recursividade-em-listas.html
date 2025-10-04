@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Filtragem de elementos - Notes</title>
+        <title>Formulação da recursividade em listas - Notes</title>
 
 
         <!-- Custom HTML head -->
@@ -155,59 +155,33 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="filtragem-de-elementos"><a class="header" href="#filtragem-de-elementos">Filtragem de Elementos</a></h1>
-<p>Listas podem ser filtradas, retornando somente os elementos que queremos (aqueles que se encaixam a um critério definido).</p>
-<h2 id="função-filter"><a class="header" href="#função-filter">Função <code>filter</code></a></h2>
-<p>Em JavaScript, fazemos essa filtragem com uso de uma função pré-definida <code>filter(f)</code> onde <code>f</code> é a função definida que representa o critério de seleção de cada elemento.</p>
-<h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
-<p>Programa para selecionar produtos que custem menos que R$15.</p>
+                        <h1 id="formulação-da-recursividade-em-listas"><a class="header" href="#formulação-da-recursividade-em-listas">Formulação da recursividade em listas</a></h1>
+<p>Muitos problemas computacionais são resolvidos repetindo-se uma mesma computação sobre coleções de dados de tamanho cada vez menor até que se chege a um ponto onde não há mais necessidade de continuar esse processo. Isso é típico em problemas onde identifica-se claramente o perfil de <strong>sequência</strong> de dados. Uma das formas de expressar uma sequência de dados é com recursão.</p>
+<h2 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h2>
+<p>Considere o problema de realizar a soma dos elementos de uma dada sequência de valores: \( {3, 8, 20, 21, 34, 44} \). Encontre uma fórmula recursiva apropriada para representar essa soma.</p>
 <details>
-<pre><code class="language-javascript">const menorQue = (limite) =&gt; (lista) =&gt; lista.filter((x) =&gt; x &lt; limite)
-const menorQue15 = menorQue(15)
-const listaProdutosR$ = [10.60, 8.50, 5.55, 6.40, 41.00, 23.05, 19.90, 15.90, 22.10, 2.75]
-const resultado = menorQue15(listaProdutosR$)
-console.log(resultado)
-</code></pre>
-<p><code>[ 10.6, 8.5, 5.55, 6.4, 2.75 ]</code></p>
-</details>
-<h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
-<p>Programa para selecionar os nomes que começam com a letra "A".</p>
-<details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
-
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
-</code></pre>
-<p><code>[ "Ana"&lt; "Adele", "Adam" ]</code></p>
-</details>
-<h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
-<p>Programa para selecionar os nomes com mais de 4 letras.</p>
-<details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
-
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
-
-const tamanhoMaiorQue = (n) =&gt; (texto) =&gt; texto.length &gt; n
-const tamanhoMaiorQue4 = tamanhoMaiorQue(4)
-console.log(nomes.filter(tamanhoMaiorQue4))
-</code></pre>
-<pre><code>[ "Ana", "Adele", "Adam" ]
-[ "Felipe", "Adele", "Maria" ]
-</code></pre>
+\\( \sum\{\} \implies 0 \\)
+\\( \sum\{3, 8, 20, 21, 34, 44\} \implies 3 + \\)
+\\( \sum\{8, 20, 21, 34, 44\} \implies 8 + \\)
+\\( \sum\{20, 21, 34, 44\} \implies 20 + \\)
+...
+<p>\( soma({}) = 0 \)
+\( soma({a_{1}, a_{2}, ..., a_{n}}) = a_{1} + \)
+\( soma({a_{2}, ..., a_{n}}) = a_{2} + \)
+...</p>
+<p>\( soma(lista) = 0, \text{ caso } lista = \emptyset \)
+\( soma(elem1, sublista) = elem1 + soma(sublista) \), caso contrário.</p>
 </details>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../programacao/programacao-funcional/recursividade-em-lista/recursividade-em-lista.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/recursividade-em-lista/programacao-recursiva-em-listas.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -217,11 +191,11 @@ console.log(nomes.filter(tamanhoMaiorQue4))
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../programacao/programacao-funcional/recursividade-em-lista/recursividade-em-lista.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/recursividade-em-lista/programacao-recursiva-em-listas.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

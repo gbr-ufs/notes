@@ -467,6 +467,110 @@ A \underline{\lor} B, C \implies ~A, ~B \vDash A \implies C
 <tr><td>Dilema Destrutivo</td><td>\( P \implies Q, R \implies S, ~Q \lor ~S \)</td><td>\( ~P \lor ~R \)</td></tr>
 </tbody></table>
 </div>
+<h3 id="exemplo-12"><a class="header" href="#exemplo-12">Exemplo</a></h3>
+<p>Passe o celular ou a carteira. Dou o relógio ou não dou o celular. Fico com os documentos ou não dou a carteira. Não fico com os documentos. Logo, dou o celular e o relógio. Em símbolos</p>
+<p>\[
+P \lor C, L \or ~P, N \lor ~C, ~N \vDash P \land L
+\]</p>
+<details>
+<p>(1) \( P \lor C \) Premissa</p>
+<p>(2) \( L \lor ~P \) Premissa</p>
+<p>(3) \( N \lor ~C \) Premissa</p>
+<p>(4) \( ~N \) Premissa</p>
+<p>(5) \( ~C \) (3, 4) Silogismo Disjuntivo</p>
+<p>(6) \( P \) (1, 5) Silogismo Disjuntivo</p>
+<p>(7) \( L \) (2, 6) Silogismo Disjuntivo</p>
+<p>(8) \( P \land L \) (6, 7) Conjunção</p>
+</details>
+<p>Como chegamos na conclusão, temos que o argumento é válido.</p>
+<h3 id="exemplo-13"><a class="header" href="#exemplo-13">Exemplo</a></h3>
+<p>Se não estudar, não serei aprovado. Se colar, não estudo. Se não perder a concentração, serei aprovado. Se desligo o celular, não perco a concentração. Logo, se colo, não desligo o celular. Em símbolos</p>
+<p>\[
+~E \implies ~A, C \implies E, ~P \implies A, M \implies ~P \vDash C \implies ~M
+\]</p>
+<details>
+<p>(1) \( ~E \implies ~A \) Premissa</p>
+<p>(2) \( C \implies ~E \) Premissa</p>
+<p>(3) \( ~P \implies A \) Premissa</p>
+<p>(4) \( M \implies ~P \) Premissa</p>
+<p>(5) \( C \implies ~A \) (1, 2) Silogismo Hipotético</p>
+<p>(6) \( ~A \implies P \) (3) Contrapositiva</p>
+<p>(7) \( C \implies P \) (5, 6) Silogismo Hipotético</p>
+<p>(8) \( P \implies ~M \) (4) Contrapositiva</p>
+<p>(9) \( C \implies ~M \) (7, 8) Silogismo Hipotético</p>
+</details>
+<h2 id="Árvore-de-refutação"><a class="header" href="#Árvore-de-refutação">Árvore de Refutação</a></h2>
+<p>Involve provar que o arugmento <strong>não</strong> pode ser inválido. Assumimos a conclusão como falsa, e, se não encontrarmos nenhum argumento a favor, então o argumento é válido.</p>
+<p>Uma conjunção gera somente um ramo, enquanto uma disjunção gera dois ramos.</p>
+<p><img src="../img/fem/arvore-de-refutacao-1.png" alt="" /></p>
+<p>Se encontarmos uma contradição tipo \( P \) e \( ~P \) então o ramo é fechado.</p>
+<h3 id="exemplo-14"><a class="header" href="#exemplo-14">Exemplo</a></h3>
+<p>Verificar por meio de árvore de refutação a validade do argumento \( [(P \lor Q) \land ~P] \vDash Q \).</p>
+<details>
+<p><img src="../img/fem/arvore-de-refutacao-2.png" alt="" /></p>
+</details>
+<h3 id="exemplo-15"><a class="header" href="#exemplo-15">Exemplo</a></h3>
+<p>\[
+(Q \lor (R \implies T), Q \implies S, ~S \implies (T \implies P), ~S \vDash R \implies P
+\]</p>
+<p>Dica: simplificamos ao converter \( A \implies B \) em \( ~A \lor B \).</p>
+<details>
+<p><img src="../img/fem/arvore-de-refutacao-3.png" alt="" /></p>
+</details>
+<h3 id="exemplo-16"><a class="header" href="#exemplo-16">Exemplo</a></h3>
+<p>Considere o argumento \( {[P \implies (R \lor S)] \land [(R \land S) \implies Q]} \vDash (P \implies Q) \).</p>
+<details>
+<p><img src="../img/fem/arvore-de-refutacao-4.png" alt="" /></p>
+<p>Como dois ramos ficaram abertos, o argumento é inválido.</p>
+</details>
+<h3 id="exemplo-17"><a class="header" href="#exemplo-17">Exemplo</a></h3>
+<p>Construa uma árvore de refutação para verificar se a fórmula \( (P \implies Q) \lor (P \land ~Q) \) é uma tautologia.</p>
+<details>
+<p><img src="../img/fem/arvore-de-refutacao-5.png" alt="" /></p>
+</details>
+<h3 id="argumentos-envolvendo-quantificadores"><a class="header" href="#argumentos-envolvendo-quantificadores">Argumentos Envolvendo Quantificadores</a></h3>
+<blockquote>
+<p><strong>Regra 1</strong>: Dada qualquer função proposicional \( P(x) \), da verdade de \( \forall{x}, P(x) \), podemos inferir a verdade de \( P(a) \) para qualquer \( a \) no universo de discurso.</p>
+</blockquote>
+<blockquote>
+<p><strong>Regra 2</strong>: Dada qualquer função proposicional \( P(x) \), da verdade de \( \exists{x}, P(x) \), podemos inferir que existe pelo menos um elemento \( a \) no universo de discurso para o qual \( P(a) \) é verdadeiro.</p>
+</blockquote>
+<p>Procure utilizar primeiro as proposições que envolvem quantificadores existenciais.</p>
+<h4 id="exemplo-18"><a class="header" href="#exemplo-18">Exemplo</a></h4>
+<p>Prove a validade do seguinte argumento: "Todos os atletas são fisicamente fortes. Paulo é um atleta. Então Paulo é fisicamente forte."</p>
+<details>
+<p>Sejam \( A(x) : x \) é um atleta; \( F(x) : x \) é fisicamente forte. Assim,</p>
+<p>(1) \( \forall{x}, A(x) \implies F(x) \) Premissa</p>
+<p>(2) \( A(p) \) Premissa</p>
+<p>(3) \( A(p) \implies F(p) \) Regra 1</p>
+<p>(4) \( F(p) \) (2, 3) Modus Ponens</p>
+</details>
+<h4 id="exemplo-19"><a class="header" href="#exemplo-19">Exemplo</a></h4>
+<p>"Tudo é caro ou ruim para você. Nem tudo é ruim para você. Assim, existem algumas coisas que são caras e não são ruins para você."</p>
+<details>
+<p>Fazendo \( C(x) : x \) é caro e \( R(x) : x \) é ruim, obtemos:</p>
+<p>(1) \( \forall{x}, [C(x) \lor R(x)] \) Premissa</p>
+<p>(2) \( ~\forall{x}, R(x) \) Premissa</p>
+<p>(3) \( \exists{x}, ~R(x) \) (2) Negação</p>
+<p>(4) \( ~R(a) \) Regra 2</p>
+<p>(5) \( C(a) \lor R(a) \) Regra 1</p>
+<p>(6) \( C(a) \) (5, 4) Silogismo Disjuntivo</p>
+<p>(7) \( C(a) \land ~R(a) \) (4, 6) Conjunção</p>
+<p>(8) \( \exists{x}, [C(x) \land ~R(x)] \) Regra 2</p>
+</details>
+<h4 id="exemplo-20"><a class="header" href="#exemplo-20">Exemplo</a></h4>
+<p>"Todos os cientistas são estudiosos. Alguns cientistas são inventores. Alguns estudiosos são inventores."</p>
+<details>
+<p>Faça \( C(x) : x \) é cientista; \( E(x) : x \) é estudioso; e \( I(x) : x \) é inventor. Tomando a negação da conclusão como hipótese adicional, obtemos que o argumento é válido, conforme a árvore de refutação abaixo:</p>
+<p><img src="../img/fem/arvore-de-refutacao-6.png" alt="" /></p>
+</details>
+<h4 id="exemplo-21"><a class="header" href="#exemplo-21">Exemplo</a></h4>
+<p>Consideremos o seguinte arugmento: "Nenhum estudante é velho. Alguns jovens não são estudantes. Logo, alguns velhos não são jovens."</p>
+<details>
+<p>Faça \( E(x) : x \) é estudante; \( V(x) : x \) é velho; e \( J(x) : x \) é jovem. Então</p>
+<p><img src="../img/fem/arvore-de-refutacao-7.png" alt="" /></p>
+</details>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

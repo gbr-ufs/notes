@@ -166,7 +166,7 @@
 \vec{v} = x\vec{i} + y\vec{j} + z\vec{zk}
 \]</p>
 <h2 id="expressão-analítica"><a class="header" href="#expressão-analítica">Expressão Analítica</a></h2>
-<p>A representação de um vetor \( \vec{v} \) por \( \vec{v} = (x, y, z \).</p>
+<p>A representação de um vetor \( \vec{v} \) por \( \vec{v} = (x, y, z) \).</p>
 <h2 id="paralelismo-de-vetores"><a class="header" href="#paralelismo-de-vetores">Paralelismo de Vetores</a></h2>
 <p>\[
 \vec{u} || \vec{v} \iff \vec{u} = k\vec{v}, k \in \mathbb{R}
@@ -368,6 +368,84 @@ Para a operação fazemos \( \vec{i} (y_{1} \cdot z_{2} - y_{2} \cdot z_{1}) - \
 \end{vmatrix}
 = \vec_{i} (1 + 8) - \vec{j} (-3 + 4) + \vec{k} (12 + 2) = (9, -1, 14)
 \]</p>
+</details>
+<h3 id="propriedades-1"><a class="header" href="#propriedades-1">Propriedades</a></h3>
+<ol>
+<li>\( \vec{u} \times \vec{0} = \vec{0} \)</li>
+<li>\( \vec{v} \times \vec{u} = -(\vec{u} \times \vec{v}) \)</li>
+<li>\( (\vec{u} \times \vec{v}) \bot \vec{u} \) e \( (\vec{u} \times \vec{v}) \bot \vec{v} \)</li>
+<li>\( ||\vec{u} \times \vec{v}||^{2} = ||\vec{u}||^{2}||\vec{v}||^{2} - (\langle \vec{u}, \vec{v} \rangle)^{2} \)</li>
+<li>Se \( \theta \) é o ângulo entre dois vetores não-nulos \( \vec{u} \) e \( \vec{v} \), então
+\[
+||\vec{u} \times \vec{v}|| = ||\vec{u}||||\vec{v}||\text{sin} \theta
+\]</li>
+<li>\( \vec{u} \times \vec{v} = \vec{0} \iff \vec{u}||\vec{v} \)</li>
+<li>\( \vec{u} \times (\vec{v} + \vec{w}) = \vec{u} \times \vec{v} + \vec{u} \times \vec{w} \)
+\( (\vec{u} + \vec{v}) \times \vec{w} = \vec{u} \times \vec{w} + \vec{v} \times \vec{w} \)</li>
+<li>\( x(\vec{u} \times \vec{v}) = (x\vec{u}) \times \vec{v} = \vec{u} \times (x\vec{v}) \)</li>
+<li>\( \langle \vec{u}, \vec{v} \times \vec{w} \rangle = \langle \vec{u} \times \vec{v}, \vec{w} \rangle \)</li>
+</ol>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Por 6, temos que \( \vec{u} \times \vec{u} = \vec{0}, \forall \vec{u} \).
+Por 2, vemos que o produto vetorial não é comutativo, ou seja, \( \vec{u} \times \vec{v} \neq \vec{v} \times \vec{u} \).
+O produto vetorial não é associativo, ou seja, em geral temos que
+\( (\vec{u} \times \vec{v}) \times \vec{w} \neq \vec{u} \times (\vec{v} \times \vec{w}) \).</p>
+</blockquote>
+<h3 id="exemplo-9"><a class="header" href="#exemplo-9">Exemplo</a></h3>
+<p>Determine um vetor com módulo igual a 5 <em>simultaneamente ortogonal</em> aos vetores \( \vec{u} = (1, 1, 0) \) e \( \vec{v} = (-1, 1, 2) \).</p>
+<details>
+<p>\[
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+1 &amp; 1 &amp; 0
+-1 &amp; 1 &amp; 2
+\end{vmatrix}
+= (2, -2, 2) = \vec{w}
+\]</p>
+<p>\[
+||\vec{w}|| = \sqrt{(2)^{2} + (2)^{2} + (2)^{2}} = \sqrt{12} = 2\sqrt{3}
+\]</p>
+<p>\[
+2\sqrt{3}x = 5 \implies x = \frac{5 \sqrt{3}}{6}
+\]</p>
+<p>\[
+\vec{w} \cdot \frac{5 \sqrt{3}}{6} = (\frac{10\sqrt{3}}{6}, -\frac{10\sqrt{3}}{6}, \frac{10\sqrt{3}}{6}) = (\frac{5 \sqrt{3}}{3}, -\frac{5 \sqrt{3}}{3}, \frac{5 \sqrt{3}}{3})
+\]</p>
+</details>
+<h3 id="interpretação-geométrica-para-o-produto-vetorial"><a class="header" href="#interpretação-geométrica-para-o-produto-vetorial">Interpretação Geométrica para o Produto Vetorial</a></h3>
+<p>Sejam \( \vec{u} \) e \( \vec{v} \) vetores não-nulos e não-paralelos, e \( \theta \) o ângulo entre eles. Sabemos que estes valores determinam um paralelogramo.</p>
+<p>Chame de \( a \) a mediada da altura deste paralelogramo. Note que</p>
+<p>\[
+\text{sin} \theta = \frac{a}{||\vec{v}||} \implies a = ||\vec{v}|| \text{sin} \theta
+\]</p>
+<p>Assim, a área deste paralelogramo é dada por</p>
+<p>\[
+A = \text{base} \cdot \text{altura} = ||\vec{u}||a = ||\vec{u}||||\vec{v}|| \text{sin} \theta
+\]</p>
+<p>Portanto, pela propriedade 5 obtemos que</p>
+<p>\[
+A = ||\vec{u} \times \vec{v}||
+\]</p>
+<p>Conclusão: O módulo do produto de vetorial de dois vetores não-nulos é igual a área do paralelogramo determinado por eles.</p>
+<h4 id="exemplo-10"><a class="header" href="#exemplo-10">Exemplo</a></h4>
+<p>Considere os vetores \( \vec{u} = (1, -1, 1) \) e \( \vec{v} = (2, -3, 4) \). Calcule a área do paralelogramo gerado por \( \vec{u} \) e \( \vec{v} \).</p>
+<details>
+<p>\[
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+1 &amp; -1 &amp; 1
+2 &amp; -3 &amp; 4
+\end{vmatrix}
+= \vec_{i} (-4 + 3) - \vec{j} (4 - 2) + \vec{k} (-3 + 2) = (-1, -2, -1) = \vec{w}
+\]</p>
+<p>\[
+||\vec{w}|| = \sqrt{(-1)^{2} + (-2)^{2} + (-1)^{2}} = \sqrt{6}
+\]</p>
+</details>
+<h4 id="exemplo-11"><a class="header" href="#exemplo-11">Exemplo</a></h4>
+<p>Considere os pontos \( A = (2, 1, 1) \), \( B = (3, -1, 0) \) e \( C = (4, 2, -2) \). Calcule a área do triângulo \( ABC \).</p>
+<details>
 </details>
 
                     </main>

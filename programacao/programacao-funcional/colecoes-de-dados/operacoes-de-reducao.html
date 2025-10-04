@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Filtragem de elementos - Notes</title>
+        <title>Operações de Redução - Notes</title>
 
 
         <!-- Custom HTML head -->
@@ -155,59 +155,56 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="filtragem-de-elementos"><a class="header" href="#filtragem-de-elementos">Filtragem de Elementos</a></h1>
-<p>Listas podem ser filtradas, retornando somente os elementos que queremos (aqueles que se encaixam a um critério definido).</p>
-<h2 id="função-filter"><a class="header" href="#função-filter">Função <code>filter</code></a></h2>
-<p>Em JavaScript, fazemos essa filtragem com uso de uma função pré-definida <code>filter(f)</code> onde <code>f</code> é a função definida que representa o critério de seleção de cada elemento.</p>
+                        <h1 id="operações-de-redução"><a class="header" href="#operações-de-redução">Operações de Redução</a></h1>
+<p><strong>Redução</strong> é o termo genérico usado para representar qualquer <strong>operação que aje sobre todos os elementos</strong> em conjunto gerando algum resultado unitário; ou seja, você <strong>reduz</strong> a quantidade de elementos para um único por meio de uma operação.</p>
+<h2 id="função-reduce"><a class="header" href="#função-reduce">Função <code>reduce</code></a></h2>
+<p>Em JavaScript, fazemos essa redução com uso de uma função pré-definida <code>reduce(f, i)</code> onde <code>f</code> é a função definida que representa a operação a ser efetuada sobre todos os elementos e <code>i</code> é o <strong>valor inicial</strong> a ser considerado na operação de redução.</p>
+<blockquote>
+<p><strong>Observação</strong>
+O argumento <code>i</code> pode ser omitido em alguns casos.</p>
+</blockquote>
+<p>Por sua vez, a função <code>f</code>, além do paraâmetro usual, usa <strong>um acumulador</strong> <code>acc</code>. Esse parâmetro é importante para armazenar as parciais do processo de acumulação que se inicia a partir do valor inicial <code>i</code> indicado.</p>
 <h3 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h3>
-<p>Programa para selecionar produtos que custem menos que R$15.</p>
+<p>Programa para somar os valores de toda a cesta de produtos a serem comprados.</p>
 <details>
-<pre><code class="language-javascript">const menorQue = (limite) =&gt; (lista) =&gt; lista.filter((x) =&gt; x &lt; limite)
-const menorQue15 = menorQue(15)
-const listaProdutosR$ = [10.60, 8.50, 5.55, 6.40, 41.00, 23.05, 19.90, 15.90, 22.10, 2.75]
-const resultado = menorQue15(listaProdutosR$)
+<pre><code class="language-javascript">somar = (acc, x) =&gt; acc + x
+const somatorio = (lista) =&gt; lista.reduce(somar)
+const listaProdutosR$ = [10.60,8.50,5.55,6.40,41.00,23.05,19.90,15.90,22.10,2.75]
+const resultado = somatorio(listaProdutosR$)
 console.log(resultado)
 </code></pre>
-<p><code>[ 10.6, 8.5, 5.55, 6.4, 2.75 ]</code></p>
+<p><code>155.75</code></p>
 </details>
 <h3 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h3>
-<p>Programa para selecionar os nomes que começam com a letra "A".</p>
+<p>Programa para gerar uma sigla a partir do nome de uma empresa/instituição.</p>
 <details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
+<pre><code class="language-javascript">const nomes = ['Organização', 'Mundial', 'Saúde']
 
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
+const sigla = (acc, x) =&gt; acc + x[0]
+console.log(nomes.reduce(sigla, ''))
 </code></pre>
-<p><code>[ "Ana"&lt; "Adele", "Adam" ]</code></p>
+<p><code>OMS</code></p>
 </details>
 <h3 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h3>
-<p>Programa para selecionar os nomes com mais de 4 letras.</p>
+<p>Programa para contar o número de letras de uma lista de palavras.</p>
 <details>
-<pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
+<pre><code class="language-javascript">const nomes = ['Organização', 'Mundial', 'Saúde']
 
-const filtroLetra = (letra) =&gt; (texto) =&gt; texto[0] == letra
-const primeiraLetraA = filtroLetra('A')
-console.log(nomes.filter(primeiraLetraA))
-
-const tamanhoMaiorQue = (n) =&gt; (texto) =&gt; texto.length &gt; n
-const tamanhoMaiorQue4 = tamanhoMaiorQue(4)
-console.log(nomes.filter(tamanhoMaiorQue4))
+const numLetras = (acc, x) =&gt; acc + x.length
+console.log(nomes.reduce(numLetras, 0))
 </code></pre>
-<pre><code>[ "Ana", "Adele", "Adam" ]
-[ "Felipe", "Adele", "Maria" ]
-</code></pre>
+<p><code>23</code></p>
 </details>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/filtragem-de-elementos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/composicao-de-funcoes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -217,11 +214,11 @@ console.log(nomes.filter(tamanhoMaiorQue4))
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/mapeamento-de-elementos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../programacao/programacao-funcional/colecoes-de-dados/filtragem-de-elementos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/operacoes-de-reducao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../programacao/programacao-funcional/colecoes-de-dados/composicao-de-funcoes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
