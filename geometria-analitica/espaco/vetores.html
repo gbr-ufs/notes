@@ -446,7 +446,81 @@ A = ||\vec{u} \times \vec{v}||
 <h4 id="exemplo-11"><a class="header" href="#exemplo-11">Exemplo</a></h4>
 <p>Considere os pontos \( A = (2, 1, 1) \), \( B = (3, -1, 0) \) e \( C = (4, 2, -2) \). Calcule a área do triângulo \( ABC \).</p>
 <details>
+<p>\[
+\vec{AB} = B - A = (1, -2, -1) = \vec{u}
+\]</p>
+<p>\[
+\vec{AC} = C - A = (2, 1, -3) = \vec{v}
+\]</p>
+<p>\[
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+1 &amp; -2 &amp; -1
+2 &amp; -3 &amp; -3
+\end{vmatrix}
+= i(6 + 1) - j(-3 + 2) + k(1 + 4) = (7, 1, 5) = \vec{w}
+\]</p>
+<p>\[
+||\vec{w}|| = \sqrt{(7)^{2} + (1)^{2} + (5)^{2}} = \sqrt{75} = 5\sqrt{3}
+\]</p>
+<p>Como podemos dividir um paralelogramo em dois triângulos, a área do triângulo é \( \frac{5\sqrt{3}}{2} \).</p>
 </details>
+<h2 id="produto-misto"><a class="header" href="#produto-misto">Produto Misto</a></h2>
+<p>O <strong>produto misto</strong> de três vetores \( \vec{u} \), \( \vec{v} \) e \( \vec{w} \) no espaço, tomados nesta ordem, é um número real, denotado por \( (\vec{u}, \vec{v}, \vec{w}) \), e definido por</p>
+<p>\[
+(\vec{u}, \vec{v}, \vec{w}) = \langle \vec{u}, \vec{v} \times \vec{w} \rangle =
+\begin{vmatrix}
+x_{1} &amp; y_{1} &amp; z_{1}
+x_{2} &amp; y_{2} &amp; z_{2}
+x_{3} &amp; y_{3} &amp; z_{3}
+\end{vmatrix}
+\]</p>
+<h3 id="exemplo-12"><a class="header" href="#exemplo-12">Exemplo</a></h3>
+<p>Calcule \( (\vec{u}, \vec{v}, \vec{w}) \), onde \( \vec{u} = (3, -1, 1) \), \( \vec{v} = (1, 2, 2) \) e \( \vec{w} = (2, 0, -3) \).</p>
+<details>
+<p>\[
+\begin{vmatrix}
+3 &amp; -1 &amp; 1
+1 &amp; 2 &amp; 2
+2 &amp; 0 &amp; -3
+\end{vmatrix}
+= 3(-6) + 1(-3 - 4) + 1(-4) = -18 - 7 - 4 = -29
+\]</p>
+</details>
+<h3 id="propriedades-2"><a class="header" href="#propriedades-2">Propriedades</a></h3>
+<ol>
+<li>Se \( \vec{u} = \vec{0} \) ou \( \vec{v} = \vec{0} \) ou \( \vec{w} = \vec{0} \) então \( (\vec{u}, \vec{v}, \vec{w}) = 0 \).</li>
+<li>Se \( \vec{u}|| \vec{v} \) ou \( \vec{v}||\vec{w} \) ou \( \vec{u}||\vec{w} \) então \( (\vec{u}, \vec{v}, \vec{w}) = 0 \).</li>
+<li>O produto misto (\vec{u}, \vec{v}, \vec{w}) muda de sinal ao trocarmos a posição dos vetores.</li>
+<li>\( (\vec{u} + \vec{x}, \vec{v}, \vec{w}) = (\vec{u}, \vec{v}, \vec{w}) + (\vec{x}, \vec{v}, \vec{w}) \), \( (\vec{u}, \vec{v} + \vec{x}, \vec{w}) = (\vec{u}, \vec{v}, \vec{w}) + (\vec{x}, \vec{x}, \vec{w}) \), \( (\vec{u}, \vec{v}, \vec{w} + \vec{x} = (\vec{u}, \vec{v}, \vec{w}) + (\vec{x}, \vec{v}, \vec{x}) \).</li>
+<li>\( (x\vec{u}, \vec{v}, \vec{w}) = (\vec{u}, x\vec{v}, \vec{w}) = (\vec{u}, \vec{v}, x\vec{w}) = x(\vec{u}, \vec{v}, \vec{w}) \).</li>
+<li>\( (\vec{u}, \vec{v}, \vec{w}) = 0 \iff \vec{u}, \vec{v}, \vec{w} \text{ são coplanares (ou seja, pertencem a um mesmo plano)} \)</li>
+</ol>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+A maioria dessas propriedades vem das matrizes.</p>
+</blockquote>
+<h4 id="exemplo-13"><a class="header" href="#exemplo-13">Exemplo</a></h4>
+<p>Verifique se os vetores \( \vec{u} = (1, -1, 2) \), \( \vec{v} = (2, 2, 1) \) e \( \vec{w} = (-2, 0, -4) \) são coplanares.</p>
+<details>
+<p>\[
+\begin{vmatrix}
+x_{1} &amp; y_{1} &amp; z_{1}
+x_{2} &amp; y_{2} &amp; z_{2}
+x_{3} &amp; y_{3} &amp; z_{3}
+\end{vmatrix}
+= (1 \cdot 2 \cdot -4) + (-1 \cdot 1 \cdot -2) + (2 \cdot 2 \cdot 0) - (2 \cdot 2 \cdot -2) - (1 \cdot 1 \cdot 0) - (-1 \cdot 2 \cdot -4) = (-8) + (2) = -6
+\]</p>
+<p>Como \( -6 \neq 0 \), esses vetores não são coplanares.</p>
+</details>
+<h2 id="interpretação-geométrica-para-o-produto-misto"><a class="header" href="#interpretação-geométrica-para-o-produto-misto">Interpretação Geométrica para o Produto Misto</a></h2>
+<p>Podemos determinar um paralelepípedo usando três vetores não-nulos e dois não-paralelos.</p>
+<p>Temos que o volume \( V \) do paralelepípedo é dado por</p>
+<p>\[
+V = |(\vec{u}, \vec{v}, \vec{w})|
+\]</p>
+<h3 id="exemplo-14"><a class="header" href="#exemplo-14">Exemplo</a></h3>
+<p>Calcule o volume do paralelepípedo determinado pelos vetores \( \vec{u} = (3, -1, 1) \), \( \vec{v} = (1, 2, ) \) e \( \vec{w} = (2, 0, -3) \).</p>
 
                     </main>
 

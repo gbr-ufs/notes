@@ -793,6 +793,7 @@ Lembrando que tem que fazer dos dois lados para ter certeza!</p>
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="derivadas"><a class="header" href="#derivadas">Derivadas</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="regras-de-derivação"><a class="header" href="#regras-de-derivação">Regras de Derivação</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="aplicações-de-derivação"><a class="header" href="#aplicações-de-derivação">Aplicações de Derivação</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cálculo-b"><a class="header" href="#cálculo-b">Cálculo B</a></h1>
 <p>Segunda partição do estudo de cálculo para alguns cursos, como os de computação. Outros, como Engenharia Civil, cursam Cálculo II.</p>
 <p>A diferença está no conteúdo. Cálculo B abrange parte do cálculo infinitesimal, enquanto cálculo II fala ainda mais sobre esse tema.</p>
@@ -1410,6 +1411,157 @@ P \lor C, L \or ~P, N \lor ~C, ~N \vDash P \land L
 <p>Faça \( E(x) : x \) é estudante; \( V(x) : x \) é velho; e \( J(x) : x \) é jovem. Então</p>
 <p><img src="fem/../img/fem/arvore-de-refutacao-7.png" alt="" /></p>
 </details>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="técnicas-de-prova"><a class="header" href="#técnicas-de-prova">Técnicas de Prova</a></h1>
+<h2 id="definição"><a class="header" href="#definição">Definição</a></h2>
+<p>Em matemática, uma <strong>definição</strong> indica o significado matemático de uma palavra.</p>
+<h3 id="exemplos"><a class="header" href="#exemplos">Exemplos</a></h3>
+<ul>
+<li>Inteiro par: \( 2k \)</li>
+<li>Número primo: \( k &gt; 1 \land \text{k divisível somente por 1 e ele mesmo} \)</li>
+<li>Função: relação entre conjuntos</li>
+</ul>
+<h2 id="axioma-postulado"><a class="header" href="#axioma-postulado">Axioma (Postulado)</a></h2>
+<p>Afirmação matemática auto-evidente.</p>
+<h2 id="teorema-1"><a class="header" href="#teorema-1">Teorema</a></h2>
+<p>Afirmação matemática condicional que demanda prova. Composta por hipótese e conclusão (\( A \vDash B \)).</p>
+<h2 id="lema"><a class="header" href="#lema">Lema</a></h2>
+<p>Afirmação que serve de base para provar um teorema.</p>
+<h2 id="corolário"><a class="header" href="#corolário">Corolário</a></h2>
+<p>Afirmação consequência de um teorema.</p>
+<h2 id="exemplo-56"><a class="header" href="#exemplo-56">Exemplo</a></h2>
+<p>Sejam \( m, n \in \mathbb{N} \). Se \( m \) e \( n \) são ímpares, então \( m + n \) e \( m - n \) são pares.</p>
+<h3 id="definição-1"><a class="header" href="#definição-1">Definição</a></h3>
+<p>Seja \( n \in \mathbb{N} \). \( n \) é par se \( \exists{k} \in \mathbb{N}, n = 2k \). \( n \) é ímpar se \( \exists{j} \in \mathbb{N}, n = 2j + 1 \).</p>
+<details>
+<p>\[
+n = 2k + 1, m = 2j + 1
+\]</p>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Os números genéricos (\( k \) e \( j \)) dos exemplos devem ser diferentes, que nem são aqui!</p>
+</blockquote>
+<p>\[
+m + n = 2k + 2j + 2 = 2(k + j + 1)
+\]</p>
+<p>\[
+m - n = (2j + 1) - (2k + 1) = 2(j - k)
+\]</p>
+<p>Como \( (k + j + 1) \) é um número inteiro, \( m + n \) e \( m - n \) são par.</p>
+</details>
+<h2 id="o-método-direto"><a class="header" href="#o-método-direto">O Método Direto</a></h2>
+<p>Começo \( \to \) fim \( \to \) se encontra no meio.</p>
+<h3 id="exemplo-57"><a class="header" href="#exemplo-57">Exemplo</a></h3>
+<p>\[
+a \neq 0 , b \neq 0, c \neq 0 \in \mathbb{N}
+\]</p>
+<p>Se \( a \) divide \( b \) e, por usa vez, \( b \) divide \( c \), então \( a \) divide \( c \).</p>
+<details>
+<ul>
+<li>Divisão: \( a, b, q \in \mathbb{N}, b = aq \) (\( a \) divide \( b \))</li>
+<li>Símbolo: \( a|b \)</li>
+</ul>
+<p>É preciso definir um \( k \in \mathbb{N}, c = ak \).</p>
+<p>\[
+q, r \in \mathbb{N}, b = aq \land c = br \implies c = br = (aq)r = a(qr) \therefore k = qr
+\]</p>
+</details>
+<h3 id="algoritmo-da-divisão-em--mathbbn-"><a class="header" href="#algoritmo-da-divisão-em--mathbbn-">Algoritmo da Divisão em \( \mathbb{N} \)</a></h3>
+<p>\[
+a, b \in \mathbb{N}, q, r \in \mathbb{N}, b = aq + r \land 0 \leq r &lt; a
+\]</p>
+<p>Com \( a \) sendo o quoeficiente e \( r \) o resto.</p>
+<h3 id="exemplo-58"><a class="header" href="#exemplo-58">Exemplo</a></h3>
+<p>Sejam \( m, n \in \mathbb{R} \).</p>
+<p>\[
+n &gt; m &gt; 0 \implies \frac{m + 1}{n + 1} &gt; \frac{m}{n}
+\]</p>
+<details>
+<p>Assumindo a conclusão como verdadeira:</p>
+<p>\[
+(m + 1)n &gt; (n + 1)m \implies mn + n &gt; mn + m \implies n &gt; m
+\]</p>
+<p>Somar quaisquer termos não muda a desigualdade, logo</p>
+<p>\[
+\frac{m + 1}{n + 1} &gt; \frac{m}{n}
+\]</p>
+</details>
+<h3 id="exemplo-59"><a class="header" href="#exemplo-59">Exemplo</a></h3>
+<p>i) \( n \) é ímpar;</p>
+<p>ii) \( n^{2} \) é ímpar;</p>
+<p>iii) \( n^{2} - 2n + 1 \) é par.</p>
+<h3 id="exemplo-60"><a class="header" href="#exemplo-60">Exemplo</a></h3>
+<p>Use a contrapositiva para mostrar que se \( \frac{2x}{1 + x^{2}} \) é irracional, então \( x \) é um número irracional.</p>
+<details>
+<p>Contrapositiva: \( x \in \mathbb{Q} \implies \frac{2x}{1 + x^{2}} \in \mathbb{Q}, x = \frac{m}{n}, m, n \neq 0 \in \mathbb{Z} \). Assim,</p>
+<p>\[
+\frac{2x}{1 + x^{2}} = \frac{\frac{2m}{n}}{1 + (\frac{2m}{n})^{2}} = \frac{2mn}{n^{2} + 4m^{2}} \in \mathbb{Q}
+\]</p>
+<p>Visto que \( 2mn, n^{2} + 4m^{2} \in \mathbb{Z} \) e \( n^{2} + 4m^{2} \neq 0 \). Como a contrapositiva é verdadeira, a afirmação é verdadeira.</p>
+</details>
+<h3 id="exemplo-61"><a class="header" href="#exemplo-61">Exemplo</a></h3>
+<p>\[
+a \neq 0, b, c \in \mathbb{R}
+\]</p>
+<p>\[
+ax^{2} + bx + c = 0 \iff x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}
+\]</p>
+<details>
+<p>Sendo \( x \) uma solução da equação e \( a \neq 0 \) podemos dividir \( ax^{2} + bx + c = 0 \) por \( a \) para obtermos</p>
+<p>\[
+x^{2} + \frac{b}{a}x + \frac{c}{a} = 0
+\]</p>
+<p>Assim, por completar os quadrados, segue que</p>
+<p>\[
+\left(x + \frac{b}{2a}\right)^{2} - \left(\frac{b}{2a}\right)^{2} + \frac{c}{a} = 0
+\]</p>
+<p>Pondo \( x \) em evidência</p>
+<p>\[
+x = -\frac{2}{2a} \pm \sqrt{\left(\frac{b}{2a}\right)^{2} - \frac{c}{a}} = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}
+\]</p>
+<p>Para provar que esse valor resolve a equação, basta substituir</p>
+<p>\[
+x^{2} = \frac{2b^{2} - 4ac \mp 2b \sqrt{b^{2} - 4ac}}{4a^{2}}
+\]</p>
+<p>\[
+ax^{2} = \frac{2b^{2} - 4ac \mp 2b \sqrt{b^{2} - 4ac}}{4a}
+\]</p>
+<p>\[
+bx = \frac{-b^{2} \pm b\sqrt{b^{2} - 4ac}}{2a}
+\]</p>
+<p>\[
+ax^{2} + bx + c = \frac{2b^{2} - 4ac \mp 2b \sqrt{b^{2} - 4ac}}{4a} + \left(\frac{-b^{2} \pm b\sqrt{b^{2} - 4ac}}{2a \cdot 2}\right)^{2} + \frac{c \cdot 4a}{1 \cdot 4a} \implies \frac{0}{4a} = 0
+\]</p>
+</details>
+<h3 id="exemplo-62"><a class="header" href="#exemplo-62">Exemplo</a></h3>
+<p>\[
+a, l, k \in \mathbb{N}, a^{3} + a^{2} + a = 2l \iff 2k
+\]</p>
+<details>
+<p>Verificando \( a = 2k \implies a^{3} + a^{2} + a = 2l \)</p>
+<p>\[
+a^{3} + a^{2} + a = (2k)^{3} + (2k)^{2} + 2k = 2[4k^{3} + 2k^{2} + k] \therefore a^{3} + a^{2} + a = 2l
+\]</p>
+<p>\( a^{3} + a^{2} + a = 2l \implies a = 2k \) pode pode ser provada pela contrapositiva.</p>
+<p>\[
+a^{3} + a^{2} + a = (2k + 1)^{3} + (2k + 1)^{2} + 2k + 1 = 2[4k^{3} + 8k^{2} + 6k + 1] + 1
+\]</p>
+</details>
+<h3 id="exemplo-63"><a class="header" href="#exemplo-63">Exemplo</a></h3>
+<p>Um inteiro positivo \( n \) com quatro dígitos é divisível por 3 se, e somente se, a soma dos dígitos de \( n \) é divisível por 3.</p>
+<details>
+<p>\[
+n = d_{3}d_{2}d_{1}d_{0}
+\]</p>
+<p>\[
+n = d_{0} + 10d_{1} + 100d_{2} + 1000d_{3} = (d_{0} + d_{1} + d_{2} + d_{3}) + 9d^{1} + 99d^{2} + 999d_{3}
+\]</p>
+<p>Desse modo, se \( 3|n \), então \( m = 3k, k \im \mathbb{Z} \) e da expressão acima tiramos que</p>
+<p>\[
+d_{0} + d_{1} + d_{2} + d_{3} = 3[k - 3d_{1} - 33d_{2} - 333d_{3}]
+\]</p>
+<p>Logo, \( 3|(d_{0} + d_{1} + d_{2} + d_{3}) \).</p>
+<p>Se 3 divide a soma dos dígitos de \( n \), então \( d_{0} + d_{1} + d_{2} + d_{3} = 3k</p>
+</details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="conjuntos"><a class="header" href="#conjuntos">Conjuntos</a></h1>
 <p>Coleção de objetos. Um objeto membro de um conjunto é chamado de <em>elemento</em>.</p>
 <h2 id="legenda-1"><a class="header" href="#legenda-1">Legenda</a></h2>
@@ -1423,7 +1575,7 @@ P \lor C, L \or ~P, N \lor ~C, ~N \vDash P \land L
 <li>Exemplo de declaração de conjunto: \( A = \{n \in \mathbb{Z}: n = 2k, k \in \mathbb{Z}\} \) (\( n \) do conjunto dos números naturais pertence à A se for par)</li>
 </ul>
 <p>A ordem não importa, o que importa são os elementos.</p>
-<h2 id="exemplo-56"><a class="header" href="#exemplo-56">Exemplo</a></h2>
+<h2 id="exemplo-64"><a class="header" href="#exemplo-64">Exemplo</a></h2>
 <p>Determine os conjuntos \( A = \{x \in \mathbb{R}: x^{2} &lt; 4\} \), \( B = \{x \in \mathbb{Z}: -2 &lt; x &lt; 5\} \) e \( C = \{x \in \mathbb{N}: (3x - 1)(x - 2) = 0\} \)</p>
 <h3 id="resolução"><a class="header" href="#resolução">Resolução</a></h3>
 <details>
@@ -1457,7 +1609,7 @@ A = \{n \in \mathbb{Z}: n = 2k, k \in \mathbb{Z}\}
 B = \{m \in \mathbb{Z}: m = 6k, k \in \mathbb{Z}\}
 \]</p>
 <p>\( B \subset A \), pois se \( y \in B \implies y = 6k, k \in \mathbb{Z} \implies y = 2(3k) = 2u, u \in \mathbb{Z} \), cumprindo a exigência de A.</p>
-<h2 id="exemplo-57"><a class="header" href="#exemplo-57">Exemplo</a></h2>
+<h2 id="exemplo-65"><a class="header" href="#exemplo-65">Exemplo</a></h2>
 <p>Considere os conjuntos \( A = \{-4, 1, 2, 4, 10\} \), \( B = \{m \in \mathbb{Z}: |m| \leq 12\} \) e \( C = \{t \in \mathbb{Z}: t^2 + 3 \in [4, 20)\} \). Quais inclusões entre esses conjuntos é verdadeira?</p>
 <h3 id="resolução-1"><a class="header" href="#resolução-1">Resolução</a></h3>
 <details>
@@ -1468,7 +1620,7 @@ B = \{-12, -11, -10, ..., 10, 11, 12\}
 \(1 \leq t^2 &lt; 17 \implies 1 \leq t &lt; \sqrt{17} \).
 Logo, \( C = \{-4, -3, -2, -1, 1, 2, 3, 4\} \), \( C \subset B \), \( (10 \in A \land 10 \not\in C) \implies A \not\in C \).</p>
 </details>
-<h2 id="exemplo-58"><a class="header" href="#exemplo-58">Exemplo</a></h2>
+<h2 id="exemplo-66"><a class="header" href="#exemplo-66">Exemplo</a></h2>
 <p>\[
 A \subset B \land B \subset C \implies A \subset C
 \]</p>
@@ -1486,7 +1638,7 @@ Para provar uma afirmação da forma \( A \not\subset B \), basta encontrar um \
 <p><em><strong>Observação \( (A = B) \)</strong></em>
 \( A = B \iff A \subset B \land B \subset A \)</p>
 </blockquote>
-<h2 id="exemplo-59"><a class="header" href="#exemplo-59">Exemplo</a></h2>
+<h2 id="exemplo-67"><a class="header" href="#exemplo-67">Exemplo</a></h2>
 <p>\[
 P = \{x \in \mathbb{R}: x^2 - 5x + 6 &lt; 0\}
 \]</p>
@@ -1515,9 +1667,9 @@ A \cap B = \{x \in \mathbb{U}: x \in A \land x \in B\}
 <p>\[
 A - B = \{x \in \mathbb{U}: x \in A \land x \not\in B\}
 \]</p>
-<h3 id="exemplo-60"><a class="header" href="#exemplo-60">Exemplo</a></h3>
+<h3 id="exemplo-68"><a class="header" href="#exemplo-68">Exemplo</a></h3>
 <p>Seja \( \mathbb{U} = \{1, 2, 3, ..., 12\} \), \( A = \{n \in \mathbb{U}: n = 2k, k \in \mathbb{R}\} \) e \(B = \{n \in \mathbb{U}: n \text{é primo}\} \). Então \( A \cup B = \{2, 3, 4, 5, 6, 7, 8, 10, 11, 12\} \), \( A \cap B = \{2\} \) e \( A - B = \{4, 6, 8, 10, 12\} \).</p>
-<h3 id="exemplo-61"><a class="header" href="#exemplo-61">Exemplo</a></h3>
+<h3 id="exemplo-69"><a class="header" href="#exemplo-69">Exemplo</a></h3>
 <p>Consideramos os intervalos da reta \( A = [1, 4) = \{x \in \mathbb{R}: 1 \leq x &lt; 4\} \) e \( B = (2, 6] = \{x \in \mathbb{R}: 2 &lt; x \leq 6\} \). Então \( A \cup B = [1, 6] \). \( A \cap B = (2, 4) \) e \( A - B = [1, 2] \).
 Além disso, \( [1, 2] \cap (2, 4) = \varnothing \) (conjunto vazio).</p>
 <h2 id="Álgebra-de-conjuntos"><a class="header" href="#Álgebra-de-conjuntos">Álgebra de Conjuntos</a></h2>
@@ -1529,7 +1681,7 @@ Além disso, \( [1, 2] \cap (2, 4) = \varnothing \) (conjunto vazio).</p>
 <p>V. Leis Distributivas: \( A \cap (B \cap C) = (A \cap B) \cup (A \cap C) \)  e \( A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \)</p>
 <h2 id="uniões-e-interseções-generalizadas"><a class="header" href="#uniões-e-interseções-generalizadas">Uniões e Interseções Generalizadas</a></h2>
 <p>Esta seção aborda operações com mais de dois conjuntos. Seja \(n \in \mathbb{N} \) e \(A_{1}, A_{2}, ..., A_{n} \) subconjuntos de \( \mathbb{U} \).</p>
-<h3 id="definição"><a class="header" href="#definição">Definição</a></h3>
+<h3 id="definição-2"><a class="header" href="#definição-2">Definição</a></h3>
 <p>(a) A união dos conjuntos \( A_{i} \) como o conjunto</p>
 <p>\[
 \underset{i \in 1}{\overset{n}{\bigcup}} A_{i} = A_{1} \cup A_{2} \cup ... \cup A_{n} = \{ x \in \mathbb{U}: x \in A_{i}, \text{para algum } i = 1, 2, ..., n\}
@@ -1538,7 +1690,7 @@ Além disso, \( [1, 2] \cap (2, 4) = \varnothing \) (conjunto vazio).</p>
 <p>\[
 \underset{i = 1}{\overset{n}{\bigcap}} A_{i} = A_{1} \cap A_{2} \cap ... \cap A_{n} = \{x \in \mathbb{U}: x \in A_{i}, \text{para todo } i = 1, 2, ..., n\}
 \]</p>
-<h3 id="exemplo-62"><a class="header" href="#exemplo-62">Exemplo</a></h3>
+<h3 id="exemplo-70"><a class="header" href="#exemplo-70">Exemplo</a></h3>
 <p>Consideremos a família \( A_{i} = [0, \frac{1}{i}) \), com \( i = 1, 2, ..., 5 \). Então</p>
 <p>\[
 \underset{i \in 1}{\overset{5}{\bigcup}} A_{i} = [0, 1)
@@ -1572,32 +1724,32 @@ Além disso, \( [1, 2] \cap (2, 4) = \varnothing \) (conjunto vazio).</p>
 <p>\[
 \rho(A) = \{X: X \subset A \}
 \]</p>
-<h3 id="teorema-1"><a class="header" href="#teorema-1">Teorema</a></h3>
-<p>Se \( A \) é um conjunto \( n \) de elementos, então \( \rho(A) \) é um conjunto com \( 2^{n} \) elementos.</p>
 <h3 id="teorema-2"><a class="header" href="#teorema-2">Teorema</a></h3>
+<p>Se \( A \) é um conjunto \( n \) de elementos, então \( \rho(A) \) é um conjunto com \( 2^{n} \) elementos.</p>
+<h3 id="teorema-3"><a class="header" href="#teorema-3">Teorema</a></h3>
 <p>Sejam \( A \) e \( B \) conjuntos. Então \( A \subset B \iff \rho(A) \subset \rho(B) \).</p>
 <h2 id="produto-cartesiano"><a class="header" href="#produto-cartesiano">Produto Cartesiano</a></h2>
 <p>Conjunto formado por pares <strong>ordenados</strong> \( (a, b) \).</p>
-<h3 id="definição-1"><a class="header" href="#definição-1">Definição</a></h3>
+<h3 id="definição-3"><a class="header" href="#definição-3">Definição</a></h3>
 <p>Sejam \( A \) e \( B \) conjuntos. Definimos o produto cartesiano de \( A \) e \( B \) \( (A \times B) \) como o conjunto</p>
 <p>\[
 A \times B = \{(a, b): a \in A \land b \in B\}
 \]</p>
 <p>onde \( (a, b) \) denota um par ordenado.</p>
-<h3 id="exemplo-63"><a class="header" href="#exemplo-63">Exemplo</a></h3>
+<h3 id="exemplo-71"><a class="header" href="#exemplo-71">Exemplo</a></h3>
 <p>Sejam \( A = \{a, b, c \} \) e \( B = \{1, 2\} \). Então</p>
 <p>\[
 A \times B = \{(a, 1), (a, 2), (b, 1), (b, 2), (c, 1), (c, 2)\}
 \]</p>
-<h3 id="teorema-3"><a class="header" href="#teorema-3">Teorema</a></h3>
+<h3 id="teorema-4"><a class="header" href="#teorema-4">Teorema</a></h3>
 <p>Sejam \( A \), \( B \), \( C \) e \( D \) conjuntos.</p>
 <p>I. Se \( A \subset B \) e \( C \subset D \), então \( A times C \subset B \times D \)</p>
 <p>II. \( A \times B \cup C = A \times B \cup A \times C \) e \( A \times (B \cap C) = (A \times B) \cap (A \times C)\)</p>
 <p>III. \( A \cap B \times C \cap D = A \times C \cap B \times D \)</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="relações"><a class="header" href="#relações">Relações</a></h1>
-<h2 id="definição-2"><a class="header" href="#definição-2">Definição</a></h2>
+<h2 id="definição-4"><a class="header" href="#definição-4">Definição</a></h2>
 <p>Sejam \( A \) e \( B \) conjuntos. Uma <strong>relação</strong> \( R \) entre \( A \) e \( B \) é um subconjunto de \( A \times B \). Assim, se \( (a, b) \in R \), escrevemos \( aRb \) (ou \( a ~ b \)) par aexpressar que \( a \) e \( b \) estão relacionados. O <strong>domínio</strong> de uma relação é o conjunto \( D(r) = \{x \in A : \exists y  \in B \text{ tal que } xRy\} \) e a <strong>imagem</strong> da relação é o conjunto \( I(R) = \{y \in B : \exists x \in A \text{ tal que } xRy\} \).</p>
-<h2 id="exemplo-64"><a class="header" href="#exemplo-64">Exemplo</a></h2>
+<h2 id="exemplo-72"><a class="header" href="#exemplo-72">Exemplo</a></h2>
 <p>Seja \( A = \{1, 2, 3\} \) e \( B = \{2, 3, 4\} \). Defina a relação \( R = \{(x, y) : x + 1 &lt; y\} \).</p>
 <h3 id="resolução-4"><a class="header" href="#resolução-4">Resolução</a></h3>
 <details>
@@ -1612,7 +1764,7 @@ I(R) = \{3, 4\}
 \]</p>
 </details>
 <p>O domínio fica na esquerda e a imagem na direita.</p>
-<h2 id="exemplo-65"><a class="header" href="#exemplo-65">Exemplo</a></h2>
+<h2 id="exemplo-73"><a class="header" href="#exemplo-73">Exemplo</a></h2>
 <p>(1) Sobre \( \mathbb{Z} \) consideremos a relação \( R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} : x + y = 0\} \). Enstão \( R = \{..., (-1, 1), (1, -1), (0, 0), (2, -2), ...\} \) é o conjunto de pontos sobre a reta dada pela equação \( y = -x \) com coordenadas inteiras.</p>
 <p>(2) Sobre o conjunto \( \mathbb{N} \times \mathbb{N} \) considere a relação \( (m, n)R(s, r) \iff m + r = n + s \). Esta relação possui uma infinidade de elementos. Por exemplo, \( (1, 1)R(2, 2), (1, 3)R(5, 7), ...\).</p>
 <p>(3) Seja \( E = \{(x, y) \in \mathbb{R} \times \mathbb{R} : \frac{x^{2}}{324} + \frac{y^{2}}{64} \leq 1\} \). O gráfico de \( E \) é constituído pelos pontos do plano que estão dentro e sobre a elipse.</p>
@@ -1620,12 +1772,12 @@ I(R) = \{3, 4\}
 <p><img src="fem/../img/fem/grafico_e.png" alt="Gráfico exibindo uma elipse no centro, com os pontos 8 e 18 pertencendo à ela" /></p>
 </details>
 <p>(4, 5) Relações também podem ser representadas usando grafos e fluxogramas.</p>
-<h2 id="definição-3"><a class="header" href="#definição-3">Definição</a></h2>
+<h2 id="definição-5"><a class="header" href="#definição-5">Definição</a></h2>
 <p>SE \( R \) é uma relação entre os conjuntos \( A \) e \( B \), então definimos a <strong>inversa</strong> de \( R \), denotada por \( R^{-1} \), como sendo a relação</p>
 <p>\[
 R^{-1} = \{(x, y) \in B \times A : (x, y) \in R\}
 \]</p>
-<h2 id="exemplo-66"><a class="header" href="#exemplo-66">Exemplo</a></h2>
+<h2 id="exemplo-74"><a class="header" href="#exemplo-74">Exemplo</a></h2>
 <p>(1) No caso da relação \( R = \{(x, y) : x + 1 &lt; y\} \) em \( A \times B \), sua inversa é dada pela relação \( R^{-1} = \{(3, 1), (4, 1), (4, 2)\} \) em \( B \times A \). Ou seja, os papéis de \( x \) e \( y \) foram trocados; enquanto em \( R \) o critério era que o segundo componente do par ordenado fosse maior que o primeiro mais uma unidade, em \( R^{-1} \) o primeiro componente é que é maior que o segundo mais uma unidade.</p>
 <p>(2) Seja \( R \) uma relação sobre o conjunto dos números reais \( \mathbb{R} \) definida por \( xRy \iff y = x^{2} \). Determine \( R^{-1} \).</p>
 <details>
@@ -1634,19 +1786,19 @@ R^{-1} = \{(x, y) \in B \times A : (x, y) \in R\}
 R^{-1} = \{(y, x) \in \mathbb{R}^{+} \times \mathbb{R} : y = x^{2}\} = \{(y, x) \i \mathbb{R}^{+} \times \mathbb{R} : x = \pm \sqrt{y}\}
 \]</p>
 </details>
-<h2 id="definição-4"><a class="header" href="#definição-4">Definição</a></h2>
+<h2 id="definição-6"><a class="header" href="#definição-6">Definição</a></h2>
 <p>Seja \( R \) uma relação entre os conjuntos \( A \) e \( B \) e seja \( S \) uma relação entre os conjuntos \( B \) e \( C \). A <strong>composição</strong> de \( R \) e \( S \) é definida como sendo o subconjunto de \( A \times C \) dado por</p>
 <p>\[
 S \circ R = \{(a, c) \in A \times C : \exists{b} \in B \text{ tal que } (a, b) \in R \text{ e } (b, c) \in S\}
 \]</p>
 <p>O domínio de \( S \circ R \) será um subconjunto do domínio da relação \( R \) e a imagem estará contida na imagem da relação \( S \). E para um elemento pertencer a composição é necessário que haja um elemento em \( B \) fazendo a conexão entre elementos de \( A \) e \( C \).</p>
-<h2 id="exemplo-67"><a class="header" href="#exemplo-67">Exemplo</a></h2>
+<h2 id="exemplo-75"><a class="header" href="#exemplo-75">Exemplo</a></h2>
 <p>Consideremos os conjuntos \( A = \{1, 2, 3, 4\} \), \( B = \{p, q, r, s\} \) e \( C = \{x, y, z\} \). Seja \( R = \{(1, p), (1, q), (2, q), (3, r), (4, s)\} \) uma relação entre \( A \) e \( B \), e tomemos a relação entre \( B \) e \( C \) dada por \( S = \{(p, x), (q, x), (q, y), (s, z)\} \). Então</p>
 <p>\[
 S \circ R = \{(1, x), (1, y), (2, x), (2, y), (4, z)\},
 \]</p>
 <p>com \( D(S \circ R) = \{1, 2, 4\} \subset D(R)\) e \( I(S \circ R) = \{x, y, z\} \subset I(S) \).</p>
-<h2 id="exemplo-68"><a class="header" href="#exemplo-68">Exemplo</a></h2>
+<h2 id="exemplo-76"><a class="header" href="#exemplo-76">Exemplo</a></h2>
 <p>Se \( R \) é uma relação entre \( A \) e \( B \) e \( S \) é uma relação entre \( B \) e \( A \), então nem sempre é verdade que \( S \circ R = R \circ S \). Por exemplo, tome sobre \( \mathbb{R} \times \mathbb{R} \) as seguintes relações</p>
 <p>\[
 R = \{(x, y) \in \mathbb{R} \times \mathbb{R} : y = x + 1\} \text{ e } S = \{(y, z) \in \mathbb{R} \times \mathbb{R} : z = y^{2}\}
@@ -1660,7 +1812,7 @@ R \circ S = \{(y, x) \in \mathbb{R} \times \mathbb{R} : x = y^{2} + 1\}
 S \circ R = \{(y, x) \in \mathbb{R} \times \mathbb{R} : x = (y + 1)^{2}\}
 \]</p>
 <p>Observamos agora que a composição de uma relação \( R \) com sua inversa \( R^{-1} \) nem sempre é a relação identidade (que associa um objeto a ele mesmo).</p>
-<h2 id="teorema-4"><a class="header" href="#teorema-4">Teorema</a></h2>
+<h2 id="teorema-5"><a class="header" href="#teorema-5">Teorema</a></h2>
 <p>Suponha \( A \), \( B \), \( C \) e \( D \) conjuntos. Sejam \( R \) uma relação entre \( A \) e \( B \), \( S \) uma relação entre \( B \) e \( C \), e \( T \) uma relação entre \( C \) e \( D \). Então, considerando que sejam válidas as composições,</p>
 <p>(i) \( (R^{-1})^{-1} = R \)
 (ii) \( T \circ (S \circ R) = (T \circ S) \circ R \)
@@ -1670,7 +1822,7 @@ S \circ R = \{(y, x) \in \mathbb{R} \times \mathbb{R} : x = (y + 1)^{2}\}
 <p>(1) <strong>Reflexiva</strong>: \( \forall x \in X, xRx \)</p>
 <p>(2) <strong>Simétrica</strong>: \( \forall x, y \in X, xRy \implies yRx \)</p>
 <p>(3) <strong>Transitiva</strong>: \( \forall x, y, z \in X, xRy \land yRz \implies xRz \)</p>
-<h3 id="exemplo-69"><a class="header" href="#exemplo-69">Exemplo</a></h3>
+<h3 id="exemplo-77"><a class="header" href="#exemplo-77">Exemplo</a></h3>
 <p>Seja \( n \) um inteiro positivo fixado. Então definimos sobre \( \mathbb{Z} \) a seguinte relação: \( aRb \iff a - b = kn, k \in \mathbb{Z} \). Esta relação é chamada <strong>congruência módulo</strong> \( n \). Ao invés de escrever \( aRb \), costuma-se denotar esta relação por \( a \equiv b \pmod{n}} \). Verifiquemos que esta é uma relação de equivalência.</p>
 <p>(1) Vale a reflexividade pois \( a \equiv a \pmod{n} \forall a \in \mathbb{Z} \) uma vez que \( a - a = 0n \)</p>
 <p>(2) Vale a simetria pois se \( a \equiv b \pmod{n} \), então</p>
@@ -1683,7 +1835,7 @@ b - a = -(a - b) = -(kn) = (-k)n,
 a - c = (a - b) + (b - c) = (k_{1} + k_{2})n
 \]</p>
 <p>e isto implica que \( a \equiv c \pmod{n} \)</p>
-<h3 id="exemplo-70"><a class="header" href="#exemplo-70">Exemplo</a></h3>
+<h3 id="exemplo-78"><a class="header" href="#exemplo-78">Exemplo</a></h3>
 <p>Definimos uma relação sobre \( \mathbb{Z} \) por: \( xRy \iff x + 3y = 2k, k \in \mathbb{Z} \). Verifiquemos que esta é uma relação de equivalência.</p>
 <p>(1) Vale a reflexividade pois \( \forall x \in \mathbb{Z} \) temos que \( x + 3x = 4x = 2k, k \in \mathbb{Z} \).</p>
 <p>(2) Vale a simetria pois se \( xRy \), então \( x + 3y = 2k, k \in \mathbb{Z} \). Consequentemente,</p>
@@ -1696,12 +1848,12 @@ y + 3x = y + 2y - 2y + x + 2x = x + 3y + 2(x - y) = 2(k + x - y)
 x + 3z = x + 3y - 3y + y - y + 3z = (x + 3y) + (y + 3y) + (y + 3z) - 4y = 2(k_{1} + k_{2} - y)
 \]</p>
 <p>é par, e isto implica que \( xRz \) como queríamos mostrar.</p>
-<h3 id="exemplo-71"><a class="header" href="#exemplo-71">Exemplo</a></h3>
+<h3 id="exemplo-79"><a class="header" href="#exemplo-79">Exemplo</a></h3>
 <p>Definimos agora a relação sobre \( R \) por: \( xRy \iff |x - y| \leq 1 \). Verifiquemos que esta não é uma relação de equivalência.</p>
 <p>(1) Vale a reflexividade pois \( \forall x \in \mathbb{R}, |x - x| = 0 \leq 1\)</p>
 <p>(2) Vale a simetria pois \( xRy \implies |x - y| \leq 1 \) e como \( |y - x| = |x - y| \) temos que \( yRx \)</p>
 <p>(3) Não vale a propriedade transitiva pois, \( 5R4 \) e \( 4R3 \) porém \( |5 - 3| = 2 &gt; 1 \)</p>
-<h3 id="definição-5"><a class="header" href="#definição-5">Definição</a></h3>
+<h3 id="definição-7"><a class="header" href="#definição-7">Definição</a></h3>
 <p>Uma vez que temos uma relação de equivalência \( R \) sobre um conjunto \( X \), definimos a <strong>classe de equivalência</strong> de um elemento \( x \in X \), denotada por \( [x] \), como sendo o subconjunto de todos os elementos em \( X \) que estão relacionados a \( x \), isto é,</p>
 <p>\[
 [x] = \{y \in X : yRx\}
@@ -1710,7 +1862,7 @@ x + 3z = x + 3y - 3y + y - y + 3z = (x + 3y) + (y + 3y) + (y + 3z) - 4y = 2(k_{1
 <p>\[
 X/R = \{[x] : x \in X\}
 \]</p>
-<h3 id="exemplo-72"><a class="header" href="#exemplo-72">Exemplo</a></h3>
+<h3 id="exemplo-80"><a class="header" href="#exemplo-80">Exemplo</a></h3>
 <p>No caso da relação de equivalência \( x \equiv y \pmod{3} \) sobre \( \mathbb{Z} \), temos que</p>
 <p>\[
 [x] = \{x \in \mathbb{Z} : y \equiv x \pmod{3}\}
@@ -1727,7 +1879,7 @@ X/R = \{[x] : x \in X\}
 <p>\[
 Z/R = \{[0], [1], [2]\}
 \]</p>
-<h3 id="exemplo-73"><a class="header" href="#exemplo-73">Exemplo</a></h3>
+<h3 id="exemplo-81"><a class="header" href="#exemplo-81">Exemplo</a></h3>
 <p>A relação \( R \) definida sobre o conjunto dos números reais \( R \) por \( xRy \iff x^{2} = y^{2} \) é uma relação de equivalência. As classes de equivalência têm a forma</p>
 <p>\[
 [x] = \{y \in \mathbb{R} : yRx\} = \{y \in : y^{2} = x^{2}\} = \{-x, x\}
@@ -1742,24 +1894,24 @@ Z/R = \{[0], [1], [2]\}
 [x] \cdot [y] = [xy]
 \]</p>
 <p>Com estas operações podemos construir o conjunto dos inteiros a partir dos números naturais da seguinte forma: defina a relação  de equivalência \ ( R \) sobre \( \mathbb{N} \times \mathbb{N} \) por \( (a, b)R(c, d) \iff a + b = b + c \).</p>
-<h3 id="definição-6"><a class="header" href="#definição-6">Definição</a></h3>
+<h3 id="definição-8"><a class="header" href="#definição-8">Definição</a></h3>
 <p>Seja \( X \) um conjunt não-vazio e seja \( I \) um conjunto de índices. Uma <strong>partição</strong> é uma relação de subconjuntos \( \{A_{\alpha}_{\alpha \in I} \in X \) tal que:</p>
 <p>(1) \( \forall \alpha \in I, A_{\alpha} \neq \varnothing \)</p>
 <p>(2) \( X = \bigcup_{\alpha \in I} A_{\alpha} \)</p>
 <p>(3) \( \forall \alpha, \beta \in I, A_{\alpha} \cap A_{\beta} \implies A_{\alpha} = A_{\beta} \)</p>
-<h3 id="exemplo-74"><a class="header" href="#exemplo-74">Exemplo</a></h3>
+<h3 id="exemplo-82"><a class="header" href="#exemplo-82">Exemplo</a></h3>
 <p>A família de intervalos \( A_{n} = [n, n + 1) \), com \( n \in \mathbb{Z} \), particiona o conjunto \( \mathbb{R} \). De fato, cada \( A_{n} \neq \varnothing, \mathbb{R} = \bigcup_{n \in \mathbb{Z}} A_{n} \) e se \( A_{n} \cap A_{m} \neq \varnothing, como os intervalos \( [n, n + 1) \) e \( [m, m + 1) \) são ou iguais ou disjuntos, segue que \( A_{n} = A_{m} \).</p>
-<h3 id="teorema-5"><a class="header" href="#teorema-5">Teorema</a></h3>
+<h3 id="teorema-6"><a class="header" href="#teorema-6">Teorema</a></h3>
 <p>seja \( \{A_{\alpha}\}<em>{\alpha \in I} \) uma pratição do conjunto \( X \). Para \( x, y \in X \) define \( xRy \iff \exists A</em>{\alpha}, x, y \in A \). Então \( R \) é uma relação de equivalência sobre \( X \) e \( X/R = \{A_{alpha} : \alpha \in I\} \).</p>
 <h2 id="relação-de-ordem"><a class="header" href="#relação-de-ordem">Relação de Ordem</a></h2>
 <p>Relação que compara os elementos de um conjunto e os classifica de alguma forma. Requer que a propriedade transitiva seja válida, mas não a simétrica.</p>
-<h3 id="definição-7"><a class="header" href="#definição-7">Definição</a></h3>
+<h3 id="definição-9"><a class="header" href="#definição-9">Definição</a></h3>
 <p>Uma relação \( R \) sobre um conjunto \( X \) é dita uma <strong>relação de ordem parcial</strong> se ela é reflexiva, antissimétrica e transitiva, onde anti-simetria significa que \( \forall x, y \in X, xRy \land yRx \) temos que \( x = y \). O conjunto \( X \) é dito parcialmente ordenado.</p>
-<h3 id="exemplo-75"><a class="header" href="#exemplo-75">Exemplo</a></h3>
+<h3 id="exemplo-83"><a class="header" href="#exemplo-83">Exemplo</a></h3>
 <p>A ordem padrão \( \leq \) (menor ou igual) sobre \( \mathbb{R} \) é claramente uma relação de ordem parcial sobre \( \mathbb{R} \).</p>
-<h3 id="exemplo-76"><a class="header" href="#exemplo-76">Exemplo</a></h3>
+<h3 id="exemplo-84"><a class="header" href="#exemplo-84">Exemplo</a></h3>
 <p>Para o conjunto dos números naturais \( \mathbb{N} \), a relação \( R \) é definida por \( aRb \iff a|b \) é uma relação de ordem. Com efeito, a propriedade reflexiva é válida, pois \( \forall n \in \mathbb{N}, n = n \cdot 1, n|n \). A relação \( R \) também é anti-simétrica, pois \( aRb \land bRa \implies \exists m, n \in \mathbb{N}, b = am \land a = bn \). Assim, \( a = (am)n = a(mn) \). Mas isto somente é possível se \( mn = 1 \), donde concluímos que \( m = n = 1 \). Portanto, \( a = b \). Por fim, verificamos que a propriedade transitiva também é válida. \( aRb \land bRc \implies \exists m, n \in \mathbb{N}, b = am \land c = bn \). Assim, \( c = (am)n = a(mn) = ak \). Portanto, \( a \) divide \( c \) e isto implica que \( aRc \).</p>
-<h3 id="exemplo-77"><a class="header" href="#exemplo-77">Exemplo</a></h3>
+<h3 id="exemplo-85"><a class="header" href="#exemplo-85">Exemplo</a></h3>
 <p>Consideremos um conjunto \( X \) e sobre seu conjunto potência \( \mathcal{P}(X) \) a relação definida por \( A \preceq B \iff A \subset B \). Uma vez que \( A \subset A \) segue que \( A \preceq A \) ( \( A \) precede ou é igual a \( A \) ) e a relação é reflexiva. Quando estudamos <a href="fem/conjuntos.html">Conjuntos</a> vimos que \( A \subset B \land B \subset C \implies A \subset C \). Isto é \( A \preceq B \land B \preceq C \implies A \preceq C \) e a relação é transitiva. Também do capítulo sobre conjuntos vimos que \( A \subset B \land B \subset C \implies A = B \). Logo, \( a \preceq B \land B \preceq A \implies A = B \), de modo que vale a propriedade antissimétrica. Portanto, o conjunto ( \( \mathcal{P}(X), \subset \) ) é parcialmente ordenado.</p>
 <h3 id="ordem-lexicográfica"><a class="header" href="#ordem-lexicográfica">Ordem lexicográfica</a></h3>
 <p>Seja \( A \) um conjunto e seja \( \preceq \) uma ordem parcial sobre \( A \). Dizemos que \( (a_{1}, a_{2})R(x_{1}, x_{2}) \iff a_{1} \preceq x_{1} \lor a_{1} = x_{1} \land a_{2} \preceq x_{2} \). Mostremos que \( R \) é uma relação de ordem parcial. A propriedade reflexiva é válida, uma vez que \( \forall (x,y) \in A \) temos que \( x = x \land y \preceq y \). Logo, \( (x,y)R(x, y) \). Para verificarmos a antissimetria, suponha que \( (x_{1}, y_{2})R(x_{2}, y_{2}) \) e \( (x_{2}, y_{2})R(x_{1}, y_{1}) \). Assim, do fato que \( x_{1] \preceq x_{2} \land x_{2} \preceq x_{1} \) segue que \( x_{1} = x_{2} \) e, consequentemente, \( y_{1} \preceq y_{2} \land y_{2} \preceq y_{1} \). Portanto, \( y_{1} = y_{2} \land (x_{1}, y_{1}) = (x_{2}, y_{2}) \). Por fim, para mostrarmos a validade da propriedade transitiva, suponha que \( (x_{1}, y_{1})R(x_{2}, y_{2}) \land (x_{2}, y_{2})R(x_{3}, y_{3}) \). Temos quatro casos a considerar:</p>
@@ -1780,13 +1932,13 @@ f(X) = I(f) = \{f(x): x \in X\}
 \]</p>
 <p>é chamado <strong>imagem</strong> de \( f \). Designamos o conjunto \( Y \) como o <strong>contra-domínio</strong>.</p>
 <p>Para ser uma função, todo elemento do conjunto \( X \) deve estar associado a outro do conjunto \( Y \), mas a inversa não precisa ser necessariamente verdade.</p>
-<h2 id="exemplo-78"><a class="header" href="#exemplo-78">Exemplo</a></h2>
+<h2 id="exemplo-86"><a class="header" href="#exemplo-86">Exemplo</a></h2>
 <p>(1) A função \( f : A = \{1, 4, 7\} \rightarrow B = \{1, 2, 6, 7, 8, 9, 12\} \) dada por \( f(x) = x + 5 \) pode ser representada por um diagrama de flechas. Note que \( I(f) = \{6, 9, 12\} \subset B \).</p>
 <p><img src="fem/../img/fem/diagrama_de_flechas.png" alt="Diagrama de flechas (setas) exibindo os elementos de A ligados a alguns dos elementos de B, mas não todos" /></p>
 <p>(2) Muitas vezes, funções são dadas sem haver menção ao domínio. Nesse caso, o domínio é entendido como o maior subconjunto de \( \mathbb{R} \) para o qual \( f \) está definida. Por exemplo, para \( f(x) = \frac{\sqrt{x}}{x - 2} \), o domínio de \( f \) é \( [0, \infty) - \{2\} = D(f) \).</p>
-<h2 id="definição-8"><a class="header" href="#definição-8">Definição</a></h2>
+<h2 id="definição-10"><a class="header" href="#definição-10">Definição</a></h2>
 <p>Duas funções \( f : A \rightarrow B \) e \( g : C \rightarrow D \) são iguais se, e somente se, \( A = C, B = D \land \forall x \in A = C, f(x) = g(x) \).</p>
-<h2 id="exemplo-79"><a class="header" href="#exemplo-79">Exemplo</a></h2>
+<h2 id="exemplo-87"><a class="header" href="#exemplo-87">Exemplo</a></h2>
 <p>Consideremos as seguintes funções \( f : \mathbb{R} \rightarrow \mathbb{R} \) e \( g : \mathbb{R}_{+} \rightarrow \mathbb{R} \) dadas por \( f(x) = x^{3} \) e \( g(x) = x^{3} \), respectivamente. Então, mesmo tendo expressões iguais, como \( \mathbb{R} \neq \mathbb{R}_{+} \), elas são diferentes.</p>
 <h2 id="combinando-funções"><a class="header" href="#combinando-funções">Combinando funções</a></h2>
 <p>Quando o contradomínio das funções são conjuntos em que se podem fazer operações aritméticas, então podemos produzir novas funções a partir de funções dadas combinando-as. Desse modo, se \( A \) é um conjunto qualquer e \(f, g : A \rightarrow \mathbb{R} \), definimos as seguintes novas funções \( f + g \), \( f - g \), \( f \cdot g \) e \( \frac{f}{g} \) de \( A \) em \( \mathbb{R} \) através dos valores de \( f \) e  \( g \) em cada \( x \in A \). Isto é</p>
@@ -1796,7 +1948,7 @@ f(X) = I(f) = \{f(x): x \in X\}
 <li>\( (f \cdot g)(x) = f(x) \cdot g(x) \)</li>
 <li>\( (\frac{f}{g})(x) = \frac{f(x)}{g(x)} (g(x) \neq 0) \)</li>
 </ul>
-<h3 id="exemplo-80"><a class="header" href="#exemplo-80">Exemplo</a></h3>
+<h3 id="exemplo-88"><a class="header" href="#exemplo-88">Exemplo</a></h3>
 <p>Seja \( f(x) = x^{2} + 1 \) e \( g(x) = 2x + 1 \), temos as seguintes funções:</p>
 <ul>
 <li>\( (f + g)(x) = x^{2} + 2x + 2 \)</li>
@@ -1808,9 +1960,9 @@ f(X) = I(f) = \{f(x): x \in X\}
 <p>Outra maneira de a partir de uma função \( f : X \rightarrow Y \) se obter uma nova função é restringir a ação da função a um subconjunto de seu domínio ou, ao contrário, estender o domínio.</p>
 <p>(1) se \( a \subset X \), a função \( f|_{A} : A \rightarrow Y \) definida por \( f|_{A}(a) = f(a), \forall a \in A \) é dita a <strong>restrição</strong> de \( f \) ao conjunto \( A \).</p>
 <p>(2) se \( X \subset W \) uma função \( g: W \rightarrow B, g(x) = f(x) \forall x \in X \) é dita uma <strong>extensão</strong> de \( f \).</p>
-<h3 id="exemplo-81"><a class="header" href="#exemplo-81">Exemplo</a></h3>
+<h3 id="exemplo-89"><a class="header" href="#exemplo-89">Exemplo</a></h3>
 <p>A função \( f : (0, \infty) \rightarrow \mathbb{R}, f(x) = \frac{1}{x} \) cresce ilimitadamente quando nos aproximamos de \( x = 0 \), porém, sua restrição \( g : [\frac{1}{2}, \infty) \rightarrow \mathbb{R}, g(x) = \frac{1}{x} \) é limitada, com \( g(x) \leq 2, \forall x \in [\frac{1}{2}, \infty) \).</p>
-<h3 id="exemplo-82"><a class="header" href="#exemplo-82">Exemplo</a></h3>
+<h3 id="exemplo-90"><a class="header" href="#exemplo-90">Exemplo</a></h3>
 <p>A função raiz quadrada pode ser estendida para todo o conjunto dos reais através da função \( g : \mathbb{R} \rightarrow \mathbb{R}, g(x) = \sqrt{|x|} \).</p>
 <h2 id="composição-e-funções-inversas"><a class="header" href="#composição-e-funções-inversas">Composição e funções inversas</a></h2>
 <p>Desde que cada função é uma relação e cada relação possui associado a ela sua inversa, isto é, se \( f : A \rightarrow B \) é uma relação, então a relação inversa \( f^{-1} \) é dada por</p>
@@ -1818,7 +1970,7 @@ f(X) = I(f) = \{f(x): x \in X\}
 f^{-1} = \{(y, x) : (x, y) \in f\}
 \]</p>
 <p>diremos que \( f \) é <strong>invertível</strong> se \( f^{-1} \) é também uma função.</p>
-<h3 id="exemplo-83"><a class="header" href="#exemplo-83">Exemplo</a></h3>
+<h3 id="exemplo-91"><a class="header" href="#exemplo-91">Exemplo</a></h3>
 <p>Para a função \( f = \{(x, y) : y = 2x + 1\} \subset \mathbb{R} \times \mathbb{R} \), a inversa de \( f \) é a função</p>
 <p>\[
 f^{-1} = \{(y, x) : (x, y) \in f\} = \{(y, x) : y = 2x + 1\} = \{(y, x) : x = \frac{y - 1}{2}\}
@@ -1831,7 +1983,7 @@ g^{-1} = \{(y, x) : (x, y) \in g\} = \{(y, x) : y = x^{2}\} = \{(y, x) : x = \pm
 <p>(1) Elementos distintos no domínio \( A \) devem estar associados a elementos distintos no contradomínio \( B \), ou seja, se \( x \neq y \in A \), então \( f(x) \neq f(y) \in B \). Funções que satisfazm esta propriedade são chamadas de <strong>funções injetivas</strong>.</p>
 <p>(2) Cada elemento no contradomínio \( B \) deve ser imagem sob \( f \) de pelo menos um elemento de \( A \). Em outras palavras \( \forall y \in B,  \exists x \in A, f(x) = y \), ou ainda, \( I(f) = B \). Funções que satisfazem esta propriedade são ditas <strong>funções sobrejetivas</strong>.</p>
 <p>Desse modo, se a função \( f \) não for <strong>bijetiva</strong>: injetiva e sobrejetiva, ela não é invertível. Noutras palavras, se \( f \) é invertível, necessariamente ela é bijetiva.</p>
-<h3 id="exemplo-84"><a class="header" href="#exemplo-84">Exemplo</a></h3>
+<h3 id="exemplo-92"><a class="header" href="#exemplo-92">Exemplo</a></h3>
 <p>Seja \( f : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R} \times \mathbb{R} \) definida por \( f(x, y) = (-x + y, x + y) \). Se \( (x, y), (z, t) \in \mathbb{R} \times \mathbb{R} \) são tais que \( f(x, y) = f(z, t) \), então</p>
 <p>\[
 (-x + y, x + y) = (-z + t, z + t)
@@ -1853,7 +2005,7 @@ g \circ f = \{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\}
 = \{(x, z) : g(f(x)) = z\}
 \]</p>
 <p>Logo, \( g \circ f : A \rightarrow C \) será definida por \( (g \circ f)(x) = g(f(x)) \).</p>
-<h4 id="exemplo-85"><a class="header" href="#exemplo-85">Exemplo</a></h4>
+<h4 id="exemplo-93"><a class="header" href="#exemplo-93">Exemplo</a></h4>
 <p>Seja \( f(x) = sen(x) \) e \( g(x) = x^{2} + 6x \).</p>
 <p>\[
 (f \circ g)(x) = f(g(x)) = sen(g(x)) = sen(x^{2} + 6x)
@@ -1867,7 +2019,7 @@ g \circ f = \{(x, y) : \forall y \in B, (x,  y) \in f \land (y, z) \in g\}
 <p><em><strong>Observação</strong></em>
 Como a composição de relações é associativa e funções são relações, a composição de funções também é associativa, ou seja, \( f : A \rightarrow B, g : B \rightarrow C \land h : C \rightarrow \implies (h \circ f) \circ g = h \circ (f \circ g) \).</p>
 </blockquote>
-<h3 id="definição-9"><a class="header" href="#definição-9">Definição</a></h3>
+<h3 id="definição-11"><a class="header" href="#definição-11">Definição</a></h3>
 <p>Se uma função \( f : A \rightarrow B \) é bijetiva, então ela é invertível.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="matemática-básica"><a class="header" href="#matemática-básica">Matemática Básica</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="produtos-notáveis"><a class="header" href="#produtos-notáveis">Produtos Notáveis</a></h1>
@@ -2769,7 +2921,7 @@ e) \( \frac{4 \cdot (x + 1)}{(1 - x)} \)</p>
 <p>Uma geratriz de C é uma reta obtida girando \( g \) a um ângulo \( 0 \leq \theta &lt; 2\pi \) em torno de \( e \). Uma cônica é uma curva obtida intersectando \( C \) com um plano \( \pi \) que não passa por \( O \).</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="parábola"><a class="header" href="#parábola">Parábola</a></h1>
 <p>Obtida ao cortar um cone de forma paralela à geratriz de \( C \).</p>
-<h2 id="definição-10"><a class="header" href="#definição-10">Definição</a></h2>
+<h2 id="definição-12"><a class="header" href="#definição-12">Definição</a></h2>
 <p>Sejam \( d \) uma reta no plano e \( F \) um ponto não pertencente a \( d \). A parábola \( \mathcal{P} \) de diretriz \( d \) e foco \( F \) é o conjunto que consiste em todos os pontos \( P \) do plano, equidistantes do ponto \( F \) e da reta \( d \), isto é,</p>
 <p>\[
 \mathcal{P} = \{P; d(P, F) = d(P, d_{\text{reta}})\}
@@ -2860,7 +3012,7 @@ d(P, d) = d(P, P') = \sqrt{(x + a)^{2}} = |x + a|
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="elipse"><a class="header" href="#elipse">Elipse</a></h1>
 <p>Quando apenas um dos cones é cortado de uma forma não paralela.</p>
-<h2 id="definição-11"><a class="header" href="#definição-11">Definição</a></h2>
+<h2 id="definição-13"><a class="header" href="#definição-13">Definição</a></h2>
 <p>Sejam \( F_{1} \) e \( F_{2} \) pontos distintos do plano. Denote \( d(F_{1}, F_{2}) = 2c &gt; 0 \). A elipse \( \mathcal{E} \) de focos \( F_{1} \) e \( F_{2} \) é o conjunto do plano que consiste de todos os pontos \( P \), cuja soma das distâncias a \( F_{1} \) e \( F_{2} \) é igual a uma constante \( 2a &gt; 0 \), onde \( a &gt; c \), ou seja,</p>
 <p>\[
 \mathcal{E} = \{P; d(P, F_{1}) + d(P, F_{2}) = 2a\}, a &gt; c
@@ -2956,7 +3108,7 @@ Ax^{2} + By^{2} + Cx + Dy + E = 0
 \]</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hipérbole"><a class="header" href="#hipérbole">Hipérbole</a></h1>
 <p>Quando o corte não é paralelo e os dois cones são cortados.</p>
-<h2 id="definição-12"><a class="header" href="#definição-12">Definição</a></h2>
+<h2 id="definição-14"><a class="header" href="#definição-14">Definição</a></h2>
 <p>Sejam \( F_{1} \) e \( F_{2} \) pontos distintos do plano. Denote \( d(F_{1}, F_{2}) = 2c &gt; 0 \). A hipérbole \( \mathcal{H} \) de focos \( F_{1} \) e \( F_{2} \) é o conjunto do plano que consiste de todos os pontos \( P \) tais que o módulo da diferença das distâncias a \( F_{1} \) e \( F_{2} \) é igual a uma constante \( 2a &gt; 0 \), ou seja,</p>
 <p>\[
 \mathcal{H} = \{P; |d(P, F_{1}) - d(P, F_{2})| = 2a\}
@@ -3104,7 +3256,7 @@ Com \( x_{2} \neq 0 \), \( y_{2} \neq 0 \) e \( z_{2} \neq 0 \), podemos fazer
 <p>\[
 d(A, B) = \sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2} + (z_{2} - z_{1})^{2}}
 \]</p>
-<h2 id="exemplo-86"><a class="header" href="#exemplo-86">Exemplo</a></h2>
+<h2 id="exemplo-94"><a class="header" href="#exemplo-94">Exemplo</a></h2>
 <p>Considere o vetor \( \vec{v} = (2, -1, -3) \). Determine o vetor \( \vec{w} \) tal que \( \vec{w} || \vec{v} \), \( \vec{w} \) tem o mesmo sentido de \( \vec{v} \) e \( ||\vec{w}|| = 3||\vec{v}|| \).</p>
 <details>
 <p>\[
@@ -3113,7 +3265,7 @@ d(A, B) = \sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2} + (z_{2} - z_{1})^{2}}
 \vec{w} = (6, -3, -9)
 \]</p>
 </details>
-<h2 id="exemplo-87"><a class="header" href="#exemplo-87">Exemplo</a></h2>
+<h2 id="exemplo-95"><a class="header" href="#exemplo-95">Exemplo</a></h2>
 <p>Considere os pontos \( A = (0, 1, -1) \) e \( B = (1, 2, -1) \), e os vetores \( \vec{u} = (-2, -1, 1) \), \( \vec{v} = (3, 0, -1) \) e \( \vec{w} = (-2, 2, 2) \). Existem números \( a \), \( b \) e \( c \in \mathbb{R} \) tais que</p>
 <p>\[
 \vec{w} = a\vec{AB} + b\vec{u} + c\vec{v}
@@ -3147,7 +3299,7 @@ c = b - 2 \implies c = -1
 <p>\[
 \langle \vec{u}, \vec{v} \rangle = x_{1}x_{2} + y_{1}y_{2}
 \]</p>
-<h4 id="exemplo-88"><a class="header" href="#exemplo-88">Exemplo</a></h4>
+<h4 id="exemplo-96"><a class="header" href="#exemplo-96">Exemplo</a></h4>
 <p>Calcule o produto interno entre os vetores \( \vec{u} = (2, -5) \) e \( \vec{v} = (-1, 1) \).</p>
 <details>
 <p>\[
@@ -3158,7 +3310,7 @@ c = b - 2 \implies c = -1
 <p>\[
 \langle \vec{u}, \vec{v} \rangle = x_{1}x_{2} + y_{1}y_{2} + z_{1}z_{2}
 \]</p>
-<h4 id="exemplo-89"><a class="header" href="#exemplo-89">Exemplo</a></h4>
+<h4 id="exemplo-97"><a class="header" href="#exemplo-97">Exemplo</a></h4>
 <p>Calcule o produto interno entre os vetores \( \vec{u} = (1, -4, 0) \) e \( \vec{v} = (3, 1, -5) \).</p>
 <details>
 <p>\[
@@ -3189,7 +3341,7 @@ c = b - 2 \implies c = -1
 <p>\[
 \vec{u} \bot \vec{v} \iff \langle \vec{u}, \vec{v} \rangle = 0
 \]</p>
-<h4 id="exemplo-90"><a class="header" href="#exemplo-90">Exemplo</a></h4>
+<h4 id="exemplo-98"><a class="header" href="#exemplo-98">Exemplo</a></h4>
 <p>Determine o ângulo entre os vetores \( \vec{u} = (2, -1, -1) \) e \( \vec{v} = (-1, -1, 2) \).</p>
 <details>
 <p>\[
@@ -3197,7 +3349,7 @@ c = b - 2 \implies c = -1
 \theta = \text{arcos } \left(-\frac{1}{2}\right) \implies \theta = 120^{\circ} \text{ ou } \frac{2\pi}{3}
 \]</p>
 </details>
-<h4 id="exemplo-91"><a class="header" href="#exemplo-91">Exemplo</a></h4>
+<h4 id="exemplo-99"><a class="header" href="#exemplo-99">Exemplo</a></h4>
 <p>Determine \( k \) para que os vetores \( \vec{u} = (-2, 3) \) e \( \vec{v} = (k, -4) \) sejam</p>
 <p>(a) Ortogonais</p>
 <p>(b) Paralelos</p>
@@ -3215,7 +3367,7 @@ k = -6
 -2 \cdot \left(-\frac{4}{3}\right) \implies k = \frac{8}{3}
 \]</p>
 </details>
-<h4 id="exemplo-92"><a class="header" href="#exemplo-92">Exemplo</a></h4>
+<h4 id="exemplo-100"><a class="header" href="#exemplo-100">Exemplo</a></h4>
 <p>Calcule \( ||\vec{u} + \vec{v}|| \), \( ||\vec{u} - \vec{v}|| \) e \( \langle \vec{u}, \vec{v} \rangle \) sabendo que \( ||\vec{u}|| = 4 \), \( ||\vec{v}|| = 3 \) e o ângulo entre \( \vec{u} \) e \( \vec{v} \) é \( \frac{\pi}{3} \).</p>
 <details>
 <ol>
@@ -3250,7 +3402,7 @@ k = -6
 <p>\[
 Proj_{\vec{v}}^{\vec{u}} = \frac{\langle \vec{u}, \vec{v} \rangle}{||\vec{v}||^{2}} \cdot \vec{v}
 \]</p>
-<h3 id="exemplo-93"><a class="header" href="#exemplo-93">Exemplo</a></h3>
+<h3 id="exemplo-101"><a class="header" href="#exemplo-101">Exemplo</a></h3>
 <p>Considere os vetores no plano \( \vec{v} = (1, 1) \) e \( \vec{u} = (2, 5) \). Calcule a projeção ortogonal de \( \vec{u} \) e \( \vec{v} \). Decomponha \( \vec{u} \) como soma de \( \vec{u}<em>{1} \) com \( \vec{u}</em>{2} \), onde \( \vec{u}<em>{1} || \vec{v} \) e \( \vec{u}</em>{2} \bot \vec{v} \).</p>
 <details>
 <p>\[
@@ -3277,7 +3429,7 @@ x_{2} &amp; y_{2} &amp; z_{2}
 <p><em><strong>Observação</strong></em>
 Para a operação fazemos \( \vec{i} (y_{1} \cdot z_{2} - y_{2} \cdot z_{1}) - \vec{j} (x_{1} \cdot z_{2} - x_{2} \cdot z_{1}) + \vec{k} (x_{1} \cdot y_{2} - x_{2} \cdot y_{1}) = (a, -b, c) \).</p>
 </blockquote>
-<h3 id="exemplo-94"><a class="header" href="#exemplo-94">Exemplo</a></h3>
+<h3 id="exemplo-102"><a class="header" href="#exemplo-102">Exemplo</a></h3>
 <p>Considere os vetores \( \vec{u} = (3, -1, -2) \) e \( \vec{v} = (2, 4, -1) \). Calcule \( \vec{u} \times \vec{v} \).</p>
 <details>
 <p>\[
@@ -3312,7 +3464,7 @@ Por 2, vemos que o produto vetorial não é comutativo, ou seja, \( \vec{u} \tim
 O produto vetorial não é associativo, ou seja, em geral temos que
 \( (\vec{u} \times \vec{v}) \times \vec{w} \neq \vec{u} \times (\vec{v} \times \vec{w}) \).</p>
 </blockquote>
-<h3 id="exemplo-95"><a class="header" href="#exemplo-95">Exemplo</a></h3>
+<h3 id="exemplo-103"><a class="header" href="#exemplo-103">Exemplo</a></h3>
 <p>Determine um vetor com módulo igual a 5 <em>simultaneamente ortogonal</em> aos vetores \( \vec{u} = (1, 1, 0) \) e \( \vec{v} = (-1, 1, 2) \).</p>
 <details>
 <p>\[
@@ -3348,7 +3500,7 @@ A = \text{base} \cdot \text{altura} = ||\vec{u}||a = ||\vec{u}||||\vec{v}|| \tex
 A = ||\vec{u} \times \vec{v}||
 \]</p>
 <p>Conclusão: O módulo do produto de vetorial de dois vetores não-nulos é igual a área do paralelogramo determinado por eles.</p>
-<h4 id="exemplo-96"><a class="header" href="#exemplo-96">Exemplo</a></h4>
+<h4 id="exemplo-104"><a class="header" href="#exemplo-104">Exemplo</a></h4>
 <p>Considere os vetores \( \vec{u} = (1, -1, 1) \) e \( \vec{v} = (2, -3, 4) \). Calcule a área do paralelogramo gerado por \( \vec{u} \) e \( \vec{v} \).</p>
 <details>
 <p>\[
@@ -3363,10 +3515,84 @@ A = ||\vec{u} \times \vec{v}||
 ||\vec{w}|| = \sqrt{(-1)^{2} + (-2)^{2} + (-1)^{2}} = \sqrt{6}
 \]</p>
 </details>
-<h4 id="exemplo-97"><a class="header" href="#exemplo-97">Exemplo</a></h4>
+<h4 id="exemplo-105"><a class="header" href="#exemplo-105">Exemplo</a></h4>
 <p>Considere os pontos \( A = (2, 1, 1) \), \( B = (3, -1, 0) \) e \( C = (4, 2, -2) \). Calcule a área do triângulo \( ABC \).</p>
 <details>
+<p>\[
+\vec{AB} = B - A = (1, -2, -1) = \vec{u}
+\]</p>
+<p>\[
+\vec{AC} = C - A = (2, 1, -3) = \vec{v}
+\]</p>
+<p>\[
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+1 &amp; -2 &amp; -1
+2 &amp; -3 &amp; -3
+\end{vmatrix}
+= i(6 + 1) - j(-3 + 2) + k(1 + 4) = (7, 1, 5) = \vec{w}
+\]</p>
+<p>\[
+||\vec{w}|| = \sqrt{(7)^{2} + (1)^{2} + (5)^{2}} = \sqrt{75} = 5\sqrt{3}
+\]</p>
+<p>Como podemos dividir um paralelogramo em dois triângulos, a área do triângulo é \( \frac{5\sqrt{3}}{2} \).</p>
 </details>
+<h2 id="produto-misto"><a class="header" href="#produto-misto">Produto Misto</a></h2>
+<p>O <strong>produto misto</strong> de três vetores \( \vec{u} \), \( \vec{v} \) e \( \vec{w} \) no espaço, tomados nesta ordem, é um número real, denotado por \( (\vec{u}, \vec{v}, \vec{w}) \), e definido por</p>
+<p>\[
+(\vec{u}, \vec{v}, \vec{w}) = \langle \vec{u}, \vec{v} \times \vec{w} \rangle =
+\begin{vmatrix}
+x_{1} &amp; y_{1} &amp; z_{1}
+x_{2} &amp; y_{2} &amp; z_{2}
+x_{3} &amp; y_{3} &amp; z_{3}
+\end{vmatrix}
+\]</p>
+<h3 id="exemplo-106"><a class="header" href="#exemplo-106">Exemplo</a></h3>
+<p>Calcule \( (\vec{u}, \vec{v}, \vec{w}) \), onde \( \vec{u} = (3, -1, 1) \), \( \vec{v} = (1, 2, 2) \) e \( \vec{w} = (2, 0, -3) \).</p>
+<details>
+<p>\[
+\begin{vmatrix}
+3 &amp; -1 &amp; 1
+1 &amp; 2 &amp; 2
+2 &amp; 0 &amp; -3
+\end{vmatrix}
+= 3(-6) + 1(-3 - 4) + 1(-4) = -18 - 7 - 4 = -29
+\]</p>
+</details>
+<h3 id="propriedades-3"><a class="header" href="#propriedades-3">Propriedades</a></h3>
+<ol>
+<li>Se \( \vec{u} = \vec{0} \) ou \( \vec{v} = \vec{0} \) ou \( \vec{w} = \vec{0} \) então \( (\vec{u}, \vec{v}, \vec{w}) = 0 \).</li>
+<li>Se \( \vec{u}|| \vec{v} \) ou \( \vec{v}||\vec{w} \) ou \( \vec{u}||\vec{w} \) então \( (\vec{u}, \vec{v}, \vec{w}) = 0 \).</li>
+<li>O produto misto (\vec{u}, \vec{v}, \vec{w}) muda de sinal ao trocarmos a posição dos vetores.</li>
+<li>\( (\vec{u} + \vec{x}, \vec{v}, \vec{w}) = (\vec{u}, \vec{v}, \vec{w}) + (\vec{x}, \vec{v}, \vec{w}) \), \( (\vec{u}, \vec{v} + \vec{x}, \vec{w}) = (\vec{u}, \vec{v}, \vec{w}) + (\vec{x}, \vec{x}, \vec{w}) \), \( (\vec{u}, \vec{v}, \vec{w} + \vec{x} = (\vec{u}, \vec{v}, \vec{w}) + (\vec{x}, \vec{v}, \vec{x}) \).</li>
+<li>\( (x\vec{u}, \vec{v}, \vec{w}) = (\vec{u}, x\vec{v}, \vec{w}) = (\vec{u}, \vec{v}, x\vec{w}) = x(\vec{u}, \vec{v}, \vec{w}) \).</li>
+<li>\( (\vec{u}, \vec{v}, \vec{w}) = 0 \iff \vec{u}, \vec{v}, \vec{w} \text{ são coplanares (ou seja, pertencem a um mesmo plano)} \)</li>
+</ol>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+A maioria dessas propriedades vem das matrizes.</p>
+</blockquote>
+<h4 id="exemplo-107"><a class="header" href="#exemplo-107">Exemplo</a></h4>
+<p>Verifique se os vetores \( \vec{u} = (1, -1, 2) \), \( \vec{v} = (2, 2, 1) \) e \( \vec{w} = (-2, 0, -4) \) são coplanares.</p>
+<details>
+<p>\[
+\begin{vmatrix}
+x_{1} &amp; y_{1} &amp; z_{1}
+x_{2} &amp; y_{2} &amp; z_{2}
+x_{3} &amp; y_{3} &amp; z_{3}
+\end{vmatrix}
+= (1 \cdot 2 \cdot -4) + (-1 \cdot 1 \cdot -2) + (2 \cdot 2 \cdot 0) - (2 \cdot 2 \cdot -2) - (1 \cdot 1 \cdot 0) - (-1 \cdot 2 \cdot -4) = (-8) + (2) = -6
+\]</p>
+<p>Como \( -6 \neq 0 \), esses vetores não são coplanares.</p>
+</details>
+<h2 id="interpretação-geométrica-para-o-produto-misto"><a class="header" href="#interpretação-geométrica-para-o-produto-misto">Interpretação Geométrica para o Produto Misto</a></h2>
+<p>Podemos determinar um paralelepípedo usando três vetores não-nulos e dois não-paralelos.</p>
+<p>Temos que o volume \( V \) do paralelepípedo é dado por</p>
+<p>\[
+V = |(\vec{u}, \vec{v}, \vec{w})|
+\]</p>
+<h3 id="exemplo-108"><a class="header" href="#exemplo-108">Exemplo</a></h3>
+<p>Calcule o volume do paralelepípedo determinado pelos vetores \( \vec{u} = (3, -1, 1) \), \( \vec{v} = (1, 2, ) \) e \( \vec{w} = (2, 0, -3) \).</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="operações-2"><a class="header" href="#operações-2">Operações</a></h1>
 <p>Assim como os vetores no plano, podemos fazer operações com os vetore no espaço.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="igualdade-1"><a class="header" href="#igualdade-1">Igualdade</a></h1>
@@ -3476,7 +3702,7 @@ Mas geralmente você vai precisar seguir esses passos.</p>
 <p>Ao seguir os passos 1, 2 e 3, estaremos redigindo a função principal no topo das anotaçẽos e seguindo para "baixo" escrevendo as sub-funções necessárias.</p>
 <p>Entretanto, ao codificarmos as funções, precisamos inverter essa ordem, uma vez que o compilador precisa conhecer de antemão as funções que serão utilizadas.</p>
 <p>Na nomenclatura do professor Hendrik, algoritmos são elaborados <strong>de cima para baixo</strong>, e em seguida o código <strong>de baixo pra cima</strong>.</p>
-<h3 id="exemplo-98"><a class="header" href="#exemplo-98">Exemplo</a></h3>
+<h3 id="exemplo-109"><a class="header" href="#exemplo-109">Exemplo</a></h3>
 <p>Crie um programa que calcule a soma das áreas de duas figuras geométricas distintas: um retângulo e uma elipse.</p>
 <details>
 <p><em><strong>Algoritmo Visual</strong></em>
@@ -3547,7 +3773,7 @@ console.log(resultado)
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="enriquecendo-sua-solução"><a class="header" href="#enriquecendo-sua-solução">Enriquecendo sua solução</a></h1>
 <p>Algo importante na programação é a <em>refatoração</em>, o ato de reescrever código para deixá-lo conciso.</p>
-<h2 id="exemplo-99"><a class="header" href="#exemplo-99">Exemplo</a></h2>
+<h2 id="exemplo-110"><a class="header" href="#exemplo-110">Exemplo</a></h2>
 <p>Retomando o exemplo anterior, poderíamos...</p>
 <p>...fazer uso direto das funções no console:</p>
 <pre><code class="language-javascript">console.log(soma(areaRet(6.1, 4.4), areaEli(3.0, 5.3)))
@@ -3578,7 +3804,7 @@ console.log(textoArea)
 <div style="break-before: page; page-break-before: always;"></div><h1 id="definição-de-função-como-retorno"><a class="header" href="#definição-de-função-como-retorno">Definição de função como retorno</a></h1>
 <p>Uma função <strong>pode ser retornada como resultado</strong> do uso de outra função.</p>
 <p>Com isso, podemos separar os parâmetros de uma função, para deixá-los mais modulares. Uma função que usa esse método é chamada de <strong>função parcial</strong>, pois apenas um de seus parâmetros está definido.</p>
-<h2 id="exemplo-100"><a class="header" href="#exemplo-100">Exemplo</a></h2>
+<h2 id="exemplo-111"><a class="header" href="#exemplo-111">Exemplo</a></h2>
 <p>Defina funções para calcular o <strong>quadrado</strong>, o <strong>cubo</strong> e a <strong>raíz quadrada</strong> de um número passado como argumento reaproveitando uma definição de função genérica chamada <strong>expoente</strong>.</p>
 <details>
 <p><em><strong>Programa em JavaScript</strong></em></p>
@@ -3638,7 +3864,7 @@ IN
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="função-anônima"><a class="header" href="#função-anônima">Função Anônima</a></h1>
 <p>É quando usamos uma definição de função <strong>sem atribuir a ela qualquer nome</strong>, só no momento. Útil quando estamos interagindo com uma função que exige outra como argumento ou quando precisamos da maleabilidade de uma função.</p>
-<h2 id="exemplo-101"><a class="header" href="#exemplo-101">Exemplo</a></h2>
+<h2 id="exemplo-112"><a class="header" href="#exemplo-112">Exemplo</a></h2>
 <p>Escreva um programa para calcular o maior e o menor valor real das raízes de uma equação de segundo grau. A expressão genérica para cálculo das raízes é dada por \( \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} \).</p>
 <details>
 <pre><code class="language-javascript">const raiz = (a, b, c, f) =&gt; {
@@ -3683,7 +3909,7 @@ a_{0} = \text{base}
 f(0) = \text{base}
 f(n) = f(n - 1) + \text{base}
 \]</p>
-<h2 id="exemplo-102"><a class="header" href="#exemplo-102">Exemplo</a></h2>
+<h2 id="exemplo-113"><a class="header" href="#exemplo-113">Exemplo</a></h2>
 <p>Observe a sequência aritmética a seguir e encontre uma fórmula recursiva apropriada: \( {2, 7, 12, 17, 22, ...} \).</p>
 <details>
 <p>f(0) = 2
@@ -3694,7 +3920,7 @@ f(n) = f(n - 1) + 5</p>
 <p>Agora, iremos ver como converter essa formulação recursiva para a implementação da recursividade em JavaScript.</p>
 <p>Nesta seção, são destacados dois padrões que devem ser lembrados, para auxiliar na solução de futuros problemas.</p>
 <h2 id="n-ésimo-elemento-de-uma-sequência-infinita"><a class="header" href="#n-ésimo-elemento-de-uma-sequência-infinita">N-ésimo elemento de uma sequência infinita</a></h2>
-<h3 id="exemplo-103"><a class="header" href="#exemplo-103">Exemplo</a></h3>
+<h3 id="exemplo-114"><a class="header" href="#exemplo-114">Exemplo</a></h3>
 <p>Observe a sequência aritmética a seguir e crie um programa para encontrar o valor do n-ésimo elemento: \( {2, 7, 12, 17, 22, ...} \).</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
@@ -3712,7 +3938,7 @@ f(n) = f(n - 1) + 5
 }
 </code></pre>
 </details>
-<h3 id="exemplo-104"><a class="header" href="#exemplo-104">Exemplo</a></h3>
+<h3 id="exemplo-115"><a class="header" href="#exemplo-115">Exemplo</a></h3>
 <p>N-ésimo termo da sequência \( {0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...} \).</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
@@ -3734,7 +3960,7 @@ fib(n) = fib(n - 1) + fib(n - 2)
 </code></pre>
 </details>
 <h2 id="operação-formada-por-uma-repetição-de-operações-mais-primitivas"><a class="header" href="#operação-formada-por-uma-repetição-de-operações-mais-primitivas">Operação formada por uma repetição de operações mais primitivas</a></h2>
-<h3 id="exemplo-105"><a class="header" href="#exemplo-105">Exemplo</a></h3>
+<h3 id="exemplo-116"><a class="header" href="#exemplo-116">Exemplo</a></h3>
 <p>Implemente o operador de exponenciação para permitir calcular a potência natural de um número \( m \) qualquer: \( m^{n} \).</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
@@ -3743,7 +3969,7 @@ pot(m, 0) = 1
 pot(m, n) = m \cdot pot(m, n - 1)
 \]</p>
 </details>
-<h3 id="exemplo-106"><a class="header" href="#exemplo-106">Exemplo</a></h3>
+<h3 id="exemplo-117"><a class="header" href="#exemplo-117">Exemplo</a></h3>
 <p>Implemente o operador de exponenciação para permitir calcular a potência <em>inteira</em> de um número \( m \) qualquer: \( m^{n} \).</p>
 <details>
 <p>Em alguns casos, é recomendado elaborarmos uma <strong>função auxiliar</strong> para ajudar.</p>
@@ -3768,7 +3994,7 @@ pot(m, n) = m \cdot pot(m, n - 1)
 }
 </code></pre>
 </details>
-<h3 id="exemplo-107"><a class="header" href="#exemplo-107">Exemplo</a></h3>
+<h3 id="exemplo-118"><a class="header" href="#exemplo-118">Exemplo</a></h3>
 <p>Implemente o operador de divisão a fim de encontrar o resto da divisão entre dois números inteiros positivos fornecidos, \( n \) e \( m \).</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
@@ -3818,7 +4044,7 @@ resto(n, m) = resto(n - m, m), \forall n \geq m
 <p>Quando uma solução planejada consituir de algum tipo de <strong>transformação de cada valor original para um novo valor</strong>, gerando uma nova lista de valores modificados, temos um caso de <strong>mapeamento</strong>.</p>
 <h2 id="função-map"><a class="header" href="#função-map">Função <code>map</code></a></h2>
 <p>Em JavaScript, fazemos esse mapeamento com uso de uma função pré-definida <code>map(f)</code> onde <code>f</code> é a função definida que representa a operação de transformação a ser aplicada a cada elemento.</p>
-<h3 id="exemplo-108"><a class="header" href="#exemplo-108">Exemplo</a></h3>
+<h3 id="exemplo-119"><a class="header" href="#exemplo-119">Exemplo</a></h3>
 <p>Programa para aplicar um desconto de 10% em uma lista de produtos.</p>
 <details>
 <pre><code class="language-javascript">const desconto = (desc) =&gt; (lista) =&gt; lista.map((x) =&gt; x - x * (desc) / 100)
@@ -3830,7 +4056,7 @@ console.log(resultado)
 </code></pre>
 <p><code>[ 9.54, 7.65, 4.995, 5.760000000000001, 36.9, 20.745, 17.91, 14.31, 19.89, 2.475 ]</code></p>
 </details>
-<h3 id="exemplo-109"><a class="header" href="#exemplo-109">Exemplo</a></h3>
+<h3 id="exemplo-120"><a class="header" href="#exemplo-120">Exemplo</a></h3>
 <p>Programa para calcular o triplo de cada elemento de uma lista.</p>
 <details>
 <pre><code class="language-javascript">const valores = [3, 4, -2, 0, 1, 40]
@@ -3840,7 +4066,7 @@ console.log(triplo)
 </code></pre>
 <p><code>[9, 12, -6, 0, 3, 120 ]</code></p>
 </details>
-<h3 id="exemplo-110"><a class="header" href="#exemplo-110">Exemplo</a></h3>
+<h3 id="exemplo-121"><a class="header" href="#exemplo-121">Exemplo</a></h3>
 <p>Programa para extrair a inicial de cada nome de uma lista.</p>
 <details>
 <pre><code class="language-javascript">const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa']
@@ -3851,7 +4077,7 @@ console.log(iniciais)
 </code></pre>
 <p><code>[ "A", "B", "G", "L", "R" ]</code></p>
 </details>
-<h3 id="exemplo-111"><a class="header" href="#exemplo-111">Exemplo</a></h3>
+<h3 id="exemplo-122"><a class="header" href="#exemplo-122">Exemplo</a></h3>
 <p>Programa para adicionar um sobrenome a cada nome de uma lista.</p>
 <details>
 <pre><code class="language-javascript">const nomes = ['Ana', 'Bia', 'Gui', 'Lia', 'Rafa']
@@ -3866,7 +4092,7 @@ console.log(nomeCompleto)
 <p>Listas podem ser filtradas, retornando somente os elementos que queremos (aqueles que se encaixam a um critério definido).</p>
 <h2 id="função-filter"><a class="header" href="#função-filter">Função <code>filter</code></a></h2>
 <p>Em JavaScript, fazemos essa filtragem com uso de uma função pré-definida <code>filter(f)</code> onde <code>f</code> é a função definida que representa o critério de seleção de cada elemento.</p>
-<h3 id="exemplo-112"><a class="header" href="#exemplo-112">Exemplo</a></h3>
+<h3 id="exemplo-123"><a class="header" href="#exemplo-123">Exemplo</a></h3>
 <p>Programa para selecionar produtos que custem menos que R$15.</p>
 <details>
 <pre><code class="language-javascript">const menorQue = (limite) =&gt; (lista) =&gt; lista.filter((x) =&gt; x &lt; limite)
@@ -3877,7 +4103,7 @@ console.log(resultado)
 </code></pre>
 <p><code>[ 10.6, 8.5, 5.55, 6.4, 2.75 ]</code></p>
 </details>
-<h3 id="exemplo-113"><a class="header" href="#exemplo-113">Exemplo</a></h3>
+<h3 id="exemplo-124"><a class="header" href="#exemplo-124">Exemplo</a></h3>
 <p>Programa para selecionar os nomes que começam com a letra "A".</p>
 <details>
 <pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
@@ -3888,7 +4114,7 @@ console.log(nomes.filter(primeiraLetraA))
 </code></pre>
 <p><code>[ "Ana"&lt; "Adele", "Adam" ]</code></p>
 </details>
-<h3 id="exemplo-114"><a class="header" href="#exemplo-114">Exemplo</a></h3>
+<h3 id="exemplo-125"><a class="header" href="#exemplo-125">Exemplo</a></h3>
 <p>Programa para selecionar os nomes com mais de 4 letras.</p>
 <details>
 <pre><code class="language-javascript">const nomes = ['Felipe', 'Ana', 'Bia', 'Adele', 'Gui', 'Adam', 'Rafa', 'Maria']
@@ -3914,7 +4140,7 @@ console.log(nomes.filter(tamanhoMaiorQue4))
 O argumento <code>i</code> pode ser omitido em alguns casos.</p>
 </blockquote>
 <p>Por sua vez, a função <code>f</code>, além do paraâmetro usual, usa <strong>um acumulador</strong> <code>acc</code>. Esse parâmetro é importante para armazenar as parciais do processo de acumulação que se inicia a partir do valor inicial <code>i</code> indicado.</p>
-<h3 id="exemplo-115"><a class="header" href="#exemplo-115">Exemplo</a></h3>
+<h3 id="exemplo-126"><a class="header" href="#exemplo-126">Exemplo</a></h3>
 <p>Programa para somar os valores de toda a cesta de produtos a serem comprados.</p>
 <details>
 <pre><code class="language-javascript">somar = (acc, x) =&gt; acc + x
@@ -3925,7 +4151,7 @@ console.log(resultado)
 </code></pre>
 <p><code>155.75</code></p>
 </details>
-<h3 id="exemplo-116"><a class="header" href="#exemplo-116">Exemplo</a></h3>
+<h3 id="exemplo-127"><a class="header" href="#exemplo-127">Exemplo</a></h3>
 <p>Programa para gerar uma sigla a partir do nome de uma empresa/instituição.</p>
 <details>
 <pre><code class="language-javascript">const nomes = ['Organização', 'Mundial', 'Saúde']
@@ -3935,7 +4161,7 @@ console.log(nomes.reduce(sigla, ''))
 </code></pre>
 <p><code>OMS</code></p>
 </details>
-<h3 id="exemplo-117"><a class="header" href="#exemplo-117">Exemplo</a></h3>
+<h3 id="exemplo-128"><a class="header" href="#exemplo-128">Exemplo</a></h3>
 <p>Programa para contar o número de letras de uma lista de palavras.</p>
 <details>
 <pre><code class="language-javascript">const nomes = ['Organização', 'Mundial', 'Saúde']
@@ -3953,7 +4179,7 @@ console.log(nomes.reduce(numLetras, 0))
         (valor) =&gt; fns.reduce((acc, fn) =&gt; fn(acc, valor))
 </code></pre>
 <p>O operador <code>...</code> se chama <strong>spread</strong>, e serve para permitir expandir uma expressão em um local que receba múltiplos argumentos ou elementos.</p>
-<h2 id="exemplo-118"><a class="header" href="#exemplo-118">Exemplo</a></h2>
+<h2 id="exemplo-129"><a class="header" href="#exemplo-129">Exemplo</a></h2>
 <p>Crie um programa para contar o número de caracteres de cada palavra de uma lista, multiplicar esse valor por 3 e depois gerar uma lista crescente dessa lista resultante. Você deve compor as funções de <em>contagem</em>, de <em>triplicação</em> e de <em>ordenação</em> em uma única função.</p>
 <details>
 <pre><code class="language-javascript">const contagem = (lista) =&gt; lista.map((texto) =&gt; texto.length)
@@ -3978,7 +4204,7 @@ console.log(geraResultado(nomes))
 <h2 id="modo-síncrono"><a class="header" href="#modo-síncrono">Modo síncrono</a></h2>
 <p>Neste modo, o arquivo é acessado e o programa interrompe seu processamento enquanto os dados estão sendo lidos.</p>
 <p>Para leitura síncrona, JavaScript disponibiliza a função <code>readFileSync</code>. Essa função possui o caminho do arquivo como parâmetro de entrada e retorna seu conteúdo.</p>
-<h3 id="exemplo-119"><a class="header" href="#exemplo-119">Exemplo</a></h3>
+<h3 id="exemplo-130"><a class="header" href="#exemplo-130">Exemplo</a></h3>
 <p>Programa que lê o conteúdo de um arquivo de texto, exibe esse conteúdo no terminal e A SEGUIR, realiza a próxima operação programada.</p>
 <pre><code class="language-javascript">// Bibliotecas Node para ler arquivos.
 const fs = require('fs')
@@ -4002,7 +4228,7 @@ console.log('=== FIM da outra operação.\n')
 <h2 id="modo-assíncrono"><a class="header" href="#modo-assíncrono">Modo assíncrono</a></h2>
 <p>Executa sem travar a execução de outras funções. Executa depois do arquivo ter sido completamente lido.</p>
 <p>Para leitura assíncrona, JavaScript disponibiliza a função <code>readFile</code>. Além do caminho do arquivo, essa função exige um segundo parâmetro de entrada: uma função responsável por realizar o processamento desejado assim que o conteúdo do arquivo tiver sido completamente lido, uma função de <strong>callback</strong>.</p>
-<h3 id="exemplo-120"><a class="header" href="#exemplo-120">Exemplo</a></h3>
+<h3 id="exemplo-131"><a class="header" href="#exemplo-131">Exemplo</a></h3>
 <p>Programa que lê o conteúdo de um arquivo de texto no modo assíncrono, com <em>callback</em>.</p>
 <pre><code class="language-javascript">// Bibliotecas Node para ler arquivos.
 const fs = require('fs')
@@ -4382,7 +4608,7 @@ console.timeEnd('#2')
 <p>Aplicação do conceito de recursão em estrutura de dados maiores.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="formulação-da-recursividade-em-listas"><a class="header" href="#formulação-da-recursividade-em-listas">Formulação da recursividade em listas</a></h1>
 <p>Muitos problemas computacionais são resolvidos repetindo-se uma mesma computação sobre coleções de dados de tamanho cada vez menor até que se chege a um ponto onde não há mais necessidade de continuar esse processo. Isso é típico em problemas onde identifica-se claramente o perfil de <strong>sequência</strong> de dados. Uma das formas de expressar uma sequência de dados é com recursão.</p>
-<h2 id="exemplo-121"><a class="header" href="#exemplo-121">Exemplo</a></h2>
+<h2 id="exemplo-132"><a class="header" href="#exemplo-132">Exemplo</a></h2>
 <p>Considere o problema de realizar a soma dos elementos de uma dada sequência de valores: \( {3, 8, 20, 21, 34, 44} \). Encontre uma fórmula recursiva apropriada para representar essa soma.</p>
 <details>
 \\( \sum\{\} \implies 0 \\)
@@ -4399,7 +4625,7 @@ console.timeEnd('#2')
 </details>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="programação-recursiva-em-listas"><a class="header" href="#programação-recursiva-em-listas">Programação recursiva em listas</a></h1>
 <h2 id="padrão-1-realizar-uma-operação-de-redução-numérica-em-uma-lista-de-valores"><a class="header" href="#padrão-1-realizar-uma-operação-de-redução-numérica-em-uma-lista-de-valores">Padrão 1: realizar uma operação de redução numérica em uma lista de valores</a></h2>
-<h3 id="exemplo-122"><a class="header" href="#exemplo-122">Exemplo</a></h3>
+<h3 id="exemplo-133"><a class="header" href="#exemplo-133">Exemplo</a></h3>
 <p>Escreva um programa para calcular a soma dos valores de uma lista. Ex: \( {3, 8, 20, 21, 34, 44} \).</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
@@ -4431,7 +4657,7 @@ console.timeEnd('#2')
 </code></pre>
 </details>
 <h2 id="padrão-2-retornar-o-elemento-de-uma-lista-que-atenda-a-um-determinado-critério"><a class="header" href="#padrão-2-retornar-o-elemento-de-uma-lista-que-atenda-a-um-determinado-critério">Padrão 2: retornar o elemento de uma lista que atenda a um determinado critério</a></h2>
-<h3 id="exemplo-123"><a class="header" href="#exemplo-123">Exemplo</a></h3>
+<h3 id="exemplo-134"><a class="header" href="#exemplo-134">Exemplo</a></h3>
 <p>Encontre o maior elemento de uma lista.</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
@@ -4457,7 +4683,7 @@ const maiorAux = ([x, ...xs]) =&gt; {
 </code></pre>
 </details>
 <h2 id="padrão-3-realizar-operações-sobre-elementos-de-uma-lista-gerando-uma-nova-lista"><a class="header" href="#padrão-3-realizar-operações-sobre-elementos-de-uma-lista-gerando-uma-nova-lista">Padrão 3: realizar operações sobre elementos de uma lista, gerando uma nova lista.</a></h2>
-<h3 id="exemplo-124"><a class="header" href="#exemplo-124">Exemplo</a></h3>
+<h3 id="exemplo-135"><a class="header" href="#exemplo-135">Exemplo</a></h3>
 <p>Inverta a ordem dos elementos de uma lista.</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
@@ -4468,7 +4694,7 @@ const maiorAux = ([x, ...xs]) =&gt; {
     x === undefined ? [] : [...inverte(xs), x]
 </code></pre>
 </details>
-<h3 id="exemplo-125"><a class="header" href="#exemplo-125">Exemplo</a></h3>
+<h3 id="exemplo-136"><a class="header" href="#exemplo-136">Exemplo</a></h3>
 <p>Duplique a presença de cada elemento de uma lista.</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
@@ -4480,7 +4706,7 @@ const maiorAux = ([x, ...xs]) =&gt; {
 </code></pre>
 </details>
 <h2 id="padrão-4-verificar-se-uma-lista-possui-um-elemento-que-atenda-a-uma-dada-propriedadecaracterística"><a class="header" href="#padrão-4-verificar-se-uma-lista-possui-um-elemento-que-atenda-a-uma-dada-propriedadecaracterística">Padrão 4: verificar se uma lista possui um elemento que atenda a uma dada propriedade/característica</a></h2>
-<h3 id="exemplo-126"><a class="header" href="#exemplo-126">Exemplo</a></h3>
+<h3 id="exemplo-137"><a class="header" href="#exemplo-137">Exemplo</a></h3>
 <p>Verifique se uma lista possui um determinado elemento.</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em>
@@ -4497,7 +4723,7 @@ const maiorAux = ([x, ...xs]) =&gt; {
 </code></pre>
 </details>
 <h2 id="padrão-5-verificar-se-a-lista-atende-a-uma-determinada-propriedade"><a class="header" href="#padrão-5-verificar-se-a-lista-atende-a-uma-determinada-propriedade">Padrão 5: verificar se a lista atende a uma determinada propriedade</a></h2>
-<h3 id="exemplo-127"><a class="header" href="#exemplo-127">Exemplo</a></h3>
+<h3 id="exemplo-138"><a class="header" href="#exemplo-138">Exemplo</a></h3>
 <p>Teste se uma string consiste num <em>palíndromo</em>.</p>
 <details>
 <p><em><strong>Formulação recursiva</strong></em></p>
