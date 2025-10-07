@@ -306,6 +306,179 @@ d_{0} + d_{1} + d_{2} + d_{3} = 3[k - 3d_{1} - 33d_{2} - 333d_{3}]
 <p>Logo, \( 3|(d_{0} + d_{1} + d_{2} + d_{3}) \).</p>
 <p>Se 3 divide a soma dos dígitos de \( n \), então \( d_{0} + d_{1} + d_{2} + d_{3} = 3k</p>
 </details>
+<h2 id="prova-por-contradição"><a class="header" href="#prova-por-contradição">Prova por Contradição</a></h2>
+<p>Assimuma a conclusão como falsa. Se chegarmos a um absurdo, então a conclusão é verdadeira.</p>
+<h3 id="exemplo-8"><a class="header" href="#exemplo-8">Exemplo</a></h3>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Números irracionais não possuem uma notação definida.
+Vamos adotar \( \mathbb{A} \) aqui porque é uma letra livre.</p>
+</blockquote>
+<p>\[
+a \in \mathbb{R}, b \in \mathbb{A} \vDash (a + b) \in \mathbb{A}
+\]</p>
+<details>
+<p>\[
+Q = (a + b) \in \mathbb{A}
+\]</p>
+<p>\[
+~Q = (a + b) \in \mathbb{R}
+\]</p>
+<p>\[
+a = \frac{m}{n}, a + b = \frac{r}{s}, m \neq 0, n, r, s \neq 0 \in \mathbb{R}
+\]</p>
+<p>\[
+b = \frac{r}{s} - a = \frac{r}{s} - \frac{m}{n} = \frac{nr - ms}{ns}
+\]</p>
+<p>Isso gera um absurdo, ao dizer que \( b \) é irracional em vez de de irracional. Portanto \( (a + b) \in \mathbb{A} \).</p>
+</details>
+<h3 id="exemplo-9"><a class="header" href="#exemplo-9">Exemplo</a></h3>
+<p>\[
+x &gt; 0, y &gt; 0 \in mathbb{R} \vDash \sqrt{x + y} \neq \sqrt{x} + \sqrt{y}
+\]</p>
+<details>
+<p>\[
+Q = \sqrt{x + y} \neq \sqrt{x} + \sqrt{y}
+\]</p>
+<p>\[
+~Q = \sqrt{x + y} = \sqrt{x} + \sqrt{y}
+\]</p>
+<p>\[
+(\sqrt{x + y}^{2}) = (\sqrt{x})^{2} + (\sqrt{x})^{2} \implies x + y = x + 2\sqrt{xy} + y \implies (x + y) - x = (x + 2\sqrt{xy} + y) - x \implies y = \sqrt{xy} + y \implies y - y = (2\sqrt{xy} + y) - y \implies 0 = 2\sqrt{xy}
+\]</p>
+<p>Sendo \( x = 0 \) ou \( y = 0 \).</p>
+<p>Isso gera um absurdo, pois \( x &gt; 0 \) e \( y &gt; 0 \). Portanto, \( \sqrt{x + y} \neq \sqrt{x} + \sqrt{y} \).</p>
+</details>
+<h3 id="exemplo-10"><a class="header" href="#exemplo-10">Exemplo</a></h3>
+<p>\[
+x &gt; 0, y &gt; 0 \in \mathbb{Q} \vDash \frac{x}{y} + \frac{y}{x} &gt; 2
+\]</p>
+<details>
+<p>\[
+Q = \frac{x}{y} + \frac{y}{x} &gt; 2
+\]</p>
+<p>\[
+~Q = \frac{x}{y} + \frac{y}{x} \leq 2
+\]</p>
+<p>\[
+\frac{x}{y} + \frac{y}{x} \leq 2 \implies xy \cdot \left(\frac{x}{y} + \frac{y}{x}\right) \leq xy \cdot 2 \implies x^{2} + y^{2} \leq 2xy \implies x^{2} - 2xy + y^{2} \leq 0 \implies (x - y)^{2} \leq 0
+\]</p>
+<p>\( (x - y)^{2} \) não pode ser menor que 0, devido ao quadrado, logo, a única opção é</p>
+<p>\[
+(x - y)^{2} = 0 \iff x - y = 0 \iff x = y
+\]</p>
+<p>O que é um absurdo, pois \( x \neq y \).</p>
+<h3 id="exemplo-11"><a class="header" href="#exemplo-11">Exemplo</a></h3>
+<p>\[
+a &gt; 0, b &gt; 0, c &gt; 0 \in \mathbb{Z}, b = (a + 1), c = (a + 2), a^{2} + b^{2} = c^{2} \vDash a = 3, b = 4, c = 5
+\]</p>
+<details>
+<p>\[
+Q = a = 3, b = 4, c = 5
+\]</p>
+<p>\[
+~Q = a \neq 3, b \neq 4, c \neq 5
+\]</p>
+<p>\[
+a^{2} + (a + 1) = (a + 2) \implies a^{2} + a^{2} + 2a + 1 = a^{2} + 4a + 4 \implies a^{2} - 2a - 3 = 0 \implies (a - 3)(a + 1) = 0 \implies a = 3 \lor a = -1
+\]</p>
+<p>O que é um absurdo, pois em nossa negação \( a \neq 3 \), e que \( a &gt; 0 \) para todos os casos.</p>
+</details>
+<h3 id="teorema-de-euclides"><a class="header" href="#teorema-de-euclides">Teorema de Euclides</a></h3>
+<blockquote>
+<p><em><strong>Observação</strong></em>
+Lembrando que estamo usando \( \mathbb{A} \) para representar o conjunto dos números irracionais!</p>
+</blockquote>
+<p>\[
+\sqrt{2} \in \mathbb{A}
+\]</p>
+<details>
+<p>\[
+Q = \sqrt{2} \in \mathbb{A}
+\]</p>
+<p>\[
+~Q = \sqrt{2} \in \mathbb{Q}
+\]</p>
+<p>\[
+m \neq 0, n \neq 0 \in \mathbb{Q}, \sqrt{2} = \frac{m}{n} \implies \text{mdc{m, n}} = 1 \implies \frac{m^{2}}{n^{2}} = 2 \lor 2n^{2} = m^{2} \implies n^{2} = \frac{m^{2}}{2} \implies 2|m \implies m = 2k, k \in \mathbb{Q} \implies (2k)^{2} = 2n^{2} \implies n^{2} = 2k^{2} \implies 2|n
+\]</p>
+<p>Não é possível 2 dividir tanto \( m \) quanto \( n \), pois foi decidido que \( \text{mdc{m, n}} = 1 \).</p>
+<p>Portanto, \( \sqrt{2} \in \mathbb{A} \).</p>
+</details>
+<h3 id="teorema-1"><a class="header" href="#teorema-1">Teorema</a></h3>
+<p>Existem infinitos números números primos.</p>
+<details>
+<p>\( p &gt; 1 \in \mathbb{N} \) é primo se seus divisores forem 1 e ele mesmo.</p>
+<p>\( Q = \exists{\infty} \in \mathbb{N} \) que não são primos.</p>
+<p>\( ~Q = \) existe um número finito de primos.</p>
+<p>\[
+p_{1}, p_{2}, p_{3}, ..., p_{n} \implies q = (p_{1}, p_{2}, p_{3}, ..., p_{n}) + 1
+\]</p>
+<p>Isso implica que o nosso "maior primo" estaria fora da lista de números primos, e que \( \exists{pk} \) na lista tal que \( pk|q \).</p>
+<p>\[
+\frac{p1 \cdot ... \cdot pn}{pk} = 0 + 1 = 1 \implies pk + q \implies pk + 1
+\]</p>
+<p>O que seria um absurdo, pois somente 1 divide 1.</p>
+</details>
+<h3 id="exemplo-12"><a class="header" href="#exemplo-12">Exemplo</a></h3>
+<p>\[
+x &gt; 0, y &gt; 0 \in \mathbb{Z} \vDash x^{2} - y^{2} \neq 1
+\]</p>
+<details>
+<p>\[
+Q = x^{2} - y^{2} \neq 1
+\]</p>
+<p>\[
+~Q = x^{2} - y^{2} = 1
+\]</p>
+<p>\[
+x^{2} - y^{2} = 1 \implies (x - y)(x + 1) = 1 \implies x - y = 1 \land x + y = 1 \implies x = 1 \land y = 0
+\]</p>
+<p>O que seria um absurdo, pois \( y &gt; 0 \).</p>
+</details>
+<h2 id="prova-por-casos"><a class="header" href="#prova-por-casos">Prova por Casos</a></h2>
+<p>Método que pode ser usado para provar um teorema considerando diferentes casos.</p>
+<h3 id="exemplo-13"><a class="header" href="#exemplo-13">Exemplo</a></h3>
+<p>\[
+n \in \mathbb{Z} \vDash n^{2} \geq n
+\]</p>
+<details>
+<p><em><strong>Para</strong></em> \( n = 0 \)</p>
+<p>\[
+n^{2} = 0
+\]</p>
+<p><em><strong>Para</strong></em> \( n &gt; 0 \)</p>
+<p>\[
+n \geq 1 \implies n^{2} \geq n
+\]</p>
+<p><em><strong>Para</strong></em> \( n &lt; 0 \)</p>
+<p>\[
+n \leq -1 \implies n^{2} \geq -n (\text{positivo}) &gt; n (\text{negativo})
+\]</p>
+</details>
+<h3 id="valor-absoluto"><a class="header" href="#valor-absoluto">Valor Absoluto</a></h3>
+<p>Suponha que \( x \) e \( y \) sejam números reais e a &gt; 0. Então:</p>
+<p>(1) \( |x| &lt; a \iff -a &lt; x &lt; a \)</p>
+<p>(2) \( |xy| = |x||y| \)</p>
+<details>
+<p><em><strong>Caso 1:</strong></em> \( x \geq 0, y \geq 0 \)</p>
+<p>\[
+x + y \geq 0 \implies |x + y| = x + y = |x| + |y|
+\]</p>
+<p><em><strong>Caso 2:</strong></em> \( x &lt; 0, y &lt; 0 \)</p>
+<p>\[
+x + y &lt; 0 \implies |x + y| = -(x + y) = -x + (-y) = |x| + |y|
+\]</p>
+<p><em><strong>Caso 3:</strong></em> \( x \geq 0, y &lt; 0 \)</p>
+<p><em><strong>Se</strong></em> \( x + y \geq 0 \)</p>
+<p>\[
+|x + y| = x + y = x + (-y) = |x| + |y|
+\]</p>
+<p><em><strong>Se</strong></em> \( x + y &lt; 0 \)</p>
+<p>\[
+|x + y| = -(x + y) = -x + (-y) \leq x + (-y) = |x| + |y|
+\]</p>
+</details>
 
                     </main>
 
